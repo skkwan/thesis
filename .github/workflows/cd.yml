@@ -1,0 +1,29 @@
+name: produce-latex-document
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pages: write
+
+jobs: 
+  produce-latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: setup-git-repo
+        uses: actions/checkout@v3
+
+      - name: Build the LaTeX document
+        uses: xu-cheng/latex-action@v2
+        with:
+          working_directory: ${{ env. GITHUB_WORKSPACE	}}
+          root_file: outline.tex
+
+      - name: Upload PDF
+        uses: actions/upload-artifact@v3
+        with:
+          name: outline.pdf
+          path: outline.pdf
