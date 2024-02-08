@@ -94,13 +94,36 @@ The Standard Model is built around the gauge transformations $G = SU(3) \times S
 \subsection{The Higgs Mechanism}
 Local gauge invariance of the Standard Model Lagrangian under $SU(3)_C \times SU(2)_L \times U(1)_Y$ requires massless fermions and massless force carriers of the interaction. However, if the physical vacuum does not have all the symmetries of the Lagrangian, then the propagation of the gauge particles and all the fermions is modified. The symmetries of the physical vacuum must be spontaneously broken, without affecting gauge invariance in the Lagrangian. 
 
-The \textbf{Higgs mechanism} proposes the existence of a scalar field, or fields, with nonzero vacuum expectation values, which reduce the gauge symmetries of the physical vacuum from $SU(3)_C \times SU(2)_L \times U(1)_Y$ down to $SU(3)_C \times U(1)_{EM}$. 
+The \textbf{Higgs mechanism} proposes the existence of a scalar field, or fields, with nonzero vacuum expectation values, which reduce the gauge symmetries of the physical vacuum from $SU(3)_C \times SU(2)_L \times U(1)_Y$ down to $SU(3)_C \times U(1)_{EM}$. The Higgs field interacts with the gauge bosons and fermions throughout space, impeding their free propagation. The resulting broken symmetry correctly predicts the mass ratio of the neutral (Z) and charged (W) massive electroweak bosons, and predicts that at least one physical degree of freedom in the Higgs field is a particle degree of freedom, called the \textbf{Higgs boson}. The location of the minimum of the Higgs potential can be constrained from previously measured Standard Model parameters, but the shape of the mass distribution of the Higgs boson must be experimentally measured.
 
-$A_\mu$ is chosen to be the four-potential of a gauge interaction that has zero net coupling to one of the degrees of freedom of a $SU(2)$ complex-double scalar field $\Phi$, known as the Higgs field.
+The \textit{minimal choice of Higgs field} comes from the breaking of $SU(2)_L \times U(1)_Y$ down to $U(1)_{EM}$. The smallest $SU(2)$ multiplet is the doublet. The existence of three massive electroweak bosons leads the Higgs sector to have at least three degrees of freedom. The minimal single-doublet complex scalar Higgs field is
+\begin{equation}
+    \Phi(x) = \begin{pmatrix} \phi^+(x) \\ \phi^0(x) \end{pmatrix} 
+    = \frac{1}{\sqrt{2}} \begin{pmatrix} \phi_1^+(x) + i\phi_2^+(x) \\ \phi_1^0(x) + i\phi_2^0 (x) \end{pmatrix}
+\end{equation}
+where $\phi_1^+$, $\phi_2^+$, $\phi_1^0$, and $\phi_2^0$ are real (four degrees of freedom). By convention, the nonzero vacuum expectation value is assigned to $\phi_1^0$.
 
+The minimal self-interacting Higgs potential that is invariant under $SU(2)_L \times U(1)_Y$ is given by
+\begin{equation}
+    V(\Phi^\dagger \Phi) = -\mu^2 \Phi^\dagger \Phi + \lambda (\Phi^\dagger \Phi)^2, \,\,\, \mu^2 > 0, \, \lambda > 0
+\end{equation}
+where $\lambda$ is the coupling strength of the four-point Higgs interaction. 
+The potential energy is minimized at 
+\begin{equation}
+    \Phi_{\text{min}} = \frac{1}{\sqrt{2}} \begin{pmatrix} 0 \\ v \end{pmatrix}, \,\,\,\text{where} \, v = \sqrt{\mu^2 / \lambda}
+\end{equation}
+Choosing a fixed orientation of $\langle \Phi \rangle$ out of a continuous set of possible ground states spontaneously breaks the symmetry of the physical vacuum.
+
+The excitations of the Higgs field with respect to the minimum $\Phi_{\text{min}}$ are parametrized by 
+\begin{equation}
+    \Phi(x) = \exp(i \boldsymbol{\xi}(x) \cdot \boldsymbol{\tau}) \frac{1}{\sqrt{2}} \begin{pmatrix} 0 \\ v + H(x) \end{pmatrix}
+\end{equation}
+Three degrees of freedom are coupled directly to the electroweak gauge bosons; this is often referred to as the gauge bosons ``eating up'' the Goldstone bosons to form the longitudinal polarizations of the massive spin-1 boson states. The $H(x)$ excitation is in the radial direction and corresponds to the free particle state of the Higgs boson. 
+
+\subsection{Two-Higgs Doublet Models}
 
 % https://www.damtp.cam.ac.uk/user/tong/sm/standardmodel1.pdf
-
+ 
 \section{Sources}
 
     \begin{itemize}
