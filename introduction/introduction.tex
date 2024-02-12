@@ -10,6 +10,7 @@
 
 % Useful packages
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 
@@ -23,12 +24,12 @@ The study of elementary particle physics traces back to the observation in the 1
 
 However, the existence of a fourth particle -- the photon -- was already known, and the picture became increasingly complicated in the 1930s and 1940s with the experiemntal discoveries of the positron, the muon, and the pion. Advances in particle accelerator technology in the 1960s yielded hundreds of particle discoveries. 
 
-% \begin{figure}[ht]
-%     \centering
-%     \includegraphics[width=8cm]{figures/Standard_Model_of_Elementary_Particles.pdf}
-%     \caption{Table of Standard Model particles.}
-%     \label{fig:intro-standard-model}
-% \end{figure}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=8cm]{figures/Standard_Model_of_Elementary_Particles.pdf}
+    \caption{Table of Standard Model particles.}
+    \label{fig:intro-standard-model}
+\end{figure}
 
 
 
@@ -122,8 +123,51 @@ Three degrees of freedom are coupled directly to the electroweak gauge bosons; t
 
 \subsection{Two-Higgs Doublet Models}
 
-% https://www.damtp.cam.ac.uk/user/tong/sm/standardmodel1.pdf
+% https://www.sciencedirect.com/science/article/abs/pii/S0370157312000695
  
+% This entire section is taken from
+% https://journals.aps.org/prd/abstract/10.1103/PhysRevD.90.075004
+
+The Standard Model Higgs sector is made up of a single $SU(2)_L$ doublet $H$ with hypercharge $Y = +\frac{1}{2}$, denoted by $H \sim 2_{+1/2}$. Adding a doublet to this minimal picture is one of the simplest extensions of the Higgs sector. These extensions are found in several theories such as supersymmetry. A general 2HDM can be extended with a light scalar (2HDM+S) to obtain a rich set of exotic Higgs decays. 
+
+The charges of the Higgs fields are chosen to be $H_1 \sim 2_{-1/2}$ and $H_2 \sim 2_{+1/2}$, which acquire vacuum expectation values $v_{1,2}$ which are assumed to be real and aligned. Expanding about the minima yields two complex and four real degrees of freedom:
+\begin{align}
+    H_1 &= \frac{1}{\sqrt{2}} \begin{pmatrix} v_1 + H^{0}_{1, R} + iH^0_{1, I} \\  
+                                              H^-_{1,R} + i H^-_{1, I}   \end{pmatrix} \\
+    H_2 &= \frac{1}{\sqrt{2}} \begin{pmatrix} H^+_{2, R} + iH^+_{2, I} \\  
+                                              v_2 + H^0_{2,R} + i H^0_{2, I}   \end{pmatrix} \\
+\end{align}
+
+The charged scalar and psuedoscalar mass matrices are diagonalized by a rotation angle $\beta$, defined as $\tan\beta = v_2/v_1$. One charged (complex) field and one neutral pseudoscalar combination of $H^0_{1, 2, I}$ are eaten by the SM gauge bosons after electroweak symmetry breaking. The other complex field yields two charged mass eigenstates $H^\pm$, which are assumed to be heavy. The remaining three degrees of freedom yield one neutral pseudoscalar mass eigenstate 
+\begin{equation}
+    A = H^0_{1, I}\sin\beta - H^0_{2, I} \cos\beta
+\end{equation}
+and two neutral scalar mass eigenstates (where $-\pi/2 \leq \alpha \leq pi/2$)
+\begin{equation}
+    \begin{pmatrix} h \\ H^0 \end{pmatrix} = \begin{pmatrix} -\sin\alpha & \cos\alpha \\
+                                                              \cos\alpha & \sin\alpha \end{pmatrix}
+                                             \begin{pmatrix} H^0_{1, R} \\ H^0_{2, R}  \end{pmatrix}
+\end{equation}
+We assume that the 2HDM is near or in the decoupling limit: $\alpha \rightarrow \pi/2 - \beta$, where the lightest state in the 2HDM is $h$, which we identify as the 125 GeV Higgs particle. In this limit, the fermion couplings of $h$ become identical to the Standard Model Higgs, while the gauge boson couplings are very close to Standard Model-like for $\tan\beta \gtrsim 5$ All of the properties of $h$ are determined by just two parameters: $\tan\beta$ and $\alpha$, and the fermion couplings to the two Higgs doublets. The properties of the remainder of the Higgs spectrum are in general constrained by the measured production and decays of $h$. 
+
+2HDM can be extended by a scalar singlet:
+\begin{equation}
+    S = \frac{1}{\sqrt{2}} (S_R + iS_I)
+\end{equation}
+If this singlet only couples to the Higgs doublets $H_{1,2}$ and has no direct Yukawa couplings, all of its couplings to SM fermions result from mixing with $H_{1,2}$. Under these simple assumptions, exotic Higgs decays $h\rightarrow ss \rightarrow X\bar{X}Y\bar{Y}$ or $h\rightarrow aa \rightarrow X\bar{X}Y\bar{Y}$, and $h \rightarrow aZ \rightarrow X\bar{X}Y\bar{Y}$ are permitted, where $s(a)$ is a (pseudo)scalar mass eigenstate mostly composed of $S_R (S_I)$, and $X, Y$ are Standard Model fermions or gauge bosons. There are two pseudoscalars in the 2HDM+S, and the mostly singlet-like pseudoscalar can be chosen to be the one lighter than the SM-like Higgs. For $m_a < m_h - m_Z \sim 35$ GeV, the exotic Higgs decay $h \rightarrow Za$ is possible, and for $m_a < m_h/2 \approx 63$ GeV, the exotic Higgs decay $h \rightarrow aa$ is possible. 
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=15cm]{figures/curtin-2014-figure-7-BRs-of-singlelike-pseudoscalar-type-II.png}
+    \caption{Figure 7 from Curtin et al. (2014): Branching ratios of a singlet-like pseudsocalar in Type II 2HDM+S for $tan\beta = 0.5$ (left) and $\tan\beta = 5$ (right), showing the dependence of the branching ratios on $\tan\beta$, as well as the prominence of the branching ratios to $bb$ and $\tau\tau$, the channels searched for in the analysis presented here.}
+    \label{fig:curtin-2014-fig-4-typeI-BRs}
+\end{figure}
+
+
+% continue citing https://journals.aps.org/prd/pdf/10.1103/PhysRevD.90.075004, before equation 14
+In 2HDM, and by extension 2HDM+S, there are four types of fermion couplings commonly discussed in the literature hat forbid flavour-changing neutral currents at tree level. These are referred to as Type I (all fermions couple to $H_2$), Type II (MSSM-like, $d_R$ and $e_R$ couple to $H_1$, $u_R$ to $H_2$), Type III (lepton-specific, leptons and quarks couple to $H_1$ and $H_2$ respectively) and Type IV (flipped, with $u_R$, $e_R$ coupling to $H_2$ and $d_R$ to $H_1$). The exact branching ratios of the pseudoscalars to Standard Model particles vary depending on the 2HDM+S model and the value of $\tan\beta$ (e.g. Fig. \ref{fig:curtin-2014-fig-4-typeI-BRs}).
+
+
 \section{Sources}
 
     \begin{itemize}
