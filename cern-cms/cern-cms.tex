@@ -1,0 +1,31 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\begin{document}
+
+\section{CERN and the Large Hadron Collider}
+
+% [CITE] https://cds.cern.ch/record/782076
+The European Council for Nuclear Research (in French \textit{Conseil Europ\'{e}en pour la Recherche Nucl\'{e}aire}), also known as CERN, is the site of an accelerator complex hosting the Large Hadron Collider (LHC). The LHC consists of a 27-kilometer ring of superconducting magnets with accelerating structures to boost the energy of particles, which collide at a center-of-mass energy of up to 14 TeV. The beams inside the LHC are made to collide at four locations around the accelerator ring, at the locations of four particle detectors: ATLAS, CMS, ALICE, and LHCb.
+
+The number of events generated per second at the LHC collisions is given by $N_{event} = \mathcal{L} \sigma_{event}$, where $\sigma_{event}$ is the cross-section for the event under study, and $\mathcal{L}$ the machine luminosity. The machine luminosity depends only on the beam parameters, and can be written for a Gaussian beam distribution as:
+
+\begin{equation}
+    \mathcal{L} = \frac{N_b^2 n_b f_{rev} \gamma_r}{4\pi \epsilon_n \beta^*} F
+\end{equation}
+where $N_b$ is the number of particles per bunch, $n_b$ the number of bunches per beam, $f_{rev}$ the revolution frequency, $\gamma_r$ the relativistic gamma factor, $\epsilon_n$ the normalized transverse beam emittance, $\beta^*$ the beta function at the collision point, and $F$ the geometric luminosity reduction factor due to the crossing angle at the interaction points. Luminosity is measured in units of cm$^{-2}$ s$^{-1}$. Thus the exploration of rare events in the LHC collisions requires both high beam energies and high beam intensities.
+
+\end{document}
