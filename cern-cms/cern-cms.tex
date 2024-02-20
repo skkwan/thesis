@@ -100,6 +100,24 @@ The HF is foremost designed to survive in the harsh radiation conditions and hig
 
 \subsubsection{Muon detectors}
 
+% 2008 JINST 3 S08004
+The CMS muon system is designed to have the capability of reconstructing the momentum and charge of muons over the kinematic range of the LHC, since muons are a powerful handle on signatures of interesting processes over the high background rate of the LHC. For instance, the decay of the Standard Model Higgs boson into $ZZ$, which in turn decay to 4 leptons, can be reconstructed with high 4-particle mass resolution if all the leptons are muons, since muons are less affected than electrons by radiative losses in the tracker material. The muon system consists of a cylindrical barrel section and two planar endcap regions.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=11cm]{figures/phase-1-muon-barrel-DT-schematic.png}
+    \caption{Layout of the CMS barrel muon DT chambers in one of the five wheels from [CITE 2008 JINST 3 S08004].}
+    \label{fig:phase-1-muon-barrel-DT-schematic}
+\end{figure}
+
+% 2008 JINST 3 S08004, page 165
+The barrel muon detector deploys drift tube (DT) chambers covering the pseudorapidity region $|\eta| < 1.2$. In the barrel region, the neutron-induced background is small, the muon rate is low, and the 4T magnetic field is uniform and mostly contained in the steel yoke. The low expected rate allows the use of the DTs as tracking detectors for the barrel muon system. A DT chamber is made of 3 or 2 superlayers, each made of 4 layers of rectangular drift cells staggered by a cell. Since two detector layers (one inside the yoke and the other outside) would be insufficient for reliable identification and identification, two additional layers of DTs are embedded within the yoke iron. In each of the 12 sectors of the yoke, there are 4 muon chambers per wheel, labeled MB1, MB2, MB3, and MB4 in Fig. \ref{fig:phase-1-muon-barrel-DT-schematic}. 
+
+% 2008 JINST 3 S08004
+In the two endcap regions, the muon rates and background levels are high and the magnetic field is large and non-uniform. Here, the muon system uses cathode strip chambers (CSC) to identify muons between $0.9 < |\eta| < 2.4$. The cathode strips of each chamber run radially outwards and provide a precision measurement in the $r-\phi$ bending plane. The anode wires run approximately perpendicular to the strips and are read out in order to measure $\eta$ and the beam-crossing time of a muon. 
+
+% 2008 JINST 3 S08004, page 164
+In addition to the DT and CSC, a dedicated trigger system consisting of resistive plate chambers (RPC) in the barrel and endcap regions provide a fast, independent, and highly-segmented trigger with a sharp $p_T$ threshold over a large portion of the pseudorapidity range ($|\eta| < 1.6$) of the muon system. The RPCs are double-gap chambers, operated in avalanche mode to ensure good operation at high rates. They have good time resolution but coarser position resolution compared to the DTs or CSCs. The RPCs also play a role in resolving ambiguities in reconstructing tracks from multiple hits in a chamber. 
 
 \subsection{The Level-1 Trigger}
 \label{section:phase-1-l1-trigger}
