@@ -36,66 +36,69 @@ Fermions consist of quarks and leptons, and are grouped into three generations. 
 
 
 
-
-
 \subsection{The Standard Model as a gauge theory}
 
+
 \subsubsection{Gauge invariance}
+% CITE: https://www.degruyter.com/document/doi/10.1515/9781400839353/html
+Gauge theories of elementary particle interactions originate from a freedom of choice in the mathematical description of particle fields which has no effect on the particles' physical states [CITE]. The existence and form of the particles' interactions, can be deduced from the existence of physically indeterminate, gaugable quantities.
 
-In this section we turn to a mathematical description of the structure of the Standard Model, specifically from the angle of gauge theories,
+An example of this gauge invariance is classical physics is the electromagnetic interaction, where the fundamental field is the four-vector potential $A^\mu$. The physical electromagnetic fields and Maxwell's equations arise from the elements of the tensor $F_{\mu\nu}(x) = \partial_\mu A_\nu (x) - \partial_\nu A_\mu (x)$. Any two choices of $A^\mu$ that are related by a transformation of the form \begin{equation} A_\mu \rightarrow A_\mu + \partial_\mu \alpha \label{eqn:gauge_symmetry}\end{equation} for any real, differentiable function $\alpha(x)$, describe the same physical configuration, and has no effect on Maxwell's equations. This ``redundancy'' in the choice of gauge in Eqn. \ref{eqn:gauge_symmetry} is called a gauge symmetry.
 
-An example from classical physics is the electromagnetic interaction, where the fundamental field is the four-vector potential $A^\mu$. The physical electromagnetic fields and Maxwell's equations arise from the elements of the tensor $F_{\mu\nu}(x) = \partial_\mu A_\nu (x) - \partial_\nu A_\mu (x)$. Any two choices of $A^\mu$ that are related by a transformation of the form \begin{equation} A_\mu \rightarrow A_\mu + \partial_\mu \alpha \label{eqn:gauge_symmetry}\end{equation} for any real, differentiable function $\alpha(x)$, describe the same physical configuration, and has no effect on Maxwell's equations. This transformation in Eqn. \ref{eqn:gauge_symmetry} is often referred to as a \textbf{gauge symmetry}, but can also be thought of as \textbf{gauge redundancy}.
-
-
-In gauge theories, the freedom of choice of gauge states that the existence and form of an interaction can be deduced from the existence of physically indeterminate, gaugable quantities.
-
-Noether's theorem states that for every global transformation under which the Lagrangian density is invariant, there exists a conserved quantity. If $\mathcal{L}(\Psi(x), \partial_\mu \Psi(x))$ is invariant under the transformation of the wave function $\Psi(x) \rightarrow \Psi'(x)$, where $\Psi'(x) = \Psi(x) + \delta \Psi(x)$, then there exists a conserved current 
+One important consequence of gauge symmetry comes from the application of Noether's theorem, which states that for every global transformation under which the Lagrangian density is invariant, there exists a conserved quantity. If $\mathcal{L}(\Psi(x), \partial_\mu \Psi(x))$ is invariant under the transformation of the wave function $\Psi(x) \rightarrow \Psi'(x)$, where $\Psi'(x) = \Psi(x) + \delta \Psi(x)$, then there exists a conserved current 
 \begin{equation}
     \partial_\mu \left( \frac{\partial\mathcal{L}(x)}{\partial(\partial_\mu \Psi(x))} \delta \Psi(x)  \right) = 0
 \end{equation}
-
+In classical mechanics, the conservation of linear momentum, angular momentum, and energy follows from translational invariance, rotational variance, and invariance under translations in time. Likewise, charge conservation can be shown to arise from the invariance of the Dirac Lagrangian density $\mathcal{L}_{\text{Dirac}} = \bar{\Psi} (i\gamma^\mu \partial_\mu -m)\Psi$ under the particle wavefunction's phase transformation, $\Psi'(x) = \exp(ie\chi) \Psi(x)$. Thus Noether's theorem establishes a correspondance between a gauge symmetry and a conserved internal property (e.g. charge or momentum).
 
 \subsubsection{Local gauge symmetries}
-If we modify the wave function with a phase transformation $\Psi'(x) = \exp(i e \chi) \Psi(x)$, and we allow the phase $\chi$ to be a function of spacetime, we introduce \textbf{interactions} to the theory. A wave function of the form
+Interactions between particles arise if we modify the wave function with a phase transformation $\Psi'(x) = \exp(i e \chi) \Psi(x)$, and allow the phase $\chi$ to be a function of spacetime. A wave function of the form
 \begin{equation}
     \Psi'(x) = \exp(i e \chi(x)) \Psi(x)
 \end{equation}
-can be verified, to be not a solution to the Dirac equation for free particles: $(i \gamma^\mu \partial_\mu - m) \Psi(x) = 0$. To take the derivative of a vector field $V(x)$ (e.g. a Dirac wave function), at two displaced space-time points, in a curvilinear coordinate system, 
+can be verified to \textit{not} be a solution to the Dirac equation for free particles: $(i \gamma^\mu \partial_\mu - m) \Psi(x) = 0$. This necessitates a modified Dirac equation, where the derivative takes into account that the vector field $V(x)$ needs to be compared at two displaced space-time points in a curvilinear coordinate system: 
 \begin{equation}
     \mathcal{D}_\mu \equiv \lim_{\Delta x^\mu \rightarrow 0} \frac{V_{\parallel}(x + \Delta x) - V(x)}
 {\Delta x^\mu}\end{equation}
-
-To write a derivative that is covariant under this transformation, we define a \textbf{covariant derivative}, where $A_\mu(x)$ is a 4-vector potential:
+We define a covariant derivative, 
 \begin{equation}
     D_\mu = \partial_\mu + i e A_\mu
 \label{eqn:modified_dirac}
 \end{equation}
-which gives the modified Dirac equation:
+where $A_\mu(x)$ is a 4-vector potential. Thus the modified Dirac equation reads:
 \begin{equation}
     \left( i \gamma^\mu \mathcal{D}_\mu - m  \right) \Psi(x) = 0
 \end{equation}
 The simultaneous gauge transformation $A'_\mu(x) = A_\mu(x) - \partial_\mu\chi(x)$ and wavefunction transformation $\Psi'(x) = \exp(ie\chi(x)) \Psi(x)$ leaves the covariant-derivative form of the Dirac equation (Eqn \ref{eqn:gauge_symmetry}) invariant.
 
-To generalize this, if the theory is invariant for unitary transformations $U$ of the particle states according to 
+The generalization of this result is as follows: if a theory is invariant for unitary transformations $U$ of the particle states according to 
 \begin{equation}
     \Psi' = U\Psi
 \label{eqn:generic_unitary_transformation}
 \end{equation}
-We want to define a derivative
+One must define a derivative of the form
 \begin{equation}
     D^\mu = \partial^\mu + ig B^\mu
 \end{equation}
-that keeps the theory invariant under Eqn. \ref{eqn:generic_unitary_transformation}. The four-potential $B^\mu$ represents the interacting four-potential which must be added to keep the theory invariant.
+to keep the theory invariant under Eqn. \ref{eqn:generic_unitary_transformation}. The four-potential $B^\mu$ represents the interacting four-potential which must be added to keep the theory invariant.
 
-The Standard Model is built around the gauge transformations $G = SU(3) \times SU(2) \times U(1)$. $SU(3)$ is associated to the strong force; $SU(2)$ is associated to the weak force; and $U(1)$ is hypercharge. Electromagnetism arises from the terms $SU(2) \times U(1)$. The matter of the Standard Model (leptons and quarks, as listed in the previous section) are a regular array of fermions with fixed spacings in hypercharge quantum numbers, whose interactions enter the Lagrangian through the guage-covariant derivative:
+In the case of the Standard Model, the theory is built around the gauge transformations $G = SU(3) \times SU(2) \times U(1)$. $SU(3)$ is associated to the strong force; $SU(2)$ is associated to the weak force; and $U(1)$ is hypercharge. Electromagnetism arises from the terms $SU(2) \times U(1)$. The guage-covariant derivative is 
 \begin{equation}
     \mathcal{D}_\mu = \partial_\mu - ig' B_\mu \frac{Y}{2} - ig W_{\mu}^{\alpha} \frac{\tau_a}{2} - ig_s G_\mu^{k} \frac{\lambda_k}{2}
 \end{equation}
+where the $W$, $B$ are electroweak boson fields, and the gluon field is $G$.
+% \begin{itemize}
+%     \item 
+%     \item The $SU(2)$ term, $\mathcal{D}_\mu = \partial_\mu - ig W^\alpha_\mu(x) \cdot \tau_\alpha/2$ is constructed with a triplet of four-potentials: $W_\mu(x) = (W_\mu^1(x), W_\mu^2(x), W_\mu^3(x))$ where the $\tau/2$ matrices are generators of the $SU(2)$ transformation.
+%     \item The gluon field is $G_\mu$
+%     \item 
+% \end{itemize}   
 
 \subsection{The Higgs Mechanism}
-Local gauge invariance of the Standard Model Lagrangian under $SU(3)_C \times SU(2)_L \times U(1)_Y$ requires massless fermions and massless force carriers of the interaction. However, if the physical vacuum does not have all the symmetries of the Lagrangian, then the propagation of the gauge particles and all the fermions is modified. The symmetries of the physical vacuum must be spontaneously broken, without affecting gauge invariance in the Lagrangian. 
+% CITE: https://www.degruyter.com/document/doi/10.1515/9781400839353/html
+Local gauge invariance of the Standard Model Lagrangian under $SU(3)_C \times SU(2)_L \times U(1)_Y$ requires massless fermions and massless force carriers of the interaction [CITE]. To prevent this in the theory, i.e. to change the propagation of the gauge particles and all the fermions, the physical vacuum cannot have all the symmetries of the Lagrangian. The symmetries of the physical vacuum must be spontaneously broken, without affecting gauge invariance in the Lagrangian. 
 
-The \textbf{Higgs mechanism} proposes the existence of a scalar field, or fields, with nonzero vacuum expectation values, which reduce the gauge symmetries of the physical vacuum from $SU(3)_C \times SU(2)_L \times U(1)_Y$ down to $SU(3)_C \times U(1)_{EM}$. The Higgs field interacts with the gauge bosons and fermions throughout space, impeding their free propagation. The resulting broken symmetry correctly predicts the mass ratio of the neutral (Z) and charged (W) massive electroweak bosons, and predicts that at least one physical degree of freedom in the Higgs field is a particle degree of freedom, called the \textbf{Higgs boson}. The location of the minimum of the Higgs potential can be constrained from previously measured Standard Model parameters, but the shape of the mass distribution of the Higgs boson must be experimentally measured.
+The Higgs mechanism proposes the existence of a scalar field, or fields, with nonzero vacuum expectation values, which reduce the gauge symmetries of the physical vacuum from $SU(3)_C \times SU(2)_L \times U(1)_Y$ down to $SU(3)_C \times U(1)_{EM}$. The Higgs field interacts with the gauge bosons and fermions throughout space, impeding their free propagation. The resulting broken symmetry correctly predicts the mass ratio of the neutral (Z) and charged (W) massive electroweak bosons, and predicts that at least one physical degree of freedom in the Higgs field is a particle degree of freedom, called the \textbf{Higgs boson}. The location of the minimum of the Higgs potential can be constrained from previously measured Standard Model parameters, but the shape of the mass distribution of the Higgs boson must be experimentally measured.
 
 The \textit{minimal choice of Higgs field} comes from the breaking of $SU(2)_L \times U(1)_Y$ down to $U(1)_{EM}$. The smallest $SU(2)$ multiplet is the doublet. The existence of three massive electroweak bosons leads the Higgs sector to have at least three degrees of freedom. The minimal single-doublet complex scalar Higgs field is
 \begin{equation}
