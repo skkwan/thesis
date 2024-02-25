@@ -19,7 +19,7 @@
 \section{The Standard Model}
 
 \subsection{History of the Standard Model}
-
+% source: http://www.physics.ufl.edu/~ramond/JourneysChapter2_CUP.pdf
 The building blocks of our prevailing picture of elementary particle physics were established over the course of decades by experimental discoveries and theoretical advances, culminating in the development of a theoretical framework known as the Standard Model (SM). In the 1880s, the electron was the first subatomic particle to be identified, through measurements of particles produced by ionizing gas. By the 1930s, atoms were known to consist mostly of empty space, with protons and neutrons concentrated at the center and orbited by electrons. Spurred by advances in particle accelerator technology, the experimental discoveries of the positron, the muon, and the pion, painted an increasingly complicated picture of particle physics that could not be described solely with atomic physics.
 
 In the absence of a theoretical framework describing these particles, in the 1960s and 1970s physicists and mathematicians developed the Standard Model to describe and encompass these fundamental particles and the forces that govern their interactions. The particle content of the Standard Model is shown in Fig. \ref{fig:intro-standard-model}: they are grouped into fermions, which comprise all known matter, and bosons, which mediate the interactions between particles.
@@ -82,17 +82,15 @@ One must define a derivative of the form
 \end{equation}
 to keep the theory invariant under Eqn. \ref{eqn:generic_unitary_transformation}. The four-potential $B^\mu$ represents the interacting four-potential which must be added to keep the theory invariant.
 
-In the case of the Standard Model, the theory is built around the gauge transformations $G = SU(3) \times SU(2) \times U(1)$. $SU(3)$ is associated to the strong force; $SU(2)$ is associated to the weak force; and $U(1)$ is hypercharge. Electromagnetism arises from the terms $SU(2) \times U(1)$. The guage-covariant derivative is 
+In the case of the Standard Model, the theory is built around the gauge transformations $G = SU(3) \times SU(2) \times U(1)$. $SU(3)$ is associated to the strong force (subscripted $C$ to indicate the relation to colour charges); $SU(2)$ is associated to the weak force (subscripted W); and $U(1)$ is hypercharge (subscripted Y). Electromagnetism arises from the terms $SU(2)_W \times U(1)_Y$. The guage-covariant derivative  is 
 \begin{equation}
     \mathcal{D}_\mu = \partial_\mu - ig' B_\mu \frac{Y}{2} - ig W_{\mu}^{\alpha} \frac{\tau_a}{2} - ig_s G_\mu^{k} \frac{\lambda_k}{2}
 \end{equation}
-where the $W$, $B$ are electroweak boson fields, and the gluon field is $G$.
-% \begin{itemize}
-%     \item 
-%     \item The $SU(2)$ term, $\mathcal{D}_\mu = \partial_\mu - ig W^\alpha_\mu(x) \cdot \tau_\alpha/2$ is constructed with a triplet of four-potentials: $W_\mu(x) = (W_\mu^1(x), W_\mu^2(x), W_\mu^3(x))$ where the $\tau/2$ matrices are generators of the $SU(2)$ transformation.
-%     \item The gluon field is $G_\mu$
-%     \item 
-% \end{itemize}   
+\begin{itemize}
+    \item In the $U(1)_Y$ term, $B_\mu$ is the weak hypercharge field.
+    \item In the $SU(2)_W$ term, $W_\mu(x) = (W_\mu^1(x), W_\mu^2(x), W_\mu^3(x))$ are a triplet of four-potentials. $\tau/2$ are the Pauli matrices, generators of the $SU(2)$ transformation.
+    \item In the $SU(3)_C$ term, the gluon (color) field is $G_\mu$. $\lambda_k$ are the Gell-Man matrices, generators of the $SU(3)$ transformation.
+\end{itemize}   
 
 \subsection{The Higgs Mechanism}
 % CITE: https://www.degruyter.com/document/doi/10.1515/9781400839353/html
