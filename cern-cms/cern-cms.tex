@@ -18,9 +18,10 @@
 
 \section{CERN, the LHC, and the CMS Experiment}
 
+
 \subsection{CERN and the Large Hadron Collider}
 % [CITE] https://cds.cern.ch/record/782076
-The European Council for Nuclear Research (in French \textit{Conseil Europ\'{e}en pour la Recherche Nucl\'{e}aire}), also known as CERN, is the site of an accelerator complex hosting the Large Hadron Collider (LHC). The LHC consists of a 27-kilometer ring of superconducting magnets with accelerating structures to boost the energy of particles, which collide at a center-of-mass energy of up to 14 TeV. The beams inside the LHC are made to collide at four locations around the accelerator ring, at the locations of four particle detectors: ATLAS, CMS, ALICE, and LHCb.
+The European Council for Nuclear Research (CERN, in French: \textit{Conseil Europ\'{e}en pour la Recherche Nucl\'{e}aire}) is the site of an accelerator complex hosting the Large Hadron Collider (LHC). The LHC consists of a 27-kilometer ring of superconducting magnets with accelerating structures to boost the energy of particles, which collide at a center-of-mass energy of up to 14 TeV. The beams inside the LHC are made to collide at four locations around the accelerator ring, at the locations of four particle detectors: ATLAS, CMS, ALICE, and LHCb.
 
 The number of events generated per second at the LHC collisions is given by $N_{event} = \mathcal{L} \sigma_{event}$, where $\sigma_{event}$ is the cross-section for the event under study, and $\mathcal{L}$ the machine luminosity. The machine luminosity depends only on the beam parameters, and can be written for a Gaussian beam distribution as:
 
@@ -54,20 +55,23 @@ This section details the sub-detectors of CMS that operate to identify and preci
 % CITE: Original Tracker TDR https://cds.cern.ch/record/368412/files/Tracker_TDR.pdf
 % CITE: Phase-1 Tracker TDR: https://cds.cern.ch/record/1481838 
 % CITE: Phase-2 https://cds.cern.ch/record/2272264/files/CMS-TDR-014.pdf
-The CMS Tracker perform robust tracking and detailed vertex reconstruction in the 4 T magnetic field of the superconducting solenoidal magnet. The active envelope of the CMS Tracker extends to a radius of 115 cm, over a length of approximately 270 cm on each side of the interaction point [CITE] %original tracker TDR. 
-Charged particles in the region $|\eta| \lesssim 1.6$ benefit from the full momentum measurement precision. In this region, a charged particle with $p_T$ of 1000 GeV has a sagitta of $\sim 195$ $\mu$m. The Tracker acceptance extends further to $|\eta| = 2.5$, with a reduced radial lever arm of approximately 50 cm.
+The CMS Tracker performs robust tracking and detailed vertex reconstruction in the 4 T magnetic field of the superconducting solenoidal magnet. The primary sensors used in the tracker are $p^+$ on $n$-bulk devices, which allow high voltage operation and are radiation-resistant [CITE original tracker TDR]. The active envelope of the CMS Tracker extends to a radius of 115 cm, over a length of approximately 270 cm on each side of the interaction point [CITE] %original tracker TDR. 
+Charged particles in the region $|\eta| \lesssim 1.6$ benefit from the full momentum measurement precision. In this region, a charged particle with $p_T$ of 1000 GeV has a sagitta of $\sim 195$ $\mu$m. The Tracker acceptance extends further to $|\eta| = 2.5$, with a reduced radius of approximately 50 cm.
 
 The high magnetic field of CMS causes low $p_{T}$ charged particles to travel in helical trajectories with small radii. The majority of events contain particles with a steeply falling $p_{T}$ spectrum, resulting in a track density which rapidly decreases at higher radii. 
 
+A schematic view of the current Phase-1 CMS tracker, including the pixel detector, is shown in Fig. \ref{fig:phase-1-tdr-tracker-schematic}. The Phase-1 pixel detector consists of three barrel layers (BPIX) at radii of 4.4 cm, 7.3 cm, and 10.2 cm, and two forward/backward disks (FPIX) at longitudinal positions of $\pm$ 34.5 cm and $\pm$ 46.5 cm, and extending in radius from about 6 cm to 15 cm. These pixelated detectors produce 3D measurements along the paths of charged particles with single hit resolutions between 10-20 $\mu$m. 
+
+
+% https://cds.cern.ch/record/1481838/files/CMS-TDR-011.pdf
 \begin{figure}[ht]
     \centering
     \includegraphics[width=11cm]{figures/phase-1-tdr-tracker-schematic.png}
-    \caption{Cross section of the current Phase-1 CMS tracker from [CITE] https://cds.cern.ch/record/1481838/files/CMS-TDR-011.pdf, showing the nomenclature of different sections. Each line represents a detector module. Double lines indicate back-to-back modules which deliver stereo hits in the strip tracker.}
+    \caption{Cross section of the current Phase-1 CMS tracker from [CITE]. Each line represents a detector module. Double lines indicate back-to-back modules which deliver two-dimensional (stereo) hits in the strip tracker.}
     \label{fig:phase-1-tdr-tracker-schematic}
 \end{figure}
 
 
-A schematic view of the current Phase-1 CMS tracker, including the pixel detector, is shown in Fig. \ref{fig:phase-1-tdr-tracker-schematic}. The Phase-1 pixel detector consists of three barrel layers (BPIX) at radii of 4.4 cm, 7.3 cm, and 10.2 cm, and two forward/backward disks (FPIX) at longitudinal positions of $\pm$ 34.5 cm and $\pm$ 46.5 cm, and extending in radius from about 6 cm to 15 cm. These pixelated detectors produce 3D measurements along the paths of charged particles with single hit resolutions between 10-20 $\mu$m. 
 
 % here cite 2008 JINST 3 S08004 https://iopscience.iop.org/article/10.1088/1748-0221/3/08/S08004/pdf
 After the pixel and on their way out of the tracker, particles pass through the silicon strip tracker which reaches out to a radius of 130 cm (Fig. \ref{fig:phase-1-tdr-tracker-schematic}). The sensor elements in the strip tracker are single-sided $p$-on-$n$ type silicon micro-strip sensors [CITE 2008 CMS]. The silicon strip detector consists of four inner barrel (TIB) layers assembled in shells, with two inner endcaps (TID), each composed of three small discs. The outer barrel (TOB) consists of six concentric layers. Two endcaps (TEC) close off the tracker on either end. 
@@ -75,13 +79,11 @@ After the pixel and on their way out of the tracker, particles pass through the 
 
 \subsubsection{ECAL} 
 % cite again 2008 JINST 3 S08004: https://iopscience.iop.org/article/10.1088/1748-0221/3/08/S08004/pdf
-The electromagnetic calorimeter (ECAL) of CMS measures electromagnetic energy deposits with high granularity. One of the driving criteria in the design was the capability of detecting the Standard Model Higgs boson decay to two photons (in fact, the channel in which the 125 GeV Higgs boson was discovered at CMS).
+The electromagnetic calorimeter (ECAL) of CMS measures electromagnetic energy deposits with high granularity. One of the driving criteria in the design was the capability of detecting the Standard Model Higgs boson decay to two photons (in fact, the channel in which the 125 GeV Higgs boson was discovered at CMS). % back to 2008 JINST 3 S08004
+ECAL is a hermetic homogenous calorimeter comprised of 61,200 lead tungstate (PbWO$_4$) crystals mounted in the central barrel, with 7,324 crystals in each of the two endcaps [CITE]. A preshower detector is located in front of the endcap crystals. Avalanche photodiodes (APDs) are used as photodetectors in the barrel and vacuum phototriodes (VPTs) in the endcaps. 
 
 % cite PDG Passage of Particles THrough Materal: https://pdg.lbl.gov/2019/reviews/rpp2018-rev-passage-particles-matter.pdf
-High-energy electrons predominantly lose energy in matter via bremsstrahlung, and high-energy photons by $e^+ e^-$ pair production. The characteristic amount of matter traversed for these interactions is called the radiation length $X^0$, usually measured in units of g cm$^-2$. It is the mean distance over which a high-energy electron loses all but $1/e$ of its energy via bremsstrahlung [CITE PDG]. 
-
-% back to 2008 JINST 3 S08004
-ECAL is a hermetic homogenous calorimeter comprised of 61,200 lead tungstate (PbWO$_4$) crystals mounted in the central barrel, with 7,324 crystals in each of the two endcaps [CITE]. A preshower detector is located in front of the endcap crystals. Avalanche photodiodes (APDs) are used as photodetectors in the barrel and vacuum phototriodes (VPTs) in the endcaps. 
+The design of the ECAL is driven by the behaviour of high-energy electrons, which predominantly lose energy in matter via bremsstrahlung, and high-energy photons by $e^+ e^-$ pair production. The characteristic amount of matter traversed for these interactions is the radiation length $X^0$, usually measured in units of g cm$^-2$. The radiation length is also the mean distance over which a high-energy electron loses all but $1/e$ of its energy via bremsstrahlung [CITE PDG]. Thus high granularity in $\eta$ and $\phi$, and the length of the ECAL crystals, is designed to capture the shower of $e/\gamma$ produced by electrons and photons.
 
 % back to 2008 JINST 3 S08004
 The barrel part of the ECAL (EB) covers the pseudorapidity range $|\eta| < 1.479$. The barrel granularity is 360-fold in $\phi$ and ($2 \times 85$)-fold in $\eta$. The crystal cross-section corresponds to approximately $0.0174 \times 0.0174$ in $\eta-\phi$ or $22 \times 22$ mm$^2$ at the front face of the crystal, and $26 \times 26$ mm$^2$ at the rear face. The crystal length is 230 mm, corresponding to 25.8 $X_0$.
@@ -90,6 +92,9 @@ The barrel part of the ECAL (EB) covers the pseudorapidity range $|\eta| < 1.479
 The ECAL read-out acquires the signals of the photodetectors. At each bunch crossing, digital sums representing the energy deposit in a trigger tower, comprising $5 \times 5$ crystals in $\eta \times \phi$, are generated and sent to the Level-1 trigger system (detailed in Section \ref{section:phase-1-l1-trigger}).
 
 \subsubsection{HCAL}
+% 2008 JINST 3 S08004
+The hadronic calorimeter (HCAL) of CMS measures hadronic energy, which is key to characterizing the presence of apparent missing transverse energy which could arise from hadron jets and neutrinos or exotic particles. A schematic of the components of HCAL are shown in Fig. \ref{fig:phase-1-HCAL-schematic}. The HCAL barrel (HB) and endcaps (HE) are located outside of the tracker and the ECAL, spanning a radius of 1.77 m (outer extent of ECAL) up to 2.95 m (inner extent of the magnet coil). An outer hadron calorimeter (HO) is placed outside the solenoid to complement the barrel calorimeter. Beyond $|\eta| = 3$, the forward hadron calorimeter (HF) at 11.2 m from the interaction point extend the pseudorapidity coverage to $|\eta| = 5.2$.
+
 \begin{figure}[ht]
     \centering
     \includegraphics[width=11cm]{figures/phase-1-HCAL-schematic.png}
@@ -97,38 +102,38 @@ The ECAL read-out acquires the signals of the photodetectors. At each bunch cros
     \label{fig:phase-1-HCAL-schematic}
 \end{figure}
 
-% 2008 JINST 3 S08004
-The hadronic calorimeter (HCAL) of CMS plays an important role in the measurement of hadron jets and neutrinos or exotic particles resulting in apparent missing transverse energy. A view of the CMS detector showing the components of HCAL is shown in Fig. \ref{fig:phase-1-HCAL-schematic}. The HCAL barrel (HB) and endcaps (HE) are located outside of the tracker and the ECAL. The hadron calorimeter barrel is radially restricted between the outer radius of the electromagnetic calorimeter at a radius of 1.77 m, and the inner extent of the magnet coil at radius 2.95 m. An outer hadron calorimeter (HO) is placed outside the solenoid to complement the barrel calorimeter. Beyond $|\eta| = 3$, the forward hadron calorimeter (HF) at 11.2 m from the interaction point extend the pseudorapidity coverage to $|\eta| = 5.2$.
 
 % 2008 JINST 3 S08004
-The HB is a sampling calorimeter covering the pseudorapidity range $|\eta| < 1.3$. It consists of 36 identical azimuthal wedges which form two half-barrels (HB+ and HB-). Each wedge is segmented into four azimuthal angle ($\phi$) sectors. The plastic scintillator is divided into 16 $\eta$ sectors, resulting in a segmentation of $(\Delta \eta, \Delta \phi) = (0.087, 0.087)$. The HE covers pseudorapidity $1.3 < |\eta| < 3$, and the design is driven by the need to minimize the cracks between HB and HE, rather than single-particle energy resolution, since the resolution of jets in HE will be limited by pileup, magnetic field effects, and parton fragmentation. 
+% CMS-TDR-010 https://cds.cern.ch/record/1481837/files/CMS-TDR-010.pdf
+The HB is a sampling calorimeter covering the pseudorapidity range $|\eta| < 1.3$. It consists of 36 identical azimuthal wedges which form two half-barrels (HB+ and HB-), with a segmentation of $(\Delta \eta, \Delta \phi) = (0.087, 0.087)$. The HE covers pseudorapidity $1.3 < |\eta| < 3$. The HB and endcap HE calorimeters are sampling calorimeters which use brass as the absorber and plastic scintillator as the active material. Light from the plastic scintillator is wavelength-shifted and captured in optic fibers which are read out by front-end electronics [CITE]. % last one is CMS-TDR-010
 
 % 2008 JINST 3 S08004
-In the central pseudorapidity region, the combined stopping power of EB plus the HB is insufficient to contain hadron showers [CITE]. To ensure adequate sampling depth, the hadron calorimeter is extended with a tail catcher, the HO. The size and position of the tiles are designed to roughly map the layers of the HB to make towers with the same granularity of $0.087 \times 0.087$ in $\eta$ and $\phi$. The HO is physically divided in 5 rings in $\eta$ conforming to the muon ring structure. 
+In the central pseudorapidity region, the combined stopping power of EB plus the HB is insufficient to contain hadron showers [CITE]. To ensure adequate sampling depth, the hadron calorimeter is extended with a tail catcher, the HO. The size and position of the tiles are designed to roughly map the layers of the HB to make towers with the same granularity of $0.087 \times 0.087$ in $\eta$ and $\phi$. HO uses the same active material as the HB and HE calorimeters, but uses the steel return yoke and magnet material of CMS as absorbers [CITE]. % last one is CMS-TDR-010
 
+% first citation is CMS-TDR-010
 % 2008 JINST 3 S08004
-The HF is foremost designed to survive in the harsh radiation conditions and high particle flux of the forward region. On average, 760 GeV per proton-proton interaction is deposited into the two forward calorimeters, compared to only 100 GeV for the rest of the detector [CITE]. Furthermore, this energy has a pronounced maximum at the highest rapidities. As a result of these radiation considerations, quartz fibers are used as the active medium. The signal is generated when charged shower particles above the Cherenkov threshold 
+The HF is a Cherenkov calorimeter based on a steel absorber and quartz fibers which run longitudinally through the absorber and collect Cherenkov light, primarily from the electromagnetic component of showers developed in the calorimeter [CITE]. Photomultiplier tubes are used to  collect light from the quartz fibers. The HF is designed to survive in the harsh radiation conditions and high particle flux of the forward region. On average, 760 GeV per proton-proton interaction is deposited into the two forward calorimeters, compared to only 100 GeV for the rest of the detector [CITE]. Furthermore, this energy has a pronounced maximum at the highest rapidities.
 
 \subsubsection{Muon detectors}
 
 % 2008 JINST 3 S08004
-The CMS muon system is designed to have the capability of reconstructing the momentum and charge of muons over the kinematic range of the LHC, since muons are a powerful handle on signatures of interesting processes over the high background rate of the LHC. For instance, the decay of the Standard Model Higgs boson into $ZZ$, which in turn decay to 4 leptons, can be reconstructed with high 4-particle mass resolution if all the leptons are muons, since muons are less affected than electrons by radiative losses in the tracker material. The muon system consists of a cylindrical barrel section and two planar endcap regions.
+The CMS muon system is designed to have the capability of reconstructing the momentum and charge of muons over the kinematic range of the LHC, since muons are a powerful handle on signatures of interesting processes over the high background rate of the LHC. For instance, the decay of the Standard Model Higgs boson into $ZZ$, which in turn decay to 4 leptons, can be reconstructed with high 4-particle mass resolution if all the leptons are muons, since muons are less affected than electrons by radiative losses in the tracker material. 
+
+% 2008 JINST 3 S08004, page 165
+The muon system consists of a cylindrical barrel section and two planar endcap regions. The barrel muon detector consists of drift tube (DT) chambers covering the pseudorapidity region $|\eta| < 1.2$ (Fig. \ref{fig:phase-1-muon-barrel-DT-schematic}). The DTs can be used as tracking detectors due to the barrel region's characteristical low neutron-induced backgrounds, low muon rate, and relatively uniform 4T magnetic field contained in the steel yoke. 
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=11cm]{figures/phase-1-muon-barrel-DT-schematic.png}
-    \caption{Layout of the CMS barrel muon DT chambers in one of the five wheels from [CITE 2008 JINST 3 S08004].}
+    \caption{Layout of the CMS barrel muon drift tube (DT) chambers in one of the five wheels from [CITE 2008 JINST 3 S08004]. The DTs are organized in 12 sectors of the yoke barrel (YB). In each of the 12 sectors of the yoke, there are 4 muon chambers per wheel (MB1, MB2, MB3, and MB4).}
     \label{fig:phase-1-muon-barrel-DT-schematic}
 \end{figure}
 
-% 2008 JINST 3 S08004, page 165
-The barrel muon detector deploys drift tube (DT) chambers covering the pseudorapidity region $|\eta| < 1.2$. In the barrel region, the neutron-induced background is small, the muon rate is low, and the 4T magnetic field is uniform and mostly contained in the steel yoke. The low expected rate allows the use of the DTs as tracking detectors for the barrel muon system. A DT chamber is made of 3 or 2 superlayers, each made of 4 layers of rectangular drift cells staggered by a cell. Since two detector layers (one inside the yoke and the other outside) would be insufficient for reliable identification and identification, two additional layers of DTs are embedded within the yoke iron. In each of the 12 sectors of the yoke, there are 4 muon chambers per wheel, labeled MB1, MB2, MB3, and MB4 in Fig. \ref{fig:phase-1-muon-barrel-DT-schematic}. 
-
 % 2008 JINST 3 S08004
-In the two endcap regions, the muon rates and background levels are high and the magnetic field is large and non-uniform. Here, the muon system uses cathode strip chambers (CSC) to identify muons between $0.9 < |\eta| < 2.4$. The cathode strips of each chamber run radially outwards and provide a precision measurement in the $r-\phi$ bending plane. The anode wires run approximately perpendicular to the strips and are read out in order to measure $\eta$ and the beam-crossing time of a muon. 
+In the two endcap regions, the muon rates and background levels are high and the magnetic field is large and non-uniform. Here, the muon system uses cathode strip chambers (CSCs) to identify muons between $0.9 < |\eta| < 2.4$. The cathode strips of each chamber run radially outwards and provide a precision measurement in the $r-\phi$ bending plane. The anode wires run approximately perpendicular to the strips and are read out in order to measure $\eta$ and the beam-crossing time of a muon. 
 
 % 2008 JINST 3 S08004, page 164
-In addition to the DT and CSC, a dedicated trigger system consisting of resistive plate chambers (RPC) in the barrel and endcap regions provide a fast, independent, and highly-segmented trigger with a sharp $p_T$ threshold over a large portion of the pseudorapidity range ($|\eta| < 1.6$) of the muon system. The RPCs are double-gap chambers, operated in avalanche mode to ensure good operation at high rates. They have good time resolution but coarser position resolution compared to the DTs or CSCs. The RPCs also play a role in resolving ambiguities in reconstructing tracks from multiple hits in a chamber. 
+In addition to the DT and CSC, a dedicated trigger system consisting of resistive plate chambers (RPCs) in the barrel and endcap regions provide a fast, independent, and highly-segmented trigger with a sharp $p_T$ threshold over a large portion of the pseudorapidity range ($|\eta| < 1.6$) of the muon system. RPCs have good time resolution but coarser position resolution compared to the DTs or CSCs. The RPCs also play a role in resolving ambiguities in reconstructing tracks from multiple hits in a chamber. 
 
 \subsection{The Level-1 Trigger}
 \label{section:phase-1-l1-trigger}
