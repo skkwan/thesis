@@ -17,33 +17,41 @@
 \begin{document}
 
 \section{The Standard Model}
+The Standard Model is the current prevailing theoretical framework that encompasses all known elementary particles to date and describes their interactions, yet falls short of describing open problems in physics. Here, we introduce the Standard Model (Section \ref{section:SM-history}) and provide a mathematical motivation of the SM a gauge theory (Section \ref{section:SM-as-gauge-theory}). We introduce the Higgs mechanism (Section \ref{section:Higgs-mechanism}), and outline two groups of theoretical extensions to the Standard Model that feature extended Higgs sectors (Sections \ref{section:theory-2HDM} and \ref{section:theory-TRSM}).
 
 \subsection{History of the Standard Model}
+\label{section:SM-history}
 % source: http://www.physics.ufl.edu/~ramond/JourneysChapter2_CUP.pdf
-The building blocks of our prevailing picture of elementary particle physics were established over the course of decades by experimental discoveries and theoretical advances, culminating in the development of a theoretical framework known as the Standard Model (SM). In the 1880s, the electron was the first subatomic particle to be identified, through measurements of particles produced by ionizing gas. By the 1930s, atoms were known to consist mostly of empty space, with protons and neutrons concentrated at the center and orbited by electrons. Spurred by advances in particle accelerator technology, the experimental discoveries of the positron, the muon, and the pion, painted an increasingly complicated picture of particle physics that could not be described solely with atomic physics.
+The building blocks of our modern-day understanding of particle physics were established over the course of decades by experimental discoveries and theoretical advances, culminating in the development of a theoretical framework known as the Standard Model (SM). In the 1880s, the electron was the first subatomic particle to be identified, through measurements of particles produced by ionizing gas. By the 1930s, atoms were known to consist mostly of empty space, with protons and neutrons concentrated at the center and orbited by electrons. Spurred by advances in particle accelerator technology, the experimental discoveries of the positron, the muon, and the pion, painted an increasingly complicated picture of particle physics that could not be described solely with atomic physics.
+
 
 In the absence of a theoretical framework describing these particles, in the 1960s and 1970s physicists and mathematicians developed the Standard Model to describe and encompass these fundamental particles and the forces that govern their interactions. The particle content of the Standard Model is shown in Fig. \ref{fig:intro-standard-model}: they are grouped into fermions, which comprise all known matter, and bosons, which mediate the interactions between particles.
-
-Fermions consist of quarks and leptons, and are grouped into three generations. For example, the electron belongs to the first generation of leptons. The second and third generation counterparts of the electron are the muon and the tau lepton, and are over 200 and 30,000 times heavier than the electron respectively. Bosons are force carriers; the interaction of fermions with bosons corresponds to fundamental forces. The Standard Model describes the electromagnetic force, the strong nuclear force, and the weak nuclear force.
 
 % https://en.wikipedia.org/wiki/File:Standard_Model_of_Elementary_Particles.svg
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=8cm]{figures/Standard_Model_of_Elementary_Particles.pdf}
+    \includegraphics[width=8cm]{figures/Standard_Model_of_Elementary_Particles.png}
     \caption{Table of Standard Model particles [CITE], showing the grouping of the fermions into three generations of matter and the bosons, responsible for carrying the three fundamental forces in the Standard Model. The masses, charges, and spins of the particles are shown. The antimatter counterparts of the fermions are not shown. The possible interactions between the fermions and gauge bosons are highlighted.}
     \label{fig:intro-standard-model}
 \end{figure}
 
 
+Fermions consist of quarks and leptons, and are grouped into three generations. For example, the electron belongs to the first generation of leptons. The second and third generation counterparts of the electron are the muon and the tau lepton, and are over 200 and 30,000 times heavier than the electron respectively. Bosons are force carriers; the interaction of fermions with bosons corresponds to fundamental forces. The Standard Model describes the electromagnetic force, the strong nuclear force, and the weak nuclear force.
+
 
 \subsection{The Standard Model as a gauge theory}
-
+\label{section:SM-as-gauge-theory}
 
 \subsubsection{Gauge invariance}
 % CITE: https://www.degruyter.com/document/doi/10.1515/9781400839353/html
 Gauge theories of elementary particle interactions originate from a freedom of choice in the mathematical description of particle fields which has no effect on the particles' physical states [CITE]. The existence and form of the particles' interactions, can be deduced from the existence of physically indeterminate, gaugable quantities.
 
-An example of this gauge invariance is classical physics is the electromagnetic interaction, where the fundamental field is the four-vector potential $A^\mu$. The physical electromagnetic fields and Maxwell's equations arise from the elements of the tensor $F_{\mu\nu}(x) = \partial_\mu A_\nu (x) - \partial_\nu A_\mu (x)$. Any two choices of $A^\mu$ that are related by a transformation of the form \begin{equation} A_\mu \rightarrow A_\mu + \partial_\mu \alpha \label{eqn:gauge_symmetry}\end{equation} for any real, differentiable function $\alpha(x)$, describe the same physical configuration, and has no effect on Maxwell's equations. This ``redundancy'' in the choice of gauge in Eqn. \ref{eqn:gauge_symmetry} is called a gauge symmetry.
+An example of this gauge invariance is classical physics is the electromagnetic interaction, where the fundamental field is the four-vector potential $A^\mu$. The physical electromagnetic fields and Maxwell's equations arise from the elements of the tensor $F_{\mu\nu}(x) = \partial_\mu A_\nu (x) - \partial_\nu A_\mu (x)$. Any two choices of $A^\mu$ that are related by a transformation of the form
+
+\begin{equation}
+    A_\mu \rightarrow A_\mu + \partial_\mu \alpha
+    \label{eqn:gauge_symmetry}
+\end{equation} for any real, differentiable function $\alpha(x)$, describe the same physical configuration, and has no effect on Maxwell's equations. This ``redundancy'' in the choice of gauge in Eqn. \ref{eqn:gauge_symmetry} is called a gauge symmetry.
 
 One important consequence of gauge symmetry comes from the application of Noether's theorem, which states that for every global transformation under which the Lagrangian density is invariant, there exists a conserved quantity. If $\mathcal{L}(\Psi(x), \partial_\mu \Psi(x))$ is invariant under the transformation of the wave function $\Psi(x) \rightarrow \Psi'(x)$, where $\Psi'(x) = \Psi(x) + \delta \Psi(x)$, then there exists a conserved current 
 \begin{equation}
@@ -94,6 +102,7 @@ In the case of the Standard Model, the theory is built around the gauge transfor
 The invariance of the Standard Model under $SU(3)_C \times SU(2)_L \times U(1)_Y$ requires massless fermions and massless force carriers.  
 
 \subsection{The Higgs Mechanism}
+\label{section:Higgs-mechanism}
 % CITE: https://www.degruyter.com/document/doi/10.1515/9781400839353/html
 To introduce mass into the theory, i.e. to change the propagation of the gauge particles and all the fermions, the physical vacuum cannot have all the symmetries of the Standard Model Lagrangian [CITE]. The symmetries of the physical vacuum must be spontaneously broken, without affecting gauge invariance in the Lagrangian. The Higgs mechanism proposes the existence of a scalar field, or fields, with nonzero vacuum expectation values, which reduce the gauge symmetries of the physical vacuum from $SU(3)_C \times SU(2)_L \times U(1)_Y$ down to $SU(3)_C \times U(1)_{EM}$.
 
@@ -132,7 +141,7 @@ The excitations of the Higgs field with respect to the minimum $\Phi_{\text{min}
 Three degrees of freedom are coupled directly to the electroweak gauge bosons; this is often referred to as the gauge bosons ``eating up'' the Goldstone bosons to form the longitudinal polarizations of the massive spin-1 boson states. The $H(x)$ excitation is in the radial direction and corresponds to the free particle state of the Higgs boson. 
 
 \subsection{Two-Higgs Doublet Models}
-
+\label{section:theory-2HDM}
 % This entire section is taken from
 % https://journals.aps.org/prd/abstract/10.1103/PhysRevD.90.075004
 
@@ -176,6 +185,7 @@ If this singlet only couples to the Higgs doublets $H_{1,2}$ and has no direct Y
 In 2HDM, and by extension 2HDM+S, there are four types of fermion couplings commonly discussed in the literature that forbid flavour-changing neutral currents at tree level. These are referred to as Type I (all fermions couple to $H_2$), Type II (MSSM-like, $d_R$ and $e_R$ couple to $H_1$, $u_R$ to $H_2$), Type III (lepton-specific, leptons and quarks couple to $H_1$ and $H_2$ respectively) and Type IV (flipped, with $u_R$, $e_R$ coupling to $H_2$ and $d_R$ to $H_1$). The exact branching ratios of the pseudoscalars to Standard Model particles vary depending on the 2HDM+S model and the value of $\tan\beta$ (e.g. Fig. \ref{fig:curtin-2014-fig-4-typeI-BRs}).
 
 \subsection{Two Real Singlet Model}
+\label{section:theory-TRSM}
 % [CITE] https://arxiv.org/pdf/1908.08554.pdf 
 The two real singlet model (TRSM) adds two real singlet degrees of freedom to the Standard Model. These are written as two real singlet fields $S$ and $X$. Depending on the vacuum expectation values acquired by the scalars, different phases of the model can be realized [CITE]. To reduce the number of free parameters, two discrete $\mathbb{Z}_2$ symmetries are introduced. The fields are decomposed as
 
