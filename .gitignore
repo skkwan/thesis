@@ -3,6 +3,11 @@
 *.fls
 *.log
 *.out
+*.toc
+*.fls
+*.lof
+*.lot
+*.bak
 .DS_store
 */.DS_store
 *.synctex.gz
