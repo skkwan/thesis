@@ -7,7 +7,11 @@
 \usepackage{graphicx}
 %\usepackage[colorlinks=true, allcolors=blue]{hyperref}
 %\usepackage{setspace}
-%\usepackage[round, longnamesfirst]{natbib} % for nice bibliography
+\usepackage[square, numbers]{natbib} % for nice bibliography
+\bibliographystyle{unsrtnat}
+
+% \usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
+
 
 \title{The}
 \submitted{May 2024}  %graduation date
@@ -24,6 +28,7 @@
 
 \begin{document}
 
+
 \chapter{Introduction}
 \input{ch-1-introduction}
 
@@ -35,16 +40,18 @@
 
 \chapter{The Phase-2 Upgrade of CMS}
 \input{ch-4-phase2}
-%\input{./Chapters/analysis}
+
+\chapter{Event reconstruction}
+\input{ch-5-event-reconstruction}
+
 
 % \appendix
 % \chapter{Code}
 % \input{./Chapters/code}
 
 
-\bibliographystyle{abbrv}
-\bibliography{refs} \label{bib}
-
+\bibliography{Thesis} \label{bib}
+%\nocite{*}
 
 \end{document}
 

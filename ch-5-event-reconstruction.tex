@@ -1,31 +1,7 @@
-\documentclass{article}
+We review the properties of the particles most pertinent to the analyes presented in this work (taus, muons, electrons, and b-jets), their resulting signatures in the CMS detector, and dedicated reconstruction techniques used at CMS.
 
-% Language setting
-% Replace `english' with e.g. `spanish' to change the document language
-\usepackage[english]{babel}
-
-\usepackage{csquotes}
-
-% Set page size and margins
-% Replace `letterpaper' with `a4paper' for UK/EU standard size
-\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
-
-% Useful packages
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{graphicx}
-\usepackage[colorlinks=true, allcolors=blue]{hyperref}
-\usepackage[backend=biber,style=numeric]{biblatex}
-
-\addbibresource{Thesis.bib}
-
-\begin{document}
-
-\section{Event reconstruction}
-In 2HDM+S and TRSM, the exotic Higgs decay to two light neutral scalar particles has a sizable probability of decaying to final states with tau leptons and bottom quarks. We review the particles' physical properties, the resulting signatures that these particles leave in the CMS detector, and dedicated reconstruction techniques used at CMS.
-
-\subsection{Taus}
-Tau leptons, with a mass of 1.776 GeV, are heavy enough to decay hadronically (i.e. to final states with hadrons) which it does so about 64.8\% of the time. These hadronic decays are denoted $\tau_{h}$. The remainder of the time, it decays to final states with the lighter leptons (electron or muon), termed leptonic decays. In all cases, at least one is produced, resulting in missing transverse energy in the CMS detector. The tau's largest decay branching ratios (proportional to probability of decay) are listed below \cite{workman_review_2022}: 
+\section{Taus}
+Tau leptons, with a mass of 1.776 GeV, are heavy enough to decay hadronically (i.e. to final states with hadrons) which it does so about 64.8\% of the time. These hadronic decays are denoted $\tau_{h}$. The remainder of the time, it decays to final states with the lighter leptons (electron or muon), termed leptonic decays. In all cases, at least one is produced, resulting in missing transverse energy in the CMS detector. The tau's largest decay branching ratios (proportional to probability of decay) are listed below \citep{workman_review_2022}: 
 \begin{itemize}
     \item 25.5\% decay to $\pi^- \pi^0 \nu_{\tau}$
     \item 17.8\% decay to $e^- \bar{\nu}_e \nu_{\tau}$
@@ -39,18 +15,16 @@ Thus in analyses containing $\tau\tau$ states, a distinction of the final states
 
 In the CMS detector, charged pions leave tracks in the tracking detector before being absorbed in the hadronic calorimeter. Due to presence of the tracks for the charged pions, they are called ``prongs'' in hadronic tau reconstruction, giving gives rise to the names ``1 prong", ``1 prong + $\pi^0$(s)", and ``3-prong'' for the dominant hadronic tau decay modes. Neutral pions decay to two photons which lose their energy in the electromagnetic calorimeter. Taus that decay to electrons and muons, are typically triggered on and reconstructed as electrons and muons respectively. 
 
-At CMS, hadronically decaying tau leptons are reconstructed with the hadron-plus-strips (HPS) algorithm \cite{CMS-TAU-14-001}, which is seeded with anti-$k_T$ jets. The HPS algorithm reconstructs $\tau_{h}$ candidates on the basis of the number of tracks and the number of ECAL strips in the $\eta-\phi$ plane with energy deposits, in the 1 prong, 1 prong + $\pi^0$(s), and 3-prong decay modes. A multivariate (MVA) discriminator, including isolation and lifetime information, is used to reduce backgrounds from quark- and gluon-initiated jets that are misidentified as $\tau_{h}$ candidates. 
+At CMS, hadronically decaying tau leptons are reconstructed with the hadron-plus-strips (HPS) algorithm \citep{CMS-TAU-14-001}, which is seeded with anti-$k_T$ jets. The HPS algorithm reconstructs $\tau_{h}$ candidates on the basis of the number of tracks and the number of ECAL strips in the $\eta-\phi$ plane with energy deposits, in the 1 prong, 1 prong + $\pi^0$(s), and 3-prong decay modes. A multivariate (MVA) discriminator, including isolation and lifetime information, is used to reduce backgrounds from quark- and gluon-initiated jets that are misidentified as $\tau_{h}$ candidates. 
 
-\subsection{Muons}
-Muons are identified with requirements on the quality of the track reconstruction and on the number of measurements in the tracker and the muon systems \cite{CMS-MUO-10-004}. In the standard CMS reconstruction, tracks are first reconstructed independently in the inner tracker (tracker track) and in the muon system (standalone-muon track). Next, these tracks are processed in two different methods. The first is Global Muon reconstruction (outside-in), which fits combined hits from the tracker track and standalone-muon track, using the Kalman-filter technique. At large transverse momenta, $p_{T} \gtrsim 200$ GeV, the global-muon fit can improve the momentum resolution compared to the tracker-only fit.  The second is Tracker Muon reconstruction (inside-out), which starts with tracker tracks with $p_{T} > 0.5$ GeV and total momentum $p_{T} > 2.5$ GeV. These tracks are extrapolated outwards to the muon system and matched to detector segments there, taking into account the magnetic field, expected energy losses, and multiple Coulomb scattering in the detector material. Tracker Muon reconstruction is more efficient than the Global Muon reconstruction at low momenta, $p \lesssim 5$ GeV, because it only requires a single muon segment in the muon system, where as Global Muon reconstruction typically requires segments in at least two muon stations.
+\section{Muons}
+Muons are identified with requirements on the quality of the track reconstruction and on the number of measurements in the tracker and the muon systems \citep{CMS-MUO-10-004}. In the standard CMS reconstruction, tracks are first reconstructed independently in the inner tracker (tracker track) and in the muon system (standalone-muon track). Next, these tracks are processed in two different methods. The first is Global Muon reconstruction (outside-in), which fits combined hits from the tracker track and standalone-muon track, using the Kalman-filter technique. At large transverse momenta, $p_{T} \gtrsim 200$ GeV, the global-muon fit can improve the momentum resolution compared to the tracker-only fit.  The second is Tracker Muon reconstruction (inside-out), which starts with tracker tracks with $p_{T} > 0.5$ GeV and total momentum $p_{T} > 2.5$ GeV. These tracks are extrapolated outwards to the muon system and matched to detector segments there, taking into account the magnetic field, expected energy losses, and multiple Coulomb scattering in the detector material. Tracker Muon reconstruction is more efficient than the Global Muon reconstruction at low momenta, $p \lesssim 5$ GeV, because it only requires a single muon segment in the muon system, where as Global Muon reconstruction typically requires segments in at least two muon stations.
 
-\subsection{Electrons}
-
-
-\subsection{B-jets}
+\section{Electrons}
+Electrons are identified with a multivariate discriminant combining several quantities describing the track quality, the shape of the energy deposits in the ECAL, and the compability of the the measurements from the tracker and the ECAL \citep{JINST-2015-10-P06005}.
 
 
-\printbibheading
-\printbibliography
+\section{B-jets}
 
-\end{document}
+
+
