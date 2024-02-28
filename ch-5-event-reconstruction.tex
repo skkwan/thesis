@@ -46,7 +46,22 @@ A global identification variable \citep{JINST-2015-10-P06005} is defined using a
 
 Electron isolation, i.e. the presence of energy deposits near the electron trajectory, is a separate key handle in rejecting significant background. Compared to isolated electrons, electrons from misidentified jets or genuine electrons within a jet resulting from semileptonic decays of $b$ or $c$ quarks tend to have significant energy deposits near the primary trajectory \citep{JINST-2015-10-P06005}. Offline analyses benefit from the PF technique for defining isolation, which sums the PF candidates reconstructed located within a specified isolation cone around the electron candidate, as in Eqn. \ref{eqn:definition-relative-isolation}.
 
-\section{B-jets}
+\section{Jets}
+The vast majority of processes of interest at the LHC contains quarks or gluons in the final state. These cannot be observed directly; in a process called hadronization, they fragment into spatially-grouped collections of particles called jets, which can be detected in the tracking and calorimeter systems. Hadronization and the subsequent decays of unstable hadrons can produce hundreds of nearby particles in the CMS detector. Jets are reconstructed by the PF algorithm (PF jets), or from the sum of the ECAL and HCAL energies deposited in the calorimeter towers (Calo jets). In PF jets, typically used in offline analyses, jets are built using the anti-$k_T$ (AK) clustering algorithm \cite{CMS-BTV-12-001}. The anti-$k_T$ algorithm iterates over particle pairs and finds the two that are closest in a distance measure $d$, and determines whether to combine them:
+\begin{equation}
+    d_{ij} = \text{min} \left(p_{T, i}^{-2}, \, p_{T, j}^{-2} \right) \frac{\Delta_{ij}^2}{R^2}, \, \,
+    \text{combine when $d_{ij} < p_{T,i}^{-2}$; stop when $d_{ij} > p_{T, i}^{-2}$}
+    \label{eqn:anti-kT}
+\end{equation}
+where $\Delta_{ij}^2 = (\eta_i - \eta_j)^2 + (\phi_i - \phi_j)^2$ and $p_{T, i}$, $\eta_i$, $\phi_i$ are the transverse momentum, rapidity, and azimuthal angle of particle $i$. The power $-2$ means that higher-momentum particles are clustered first, leading to jets that tend to be centered on the hardest (highest $p_T$) particle.
 
+There are several methods to remove contributions of pileup collisions from jet clustering \cite{CMS-PAS-JME-14-001}:
+\begin{itemize}
+    \item Charged hadron subtraction (CHS), which removes all charged hadron candidates associated with a track that is not associated with the primary vertex.
+    \item PileUp Per Particle Identification (PUPPI), which weighs input particles based on their likelihood of arising from pileup. QCD particles tend to have a collinear structure, compared to soft diffuse radiation coming from pileup. The local shape for charged pileup, used as a proxy for all pileup particles, is used on an event-by-event basis to calculate a weight for eaach particle. PUPPI is deployed in Run-2 and is more performant than CHS in high pileup scenarios, making this the predominant pileup subtraction method going forward and in the HL-LHC.
+\end{itemize}
+
+\section{B jets}
+Jets that arise from bottom-quark hadronization (b jets) have overwhelming background from processes involving jets from gluons (g) and light-flavour quarks (u, d, s), and from c-quark fragmentation.
 
 
