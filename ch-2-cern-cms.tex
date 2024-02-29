@@ -19,7 +19,7 @@ The CERN Large Hadron Collider (LHC) is an accelerator complex consisting of a 2
 % [CITE LINAC4 TDR] https://cds.cern.ch/record/2736208 
 The accelerator complex at CERN is a succession of machines that accelerate particles in stages until they reach their final energy of 6.5 TeV per beam [CITE] [CITE]. In Linear accelerator 4 (Linac4), negative hydrogen ions (hydrogen atoms with an additional electron) are accelerated to 160 MeV, and stripped of their two electrons, leaving only protons, before entering the Proton Synchrotron Booster (PSB). These protons are accelerated to 2 GeV, then to 26 GeV in the Proton Synchrotron (PS), and 450 GeV in the Super Proton Synchrotron (SPS). The protons are transferred to the two beam pipes of the LHC, where one beam circulates clockwise and the other counterclockwise. Each LHC ring takes 4 minutes and 20 seconds to fill, and it takes about 20 minutes for the protons to reach their maximum energy. During normal operating conditions, beams circulate for many hours inside the LHC ring.
 
-\section{Luminosity, pileup, and the High-Luminosity LHC}
+\section{Luminosity and pileup}
 % [CITE luminosity] https://cds.cern.ch/record/941318/
 The number of events generated per second by the LHC collisions is given by
 \begin{equation}
@@ -47,7 +47,15 @@ Peak luminosity at interaction points 1 and 5 reach values of $\sim 1.0 \times 1
 Per Eqn. \ref{eqn:nEvents}, the integrated luminosity over time is proportional to the number of events produced, and the size of LHC datasets is commonly presented in terms of integrated luminosity. Collider operation aims to optimize the integrated luminosity. Thus the exploration of rare events in the LHC collisions requires both high beam energies and high beam intensities.
 
 % [CITE https://iopscience.iop.org/article/10.1088/1748-0221/15/09/P09018]
-The LHC's nominal beam luminosities are sufficiently large for multiple proton-proton collisions to occur in the same time window of 25 nanoseconds in which proton bunches collide. These multiple collisions will lead to particle interactions overlapping in the detector. To measure a proton-proton collision, the single collision must be separated from overlapping collisions, which are called ``pileup'' collisions. A distribution of pileup in the data-taking years 2016-2018 is shown in Fig. \ref{fig:pileup-run-2}, with the assumption that the cross-section of inelastic proton-proton collisions is 69.2 mbarns. With the scaling of pileup vs. luminosity, higher luminosities thus create more intense pileup conditions, posing a greater challenge to detector performance and particle reconstruction and identification.
+The LHC's nominal beam luminosities are sufficiently large for multiple proton-proton collisions to occur in the same time window of 25 nanoseconds in which proton bunches collide. These multiple collisions will lead to particle interactions overlapping in the detector. To measure a proton-proton collision, the single collision must be separated from overlapping collisions, which are called ``pileup'' collisions. A distribution of pileup in the data-taking years 2016-2018 is shown in Fig. \ref{fig:pileup-run-2}. The pileup is defined as the average number of $pp$ collisions per bunch crossing.
+
+CMS reports an inelastic $pp$ cross section of $\sigma_{\text{inel}} = 68.6$ millibarns at a center-of-mass energy of $\sqrt{s} = 13$ TeV \cite{CERN-EP-2018-004-pileup}, which can be used to estimate pileup as follows:
+\begin{equation}
+    \text{Pileup} = \frac{\mathcal{L} \times \sigma_{\text{inel}}}{ n_b \cdot f}
+\end{equation}
+With the example values above, pileup can be estimated to be $\sim 22$.
+
+Thus, higher luminosities create more intense pileup conditions, posing a greater challenge to detector performance and particle reconstruction and identification.
 
 % [CITE https://iopscience.iop.org/article/10.1088/1748-0221/15/09/P09018/pdf]
 % [CITE HL-LHC]: https://cds.cern.ch/record/2749422
@@ -58,6 +66,7 @@ The LHC's nominal beam luminosities are sufficiently large for multiple proton-p
     \label{fig:pileup-run-2}
 \end{figure}
 
+\section{The High-Luminosity LHC}
 % [CITE HL-LHC]: https://cds.cern.ch/record/2749422
 The High-Luminosity LHC (HL-LHC) is a major upgrade of the LHC scheduled to take place in the late 2020s, that will increase the instantaneous luminosity by a factor of of five beyond the original design value, and the integrated luminosity by a factor of ten [CITE HL-LHC]. This will be accomplished through accelerator technological advances: for instance, reduction of the interaction point $\beta^*$ from 0.55 m down to 0.15 m by installation of new final-focusing magnets, and improvements in the geometric luminosity loss factor $F \approx 1$ through the installation of crab cavities that optimize the orientation of colliding bunches. A further discussion of the HL-LHC upgrades for the CMS detector follows in a later section.
 % TODO: Add the section label once I have it
