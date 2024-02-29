@@ -21,15 +21,16 @@ Corrections on identification efficiencies are applied to genuine electrons and 
 
 
 \section{Electron and muon ID, isolation, and tracking}
+Scale factors to correct for differences between data and MC in the identification, isolation, and tracking of the electrons and muons are taken from the Standard Model $H \rightarrow \tau\tau$ analysis \cite{CMS-HIG-16-043}, due to the similarities in event and object selection.
 
-
-\section{MET recoil corrections}
-
+\section{Recoil corrections}
+In proton-proton collisions, W and Z bosons are predominantly produced through quark-antiquark annihilation. Higher-order processes can induce radiated quarks or gluons that recoil against the boson, imparting a non-zero transverse momentum to the boson \cite{2009-Tevatron-recoil-correction}. Recoil corrections accounting for this effect are applied to samples with W+jets, Z+jets, and Higgs bosons. The corrections were derived by the $H \rightarrow \tau\tau$ working group. The corrections are applied on an event-by-event basis to the missing transverse energy, and are a function of the generator-level $p_{T}$ of the parent boson and number of jets in the event.
 
 \section{Drell-Yan corrections}
+The Z boson transverse momentum distribution disagrees between leading-order (LO) simulations and data in a $Z \rightarrow \mu\mu$ control region with at least one b-tag jet \cite{CMS-HIG-17-024}. Per-event weights derived by the 2016 data-only version of this analysis \cite{CMS-HIG-17-024} are applied to $Z \rightarrow \tau\tau / \ell \ell$ events, as a function of the generator-level Z boson $p_{T}$ to provide better matching of MC to data.
 
 \section{Pileup reweighing}
-
+Reweighing is performed to rescale MC events to account for differences between MC and data, in the distribution of the pileup (number of additional proton-proton interactions per bunch crossing). A tool for calculating the pileup reweighing for the MC samples used is provided centrally by the Luminosity POG \cite{twiki_LUMI_POG_recommendation}.
 
 \section{Trigger efficiencies}
 
