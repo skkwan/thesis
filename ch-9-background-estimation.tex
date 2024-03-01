@@ -1,0 +1,28 @@
+This section describes methods used to estimate sources of background from Standard Model processses in the search for $h \rightarrow aa \rightarrow bb\tau\tau$. Similar background estimation methods are being used for the $h \rightarrow a_1 a_2$ analysis. The background contributions directly taken from MC are described first, followed by backgrounds estimated from data-driven methods to produce sufficient statistics in the signal region.
+
+\section{Z+jets}
+
+A major source of background for $\tau\tau$ analyses is the Drell-Yan (DY) process (Z+jets). The Z boson decays to $\tau\tau/ \mu\mu/ ee$ with equal probability of 3.4\% each, with the dominant decay modes being to hadrons (around 70\%) and neutrinos (invisible) (20\%) \cite{workman_review_2022}. 
+
+The Drell-Yan contribution with genuine taus, Z $\rightarrow \tau\tau$, is estimated using embedded samples, described in Section \ref{sec:embedded-samples}. To avoid double-counting between embedded and MC samples, in all MC samples, events with legs that originated from genuine $\tau$ are discarded.
+
+The other decays of the Z, Z $\rightarrow ee$ and Z $\rightarrow \mu\mu$, are estimated from MC simulation, and are hereafter referred to as simply the Drell-Yan background. These MC samples are generated to leading order (LO) with different numbers of jets (jet multiplicity) in the matrix element: Z+1 jet, Z+2jets, Z+3 jets, Z+4 jets, and inclusive Z+jets. The cross-sections of the samples with $\geq 1$ jets are normalized to next-to-NLO (NNLO) in QCD.
+
+For the inclusive Drell-Yan sample, two samples are used with different thresholds for the di-lepton invariant mass ($m_{\ell}$) at the generator level: one with $m_{\ell\ell} > 50$ GeV and the other with $10 < m_{\ell\ell} < 50$. 
+
+\section{W+jets}
+
+The dominant W boson decay modes are to hadrons (67.4\%), $e + \nu_e$ (10.7\%), $\mu + \nu_\mu$ (10.6\%), and $\tau + \nu_\tau$ (11.4\%) \cite{workman_review_2022}.
+The W+jets background is estimated from MC simulation. Similarly to the Z+jets, the W+jets samples are generated with different jet multiplicities in the matrix element. LO samples are used for greater statistics and are normalized to NNLO cross sections. 
+
+\section{$t\bar{t}$ + jets}
+In hadron collisions, top quarks are produced singly with the weak interaction, or in pairs via the strong interaction, with interference between these leading-order processes possible in higher orders of the perturbation theory. 
+The top quark is the heaviest fermion in the Standard Model and has a short lifetime ($\sim 10^{-25}$ s), decaying without hadronization into a bottom quark and a W boson \cite{workman_review_2022}, with the decay modes of the W boson as listed in the previous section. With two top quarks, the final states of the two resulting W bosons can be described as fully leptonic, semileptonic, and fully hadronic. These three final states are modeled separately with MC simulation in 2018 and 2017, while for 2016 the sample used is inclusive.
+
+\section{Single top}
+% https://cms.cern/news/measurement-t-channel-single-top-quark-production-rates-pp-collisions-7-tev
+There are three main production modes of the single top in $pp$ collisions \cite{CMS-CR-2018-185}: the exchange of a virtual W boson ($t$ channel), the production and decay of a virtual W boson ($s$ channel), and the associated production of a top quark and W boson ($tW$, or W-associated) channel. As the $s$ channel process is rare and only 3\% of the total production, the dominant production mode of the $t-channel$ and the $tW$ production are considered and modeled with MC. 
+
+\section{Diboson}
+
+In $pp$ collisions, the production of dibosons (pairs of electroweak gauge bosons, i.e. WW, WZ, and ZZ) is dominated by quark-antiquark annihilation, with a small contribution from gluon-gluon interaction \cite{CMS-SMP-20-012}. MC is used to model the pair production and decays of VV to $2\ell 2\nu$, WZ to $2q 2\ell$ and $3 \ell \nu$, and ZZ to $4\ell$ and $2q 2\ell$ ($q$ being quarks and $\ell$ being leptons).
