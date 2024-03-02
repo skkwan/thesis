@@ -3,17 +3,14 @@ The $h \rightarrow aa \rightarrow 2b2\tau$ analysis (CMS CADI line HIG-22-007) i
 
 Data collected with the single muon trigger is used for the $\mu\tau_{h}$ channel. For the $e\tau_{h}$ channel, data collected with the single electron trigger is used; and for the $e\mu$ channel, data collected with the electron $+$ muon trigger is used. A more in-depth discussion of the triggers used follows in a later section.
 
-% TODO: put in this reference
+A full list of samples used can be found in the full documentation \cite{CMS-HIG-22-007} \cite{CMS-PAS-HIG-22-007}.
 
 \section{Monte Carlo samples}
 Modeling and computing observables originating from arbitrary physics processes at the tree level and at next-to-leading order (NLO) is performed by Monte Carlo (MC) event generators, such as Powheg and MadGraph5\_amC\@NLO \cite{Alwall_2014} \cite{Frederix_2018}. The information generated, e.g. the computation of the differential cross sections and kinematics of the final state particles, is saved in a compressed file and used to generate MC samples that are used in physics analyses. The samples are digitized using GEANT4 \cite{agostinelli_geant4simulation_2003}, a platform used at the LHC and other facilities to comprehensively simulate the passage of particles through matter. The digitized samples are passed through the same detector reconstruction as real data events collected in the detector.
 
 The samples for modeling the signal ($h \rightarrow aa \rightarrow 2b2\tau$ and $h\rightarrow a_1 a_2$) in the 2HDM+S and TRSM are generated at tree-level, for a range of masses of the light neutral scalar $a$. For $h \rightarrow aa$, the mass hypotheses for the $a$ range from $m_a = (12 \,\text{GeV}, 62.5 \,\text{GeV})$. For $h \rightarrow a_1 a_2$, the mass hypotheses for the two light scalars span combinations of $m_{a1}$, $m_{a2}$ ranging from $(12 \,\text{GeV}, 62.5 \,\text{GeV})$ for the two scalars.
 
-% TODO: put table of samples
 
 \section{Embedded samples}
 \label{sec:embedded-samples}
 An embedding technique is used to estimate background from the Standard Model $Z$ boson decaying to $\tau\tau$, from data with minimal simulation input \cite{CMS-TAU-18-001}. In data events selected to have $Z \rightarrow \mu\mu$ decays, all energy deposits of the recorded muons are removed from the event, and replaced with simulated tau leptons with the same kinematic properties as the removed muons. This results in a hybrid data format containing information from both observed and simulated events. The advantage of the Embedded samples is that the portions of the event that are difficult to model and describe (e.g. the underlying event or production of additional jets) are directly taken from data. 
-
-% TODO: put table of Embedded samples
