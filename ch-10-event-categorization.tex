@@ -1,0 +1,112 @@
+\section{Strategy}
+The increased statistics of the full Run-2 dataset enables the separation of events into events with exactly 1 b-tag jet and events with greater than 1 b-tag jet. Further event categorization is performed with deep neural networks (DNNs) described below. The DNNs  are used only for separating events into signal and control regions in the 1 b-tag and 2 b-tag jets scenarios. The final results are extracted from the statistical fitting to the mass of the $\tau\tau$ $m_{\tau\tau}$.
+
+\section{DNN-based event categorization}
+A brief overview of the DNN-based event categorization is given below with a focus on the physics aspects, with full details of the machine learning training in \cite{CMS-HIG-22-007} and associated documentation.
+
+\subsubsection{Training samples}
+Neural networks for event categorization are trained for each of the $\mu\tau_{h}$, $e\tau_{h}$, and $e\mu$ channels, for 1 and 2 b-tag jets, giving $3 \times 2 = 6$ networks in total. In the training, the signal is taken to be all of the possible pseudoscalar mass $m_{a}$ hypotheses together. The backgrounds for each DNN are taken to be a representative combination of the three major backgrounds: $Z \rightarrow \tau\tau$, $t\bar{t}$+jets, and fake backgrounds. The proportions of each background for each channel and b-tag jet multiplicity are taken from the yields in the $m_{\tau\tau}$ distribution. For instance, in the $\mu\tau_{h}$ 1 b-tag jet category, the composition of the background for training is 17.4\% from $Z \rightarrow \tau\tau$, 42.4\% from $t\bar{t}$+jets, and 40.2\% fakes.
+
+\subsubsection{Input variables}
+The input variables capture the key differences between the signal and the background:
+\begin{itemize}
+    \item Transverse momentum $p_{T}$ of the electron and muon in the $e\tau_{h}$ and $\mu\tau_{h}$ channels, where the signal tends to have a softer $p_{T}$ spectrum (lower energy) than the background.
+    \item $p_{T}$ of the b-tag jet(s). The signal sample b-tag jet(s) tend to have softer $p_{T}$.
+    \item Invariant masses of the various objects ($\tau\tau$ legs and the b-tag jet(s)), which tend to be smaller for the signal samples.
+    \item The angular separation $\Delta R$ between pairs of the objects, where signal samples peak at smaller $\Delta R$ values.
+    
+    \item The transverse mass between the missing transverse energy $p_{T}^{\text{miss}}$ and each of the four objects \cite{CMS-HIG-17-024}, defined as
+        \begin{equation}
+            m_{T}(\ell, p_{T}^{\text{miss}}) \equiv \sqrt{2 p_{T}^{\ell} \cdot p_{T}^{\text{miss}} [1 - \cos(\Delta \phi)]}
+        \end{equation}
+    where $p_{T}^\ell$ is the transverse momentum of the object $\ell$, and $\Delta \phi$ is the difference in azimuthal angle between the object and the $p_{T}^{\text{miss}}$. Events from $t\bar{t}$+jets and jets faking $\tau_{h}$ backgrounds have larger $p_{T}^{\text{miss}}$ resulting in larger transverse mass values compared to the signal, which tends to have smaller $p_{T}^{\text{miss}}$ that is also more aligned with the lepton legs.
+
+    \item The variable $D_{\zeta}$ \cite{CMS-HIG-17-024}, defined as
+        \begin{equation}
+            D_{\zeta} \equiv p_{\zeta} - 0.85 p_{\zeta}^{\text{vis}}
+        \end{equation}
+        where the $\zeta$ axis is the bisector of the transverse directions of the visible $\tau$ decay products. $p_{\zeta}$ is the compomnent of the $p_{T}^{\text{miss}}$ along the $\zeta$ axis, and $p_{\zeta}^{\text{vis}}$ is the sum of the components of the lepton $p_{T}$ along the same axis. This variable captures the fact that in signal the $p_{T}^\text{miss}$ is small and approximately aligned with the $\tau\tau$. In contrast, the $Z \rightarrow \tau\tau$ background tends towards large $D_{\zeta}$ values because the $p_{T}^{\text{miss}}$ is collinear to the $\tau\tau$, and the $t\bar{t}$+jets events tend to have small $D_{\zeta}$ due to a large $p_{T}^{\text{miss}}$ not aligned with the $\tau\tau$.
+
+    \item For events with 2 b-tag jets, one additional variable is defined to capture the difference in the invariant mass of the $bb$ and the $\tau\tau$:
+        \begin{equation}
+            \Delta m_{a_1} \equiv (m_{bb} - m_{\tau\tau})/{m_{\tau\tau}}
+        \end{equation}
+    This variable peaks at zero for the $h\rightarrow aa \rightarrow 2b2\tau$ signal.
+\end{itemize}
+
+\subsubsection{Categorization using the DNN score}
+
+After training, events in data, MC, and embedded are evaluated with the six DNNs and assigned a raw score between 0 and 1 (background-like or signal-like). In order to flatten the distribution of the score and define score thresholds for categorizing events, the raw output scores are transformed with the function $\tilde{p}(n) = \arctanh(p \times \tanh(n))/n$ where $n$ is a positive integer. The thresholds of the DNN score used for signal/control region definition are determined using scans that optimize the signal sensitivity and are shown in Tables \ref{table:1bNN-final-categories} and \ref{table:2bNN-final-categories}.
+
+\begin{table}[h!]
+    \begin{center}
+       \begin{tabular}{|c|c|c|c|c|}
+       \hline
+        & \multicolumn{3}{c}{1bNN $\tilde{p}(n=1.5)$} & \\
+       \hline
+        & SR1 & SR2 & SR3 & CR \\
+       \hline
+       $\mu\tau_{h}$ 2018 & $>$ 0.98 & $\in[0.95,0.98]$ & $\in[0.90, 0.95]$ & $<0.90$ \\
+       $\mu\tau_{h}$ 2017 & $>$ 0.97 & $\in[0.94,0.97]$ & $\in[0.90, 0.94]$ & $<0.90$ \\
+       $\mu\tau_{h}$ 2016 & $>$ 0.97 & $\in[0.94,0.97]$ & $\in[0.89, 0.94]$ & $<0.89$ \\
+       \hline
+       \hline
+        & \multicolumn{3}{c}{1bNN $\tilde{p}(n=1.5)$} & \\
+       \hline
+        & SR1 & SR2 & SR3 & CR \\
+       \hline
+       $e\tau_{h}$ 2018 & $>$ 0.97 & $\in[0.945,0.97]$ & $\in[0.90, 0.945]$ & $<0.90$ \\
+       $e\tau_{h}$ 2017 & $>$ 0.985 & $\in[0.965,0.985]$ & $\in[0.93, 0.965]$ & $<0.93$ \\
+       $e\tau_{h}$ 2016 & $>$ 0.985 & $\in[0.965,0.985]$ & $\in[0.93, 0.965]$ & $<0.93$ \\
+       \hline
+       \hline
+        & \multicolumn{3}{c}{1bNN $\tilde{p}(n=2.5)$} & \\
+       \hline
+        & SR1 & SR2 & SR3 & CR \\
+       \hline
+       $e\mu$ 2018 & $>$ 0.99 & $\in[0.95,0.99]$ & $\in[0.85, 0.95]$ & $<0.85$ \\
+       $e\mu$ 2017 & $>$ 0.985 & $\in[0.95,0.985]$ & $\in[0.85, 0.95]$ & $<0.85$ \\
+       $e\mu$ 2016 & $>$ 0.99 & $\in[0.95,0.99]$ & $\in[0.85, 0.95]$ & $<0.85$ \\
+       \hline
+      \end{tabular}
+    \end{center}
+    \caption{Event categorization based on DNN scores for events with exactly 1 b-tag jet (1bNN), for the three $\tau\tau$ channels and three eras.}
+    \label{table:1bNN-final-categories}
+\end{table}
+
+
+\begin{table}[h!]
+    \begin{center}
+       \begin{tabular}{|c|c|c|c|}
+       \hline
+        & \multicolumn{2}{c}{2bNN $\tilde{p}(n=1.5)$} & \\
+       \hline
+        & SR1 & SR2 & CR \\
+       \hline
+       $\mu\tau_{h}$ 2018 & $>0.99$ & $\in[0.96,0.99]$ & $<0.96$ \\
+       $\mu\tau_{h}$ 2017 & $>0.98$ & $\in[0.94,0.98]$ & $<0.94$ \\
+       $\mu\tau_{h}$ 2016 & $>0.97$ & $\in[0.93,0.97]$ & $<0.93$ \\
+       \hline
+       \hline
+        & \multicolumn{2}{c}{2bNN $\tilde{p}(n=1.5)$} & \\
+       \hline
+        & SR1 & SR2 & CR \\
+       \hline
+       $e\tau_{h}$ 2018 & $>0.96$ & NA & $<0.96$ \\
+       $e\tau_{h}$ 2017 & $>0.985$ & NA & $<0.985$ \\
+       $e\tau_{h}$ 2016 & $>0.96$ & NA & $<0.96$ \\
+       \hline
+       \hline
+        & \multicolumn{2}{c}{2bNN $\tilde{p}(n=2.5)$} & \\
+       \hline
+        & SR1 & SR2 & CR \\
+       \hline
+       $e\mu$ 2018 & $>0.98$ & $\in[0.94,0.98]$ & $<0.94$ \\
+       $e\mu$ 2017 & $>0.97$ & $\in[0.93,0.97]$ & $<0.93$ \\
+       $e\mu$ 2016 & $>0.98$ & $\in[0.94,0.98]$ & $<0.94$ \\
+       \hline
+      \end{tabular}
+    \end{center}
+    \caption{Event categorization based on DNN scores for events with 2 b-tag jets (2bNN), for the three $\tau\tau$ channels and three eras.}
+    \label{table:2bNN-final-categories}
+\end{table}
