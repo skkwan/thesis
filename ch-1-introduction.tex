@@ -1,20 +1,16 @@
-
-%\section{The Standard Model}
 The Standard Model is the current prevailing theoretical framework that encompasses all known elementary particles to date and describes their interactions, yet falls short of describing open problems in physics. Here, we introduce the Standard Model (Section \ref{section:SM-history}) and provide a mathematical motivation of the SM a gauge theory (Section \ref{section:SM-as-gauge-theory}). We introduce the Higgs mechanism (Section \ref{section:Higgs-mechanism}), and outline two groups of theoretical extensions to the Standard Model that feature extended Higgs sectors (Sections \ref{section:theory-2HDM} and \ref{section:theory-TRSM}).
 
 \section{History of the Standard Model}
 \label{section:SM-history}
-% source: http://www.physics.ufl.edu/~ramond/JourneysChapter2_CUP.pdf
-The building blocks of our modern-day understanding of particle physics were established over the course of decades by experimental discoveries and theoretical advances, culminating in the development of a theoretical framework known as the Standard Model (SM). In the 1880s, the electron was the first subatomic particle to be identified, through measurements of particles produced by ionizing gas. By the 1930s, atoms were known to consist mostly of empty space, with protons and neutrons concentrated at the center and orbited by electrons. Spurred by advances in particle accelerator technology, the experimental discoveries of the positron, the muon, and the pion, painted an increasingly complicated picture of particle physics that could not be described solely with atomic physics.
+The building blocks of our modern-day understanding of particle physics were established over the course of decades by experimental discoveries and theoretical advances, culminating in the development of a theoretical framework known as the Standard Model (SM). In the 1880s, the electron was the first subatomic particle to be identified, through measurements of particles produced by ionizing gas. By the 1930s, atoms were known to consist mostly of empty space, with protons and neutrons concentrated at the center and orbited by electrons. Spurred by advances in particle accelerator technology, the experimental discoveries of the positron, the muon, and the pion, painted an increasingly complicated picture of particle physics that could not be described solely with atomic physics \cite{frampton_journeys_2001}.
 
 
 In the absence of a theoretical framework describing these particles, in the 1960s and 1970s physicists and mathematicians developed the Standard Model to describe and encompass these fundamental particles and the forces that govern their interactions. The particle content of the Standard Model is shown in Fig. \ref{fig:intro-standard-model}: they are grouped into fermions, which comprise all known matter, and bosons, which mediate the interactions between particles.
 
-% https://en.wikipedia.org/wiki/File:Standard_Model_of_Elementary_Particles.svg
 \begin{figure}[ht]
     \centering
     \includegraphics[width=8cm]{figures/ch-1-introduction/Standard_Model_of_Elementary_Particles.png}
-    \caption{Table of Standard Model particles [CITE], showing the grouping of the fermions into three generations of matter and the bosons, responsible for carrying the three fundamental forces in the Standard Model. The masses, charges, and spins of the particles are shown. The antimatter counterparts of the fermions are not shown. The possible interactions between the fermions and gauge bosons are highlighted.}
+    \caption{Table of Standard Model particles showing the grouping of the fermions into three generations of matter and the bosons, responsible for carrying the three fundamental forces in the Standard Model. The masses, charges, and spins of the particles are shown. The antimatter counterparts of the fermions are not shown. The possible interactions between the fermions and gauge bosons are highlighted.}
     \label{fig:intro-standard-model}
 \end{figure}
 
@@ -26,10 +22,9 @@ Fermions consist of quarks and leptons, and are grouped into three generations. 
 \label{section:SM-as-gauge-theory}
 
 \subsection{Gauge invariance}
-% CITE: https://www.degruyter.com/document/doi/10.1515/9781400839353/html
-Gauge theories of elementary particle interactions originate from a freedom of choice in the mathematical description of particle fields which has no effect on the particles' physical states [CITE]. The existence and form of the particles' interactions, can be deduced from the existence of physically indeterminate, gaugable quantities.
+Gauge theories of elementary particle interactions originate from a freedom of choice in the mathematical description of particle fields which has no effect on the particles' physical states \cite{Tully+2012}. The existence and form of the particles' interactions, can be deduced from the existence of physically indeterminate, gaugable quantities.
 
-An example of this gauge invariance is classical physics is the electromagnetic interaction, where the fundamental field is the four-vector potential $A^\mu$. The physical electromagnetic fields and Maxwell's equations arise from the elements of the tensor $F_{\mu\nu}(x) = \partial_\mu A_\nu (x) - \partial_\nu A_\mu (x)$. Any two choices of $A^\mu$ that are related by a transformation of the form
+An example of this gauge invariance is classical physics is the electromagnetic interaction, where the fundamental field is the four-vector potential $A^\mu$ \cite{Tully+2012}. The physical electromagnetic fields and Maxwell's equations arise from the elements of the tensor $F_{\mu\nu}(x) = \partial_\mu A_\nu (x) - \partial_\nu A_\mu (x)$. Any two choices of $A^\mu$ that are related by a transformation of the form
 
 \begin{equation}
     A_\mu \rightarrow A_\mu + \partial_\mu \alpha
@@ -40,10 +35,10 @@ One important consequence of gauge symmetry comes from the application of Noethe
 \begin{equation}
     \partial_\mu \left( \frac{\partial\mathcal{L}(x)}{\partial(\partial_\mu \Psi(x))} \delta \Psi(x)  \right) = 0
 \end{equation}
-In classical mechanics, the conservation of linear momentum, angular momentum, and energy follows from translational invariance, rotational variance, and invariance under translations in time. Likewise, charge conservation can be shown to arise from the invariance of the Dirac Lagrangian density $\mathcal{L}_{\text{Dirac}} = \bar{\Psi} (i\gamma^\mu \partial_\mu -m)\Psi$ under the particle wavefunction's phase transformation, $\Psi'(x) = \exp(ie\chi) \Psi(x)$. Thus Noether's theorem establishes a correspondence between a gauge symmetry and a conserved internal property (e.g. charge or momentum).
+In classical mechanics, the conservation of linear momentum, angular momentum, and energy follows from translational invariance, rotational variance, and invariance under translations in time \cite{Tully+2012}. Likewise, charge conservation can be shown to arise from the invariance of the Dirac Lagrangian density $\mathcal{L}_{\text{Dirac}} = \bar{\Psi} (i\gamma^\mu \partial_\mu -m)\Psi$ under the particle wavefunction's phase transformation, $\Psi'(x) = \exp(ie\chi) \Psi(x)$. Thus Noether's theorem establishes a correspondence between a gauge symmetry and a conserved internal property (e.g. charge or momentum).
 
 \subsection{Local gauge symmetries}
-Interactions between particles arise if we modify the wave function with a phase transformation $\Psi'(x) = \exp(i e \chi) \Psi(x)$, and allow the phase $\chi$ to be a function of spacetime. A wave function of the form
+Interactions between particles arise if we modify the wave function with a phase transformation $\Psi'(x) = \exp(i e \chi) \Psi(x)$, and allow the phase $\chi$ to be a function of spacetime \cite{Tully+2012}. A wave function of the form
 \begin{equation}
     \Psi'(x) = \exp(i e \chi(x)) \Psi(x)
 \end{equation}
@@ -86,8 +81,7 @@ The invariance of the Standard Model under $SU(3)_C \times SU(2)_L \times U(1)_Y
 
 \section{The Higgs Mechanism}
 \label{section:Higgs-mechanism}
-% CITE: https://www.degruyter.com/document/doi/10.1515/9781400839353/html
-To introduce mass into the theory, i.e. to change the propagation of the gauge particles and all the fermions, the physical vacuum cannot have all the symmetries of the Standard Model Lagrangian [CITE]. The symmetries of the physical vacuum must be spontaneously broken, without affecting gauge invariance in the Lagrangian. The Higgs mechanism proposes the existence of a scalar field, or fields, with nonzero vacuum expectation values, which reduce the gauge symmetries of the physical vacuum from $SU(3)_C \times SU(2)_L \times U(1)_Y$ down to $SU(3)_C \times U(1)_{EM}$.
+To introduce mass into the theory, i.e. to change the propagation of the gauge particles and all the fermions, the physical vacuum cannot have all the symmetries of the Standard Model Lagrangian \cite{Tully+2012}. The symmetries of the physical vacuum must be spontaneously broken, without affecting gauge invariance in the Lagrangian. The Higgs mechanism proposes the existence of a scalar field, or fields, with nonzero vacuum expectation values, which reduce the gauge symmetries of the physical vacuum from $SU(3)_C \times SU(2)_L \times U(1)_Y$ down to $SU(3)_C \times U(1)_{EM}$.
 
 The Higgs field interacts with the gauge bosons and fermions throughout space, impeding their free propagation. The resulting broken symmetry correctly predicts the mass ratio of the neutral (Z) and charged (W) massive electroweak bosons, and predicts that at least one physical degree of freedom in the Higgs field is a particle degree of freedom, called the Higgs boson. The location of the minimum of the Higgs potential can be constrained from previously measured Standard Model parameters, but the shape of the mass distribution of the Higgs boson must be experimentally measured.
 
@@ -109,11 +103,10 @@ The potential energy is minimized at
 \end{equation}
 Choosing a fixed orientation of $\langle \Phi \rangle$ out of a continuous set of possible ground states spontaneously breaks the symmetry of the physical vacuum, as illustrated in Fig \ref{fig:higgs-potential}.
 
-% cite https://cds.cern.ch/record/1638469/plots
 \begin{figure}[ht]
     \centering
     \includegraphics[width=8cm]{figures/ch-1-introduction/higgs-potential.png}
-    \caption{An illustration of the Higgs potential [CITE]. Choosing any of the points at the bottom of the potential breaks spontaneously the rotational $U(1)$ symmetry.}
+    \caption[An illustration of the Higgs potential.]{An illustration of the Higgs potential \cite{Ellis:2013jnq}. Choosing any of the points at the bottom of the potential breaks spontaneously the rotational $U(1)$ symmetry.}
     \label{fig:higgs-potential}
 \end{figure}
 
@@ -121,16 +114,14 @@ The excitations of the Higgs field with respect to the minimum $\Phi_{\text{min}
 \begin{equation}
     \Phi(x) = \exp(i \boldsymbol{\xi}(x) \cdot \boldsymbol{\tau}) \frac{1}{\sqrt{2}} \begin{pmatrix} 0 \\ v + H(x) \end{pmatrix}
 \end{equation}
-Three degrees of freedom are coupled directly to the electroweak gauge bosons; this is often referred to as the gauge bosons ``eating up'' the Goldstone bosons to form the longitudinal polarizations of the massive spin-1 boson states. The $H(x)$ excitation is in the radial direction and corresponds to the free particle state of the Higgs boson. 
+Three degrees of freedom are coupled directly to the electroweak gauge bosons; this is often referred to as the gauge bosons ``eating'' the Goldstone bosons to form the longitudinal polarizations of the massive spin-1 boson states. The $H(x)$ excitation is in the radial direction and corresponds to the free particle state of the Higgs boson. 
 
 \section{Two-Higgs Doublet Models}
 \label{section:theory-2HDM}
-% This entire section is taken from
-% https://journals.aps.org/prd/abstract/10.1103/PhysRevD.90.075004
 
-One of the simplest possible extensions to the Standard Model is adding a doublet to the minimal Higgs sector of the Standard Model, which is a $SU(2)_L$ doublet $H$ with hypercharge $Y = +\frac{1}{2}$, denoted here as $H \sim 2_{+1/2}$. These extensions are found in several theories such as supersymmetry. A general 2HDM can be extended with a light scalar (2HDM+S) to obtain a rich set of exotic Higgs decays [CITE]. 
+One of the simplest possible extensions to the Standard Model is adding a doublet to the minimal Higgs sector of the Standard Model, which is a $SU(2)_L$ doublet $H$ with hypercharge $Y = +\frac{1}{2}$, denoted here as $H \sim 2_{+1/2}$. These extensions are found in several theories such as supersymmetry. A general 2HDM can be extended with a light scalar (2HDM+S) to obtain a rich set of exotic Higgs decays \cite{2HDM-PhysRevD.90.075004}. 
 
-The charges of the Higgs fields are chosen to be $H_1 \sim 2_{-1/2}$ and $H_2 \sim 2_{+1/2}$, which acquire vacuum expectation values $v_{1,2}$ which are assumed to be real and aligned. Expanding about the minima yields two complex and four real degrees of freedom:
+The charges of the Higgs fields are chosen to be $H_1 \sim 2_{-1/2}$ and $H_2 \sim 2_{+1/2}$, which acquire vacuum expectation values $v_{1,2}$ which are assumed to be real and aligned \cite{2HDM-PhysRevD.90.075004}. Expanding about the minima yields two complex and four real degrees of freedom:
 \begin{align}
     H_1 &= \frac{1}{\sqrt{2}} \begin{pmatrix} v_1 + H^{0}_{1, R} + iH^0_{1, I} \\  
                                               H^-_{1,R} + i H^-_{1, I}   \end{pmatrix} \\
@@ -138,7 +129,7 @@ The charges of the Higgs fields are chosen to be $H_1 \sim 2_{-1/2}$ and $H_2 \s
                                               v_2 + H^0_{2,R} + i H^0_{2, I}   \end{pmatrix} 
 \end{align}
 
-The charged scalar and pseudoscalar mass matrices are diagonalized by a rotation angle $\beta$, defined as $\tan\beta = v_2/v_1$. One charged (complex) field and one neutral pseudoscalar combination of $H^0_{1, 2, I}$ are eaten by the SM gauge bosons after electroweak symmetry breaking. The other complex field yields two charged mass eigenstates $H^\pm$, which are assumed to be heavy. The remaining three degrees of freedom yield one neutral pseudoscalar mass eigenstate 
+The charged scalar and pseudoscalar mass matrices are diagonalized by a rotation angle $\beta$, defined as $\tan\beta = v_2/v_1$. One charged (complex) field and one neutral pseudoscalar combination of $H^0_{1, 2, I}$ are eaten by the SM gauge bosons after electroweak symmetry breaking \cite{2HDM-PhysRevD.90.075004}. The other complex field yields two charged mass eigenstates $H^\pm$, which are assumed to be heavy. The remaining three degrees of freedom yield one neutral pseudoscalar mass eigenstate 
 \begin{equation}
     A = H^0_{1, I}\sin\beta - H^0_{2, I} \cos\beta
 \end{equation}
@@ -148,9 +139,9 @@ and two neutral scalar mass eigenstates (where $-\pi/2 \leq \alpha \leq pi/2$)
                                                               \cos\alpha & \sin\alpha \end{pmatrix}
                                              \begin{pmatrix} H^0_{1, R} \\ H^0_{2, R}  \end{pmatrix}
 \end{equation}
-We assume that the 2HDM is near or in the decoupling limit: $\alpha \rightarrow \pi/2 - \beta$, where the lightest state in the 2HDM is $h$, which we identify as the 125 GeV Higgs particle. In this limit, the fermion couplings of $h$ become identical to the Standard Model Higgs, while the gauge boson couplings are very close to Standard Model-like for $\tan\beta \gtrsim 5$. All of the properties of $h$ are determined by just two parameters: $\tan\beta$ and $\alpha$, and the fermion couplings to the two Higgs doublets. 
+We assume that the 2HDM is near or in the decoupling limit: $\alpha \rightarrow \pi/2 - \beta$, where the lightest state in the 2HDM is $h$, which we identify as the 125 GeV Higgs particle \cite{2HDM-PhysRevD.90.075004}. In this limit, the fermion couplings of $h$ become identical to the Standard Model Higgs, while the gauge boson couplings are very close to Standard Model-like for $\tan\beta \gtrsim 5$. All of the properties of $h$ are determined by just two parameters: $\tan\beta$ and $\alpha$, and the fermion couplings to the two Higgs doublets. 
 
-2HDM can be extended by a scalar singlet (2HDM+S):
+2HDM can be extended by a scalar singlet (2HDM+S) \cite{2HDM-PhysRevD.90.075004}:
 \begin{equation}
     S = \frac{1}{\sqrt{2}} (S_R + iS_I)
 \end{equation}
@@ -159,18 +150,16 @@ If this singlet only couples to the Higgs doublets $H_{1,2}$ and has no direct Y
 \begin{figure}[ht]
     \centering
     \includegraphics[width=15cm]{figures/ch-1-introduction/curtin-2014-figure-7-BRs-of-singlelike-pseudoscalar-type-II.png}
-    \caption{Figure 7 from Curtin et al. (2014): Branching ratios of a singlet-like pseudoscalar in Type II 2HDM+S for $tan\beta = 0.5$ (left) and $\tan\beta = 5$ (right), showing the dependence of the branching ratios on $\tan\beta$, as well as the prominence of the branching ratios to $bb$ and $\tau\tau$, the channels searched for in the analysis presented here.}
+    \caption[Branching ratios of a singlet-like pseudoscalar in Type II 2HDM+S for $\tan\beta = 0.5$ (left) and $\tan\beta = 5$ (right).]{Branching ratios of a singlet-like pseudoscalar in Type II 2HDM+S for $tan\beta = 0.5$ (\textit{left}) and $\tan\beta = 5$ (\textit{right}) from \cite{2HDM-PhysRevD.90.075004}, showing the dependence of the branching ratios on $\tan\beta$, as well as the prominence of the branching ratios to $bb$ and $\tau\tau$, the channels searched for in the analysis presented here.}
     \label{fig:curtin-2014-fig-4-typeI-BRs}
 \end{figure}
 
 
-% [CITE] continue citing https://journals.aps.org/prd/pdf/10.1103/PhysRevD.90.075004, before equation 14
-In 2HDM, and by extension 2HDM+S, there are four types of fermion couplings commonly discussed in the literature that forbid flavour-changing neutral currents at tree level. These are referred to as Type I (all fermions couple to $H_2$), Type II (MSSM-like, $d_R$ and $e_R$ couple to $H_1$, $u_R$ to $H_2$), Type III (lepton-specific, leptons and quarks couple to $H_1$ and $H_2$ respectively) and Type IV (flipped, with $u_R$, $e_R$ coupling to $H_2$ and $d_R$ to $H_1$). The exact branching ratios of the pseudoscalars to Standard Model particles vary depending on the 2HDM+S model and the value of $\tan\beta$ (e.g. Fig. \ref{fig:curtin-2014-fig-4-typeI-BRs}).
+In 2HDM, and by extension 2HDM+S, there are four types of fermion couplings commonly discussed in the literature that forbid flavour-changing neutral currents at tree level \cite{2HDM-PhysRevD.90.075004}. These are referred to as Type I (all fermions couple to $H_2$), Type II (MSSM-like, $d_R$ and $e_R$ couple to $H_1$, $u_R$ to $H_2$), Type III (lepton-specific, leptons and quarks couple to $H_1$ and $H_2$ respectively) and Type IV (flipped, with $u_R$, $e_R$ coupling to $H_2$ and $d_R$ to $H_1$). The exact branching ratios of the pseudoscalars to Standard Model particles vary depending on the 2HDM+S model and the value of $\tan\beta$ (e.g. Fig. \ref{fig:curtin-2014-fig-4-typeI-BRs}).
 
 \section{Two Real Singlet Model}
 \label{section:theory-TRSM}
-% [CITE] https://arxiv.org/pdf/1908.08554.pdf 
-The two real singlet model (TRSM) adds two real singlet degrees of freedom to the Standard Model. These are written as two real singlet fields $S$ and $X$. Depending on the vacuum expectation values acquired by the scalars, different phases of the model can be realized [CITE]. To reduce the number of free parameters, two discrete $\mathbb{Z}_2$ symmetries are introduced. The fields are decomposed as
+The two real singlet model (TRSM) adds two real singlet degrees of freedom to the Standard Model. These are written as two real singlet fields $S$ and $X$. Depending on the vacuum expectation values acquired by the scalars, different phases of the model can be realized \cite{Robens:2019kga}. To reduce the number of free parameters, two discrete $\mathbb{Z}_2$ symmetries are introduced. The fields are decomposed as
 
 \begin{equation}
     \Phi = \begin{pmatrix} 0 \\ \frac{\phi_h + v}{\sqrt{2}} \end{pmatrix}, 
@@ -183,29 +172,19 @@ To achieve electroweak-breaking symmetry, $v  = v_{SM} \sim 246$ 246 GeV is nece
 
 The mass eigenstates $h_{1,2,3}$ are related to the fields $\phi_{h,S,X}$ through a $3\times 3$ orthogonal mixing matrix denoted $R$. The mass eigenstates are assumed to be ordered $M_1 \leq M_2 \leq M_3$. $R$ is parameterized by the three mixing angles $\theta_{hS}$, $\theta_{hX}$, $\theta_{SX}$. The nine parameters of the scalar potential can be expressed in terms of the three physical Higgs masses, the three mixing angles, and the three vacuum expectation values. 
 
-After fixing one of the Higgs masses to the mass of the observed Higgs boson, and fixing the Higgs doublet vacuum expectation value to its Standard Model value, there are seven remaining free parameters of the TRSM.
+After fixing one of the Higgs masses to the mass of the observed Higgs boson, and fixing the Higgs doublet vacuum expectation value to its Standard Model value, there are seven remaining free parameters of the TRSM \cite{Robens:2019kga}.
 
-In one benchmark scenario of TRSM, the heaviest scalar state $h_3$ is identified with the 125 GeV Higgs, $h_{125}$, and it can decay asymmetrically $h_{125} \rightarrow h_1 h_2$, which we also denote $h \rightarrow a_1 a_2$ to highlight the similarity with the symmetric decay $h \rightarrow aa$ typically interpreted in 2HDM+S as discussed. The parameter values in TRSM are chosen such that the coupling of $h_3$ to Standard Model particles are nearly identical to the Standard Model predictions. 
+In one benchmark scenario of TRSM \cite{Robens:2019kga}, the heaviest scalar state $h_3$ is identified with the 125 GeV Higgs, $h_{125}$, and it can decay asymmetrically $h_{125} \rightarrow h_1 h_2$, which we also denote $h \rightarrow a_1 a_2$ to highlight the similarity with the symmetric decay $h \rightarrow aa$ typically interpreted in 2HDM+S as discussed. The parameter values in TRSM are chosen such that the coupling of $h_3$ to Standard Model particles are nearly identical to the Standard Model predictions. 
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=15cm]{figures/ch-1-introduction/Robens-TRSM-Figure-6-BP-1.png}
-    \caption{Benchmark plane BP1 for benchmark scenario 1 from [CITE] Robens et. al, for the decay signature $h_{125} \rightarrow h_1 h_2$ with $h_{125} \equiv h_3$, defined in the $(M_1, M_2)$ plane. The color code shows BR$(h_3 \rightarrow h_1 h_2)$ (\textit{top left}) and the 13 TeV LHC signal rate for $pp \rightarrow h_3 \rightarrow h_1 h_2$ (\textit{top right}). The red line separates the region $M_2 > 2 M_1$, where BR($h_2 \rightarrow h_1 h_1$) $\sim 100\%$, from the region $M_2 < 2 M_1$, where BR($h_2 \rightarrow F_{SM}$) $\sim 100\%$. The \textit{bottom left} and \textit{right} show the branching ratio of the $h_1 h_2$ into (respectively) $b\bar{b}b\bar{b}$, and through a $h_2 \rightarrow h_1 h_1$ cascade to $b\bar{b}b\bar{b}b\bar{b}$. The hatched region indicates where the decay rate slightly exceeds the $2\sigma$ upper limit inferred from the LHC Higgs rate measurements, though the region depends on the parameter choices and experimental searches should cover the whole mass range.}
+    \caption[Benchmark plane BP1 for benchmark scenario 1, for the decay signature $h_{125} \rightarrow h_1 h_2$ with $h_{125} \equiv h_3$, defined in the $(M_1, M_2)$ plane.]{Benchmark plane BP1 for benchmark scenario 1 from \cite{Robens:2019kga}, for the decay signature $h_{125} \rightarrow h_1 h_2$ with $h_{125} \equiv h_3$, defined in the $(M_1, M_2)$ plane. The color code shows BR$(h_3 \rightarrow h_1 h_2)$ (\textit{top left}) and the 13 TeV LHC signal rate for $pp \rightarrow h_3 \rightarrow h_1 h_2$ (\textit{top right}). The red line separates the region $M_2 > 2 M_1$, where BR($h_2 \rightarrow h_1 h_1$) $\sim 100\%$, from the region $M_2 < 2 M_1$, where BR($h_2 \rightarrow F_{SM}$) $\sim 100\%$. The \textit{bottom left} and \textit{right} show the branching ratio of the $h_1 h_2$ into (respectively) $b\bar{b}b\bar{b}$, and through a $h_2 \rightarrow h_1 h_1$ cascade to $b\bar{b}b\bar{b}b\bar{b}$. The hatched region indicates where the decay rate slightly exceeds the $2\sigma$ upper limit inferred from the LHC Higgs rate measurements, though the region depends on the parameter choices and experimental searches should cover the whole mass range.}
     \label{fig:trsm_bp1}
 \end{figure}
 
-In benchmark scenario 1 (benchmark plane 1, or BP1) (Fig. \ref{fig:trsm_bp1} from [CITE] Robens et. al), the maximal branching ratios for $h_3 \rightarrow h_1 h_2$ reach up to $7-8\%$ which translates into a signal rate of around 3 pb. These maximal branching ratios are reached in the intermediate mass state for $h_2$, $M_2 \sim 60 - 80$ GeV. For $M_2 < 40$ GeV, although phase space opens up significantly for light decay products, the branching ratio becomes smaller. 
+In benchmark scenario 1 (benchmark plane 1, or BP1) (Fig. \ref{fig:trsm_bp1}) \cite{Robens:2019kga}, the maximal branching ratios for $h_3 \rightarrow h_1 h_2$ reach up to $7-8\%$ which translates into a signal rate of around 3 pb. These maximal branching ratios are reached in the intermediate mass state for $h_2$, $M_2 \sim 60 - 80$ GeV. For $M_2 < 40$ GeV, although phase space opens up significantly for light decay products, the branching ratio becomes smaller. 
 
 If the decay channel $h_2 \rightarrow h_1 h_1$ is kinematically open (i.e. $M_2 > 2M_1$), it is the dominant decay mode leading to a significant rate for the $h_1 h_1 h_1$ final state, in a ``cascade" decay. In BP1, $BR(h_2 \rightarrow h_1h_1$) $\simeq 100\%$ above the red line in Fig. \ref{fig:trsm_bp1}. If, in addition, $M_1 \gtrsim 10$ GeV, the $h_1$ decays dominantly to $b\bar{b}$ leading to a sizable rate for the $b\bar{b}b\bar{b}b\bar{b}$ final state as shown in Fig. \ref{fig:trsm_bp1} (\textit{bottom right}).
 
-If the $h_2 \rightarrow h_1 h_1$ decay is kinematically closed (i.e. $M_2 < 2M_1$), both scalars decay directly to Standard Model particles, with branching ratios identical to a Standard Model-like Higgs boson, i.e. with the $b\bar{b}b\bar{b}$ final state dominating, as shown in Fig. \ref{fig:trsm_bp1} (\textit{bottom left}), while at smaller masses, combinations with $\tau$ leptons and eventually final states with charm quarks and muons become relevant.
-
-% \section{Sources}
-
-%     \begin{itemize}
-%         \item \texttt{https://www.space.com/standard-model-physics}
-%         \item \texttt{https://www.iop.org/explore-physics/big-ideas-physics/standard-model}
-%         \item Wikipedia
-%         \item \texttt{https://www.damtp.cam.ac.uk/user/tong/sm/standardmodel1.pdf}
-%     \end{itemize}
-
+If the $h_2 \rightarrow h_1 h_1$ decay is kinematically closed (i.e. $M_2 < 2M_1$), both scalars decay directly to Standard Model particles, with branching ratios identical to a Standard Model-like Higgs boson, i.e. with the $b\bar{b}b\bar{b}$ final state dominating, as shown in Fig. \ref{fig:trsm_bp1} (\textit{bottom left}), while at smaller masses, combinations with $\tau$ leptons and eventually final states with charm quarks and muons become relevant \cite{Robens:2019kga}.
