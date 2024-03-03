@@ -21,3 +21,11 @@ Classic SVFit is an improved algorithm of the original ``standalone" SVFit using
 
 \subsection{FastMTT: optimized SVFit}
 FastMTT \cite{CMS-AN-19-032-FastMTT} is a further simplification to the matrix element method of Classic SVFit which has comparable performance but is about 100 times faster. FastMTT drops the matrix element component of the computation without significant impact on the final mass resolution, and simplifies the computation of the transfer functions. The opening angle of the $\tau$ decay products with respect to the initial $\tau$ momenta approaches 0 for $\tau$ with high $\gamma = E_{\tau}/m_{\tau}$, with typical $\tau$ decays from the Z boson decays already satisfying this condition. In this collinear approximation, the dimensionality of the transfer function can be reduced in the computation of FastMTT, while still yielding similar results to Classic SVFit \cite{CMS-AN-19-032-FastMTT}. 
+
+
+\section{Signal extraction}
+
+A binned maximum likelihood fit is performed on the $m_{\tau\tau}$ distribution with the systematic uncertainties described in Chapter \ref{chapter:ch-11:systematic-uncertainties}. Event categories described in Section \ref{chapter:ch-10:event-categorization}, in all three channels, are included in a simultaneous fit. 
+
+Limits and confidence intervals are obtained using the modified frequentist CL$_s$ approach, with an asymptotic approximation to the distribution of the profile likelihood test statistic.
+
