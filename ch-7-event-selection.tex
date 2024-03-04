@@ -1,4 +1,4 @@
-\section{General procedure}
+\section{General procedure for all channels}
 For the search for $h \rightarrow aa \rightarrow bb\tau\tau$, three final states of the $\tau\tau$ system are considered: $\mu\tau_{h}$, $e\tau_{h}$, and $e\mu$. The $\tau_{h}\tau_{h}$ final state is not considered because signal events in the $\tau_{h}\tau_{h}$ channel would typically produce hadronic taus with momenta below data-taking trigger thresholds.
 
 In all three final states, events are required to have at least one b-tag jet passing the medium working point of the DeepFlavour tagger, with $p_{T} > 20$ GeV, and $|\eta| < 2.4$. A second b-tag jet is not required because such a requirement would reduce signal acceptance by 80\% compared to only requiring one b-tag jet.
@@ -8,29 +8,49 @@ Events in MC samples are sorted into one of the three $\tau\tau$ channels if the
 
 After sorting events by HLT paths and identifying the leading tau legs in the offline reconstructed objects, the $p_{T}$ of the offline objects is checked against the online trigger thresholds. Trigger matching is also performed, which checks the correspondence between each offline reconstructed object used in the analysis (e.g. a muon), and a trigger object in the HLT (e.g. a HLT muon). An offline object is considered to be matched, if it corresponds to a trigger object of the same object type, with $\Delta R < 0.5$. This matched trigger object is also required to pass the filter(s) of the HLT trigger.
 
-Further cuts are made on the offline objects in each channel to obtain the signal region, or other data regions used to perform data-driven background estimations.
+Further cuts are made on the offline objects in each channel to obtain the signal region, or other data regions used to perform data-driven background estimations. These are detailed below. 
 
 \section{Event selection in the $\mu\tau_{h}$ channel}
-
+\label{section:ch-7-event-selection-mutau}
 In all three years, a single muon trigger is used if the muon has sufficiently high $p_{T}$, otherwise a dilepton $\mu\tau_{h}$ cross-trigger is used (Tables \ref{table:trigger2016}, \ref{table:trigger2017}, and \ref{table:trigger2018}). For data taken in 2017-2018 (2016), the logical OR of the single muon triggers with online $p_{T}$ thresholds 24 and 27 (23) GeV is used, with the corresponding offline muon required to have with $p_{T}$ 1 GeV above the online threshold. For data taken in 2017-2018 (2016), a dilepton $\mu + \tau_{h}$ cross-trigger with $p_{T}$ thresholds of 20 (19) and 27 (20) GeV for the muon and tau respectively, is used. The $\tau_{h}$ is required to have $|\eta| < 2.3$ if the single trigger is fired, $|\eta| < 2.1$. 
 
-The muon and $\tau_h$ are required to have opposite charge and be separated by $\Delta R > 0.4$. The muon is required to pass the medium identification working point, and have a relative isolation (computed in a cone size of $\Delta R = 0.4$) of less than 0.15. The muon is required to have $|\eta| < 2.4$, and the $\tau_{h}$ is required to have $|\eta| < 2.3$ unless a cross-trigger is required, in which case we require $|\eta| < 2.1$ as discussed above.
+The muon and $\tau_h$ are required to have opposite charge and be separated by $\Delta R > 0.4$. The muon is required to have $|\eta| < 2.4$, and the $\tau_{h}$ is required to have $|\eta| < 2.3$ unless a cross-trigger is required, in which case we require $|\eta| < 2.1$ as discussed above.
 
+The muon is required to pass the medium identification (ID) working point \cite{twiki_MUON_POG_Run2_guide}, which is defined by the Muon POG as a loose muon (i.e. a Particle Flow muon that is either a global or a tracker muon - see Section \ref{section:ch-5-muon-reconstruction}) with additional requirements on track quality and muon quality. This identification criteria is designed to be highly efficiently for prompt muons and for muons from heavy quark decays. In addition to the ID, for prompt muons it is recommended to apply cuts on the impact parameter \cite{twiki_MUON_POG_Run2_guide}: we apply $|\Delta(z)| < 0.2$ and $|\Delta(xy)| < 0.045$. 
+
+In addition, a cut is applied on the muon relative isolation (defined in Section \ref{section:ch-5-muon-reconstruction}), to be less than 0.15 in a cone size of $\Delta R = 0.4$, which corresponds to the Tight Particle Flow isolation requirement \cite{twiki_MUON_POG_Run2_guide}.
+
+The $\tau_h$ is required to pass a cut on its impact parameter of $|\Delta(z)| < 0.2$. The $\tau_h$ is also required to pass the VLoose (Very Loose) DeepTau working point vs. electron, the Tight DeepTau working point vs. muons, and the VVVLoose and Medium DeepTau working point vs. jets. Events with taus reconstructed in two of the decay modes (labeled 5 and 6) are rejected, since these decay modes are meant to recover 3-prong taus, but are only recommended for use in analyses where the benefits in final significance outweigh the resulting increase in background \cite{twiki_TAU_POG_tauidrecommendationforrun2}.
+
+For the estimation of the background from jets faking $\tau_{h}$, which is described in Section \ref{section:ch-9-jet-faking-tauh-background}, anti-isolated events are selected, by requiring events to pass all the selections described above, except failing the Medium DeepTau working point vs. jets.
 
 \section{Event selection in the $e\tau_{h}$ channel}
+\label{section:ch-7-event-selection-etau}
 
 The HLT trigger paths for the $e\tau_{h}$ channel are summarized in Tables \ref{table:trigger2016}, \ref{table:trigger2017}, and \ref{table:trigger2018}. Similarly to the $\mu\tau_{h}$ channel, a single electron trigger is used if the electron has sufficiently high $p_{T}$ in 2018 and 2017. For data taken in 2018 (2017), the OR of the single electron triggers with online $p_{T}$ thresholds at 32 and 35 (27 and 32) GeV are used, with the corresponding offline electrons required to have $p_{T}$ greater than 33 (28) GeV. A $e + \tau_{h}$ cross-trigger is used for electrons with lower offline $p_{T}$ between 25 and 33 GeV (25 and 28 GeV). For the 2016 dataset, there is no cross trigger but only a single electron trigger with online $p_{T}$ threshold at 25 GeV, which is used if the offline electron has $p_{T}$ greater than 26 GeV.
 
-The electron and $\tau_h$ are required to have opposite charge and be separated by $\Delta R > 0.4$. The electron is required to be within $|\eta| < 2.3$ when no cross trigger is used, and $|\eta| < 2.1$ when the cross trigger is fired. The electron is also required to have a relative isolation (cone size of $\Delta R = 0.4$) of less than 0.15. The $\tau_{h}$ is required to have $|\eta| < 2.3$ if no cross trigger is fired, and have $|\eta| < 2.1$ if the cross trigger is fired.
+The electron and $\tau_h$ are required to have opposite charge and be separated by $\Delta R > 0.4$. The electron is required to be within $|\eta| < 2.3$ when no cross trigger is used, and $|\eta| < 2.1$ when the cross trigger is fired. The $\tau_{h}$ is required to have $|\eta| < 2.3$ if no cross trigger is fired, and have $|\eta| < 2.1$ if the cross trigger is fired.
 
-\section{Event selection $e\mu$ channel}
+The electron is required to have a relative isolation (same definition as in Section \ref{section:ch-5-muon-reconstruction}) of less than 0.1 in a cone size of $\Delta R = 0.3$, which is the standard recommended cone size giving minimal pileup dependence and reduced probability of other objects overlapping with the cone. The isolation quantity used includes an ``effective area'' (EA) correction to remove the effect of pileup in the barrel and endcap parts of the detector \cite{twiki_EGamma_cutbased_ID_info}.
 
+The electron is also required to pass cuts on its impact parameter of $|\Delta(z)| < 0.2$ and $|\Delta(xy)| < 0.045$. It is also required to pass the non-isolated MVA working point corresponding to 90\% efficiency. The electron's number of missing hits, which are gaps in its trajectory through the inner tracker \cite{twiki_EGamma_cutbased_ID_info}, must be less than or equal to 1. The electron must pass a conversion veto, which rejects electrons coming from photon conversions in the tracker, which should instead be reconstructed as part of the photon \cite{twiki_EGamma_cutbased_ID_info}.
+
+The impact parameter cut for the $\tau_h$ is  $|\Delta(z)| < 0.2$. In contrast to the $\mu\tau_{h}$ event selection, the vs. electron and vs. muon DeepTau working points are flipped, to reject muons faking the $\tau_{h}$ leg. The $\tau_h$ is required to pass the Tight DeepTau working point vs. electrons, the VLoose DeepTau working point vs. muons, and the Medium DeepTau working point vs. jets.
+
+As in the $\mu\tau_{h}$ channel, for the estimation of the background from jets faking $\tau_{h}$, which is described in Section \ref{section:ch-9-jet-faking-tauh-background}, anti-isolated events are selected, by requiring events to pass all the selections described above, except failing the Medium DeepTau working point vs. jets.
+
+\section{Event selection in the $e\mu$ channel}
+\label{section:ch-7-event-selection-emu}
 
 The HLT trigger paths for the $e\mu$ channel are summarized in Tables \ref{table:trigger2016}, \ref{table:trigger2017}, and \ref{table:trigger2018}. Events are selected with the logical OR of two $e+\mu$ cross triggers, where either the electron or muon can have larger $p_{T}$: (1) leading electron, where the electron has online $p_{T} > 23$ GeV and muon has online $p_{T} > 8$ GeV, or (2) leading muon, where electron has online $p_{T} > 12$ GeV and muon has online $p_{T}>23$ GeV.
 
-The leading and sub-leading leptons are required to have an offline $p_{T}$ greater than 1 GeV above the online threshold (i.e. $p_{T} > 24$ GeV). If the sub-leading lepton is the electron, the offline $p_{T}$ threshold is 1 GeV above the online ($p_{T} > 13$ GeV), but if it is a muon, the offline $p_{T}$ threshold is required to be at least 5 GeV greater than the online threshold (i.e. $p_T > 13$ GeV). This is because of poor data and simulation agreement for low-$p_T$ muons with $p_T$ between 9 GeV and 13 GeV, and the higher probability of mis-identifying jets as muons at lower $p_{T}$. With no effect on the expected limits, the offline $p_{T}$ threshold for muons is raised to 13 GeV instead of 9 GeV, even though it may lead to loss in signal acceptance. 
+The leading and sub-leading leptons are required to have an offline $p_{T}$ greater than 1 GeV above the online threshold (i.e. $p_{T} > 24$ GeV). If the sub-leading lepton is the electron, the offline $p_{T}$ threshold is 1 GeV above the online threshold ($p_{T} > 13$ GeV), but if it is a muon, the offline $p_{T}$ threshold is required to be at least 5 GeV greater than the online threshold (i.e. $p_T > 13$ GeV). This is because of poor data and simulation agreement for low-$p_T$ muons with $p_T$ between 9 GeV and 13 GeV, and the higher probability of mis-identifying jets as muons at lower $p_{T}$. With no effect on the expected limits, the offline $p_{T}$ threshold for muons is raised to 13 GeV instead of 9 GeV, even though it may lead to loss in signal acceptance. Both the electron and muon are required to be have $|\eta| < 2.4$.
 
-The electron and muon are required to have opposite charge and be separated by $\Delta R > 0.3$ (note the decreased separation requirement compared to the other two channels). The electron is required to pass the MVA identification wokring point with 90\% efficiency, and to have a relative isolation (cone size of $\Delta R = 0.4$) less than 0.1. The muon is required to pass the medium identification working point, and to have a relative isolation (cone size of $\Delta R = 0.4$) less than 0.15. Both the electron and muon are required to be within $|\eta| < 2.4$.
+The electron and muon are required to have opposite charge and be separated by $\Delta R > 0.3$ (note the decreased separation requirement compared to the other two channels). The electron is required to pass the non-isolated MVA identification working point corresponding to 90\% efficiency, and to have a relative isolation less than 0.1 for a cone size of $\Delta R = 0.3$ with the EA pileup subtraction correction. The electron must have one or fewer missing hits and pass the conversion veto (both described previously in Section \ref{section:ch-7-event-selection-etau}). 
+
+The muon is required to pass the medium identification working point (described earlier in \ref{section:ch-7-event-selection-mutau}), and to have a relative isolation less than 0.15 for a cone size of $\Delta R = 0.4$. The muon impact parameter is required to have $|\Delta(z)| > 0.2$ and $|\Delta(xy) < 0.045$. 
+
+For the QCD multijet background estimation described in Section \ref{section:ch-9-QCD-multijet-background}, the same-sign region is selected by requiring all the above selections, except the legs are required to have the same electric charge rather than opposite.
 
 
 \begin{table}[]
@@ -114,3 +134,15 @@ The electron and muon are required to have opposite charge and be separated by $
     \label{table:trigger2018}
 \end{table}
 
+
+\section{Extra lepton vetoes in all channels}
+
+Events containing a third lepton (electron or muon) that is neither of the leading $\tau\tau$ legs are rejected, and events with di-muons and di-electrons are vetoed, with criteria taken from the Standard Model $H \rightarrow \tau\tau$ working group \cite{twiki_HiggsToTauTauWorkingLegacyRun2}.
+
+The event is vetoed if a third electron is found with the following properties: $p_{T} > 10$ GeV, $|\eta| < 2.5$, impact parameter $|\Delta(z)| < 0.2$ and $|\Delta(xy)| < 0.045$, passing non-isolation MVA identification with 90\% efficiency, conversion veto, $\leq 1$ missing hits, and relative isolation $<0.3$ with cone size $\Delta R = 0.3$. The event is also vetoed if a third muon is found with the following properties: $p_{T} > 10$ GeV, $|\eta| < 2.4$, impact parameter $|\Delta(z)| < 0.2$ and $|\Delta(xy)| < 0.045$, medium ID, and isolation $<0.3$ with cone size $\Delta R = 0.4$. 
+
+A di-muon veto is applied, which rejects events containing a pair of muons with opposite charge and separation of $\Delta R > 0.15$, that both pass the following selections: $p_T > 15$ GeV, $|\eta| < 2.4$, flag for global muons, flag for tracker muon, flag for Particle Flow muon, $|\Delta(z)| < 0.2$, $|\Delta(xy)| < 0.045$, and isolation $<0.3$ with cone size $\Delta R = 0.4$.
+
+A similar di-electron veto is applied to reject events containing a pair of electrons with opposite charge and separation of $\Delta R > 0.15$, that both pass the following selections: $p_T > 15$ GeV, $|\eta| < 2.5$, a dedicated electron ID (cut-based) for vetoing third leptons, $|\Delta(z)| < 0.2$, $|\Delta(xy)| < 0.045$, with pileup-corrected relative isolation $<0.3$ with cone size $\Delta R = 0.3$. 
+
+These vetoes on extra leptons also ensure orthogonality of events to analyses such as the $bb\mu\mu$ final state, whose results are combined with this $bb\tau\tau$ final state as described in Section \ref{section:ch-13-combination-procedure-with-bbmumu}.

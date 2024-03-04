@@ -38,6 +38,7 @@ The final DeepTau discriminators against jets, muons, and electrons are given by
 where $y_\tau$ ($y_\alpha$) are estimates of the probabilities for the $\tau_{h}$ candidate to come from a genuine $\tau_{h}$ (jet, $\mu$, $e$). Working points for each discriminator with different $\tau_{h}$ identification efficiencies are defined for $D_{e}$, $D_{\mu}$, and $D_{\text{jet}}$, for usage in physics analyses and derivation of data-to-simulation corrections \cite{2022-PRD-DeepTau}. 
 
 \section{Muons}
+\label{section:ch-5-muon-reconstruction}
 Muons are identified with requirements on the quality of the track reconstruction and on the number of measurements in the tracker and the muon systems \citep{CMS-MUO-10-004}. In the standard CMS reconstruction, tracks are first reconstructed independently in the inner tracker (tracker track) and in the muon system (standalone-muon track). Next, these tracks are processed in two different methods.
 
 The first is Global Muon reconstruction (outside-in) \citep{CMS-MUO-10-004}, which fits combined hits from the tracker track and standalone-muon track, using the Kalman-filter technique. At large transverse momenta, $p_{T} \gtrsim 200$ GeV, the global-muon fit can improve the momentum resolution compared to the tracker-only fit. 
