@@ -1,22 +1,84 @@
 As the modeling of the CMS detector and underlying physics processes are imperfect, scale factors and corrections are applied to Monte Carlo events and in some cases, the embedded samples, to improve agreement with measurements in data. For the standard reconstruction physics objects in this work, central recommendations provided by dedicated physics object groups (POGs) in CMS are used.
 
-Uncertainties in scale factors and corrections are also sources of systematic errors in the analysis.
+Uncertainties in scale factors and corrections are also sources of systematic errors in the analysis, detailed in Chapter \ref{chapter:ch-11:systematic-uncertainties}. Systematic uncertainties in the tau, muon, and electron energy scales can shift the $p_{T}$ of the leptons up or down, causing a migration of number of events that pass the offline $p_{T}$ thresholds described in the previous section.
+
+\section{Tau energy scale}
+
+An energy scale is applied to the transverse momentum $p_{T}$ and mass of the hadronic tau $\tau_{h}$ in the $\mu\tau_{h}$ and $e\tau_{h}$ channels, to correct for a deviation of the average reconstructed $\tau_{h}$ energy from the generator-level energy of the visible $\tau_{h}$ decay products. These correction factors are derived centrally \cite{CMS-TAU-16-003}, by fitting to events in $e\tau_{h}$ and $\mu\tau_{h}$ final states in $Z/\gamma^*$ events separately for the $h^\pm$, $h^\pm \pi^0$, and $h^\pm h^\mp h^\pm$ decays. The values used are shown in Table \ref{table:tau-ES}.
+
+When applying the energy scale to the $\tau_{h}$, the 4-momentum of the missing transverse energy (MET) is adjusted such that the total 4-momenta of the $\tau_{h}$ and the MET remains unchanged \cite{twiki_TAU_POG_tauidrecommendationforrun2}.
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    \multicolumn{5}{|c|}{Tau energy scale factor}                                   \\ \hline
+    \hline
+    Decay mode      & 2018              & 2017              & 2016 pre-VFP      & 2016 post-VFP     \\ \hline
+    0               & 0.991 $\pm$ 0.008 & 0.986 $\pm$ 0.009 & 0.987 $\pm$ 0.01  & 0.993 $\pm$ 0.009 \\
+    1               & 1.004 $\pm$ 0.006 & 0.999 $\pm$ 0.006 & 0.998 $\pm$ 0.006 & 0.991 $\pm$ 0.007 \\
+    10              & 0.998 $\pm$ 0.007 & 0.999 $\pm$ 0.007 & 0.984 $\pm$ 0.008 & 1.001 $\pm$ 0.007 \\
+    11              & 1.004 $\pm$ 0.009 & 0.996 $\pm$ 0.01  & 0.999 $\pm$ 0.011 & 0.997 $\pm$ 0.016 \\ \hline
+    \end{tabular}
+    \caption{Energy scales applied to genuine hadronic tau decays $\tau_{h}$ by data-taking year/era and decay mode, along with systematic errors.}
+    \label{table:tau-ES}
+\end{table}
+
+\section{Muon energy scale}
+An energy scale is applied to the $p_{T}$ and mass of genuine muons from $\tau$ decays in the $e\mu$ and $\mu\tau_{h}$ channels \cite{twiki_MUON_POG_recommendation}. The applied values are the same for MC and embedded samples and are shown in Table \ref{table:muon-ES}. Following the SM $H \rightarrow \tau\tau$ analysis, Rochester corrections are not applied, and instead prescriptions from \cite{twiki_MUO_simplified_ES} are followed.
 
 
-\section{Lepton energy scales}
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|c|c|}
+    \hline
+    \multicolumn{2}{|c|}{Muon energy scale factor}      \\ \hline
+    \hline
+    Eta range                & Value for all years \\ \hline
+    $|\eta| \in [0.0, 1.2)$  & 1.0 $\pm$ 0.004 \\
+    $|\eta| \in [1.2, 2.1)$  & 1.0 $\pm$ 0.009 \\
+    $|\eta| \in [2.1, 2.4)$  & 1.0 $\pm$ 0.027 \\
+    \hline
+    \end{tabular}
+    \caption[Energy scales and systematic errors applied to genuine muons.]{Energy scales and systematic errors applied to genuine muons. The values are the same for MC and embedded for all years \cite{twiki_HiggsToTauTauWorkingLegacyRun2} \cite{twiki_MUO_simplified_ES}.}
+    \label{table:muon-ES}
+\end{table}
 
-Lepton energy scales are applied to the $p_{T}$ and mass of the relevant objects ($\tau_{h}$, muon, and electron). Systematic uncertainties in the lepton energy scales can shift the $p_{T}$ of the leptons up or down, causing a migration of number of events that pass the offline $p_{T}$ thresholds described in the previous section.
 
-The $\tau_{h}$ energy scale is binned in the four reconstructed decay topologies of the $\tau_{h}$ \cite{twiki_TAU_POG_tauidrecommendationforrun2}. When applying the energy scale to the $\tau_{h}$, the 4-momentum of the missing transverse energy (MET) is adjusted such that the total 4-momenta of the $\tau_{h}$ and the MET remains unchanged. 
+\section{Electron energy scale}
+Corrections to the electron energy scale are applied to genuine $e$ from $\tau$ decays, and are binned in two dimensions by electron $p_{T}$ and $\eta$ for barrel vs. endcap \cite{twiki_Electron_POG_recommendation}. The scale factors are binned in $p_{T}$ and $\eta$ for MC samples (Fig. \ref{fig:egamma-POG-UL-egamma-scale-factors} from \cite{twiki_Electron_UL_2016_2017_2018}). For embedded samples the electron energy scale is taken as only binned in $\eta$ (Table \ref{table:ele-ES-embedded}).
 
-Measurements of the muon energy scale have shown a relative $p_{T}$ resolution range of 1\% to 1.5\% for muons in the barrel and less than 6\% in the endcaps, which is reflected in the systematical uncertainties of the muon energy scale \cite{twiki_MUON_POG_recommendation}. They are applied to genuine $\mu$ from $\tau$ decays.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=15cm]{figures/ch-8-scale-factors-and-corrections/egamma-POG-UL-egamma-scale-factors.png}
+    \caption[Electron/photon energy scale factors and uncertainties for 2018.]{Electron/photon energy scale factors (\textit{left}) and corresponding uncertainties (\textit{right}) binned in the electron $\eta$ and $p_{T}$, for the data-taking year 2018 \cite{twiki_Electron_UL_2016_2017_2018}.} 
+    \label{fig:egamma-POG-UL-egamma-scale-factors}
+\end{figure}
 
-Corrections to the electron energy scale are applied to genuine $e$ from $\tau$ decays, and are binned in regions of $\eta$ \cite{twiki_Electron_POG_recommendation}.
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+    \multicolumn{4}{|c|}{Electron energy scale factor for embedded samples}                                   \\ \hline
+    \hline
+    Eta range                   & 2018               & 2017               & 2016     \\ \hline
+    $|\eta| \in [0.0, 1.479)$   & 0.973 $\pm$ 0.005  & 0.986 $\pm$ 0.009  & 0.9976 $\pm$ 0.0050 \\
+    $|\eta| \in [1.479, 2.4)$   & 0.980 $\pm$ 0.0125 & 0.887 $\pm$ 0.0125 & 0.993 $\pm$ 0.0125 \\ \hline
+    \end{tabular}
+    \caption[Energy scales and systematic errors applied to electrons in embedded samples by data-taking year/era.]{Energy scales and systematic errors applied to electrons in embedded samples, binned in the electron $\eta$, by data-taking year \cite{twiki_embedded_preUL_2016} \cite{twiki_embedded_preUL_2017} \cite{twiki_embedded_preUL_2018}.}
+    \label{table:ele-ES-embedded}
+\end{table}
 
 \section{$\tau_{h}$ identification efficiency}
 The $\tau_{h}$ identification efficiency can differ in data and MC \cite{twiki_TAU_POG_tauidrecommendationforrun2}. Recommended corrections are provided by the Tau POG. The identification efficiency is measured in $Z \rightarrow \tau\tau$ events in the $\mu\tau_{h}$ final state, and is binned in $p_{T}$ due to clear $p_{T}$ dependence of the DeepTau ID. 
 
-\section{$e \rightarrow \tau_{h}$ and $\mu \rightarrow \tau_{h}$ misidentification efficiency}
+For the medium DeepTau vs. jet working point used in this analysis, 
+
+\section{$e \rightarrow \tau_{h}$ and $\mu \rightarrow \tau_{h}$ energy scales and misidentification efficiency}
+
+Muons faking $\tau_{h}$ receive a nominal energy scale correction of 1.0, with an uncertainty of $\pm$ 0.1.
+
 Corrections on identification efficiencies are applied to genuine electrons and muons misidentified as $\tau$s to account for differences in data and MC. The specific values depend on the vs. electron and vs. muon discriminator working points used. For misidentified $e \rightarrow \tau_{h}$, the scale factors are split into barrel and endcap regions, dictated by the ECAL detector geometry. For misidentified $\mu \rightarrow \tau_{h}$, the scale factors are split into different $|\eta|$ regions, determined by the CMS muon and tracker detector geometries.
 
 
