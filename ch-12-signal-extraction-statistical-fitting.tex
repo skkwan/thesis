@@ -19,6 +19,16 @@ The likelihood $f$ is the product of three likelihood functions. The first two l
 \subsection{``Classic SVFit" with matrix element}
 Classic SVFit is an improved algorithm of the original ``standalone" SVFit using the formalism of the matrix element (ME) method \cite{2014_SVFit_Bianchini}. In the ME method, an estimate for the unknown model parameter $\Theta$ (here, the mass $m_{\tau\tau}$) is obtained by maximizing the probability density $\mathcal{P}$. The key ingredients of the probability density are the squared modulus of the matrix element $|\mathcal{M}(\mathbf{p}, \Theta)|^2$ and the transfer function $W(\mathbf{y}|\mathbf{p})$ (probability density to observe the measured observables $\mathbf{y}$ given the phase space point $\mathbf{p}$). The best estimate $m_{\tau\tau}$ is obtained by computing the probability density $\mathcal{P}$ for a range of mass hypotheses and finding the value of $m_{\tau\tau}$ that maximizes $\mathcal{P}$.
 
+Distributions illustrating the performance of the classic matrix element SVFit algorithm are shown in Fig. \ref{fig:classic_svfit_resolution} from \cite{2014_SVFit_Bianchini}, showing the di-tau mass after and before application of SVFit to recover energy lost to neutrinos. The SVFit algorithm is found to improve the sensitivity of the Standard Model $H \rightarrow \tau\tau$ analysis performed by CMS by about 30\%, compared to performing the same analysis using only the visible mass $m_{\text{vis}}$. 
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=15cm]{figures/ch-12-signal-extraction-statistical-fitting/original_SVFit_resolution_2014_SVFit_Bianchini.png}
+    \caption[Distributions of $m_{\tau\tau}$ reconstructed by the classic SVFit algorithm, and masses of visible tau decay products (before SVFit).]{Distributions from \cite{2014_SVFit_Bianchini}, of $m_{\tau\tau}$ after reconstruction with the original SVFit algorithm (\textit{left}), and before SVFit with only the visible tau decay products (\textit{right}), for $H \rightarrow \tau\tau$ signal events of mass $m_H = 125$ GeV (\textit{black line}) and the $Z/\gamma^* \rightarrow \tau\tau$ background (\textit{orange, solid}), in the decay channel $\tau\tau \rightarrow \mu\tau_{h}$.} 
+    \label{fig:classic_svfit_resolution}
+\end{figure}
+
+
 \subsection{FastMTT: optimized SVFit}
 FastMTT \cite{CMS-AN-19-032-FastMTT} is a further simplification to the matrix element method of Classic SVFit which has comparable performance but is about 100 times faster. FastMTT drops the matrix element component of the computation without significant impact on the final mass resolution, and simplifies the computation of the transfer functions. The opening angle of the $\tau$ decay products with respect to the initial $\tau$ momenta approaches 0 for $\tau$ with high $\gamma = E_{\tau}/m_{\tau}$, with typical $\tau$ decays from the Z boson decays already satisfying this condition. In this collinear approximation, the dimensionality of the transfer function can be reduced in the computation of FastMTT, while still yielding similar results to Classic SVFit \cite{CMS-AN-19-032-FastMTT}. 
 
