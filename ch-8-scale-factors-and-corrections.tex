@@ -167,9 +167,16 @@ Scale factors to correct for differences between data and MC in the identificati
 \section{Trigger efficiencies}
 % TODO: 
 
-Scale factors are applied to correct for differences in trigger efficiencies between MC and embedded vs. data. Exact values are taken from the Standard Model $H \rightarrow \tau\tau$ working group which uses similar trigger paths \cite{twiki_HiggsToTauTauWorkingLegacyRun2}.
+Scale factors are applied to correct for differences in trigger efficiencies between MC and embedded vs. data, with values taken from tools provided by the Standard Model $H \rightarrow \tau\tau$ working group which uses the same trigger paths \cite{twiki_HiggsToTauTauWorkingLegacyRun2}.
 
-Representative trigger efficencies in 2016, 2017, and 2018 for the hadronic tau legs of the $\mu\tau_{h}$ and $e\tau_{h}$ cross-triggers as a function of the offline tau $p_{T}$ and $\eta$, are shown in Figures \ref{fig:mutauEfficiencyPt_eachYear_mediumTauMVA_Data} and \ref{fig:etauEfficiencyPt_eachYear_mediumTauMVA_Data} \cite{CMS-DP-2019-012} \cite{twiki_Tau_Lepton_Run_2_trigger_performance}. In both figures, the different HLT thresholds and differences in the L1 seed result in higher efficiencies in 2016 and differences in shapes of the 2016 efficiencies compared to 2017 and 2018. The low pileup in 2016 has also an impact for the higher efficiencies.
+The efficiencies of the single-$\tau_{h}$ leg in $\mu\tau_{h}$, $e\tau_{h}$, and di-$\tau_{h}$ triggers is computed centrally per using a Tag and Probe (TnP) method \cite{CMS-DP-2019-012} which is outlined here. In this method, $Z \rightarrow \tau\tau \rightarrow \mu\tau_{h}$ are selected in data and a Drell-Yan simulated sample ($Z \rightarrow \ell\ell, \ell = e, \mu, \tau_{h}$) with high purity. Cuts are applied to reject events not in this final state, e.g. suppressing $Z \rightarrow \mu\mu$ by vetoing events with a single loose ID muon. An isolated muon candidate (the tag) with online $p_{T} > 27$ GeV and $|\eta| < 2.1$ is identified and matched to an offline $\mu$. An offline $\tau_{h}$ candidate (the probe) is selected, which is separated from the tag $\mu$, and has $p_{T} > 20$ GeV and $|\eta| < 2.1$. The probe $\tau_{h}$ must pass anti-muon and anti-electron discriminators to avoid fakes from muons and electrons, and must pass the medium MVA tau isolation to suppress fakes from QCD jets. The trigger efficiency in the TnP method is calculated as 
+\begin{equation}
+    \text{Efficiency} = \frac{\text{Number of events passing the TnP selection with fires the HLT path}}{\text{Number of events passing the TnP selection}}
+\end{equation}
+
+The efficiencies for the hadronic tau legs in the relevant channels of this analyses ($\mu\tau_{h}$ and $e\tau_{h}$) as a function of the offline tau $p_{T}$ and $\eta$, are shown for data taken in 2016, 2017, and 2018 in Figures \ref{fig:mutauEfficiencyPt_eachYear_mediumTauMVA_Data} and \ref{fig:etauEfficiencyPt_eachYear_mediumTauMVA_Data} \cite{CMS-DP-2019-012} \cite{twiki_Tau_Lepton_Run_2_trigger_performance}. In both figures, the different HLT thresholds and differences in the L1 seed result in higher efficiencies in 2016 and differences in shapes of the 2016 efficiencies compared to 2017 and 2018. The low pileup in 2016 also leads to higher efficiencies in that year.
+
+
 
 \begin{figure}[h]
     \centering
