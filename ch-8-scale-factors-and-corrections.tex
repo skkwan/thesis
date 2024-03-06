@@ -108,7 +108,7 @@ Energy scales for electrons misidentified as hadronic tau decays ($e$ faking $\t
     10  & 0.96903 (+0.0125, -0.03404) \\
     11 & 0.985 (+0.04309, -0.05499) \\ \hline
     \end{tabular}
-    \caption[Energy scales and up/down systematic uncertainties applied to electrons misidentified as hadronic taus.]{Energy scales and up/down systematic uncertainties applied to electrons misidentified as hadronic taus \cite{twiki_HiggsToTauTauWorkingLegacyRun2} for 2018, binned in decay mode of the fake $\tau_{h}$.}
+    \caption[Energy scales and up/down systematic uncertainties applied to electrons misidentified as hadronic taus.]{Energy scales and up/down systematic uncertainties applied to electrons misidentified as hadronic taus for 2018, binned in decay mode of the fake $\tau_{h}$ \cite{twiki_HiggsToTauTauWorkingLegacyRun2}.}
     \label{table:electron-faking-tauh-FES-2018}
 \end{table}
 
@@ -125,7 +125,7 @@ For misidentified $\mu \rightarrow \tau_{h}$, the scale factors are split into d
     \centering
     \begin{tabular}{|c|c|c|}
     \hline
-    \multicolumn{3}{|c|}{Tau ID efficiency for DeepTau vs. muon WPs in 2018}                                   \\ \hline
+    \multicolumn{3}{|c|}{Tau ID efficiency for DeepTau vs. muon WPs in 2018} \\ \hline
     \hline
     $|\eta|$  & Tight working point & VLoose working point \\ \hline
     (0.0, 0.2)     & 0.767 $\pm$ 0.127  & 0.954 $\pm$ 0.069  \\ \hline 
@@ -146,7 +146,7 @@ For misidentified $e \rightarrow \tau_{h}$, the scale factors are split into bar
     \centering
     \begin{tabular}{|c|c|c|}
     \hline
-    \multicolumn{3}{|c|}{Tau ID efficiency for DeepTau vs. electron WPs in 2018}                                   \\ \hline
+    \multicolumn{3}{|c|}{Tau ID efficiency for DeepTau vs. electron WPs in 2018} \\ \hline
     \hline
     $|\eta|$  & Tight working point & VLoose working point \\ \hline
     (0.0, 0.73)     & 1.47 $\pm$ 0.27  & 0.95 $\pm$ 0.07  \\ \hline 
@@ -169,29 +169,53 @@ Scale factors to correct for differences between data and MC in the identificati
 
 Scale factors are applied to correct for differences in trigger efficiencies between MC and embedded vs. data, with values taken from tools provided by the Standard Model $H \rightarrow \tau\tau$ working group which uses the same trigger paths \cite{twiki_HiggsToTauTauWorkingLegacyRun2}.
 
+\subsection{Tau trigger efficiencies}
 The efficiencies of the single-$\tau_{h}$ leg in $\mu\tau_{h}$, $e\tau_{h}$, and di-$\tau_{h}$ triggers is computed centrally per using a Tag and Probe (TnP) method \cite{CMS-DP-2019-012} which is outlined here. In this method, $Z \rightarrow \tau\tau \rightarrow \mu\tau_{h}$ are selected in data and a Drell-Yan simulated sample ($Z \rightarrow \ell\ell, \ell = e, \mu, \tau_{h}$) with high purity. Cuts are applied to reject events not in this final state, e.g. suppressing $Z \rightarrow \mu\mu$ by vetoing events with a single loose ID muon. An isolated muon candidate (the tag) with online $p_{T} > 27$ GeV and $|\eta| < 2.1$ is identified and matched to an offline $\mu$. An offline $\tau_{h}$ candidate (the probe) is selected, which is separated from the tag $\mu$, and has $p_{T} > 20$ GeV and $|\eta| < 2.1$. The probe $\tau_{h}$ must pass anti-muon and anti-electron discriminators to avoid fakes from muons and electrons, and must pass the medium MVA tau isolation to suppress fakes from QCD jets. The trigger efficiency in the TnP method is calculated as 
 \begin{equation}
     \text{Efficiency} = \frac{\text{Number of events passing the TnP selection with fires the HLT path}}{\text{Number of events passing the TnP selection}}
 \end{equation}
 
-The efficiencies for the hadronic tau legs in the relevant channels of this analyses ($\mu\tau_{h}$ and $e\tau_{h}$) as a function of the offline tau $p_{T}$ and $\eta$, are shown for data taken in 2016, 2017, and 2018 in Figures \ref{fig:mutauEfficiencyPt_eachYear_mediumTauMVA_Data} and \ref{fig:etauEfficiencyPt_eachYear_mediumTauMVA_Data} \cite{CMS-DP-2019-012} \cite{twiki_Tau_Lepton_Run_2_trigger_performance}. In both figures, the different HLT thresholds and differences in the L1 seed result in higher efficiencies in 2016 and differences in shapes of the 2016 efficiencies compared to 2017 and 2018. The low pileup in 2016 also leads to higher efficiencies in that year.
 
+The efficiencies for the hadronic tau legs in the relevant channels of this analyses ($\mu\tau_{h}$ and $e\tau_{h}$) as a function of the offline tau $p_{T}$ and $\eta$, are shown for data taken in 2016, 2017, and 2018 in Figures \ref{fig:mutauEfficiencyPt_eachYear_mediumTauMVA_Data} and \ref{fig:etauEfficiencyPt_eachYear_mediumTauMVA_Data} \cite{CMS-DP-2019-012} \cite{twiki_Tau_Lepton_Run_2_trigger_performance}. In both figures, the different HLT thresholds and differences in the L1 seed result in higher efficiencies in 2016 and differences in shapes of the 2016 efficiencies compared to 2017 and 2018. The low pileup in 2016 also leads to higher efficiencies in that year.
 
 
 \begin{figure}[h]
     \centering
     \begin{subfigure}{0.45\textwidth}
         \includegraphics[width=1.0\textwidth]{figures/ch-8-scale-factors-and-corrections/mutauEfficiencyPt_eachYear_mediumTauMVA_Data.png}
-        \caption{Mu+tauh cross trigger.}
+        \caption{$\tau_{h}$ efficiency from $\mu\tau_{h}$ trigger.}
         \label{fig:mutauEfficiencyPt_eachYear_mediumTauMVA_Data}
     \end{subfigure}
     \hfill
     \begin{subfigure}{0.45\textwidth}
         \includegraphics[width=1.0\textwidth]{figures/ch-8-scale-factors-and-corrections/etauEfficiencyPt_eachYear_mediumTauMVA_Data.png}
-        \caption{E+tauh cross trigger.}
+        \caption{$\tau_{h}$ efficiency from $e\tau_{h}$ trigger.}
         \label{fig:etauEfficiencyPt_eachYear_mediumTauMVA_Data}
     \end{subfigure}
     \caption[Hadronic tau leg efficiency of the cross-triggers for $\mu\tau_{h}$ (\textit{left}) and $e\tau_{h}$ (\textit{right}) triggers as a function of offline tau $p_{T}$ for 2016, 2017, and 2018.]{Hadronic tau leg efficiency of the cross-triggers for $\mu\tau_{h}$ (\textit{left}) and $e\tau_{h}$ (\textit{right}) triggers as a function of offline tau $p_{T}$ for the years 2016 (\textit{red}), 2017 (\textit{blue}) and 2018 (\textit{green}), from \cite{twiki_Tau_Lepton_Run_2_trigger_performance}. HLT $p_{T}$ thresholds and L1 seeds are indiated the legends.} 
+\end{figure}
+
+\subsection{$e\mu$ cross-trigger efficiencies}
+
+The efficiencies of the electron and muons for the cross-trigger with leading muon used in the $e\mu$ channel are shown in Figures \ref{fig:ele_efficiency_vs_pT_emu} and \ref{fig:muon_efficiency_vs_eta_emu} \cite{CMS-DP-2019-025}. These efficiencies were measured centrally using a Tag and Probe in events with $Z$ to dileptons with the same flavour and opposite charge, where the tags are an isolated muon or electron, and the probe (offline) candidate is required to satisfy the same lepton selection as that of the tag candidate, be matched within $\Delta R < 0.1$ with a corresponding online trigger object, and also to pass the cross-trigger. The trigger efficiency is then:
+\begin{equation}
+    \text{Efficiency} = \frac{\text{Events passing lepton pair selections and probe passing trigger}}{\text{Events passing lepton pair selections}}
+\end{equation}
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=1.0\textwidth]{figures/ch-8-scale-factors-and-corrections/ele_efficiency_vs_pT_emu_HLT_Mu23_TrkIsoVVL_Ele12_CaloIdL_TrackIdL_IsoVL_DZ.png}
+        \caption{Electron efficiency vs. $p_{T}$.}
+        \label{fig:ele_efficiency_vs_pT_emu}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=1.0\textwidth]{figures/ch-8-scale-factors-and-corrections/muon_efficiency_vs_eta_emu_HLT_Mu23_TrkIsoVVL_Ele12_CaloIdL_TrackIdL_IsoVL_DZ.png}
+        \caption{Muon efficiency vs. $\eta$.}
+        \label{fig:muon_efficiency_vs_eta_emu}
+    \end{subfigure}
+    \caption[Efficiencies of the electron leg vs. $p_{T}$ (\textit{left}) and the muon log vs. $\eta$ (\textit{right}), for the HLT path with online thresholds of 12 GeV for the electron and 23 GeV for the muon, with the data-taking years 2016 through 2018 overlaid.]{Efficiencies of the electron leg vs. $p_{T}$ (\textit{left}) and the muon log vs. $\eta$ (\textit{right}), for the HLT path with online thresholds of 12 GeV for the electron and 23 GeV for the muon, for the data-taking years 2016 (\textit{black}), 2017 (\textit{red}), and 2018 (\textit{green}) \cite{CMS-DP-2019-025}.} 
 \end{figure}
 
 
