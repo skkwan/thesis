@@ -48,7 +48,8 @@ An energy scale is applied to the $p_{T}$ and mass of genuine muons from $\tau$ 
 \section{Electron energy scale}
 Corrections to the electron energy scale are applied to genuine $e$ from $\tau$ decays, and are binned in two dimensions by electron $p_{T}$ and $\eta$ for barrel vs. endcap \cite{twiki_Electron_POG_recommendation}. The scale factors are binned in $p_{T}$ and $\eta$ for MC samples: e.g. values for 2018 are shown in Fig. \ref{fig:egamma-POG-UL-egamma-scale-factors} from \cite{twiki_Electron_UL_2016_2017_2018}. For embedded samples the electron energy scale is taken as only binned in $\eta$ (Table \ref{table:ele-ES-embedded}).
 
-\begin{figure}[ht]
+% https://twiki.cern.ch/twiki/pub/CMS/EgammaUL2016To2018/egammaEffi.txt_Ele_wp90noiso_egammaPlots.pdf
+\begin{figure}[h]
     \centering
     \includegraphics[width=15cm]{figures/ch-8-scale-factors-and-corrections/egamma-POG-UL-egamma-scale-factors.png}
     \caption[Electron/photon energy scale factors and uncertainties for 2018.]{Electron/photon energy scale factors (\textit{left}) and corresponding uncertainties (\textit{right}) binned in the electron $\eta$ and $p_{T}$, for the data-taking year 2018 \cite{twiki_Electron_UL_2016_2017_2018}.} 
@@ -56,7 +57,7 @@ Corrections to the electron energy scale are applied to genuine $e$ from $\tau$ 
 \end{figure}
 
 
-\begin{table}[ht]
+\begin{table}[h]
     \centering
     \begin{tabular}{|c|c|c|c|}
     \hline
@@ -74,7 +75,7 @@ Corrections to the electron energy scale are applied to genuine $e$ from $\tau$ 
 The $\tau_{h}$ identification efficiency can differ in data and MC \cite{twiki_TAU_POG_tauidrecommendationforrun2}. Recommended corrections are provided by the Tau POG, and we use the medium DeepTau vs. jet working point values. The identification efficiency is measured in $Z \rightarrow \tau\tau$ events in the $\mu\tau_{h}$ final state, and is binned in $p_{T}$ due to clear $p_{T}$ dependence of the DeepTau ID. 
 
 
-\begin{table}[ht]
+\begin{table}[h]
     \centering
     \begin{tabular}{|c|c|c|c|c|c|c|}
     \hline
@@ -90,20 +91,37 @@ The $\tau_{h}$ identification efficiency can differ in data and MC \cite{twiki_T
 \end{table}
 
 
+\section{Electrons and muons faking $\tau_{h}$: energy scales}
 
+Energy scales for electrons misidentified as hadronic tau decays ($e$ faking $\tau_{h}$) are provided by the Tau POG, and were measured in the $e\tau_{h}$ channel with the visible invariant mass of the electron and hadronic tau system \cite{twiki_HiggsToTauTauWorkingLegacyRun2}. This energy scale is applied for $\tau_{h}$ with $p_{T} > 20$ GeV regardless of which DeepTau vs. electron working point was used. Values for 2018 are shown in Table \ref{table:electron-faking-tauh-FES-2018}.
 
-\section{$e \rightarrow \tau_{h}$ and $\mu \rightarrow \tau_{h}$ energy scales and misidentification efficiency}
+% root -l TauFES_eta-dm_DeepTau2017v2p1VSe_2018ReReco.root 
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|}
+    \hline
+    \multicolumn{2}{|c|}{Electrons faking $\tau_{h}$ energy scale factor in 2018}      \\ \hline
+    \hline
+    Reconstructed decay mode of the fake $\tau_{h}$  & Central value and (up, down) shifts \\ \hline
+    0   & 1.01362 (+0.00474, -0.00904) \\
+    1   & 1.01945 (+0.01598, -0.01226) \\
+    10  & 0.96903 (+0.0125, -0.03404) \\
+    11 & 0.985 (+0.04309, -0.05499) \\ \hline
+    \end{tabular}
+    \caption[Energy scales and up/down systematic uncertainties applied to electrons misidentified as hadronic taus.]{Energy scales and up/down systematic uncertainties applied to electrons misidentified as hadronic taus \cite{twiki_HiggsToTauTauWorkingLegacyRun2} for 2018, binned in decay mode of the fake $\tau_{h}$.}
+    \label{table:electron-faking-tauh-FES-2018}
+\end{table}
 
-Electrons faking $\tau_{h}$ TODO: 
-Muons faking $\tau_{h}$ receive no nominal energy scale correction and the uncertainty is treated as $\pm$ 1\% \cite{twiki_HiggsToTauTauWorkingLegacyRun2}. 
+No nominal energy scale is applied for muons mis-reconstructed as $\tau_{h}$, and the uncertainty is treated as $\pm$ 1\% and uncorrelated in the reconstructed decay mode \cite{twiki_HiggsToTauTauWorkingLegacyRun2}. 
 
+\section{Electrons and muons faking $\tau_{h}$: misidentification efficiencies}
 Corrections on identification efficiencies are applied to genuine electrons and muons misidentified as $\tau$ to account for differences in data and MC.
 
 The specific values depend on the vs. electron and vs. muon discriminator working points used. 
-For misidentified $\mu \rightarrow \tau_{h}$, the scale factors are split into different $|\eta|$ regions, determined by the CMS muon and tracker detector geometries, as shown in Table \ref{table:tauIDeff_deepTau_vs_muon} for 2018.
+For misidentified $\mu \rightarrow \tau_{h}$, the scale factors are split into different $|\eta|$ regions, determined by the CMS muon and tracker detector geometries, as shown in Table \ref{table:tauIDeff_deepTau_vs_muon} for 2018 \cite{twiki_TAU_POG_tauidrecommendationforrun2}.
 
 
-\begin{table}[ht]
+\begin{table}[h]
     \centering
     \begin{tabular}{|c|c|c|}
     \hline
@@ -124,7 +142,7 @@ For misidentified $\mu \rightarrow \tau_{h}$, the scale factors are split into d
 For misidentified $e \rightarrow \tau_{h}$, the scale factors are split into barrel and endcap regions, dictated by the ECAL detector geometry, as shown in Table \ref{table:tauIDeff_deepTau_vs_electron} for 2018.
 
 % root -l /Users/stephaniekwan/Dropbox/Princeton_G6/TauIDSFs/data/TauID_SF_eta_DeepTau2017v2p1VSe_2018ReReco.root 
-\begin{table}[ht]
+\begin{table}[h]
     \centering
     \begin{tabular}{|c|c|c|}
     \hline
@@ -136,12 +154,40 @@ For misidentified $e \rightarrow \tau_{h}$, the scale factors are split into bar
     (1.509, 1.929)  & 1.929 $\pm$ 0.2  & 0.86 $\pm$ 0.1 \\ \hline 
     (1.929, 2.683)  & 2.683 $\pm$ 0.9  & 2.68 $\pm$ 0.0 \\ \hline
     \end{tabular}
-    \caption[Tau mis-identification efficiency for the DeepTau Tight and Very Loose (VLoose) working points vs. electrons in 2018.]{Tau mis-identification efficiency for the DeepTau Tight and Very Loose (VLoose) working points vs. electrons in 2018, binned in the muon $|\eta|$ \cite{twiki_TAU_POG_tauidrecommendationforrun2}.}
+    \caption[Tau mis-identification efficiency for the DeepTau Tight and Very Loose (VLoose) working points vs. electrons in 2018.]{Tau mis-identification efficiency for the DeepTau Tight and Very Loose (VLoose) working points vs. electrons in 2018, binned in the electron $|\eta|$ \cite{twiki_TAU_POG_tauidrecommendationforrun2}.}
     \label{table:tauIDeff_deepTau_vs_electron}
 \end{table}
 
 \section{Electron and muon ID, isolation, and tracking}
+% TODO: Expand this section by 3x: TODO: electron ID, TODO: isolation, and TODO: tracking
+% TODO: muon ID, TODO: muon isolation, TODO: muon tracking
 Scale factors to correct for differences between data and MC in the identification, isolation, and tracking of the electrons and muons are taken from the Standard Model $H \rightarrow \tau\tau$ analysis \cite{CMS-HIG-19-010}, due to the similarities in event and object selection.
+
+
+\section{Trigger efficiencies}
+% TODO: 
+
+Scale factors are applied to correct for differences in trigger efficiencies between MC and embedded vs. data. Exact values are taken from the Standard Model $H \rightarrow \tau\tau$ working group which uses similar trigger paths \cite{twiki_HiggsToTauTauWorkingLegacyRun2}.
+
+Representative trigger efficencies in 2016, 2017, and 2018 for the hadronic tau legs of the $\mu\tau_{h}$ and $e\tau_{h}$ cross-triggers as a function of the offline tau $p_{T}$ and $\eta$, are shown in Figures \ref{fig:mutauEfficiencyPt_eachYear_mediumTauMVA_Data} and \ref{fig:etauEfficiencyPt_eachYear_mediumTauMVA_Data} \cite{CMS-DP-2019-012} \cite{twiki_Tau_Lepton_Run_2_trigger_performance}. In both figures, the different HLT thresholds and differences in the L1 seed result in higher efficiencies in 2016 and differences in shapes of the 2016 efficiencies compared to 2017 and 2018. The low pileup in 2016 has also an impact for the higher efficiencies.
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=1.0\textwidth]{figures/ch-8-scale-factors-and-corrections/mutauEfficiencyPt_eachYear_mediumTauMVA_Data.png}
+        \caption{Mu+tauh cross trigger.}
+        \label{fig:mutauEfficiencyPt_eachYear_mediumTauMVA_Data}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=1.0\textwidth]{figures/ch-8-scale-factors-and-corrections/etauEfficiencyPt_eachYear_mediumTauMVA_Data.png}
+        \caption{E+tauh cross trigger.}
+        \label{fig:etauEfficiencyPt_eachYear_mediumTauMVA_Data}
+    \end{subfigure}
+    \caption[Hadronic tau leg efficiency of the cross-triggers for $\mu\tau_{h}$ (\textit{left}) and $e\tau_{h}$ (\textit{right}) triggers as a function of offline tau $p_{T}$ for 2016, 2017, and 2018.]{Hadronic tau leg efficiency of the cross-triggers for $\mu\tau_{h}$ (\textit{left}) and $e\tau_{h}$ (\textit{right}) triggers as a function of offline tau $p_{T}$ for the years 2016 (\textit{red}), 2017 (\textit{blue}) and 2018 (\textit{green}), from \cite{twiki_Tau_Lepton_Run_2_trigger_performance}. HLT $p_{T}$ thresholds and L1 seeds are indiated the legends.} 
+\end{figure}
+
+
 
 \section{Recoil corrections}
 \label{sec:ch-8-recoil-corrections}
@@ -153,8 +199,8 @@ The Z boson transverse momentum distribution disagrees between leading-order (LO
 \section{Pileup reweighing}
 Reweighing is performed to rescale MC events to account for differences between MC and data, in the distribution of the pileup (number of additional proton-proton interactions per bunch crossing). A tool for calculating the pileup reweighing for the MC samples used is provided centrally by the Luminosity POG \cite{twiki_LUMI_POG_recommendation}.
 
-\section{Trigger efficiencies}
-Scale factors are applied to correct for differences in trigger efficiencies between MC and data, and embedded samples and data. They are taken from the Standard Model $H \rightarrow \tau\tau$ working group which uses similar trigger paths \cite{twiki_HiggsToTauTauWorkingLegacyRun2}.
+\section{Pre-firing corrections}
+TODO: Check 2017 and 2016
 
 \section{Top $p_{T}$ spectrum reweighing}
 In Run-1 and Run-2 it was observed that the $p_{T}$ spectra of top quarks in $t\bar{t}$ data was significantly softer than those predicted by MC simulations \cite{twiki_Top_pt_reweighing}. Possible sources of this discrepancy are higher order QCD and/or electroweak corrections, and non-resonant production of $t\bar{t}$-like final states. To account for this, corrections derived from Run-2 data by the Top Physics Analysis Group (PAG) are applied to the $p_{T}$ of the top and anti-top quarks in MC simulations, computed as a function of their generator-level $p_{T}$ \cite{twiki_Top_pt_reweighing}.
