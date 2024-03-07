@@ -91,6 +91,103 @@ The $\tau_{h}$ identification efficiency can differ in data and MC \cite{twiki_T
 \end{table}
 
 
+\section{Trigger efficiencies}
+
+Scale factors are applied to correct for differences in trigger efficiencies between MC and embedded vs. data, with values taken from tools provided by the Standard Model $H \rightarrow \tau\tau$ working group which uses the same trigger paths \cite{twiki_HiggsToTauTauWorkingLegacyRun2}. In the following sections we review relevant trigger efficiencies in data, which form the basis of the trigger efficiency corrections applied to MC and embedded.
+
+\subsection{Tau trigger efficiencies}
+The efficiencies in data of the single-$\tau_{h}$ leg in $\mu\tau_{h}$, $e\tau_{h}$, and di-$\tau_{h}$ triggers is computed centrally per using a Tag and Probe (TnP) method \cite{CMS-DP-2019-012} which is outlined here. In this method, $Z \rightarrow \tau\tau \rightarrow \mu\tau_{h}$ are selected in data and a Drell-Yan simulated sample ($Z \rightarrow \ell\ell, \ell = e, \mu, \tau_{h}$) with high purity. Cuts are applied to reject events not in this final state, e.g. suppressing $Z \rightarrow \mu\mu$ by vetoing events with a single loose ID muon. An isolated muon candidate (the tag) with online $p_{T} > 27$ GeV and $|\eta| < 2.1$ is identified and matched to an offline $\mu$. An offline $\tau_{h}$ candidate (the probe) is selected, which is separated from the tag $\mu$, and has $p_{T} > 20$ GeV and $|\eta| < 2.1$. The probe $\tau_{h}$ must pass anti-muon and anti-electron discriminators to avoid fakes from muons and electrons, and must pass the medium MVA tau isolation to suppress fakes from QCD jets. The trigger efficiency in the TnP method is calculated as 
+\begin{equation}
+    \text{Efficiency} = \frac{\text{Number of events passing the TnP selection with fires the HLT path}}{\text{Number of events passing the TnP selection}}
+\end{equation}
+
+
+The efficiencies for the hadronic tau legs in the relevant channels of this analyses ($\mu\tau_{h}$ and $e\tau_{h}$) as a function of the offline tau $p_{T}$ and $\eta$, are shown for data taken in 2016, 2017, and 2018 in Figures \ref{fig:mutauEfficiencyPt_eachYear_mediumTauMVA_Data} and \ref{fig:etauEfficiencyPt_eachYear_mediumTauMVA_Data} \cite{CMS-DP-2019-012} \cite{twiki_Tau_Lepton_Run_2_trigger_performance}. In both figures, the different HLT thresholds and differences in the L1 seed result in higher efficiencies in 2016 and differences in shapes of the 2016 efficiencies compared to 2017 and 2018. The low pileup in 2016 also leads to higher efficiencies in that year.
+
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=1.0\textwidth]{figures/ch-8-scale-factors-and-corrections/mutauEfficiencyPt_eachYear_mediumTauMVA_Data.png}
+        \caption{$\tau_{h}$ efficiency from $\mu\tau_{h}$ trigger.}
+        \label{fig:mutauEfficiencyPt_eachYear_mediumTauMVA_Data}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=1.0\textwidth]{figures/ch-8-scale-factors-and-corrections/etauEfficiencyPt_eachYear_mediumTauMVA_Data.png}
+        \caption{$\tau_{h}$ efficiency from $e\tau_{h}$ trigger.}
+        \label{fig:etauEfficiencyPt_eachYear_mediumTauMVA_Data}
+    \end{subfigure}
+    \caption[Hadronic tau leg efficiency of the cross-triggers for $\mu\tau_{h}$ (\textit{left}) and $e\tau_{h}$ (\textit{right}) triggers as a function of offline tau $p_{T}$ for 2016, 2017, and 2018.]{Hadronic tau leg efficiency of the cross-triggers for $\mu\tau_{h}$ (\textit{left}) and $e\tau_{h}$ (\textit{right}) triggers as a function of offline tau $p_{T}$ for the years 2016 (\textit{red}), 2017 (\textit{blue}) and 2018 (\textit{green}), from \cite{twiki_Tau_Lepton_Run_2_trigger_performance}. HLT $p_{T}$ thresholds and L1 seeds are indiated the legends.} 
+\end{figure}
+
+
+\subsection{Single muon trigger efficiencies}
+The efficiencies for the single isolated muon trigger with $p_{T} > 24$ GeV used in this analysis, is shown for the data-taking year 2018 in Fig. \ref{fig:single_muon_24GeV_efficiency_vs_pt} as a function of the muon $p_{T}$ and as a function of the muon $|\eta|$ in Fig. \ref{fig:single_muon_24GeV_efficiency_vs_eta} from \cite{CMS-DP-2018-034}. The data is split with respect to a HLT muon reconstruction update that was deployed on 15/05/2018. A small asymmetry in efficiencies between negative and positive $\eta$ in Fig. \ref{fig:single_muon_24GeV_efficiency_vs_eta} is due to disabled muon chambers (CSCs). The efficiencies shown are estimated using a Tag and Probe method using $Z\rightarrow \mu\mu$ events, with the tag being an offline muon with $p_{T} > 29$ GeV and $|\eta| < 2.4$ passing a tight ID criteria, and the probe is an online (L1) trigger object with $\Delta R < 0.3$ and passing tight ID and Particle Flow based isolation requirements with $p_{T} > 26$ GeV.
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=1.0\textwidth]{figures/ch-8-scale-factors-and-corrections/singleMuon_isolated_efficiency_vs_pt}
+        \caption{Muon efficiency vs $p_{T}$ for SingleMuon.}
+        \label{fig:single_muon_24GeV_efficiency_vs_pt}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=1.0\textwidth]{figures/ch-8-scale-factors-and-corrections/singleMuon_isolated_efficiency_vs_eta}
+        \caption{Muon efficiency vs $|\eta|$ for SingleMuon.}
+        \label{fig:single_muon_24GeV_efficiency_vs_eta}
+    \end{subfigure}
+    \caption[Trigger efficiencies in data (\textit{top panels}) and ratio of efficiencies after/before a HLT muon reconstruction update (\textit{bottom panels}) for the muon in the isolated single muon trigger with threshold $p_{T} > 24$ GeV in the data-taking year 2018, as functions of the muon $p_{T}$ (\textit{left}) and muon $|\eta|$ (\textit{right}).]{Trigger efficiencies in data (\textit{top panels}) and ratio of efficiencies after/before a HLT muon reconstruction update (\textit{bottom panels}) for the muon in the isolated single muon trigger with threshold $p_{T} > 24$ GeV in the data-taking year 2018, as functions of the muon $p_{T}$ (\textit{left}) and muon $|\eta|$ (\textit{right}). Only statistical errors are shown \cite{CMS-DP-2018-034}.} 
+\end{figure}
+
+\subsection{Single electron trigger efficiencies}
+
+The efficiencies in data, and the ratio between data and MC, of the single electron HLT trigger with $p_{T}$ threshold 32 GeV used in this analysis are shown for 2018, as a function of the electron $p_{T}$ in Fig. \ref{fig:single_ele_32GeV_efficiency_vs_pt} and of the electron $|\eta|$ in Fig. \ref{fig:single_ele_32GeV_efficiency_vs_eta}, from \cite{CMS-DP-2020-016}. In the Tag and Probe method used for the 2018 dataset, the tag is an offline reconstructed electron with $|\eta| \leq 2.1$ and not in the barrel and endcap overlap region, with $p_{T} > 35$ GeV with tight isolation and shower shape requirements, firing the tag trigger. The probe is an offline reconstructed electron with $|\eta| \leq 2.5$ with $E_T^\text{ECAL} > 5$ GeV with no extra identification criteria \cite{CMS-DP-2020-016}. 
+
+The disagreement between data and MC, particularly at low transverse momentum, is in part due to detector effects that are difficult to simulate, such as crystal transparency losses in the ECAL and the evolution of dead regions in the pixel tracker \cite{CMS-DP-2020-016}.
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=1.0\textwidth]{figures/ch-8-scale-factors-and-corrections/electron_Ele32_WPTight_Gsf_efficiency_vsPt}
+        \caption{Electron efficiency vs $p_{T}$ for single electron.}
+        \label{fig:single_ele_32GeV_efficiency_vs_pt}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=1.0\textwidth]{figures/ch-8-scale-factors-and-corrections/electron_Ele32_WPTight_Gsf_efficiency_vsEta}
+        \caption{Electron efficiency vs $|\eta|$ for single electron.}
+        \label{fig:single_ele_32GeV_efficiency_vs_eta}
+    \end{subfigure}
+    \caption[Trigger efficiencies in data and the data/MC ratio for the electron in the single electron trigger with threshold $p_{T} > 32$ GeV in the data-taking year 2018, as functions of the electron $p_{T}$ (\textit{left}) and electron $|\eta|$ (\textit{right}).]{Trigger efficiencies in data, and the data/MC ratio for the electron in the single electron trigger with threshold $p_{T} > 32$ GeV in the data-taking year 2018, as functions of the electron $p_{T}$ (\textit{left}) and electron $|\eta|$ (\textit{right}) \cite{CMS-DP-2020-016}. In the plot vs. $p_{T}$, the region 1.442 $\leq |\eta| \leq$ 1.566 is not included as it corresponds to the transition between barrel and endcap parts of the ECAL.} 
+\end{figure}
+
+
+\subsection{$e\mu$ cross-trigger efficiencies}
+
+The efficiencies of the electron and muons for the cross-trigger with leading muon used in the $e\mu$ channel are shown for data in 2016, 2017, and 2018 in Figures \ref{fig:ele_efficiency_vs_pT_emu} and \ref{fig:muon_efficiency_vs_eta_emu} \cite{CMS-DP-2019-025}. These efficiencies were measured centrally using a Tag and Probe in events with $Z$ to dileptons with the same flavour and opposite charge, where the tags are an isolated muon or electron, and the probe (offline) candidate is required to satisfy the same lepton selection as that of the tag candidate, be matched within $\Delta R < 0.1$ with a corresponding online trigger object, and also to pass the cross-trigger. The trigger efficiency is then:
+\begin{equation}
+    \text{Efficiency} = \frac{\text{Events passing lepton pair selections and probe passing trigger}}{\text{Events passing lepton pair selections}}
+\end{equation}
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=1.0\textwidth]{figures/ch-8-scale-factors-and-corrections/ele_efficiency_vs_pT_emu_HLT_Mu23_TrkIsoVVL_Ele12_CaloIdL_TrackIdL_IsoVL_DZ.png}
+        \caption{Electron efficiency vs. $p_{T}$.}
+        \label{fig:ele_efficiency_vs_pT_emu}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=1.0\textwidth]{figures/ch-8-scale-factors-and-corrections/muon_efficiency_vs_eta_emu_HLT_Mu23_TrkIsoVVL_Ele12_CaloIdL_TrackIdL_IsoVL_DZ.png}
+        \caption{Muon efficiency vs. $\eta$.}
+        \label{fig:muon_efficiency_vs_eta_emu}
+    \end{subfigure}
+    \caption[Efficiencies of the electron leg vs. $p_{T}$ (\textit{left}) and the muon log vs. $\eta$ (\textit{right}), for the HLT path with online thresholds of 12 GeV for the electron and 23 GeV for the muon, with the data-taking years 2016 through 2018 overlaid.]{Efficiencies of the electron leg vs. $p_{T}$ (\textit{left}) and the muon log vs. $\eta$ (\textit{right}), for the HLT path with online thresholds of 12 GeV for the electron and 23 GeV for the muon, for the data-taking years 2016 (\textit{black}), 2017 (\textit{red}), and 2018 (\textit{green}) \cite{CMS-DP-2019-025}.} 
+\end{figure}
+
+
 \section{Electrons and muons faking $\tau_{h}$: energy scales}
 
 Energy scales for electrons misidentified as hadronic tau decays ($e$ faking $\tau_{h}$) are provided by the Tau POG, and were measured in the $e\tau_{h}$ channel with the visible invariant mass of the electron and hadronic tau system \cite{twiki_HiggsToTauTauWorkingLegacyRun2}. This energy scale is applied for $\tau_{h}$ with $p_{T} > 20$ GeV regardless of which DeepTau vs. electron working point was used. Values for 2018 are shown in Table \ref{table:electron-faking-tauh-FES-2018}.
@@ -158,108 +255,30 @@ For misidentified $e \rightarrow \tau_{h}$, the scale factors are split into bar
     \label{table:tauIDeff_deepTau_vs_electron}
 \end{table}
 
-\section{Electron and muon ID, isolation, and tracking}
-% TODO: Expand this section by 3x: TODO: electron ID, TODO: isolation, and TODO: tracking
-% TODO: muon ID, TODO: muon isolation, TODO: muon tracking
-Scale factors to correct for differences between data and MC in the identification, isolation, and tracking of the electrons and muons are taken from the Standard Model $H \rightarrow \tau\tau$ analysis \cite{CMS-HIG-19-010}, due to the similarities in event and object selection.
+\section{Electron and muon ID and tracking efficiencies}
+% TODO: muon ID efficiency https://cds.cern.ch/record/2161025/files/DP2016_027.pdf?version=1, TODO: isolation (same source as ID), and TODO: tracking https://cds.cern.ch/record/2724492/files/DP2020_035.pdf
+Scale factors are applied to correct for differences between data and MC in the identification (ID) and tracking of the electrons and muons.  
 
-% https://inspirehep.net/literature/1916962
-
-\section{Trigger efficiencies}
-
-Scale factors are applied to correct for differences in trigger efficiencies between MC and embedded vs. data, with values taken from tools provided by the Standard Model $H \rightarrow \tau\tau$ working group which uses the same trigger paths \cite{twiki_HiggsToTauTauWorkingLegacyRun2}. In the following sections we review relevant trigger efficiencies in data, which form the basis of the trigger efficiency corrections applied to MC and embedded.
-
-\subsection{Tau trigger efficiencies}
-The efficiencies in data of the single-$\tau_{h}$ leg in $\mu\tau_{h}$, $e\tau_{h}$, and di-$\tau_{h}$ triggers is computed centrally per using a Tag and Probe (TnP) method \cite{CMS-DP-2019-012} which is outlined here. In this method, $Z \rightarrow \tau\tau \rightarrow \mu\tau_{h}$ are selected in data and a Drell-Yan simulated sample ($Z \rightarrow \ell\ell, \ell = e, \mu, \tau_{h}$) with high purity. Cuts are applied to reject events not in this final state, e.g. suppressing $Z \rightarrow \mu\mu$ by vetoing events with a single loose ID muon. An isolated muon candidate (the tag) with online $p_{T} > 27$ GeV and $|\eta| < 2.1$ is identified and matched to an offline $\mu$. An offline $\tau_{h}$ candidate (the probe) is selected, which is separated from the tag $\mu$, and has $p_{T} > 20$ GeV and $|\eta| < 2.1$. The probe $\tau_{h}$ must pass anti-muon and anti-electron discriminators to avoid fakes from muons and electrons, and must pass the medium MVA tau isolation to suppress fakes from QCD jets. The trigger efficiency in the TnP method is calculated as 
-\begin{equation}
-    \text{Efficiency} = \frac{\text{Number of events passing the TnP selection with fires the HLT path}}{\text{Number of events passing the TnP selection}}
-\end{equation}
-
-
-The efficiencies for the hadronic tau legs in the relevant channels of this analyses ($\mu\tau_{h}$ and $e\tau_{h}$) as a function of the offline tau $p_{T}$ and $\eta$, are shown for data taken in 2016, 2017, and 2018 in Figures \ref{fig:mutauEfficiencyPt_eachYear_mediumTauMVA_Data} and \ref{fig:etauEfficiencyPt_eachYear_mediumTauMVA_Data} \cite{CMS-DP-2019-012} \cite{twiki_Tau_Lepton_Run_2_trigger_performance}. In both figures, the different HLT thresholds and differences in the L1 seed result in higher efficiencies in 2016 and differences in shapes of the 2016 efficiencies compared to 2017 and 2018. The low pileup in 2016 also leads to higher efficiencies in that year.
-
+\subsection{Electron ID and tracking efficiency}
+Electron and photon identification, as discussed earlier, use variables with good signal vs. background discrimination power such as lateral shower shape and ratio of energy deposited in the HCAL to energy deposited in the ECAL at the position of the electron. The cut-based electron identification efficiencies in data and ratio of efficiencies in data to MC are shown in Fig. \ref{fig:electron_MVA_ID_efficiency} for the multivariate analysis (MVA) identification working point and in Fig. \ref{fig:electron_GSF_tracking_efficiency} for the Gaussian-sum filter (GSF) tracking \cite{CMS-DP-2020-037}. The exact values used and recipe are taken from the Standard Model $H \rightarrow \tau\tau$ analysis \cite{CMS-HIG-19-010}, due to the similarities in event and object selection.
 
 \begin{figure}[h]
     \centering
     \begin{subfigure}{0.45\textwidth}
-        \includegraphics[width=1.0\textwidth]{figures/ch-8-scale-factors-and-corrections/mutauEfficiencyPt_eachYear_mediumTauMVA_Data.png}
-        \caption{$\tau_{h}$ efficiency from $\mu\tau_{h}$ trigger.}
-        \label{fig:mutauEfficiencyPt_eachYear_mediumTauMVA_Data}
+        \includegraphics[width=1.0\textwidth]{figures/ch-8-scale-factors-and-corrections/electron_MVA_90wp_identification_efficiency}
+        \caption{Electron MVA ID.}
+        \label{fig:electron_MVA_ID_efficiency}
     \end{subfigure}
     \hfill
     \begin{subfigure}{0.45\textwidth}
-        \includegraphics[width=1.0\textwidth]{figures/ch-8-scale-factors-and-corrections/etauEfficiencyPt_eachYear_mediumTauMVA_Data.png}
-        \caption{$\tau_{h}$ efficiency from $e\tau_{h}$ trigger.}
-        \label{fig:etauEfficiencyPt_eachYear_mediumTauMVA_Data}
+        \includegraphics[width=1.0\textwidth]{figures/ch-8-scale-factors-and-corrections/electron_gsf_tracking_efficiency}
+        \caption{Electron GSF tracking.}
+        \label{fig:electron_GSF_tracking_efficiency}
     \end{subfigure}
-    \caption[Hadronic tau leg efficiency of the cross-triggers for $\mu\tau_{h}$ (\textit{left}) and $e\tau_{h}$ (\textit{right}) triggers as a function of offline tau $p_{T}$ for 2016, 2017, and 2018.]{Hadronic tau leg efficiency of the cross-triggers for $\mu\tau_{h}$ (\textit{left}) and $e\tau_{h}$ (\textit{right}) triggers as a function of offline tau $p_{T}$ for the years 2016 (\textit{red}), 2017 (\textit{blue}) and 2018 (\textit{green}), from \cite{twiki_Tau_Lepton_Run_2_trigger_performance}. HLT $p_{T}$ thresholds and L1 seeds are indiated the legends.} 
+    \caption[Efficiencies in data (\textit{top panels}) and the ratio of efficiencies in data/MC (\textit{bottom panels}), for the electron multivariate analysis (MVA) identification (\textit{left}) and for the Gaussian-sum filter (GSF) tracking (\textit{right}).]{Efficiencies in data (\textit{top panels}) and the ratio of efficiencies in data/MC (\textit{bottom panels}), for the electron multivariate analysis (MVA) identification (\textit{left}) and for the Gaussian-sum filter (GSF) tracking (\textit{right}) \cite{CMS-DP-2020-037}. Error bars represent statistical and systematic uncertainties.} 
 \end{figure}
 
-
-\subsection{Single muon trigger efficiencies}
-The efficiencies for the single isolated muon trigger with $p_{T} > 24$ GeV used in this analysis, is shown for the data-taking year 2018 in Fig. \ref{fig:single_muon_24GeV_efficiency_vs_pt} as a function of the muon $p_{T}$ and as a function of the muon $|\eta|$ in Fig. \ref{fig:single_muon_24GeV_efficiency_vs_eta} from \cite{CMS-DP-2018-034}. The data is split with respect to a HLT muon reconstruction update that was deployed on 15/05/2018. A small asymmetry in efficiencies between negative and positive $\eta$ in Fig. \ref{fig:single_muon_24GeV_efficiency_vs_eta} is due to disabled muon chambers (CSCs). The efficiencies shown are estimated using a Tag and Probe method using $Z\rightarrow \mu\mu$ events, with the tag being an offline muon with $p_{T} > 29$ GeV and $|\eta| < 2.4$ passing a tight ID criteria, and the probe is an online (L1) trigger object with $\Delta R < 0.3$ and passing tight ID and Particle Flow based isolation requirements with $p_{T} > 26$ GeV.
-
-\begin{figure}[h]
-    \centering
-    \begin{subfigure}{0.45\textwidth}
-        \includegraphics[width=1.0\textwidth]{figures/ch-8-scale-factors-and-corrections/singleMuon_isolated_efficiency_vs_pt}
-        \caption{Muon efficiency vs $p_{T}$ for SingleMuon.}
-        \label{fig:single_muon_24GeV_efficiency_vs_pt}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.45\textwidth}
-        \includegraphics[width=1.0\textwidth]{figures/ch-8-scale-factors-and-corrections/singleMuon_isolated_efficiency_vs_eta}
-        \caption{Muon efficiency vs $|\eta|$ for SingleMuon.}
-        \label{fig:single_muon_24GeV_efficiency_vs_eta}
-    \end{subfigure}
-    \caption[Trigger efficiencies for the muon in the isolated single muon trigger with threshold $p_{T} > 24$ GeV in the data-taking year 2018, as functions of the muon $p_{T}$ (\textit{left}) and muon $|\eta|$ (\textit{right}).]{Trigger efficiencies for the muon in the isolated single muon trigger with threshold $p_{T} > 24$ GeV in the data-taking year 2018, as functions of the muon $p_{T}$ (\textit{left}) and muon $|\eta|$ (\textit{right}). The data is split with respect to a HLT muon reconstruction update deployed on 15/05/2018. Only statistical errors are shown \cite{CMS-DP-2018-034}.} 
-\end{figure}
-
-\subsection{Single electron trigger efficiencies}
-
-The efficiencies in data, and the ratio between data and MC, of the single electron HLT trigger with $p_{T}$ threshold 32 GeV used in this analysis are shown for 2018, as a function of the electron $p_{T}$ in Fig. \ref{fig:single_ele_32GeV_efficiency_vs_pt} and of the electron $|\eta|$ in Fig. \ref{fig:single_ele_32GeV_efficiency_vs_eta}, from \cite{CMS-DP-2020-016}. In the Tag and Probe method used for the 2018 dataset, the tag is an offline reconstructed electron with $|\eta| \leq 2.1$ and not in the barrel and endcap overlap region, with $p_{T} > 35$ GeV with tight isolation and shower shape requirements, firing the tag trigger. The probe is an offline reconstructed electron with $|\eta| \leq 2.5$ with $E_T^\text{ECAL} > 5$ GeV with no extra identification criteria \cite{CMS-DP-2020-016}. 
-
-The disagreement between data and MC, particularly at low transverse momentum, is in part due to detector effects that are difficult to simulate, such as crystal transparency losses in the ECAL and the evolution of dead regions in the pixel tracker \cite{CMS-DP-2020-016}.
-
-\begin{figure}[h]
-    \centering
-    \begin{subfigure}{0.45\textwidth}
-        \includegraphics[width=1.0\textwidth]{figures/ch-8-scale-factors-and-corrections/electron_Ele32_WPTight_Gsf_efficiency_vsPt}
-        \caption{Electron efficiency vs $p_{T}$ for single electron.}
-        \label{fig:single_ele_32GeV_efficiency_vs_pt}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.45\textwidth}
-        \includegraphics[width=1.0\textwidth]{figures/ch-8-scale-factors-and-corrections/electron_Ele32_WPTight_Gsf_efficiency_vsEta}
-        \caption{Electron efficiency vs $|\eta|$ for single electron.}
-        \label{fig:single_ele_32GeV_efficiency_vs_eta}
-    \end{subfigure}
-    \caption[Trigger efficiencies in data and the data/MC ratio for the electron in the single electron trigger with threshold $p_{T} > 32$ GeV in the data-taking year 2018, as functions of the electron $p_{T}$ (\textit{left}) and electron $|\eta|$ (\textit{right}).]{Trigger efficiencies in data, and the data/MC ratio for the electron in the single electron trigger with threshold $p_{T} > 32$ GeV in the data-taking year 2018, as functions of the electron $p_{T}$ (\textit{left}) and electron $|\eta|$ (\textit{right}) \cite{CMS-DP-2020-016}. In the plot vs. $p_{T}$, the region 1.442 $\leq |\eta| \leq$ 1.566 is not included as it corresponds to the transition between barrel and endcap parts of the ECAL.} 
-\end{figure}
-
-
-\subsection{$e\mu$ cross-trigger efficiencies}
-
-The efficiencies of the electron and muons for the cross-trigger with leading muon used in the $e\mu$ channel are shown for data in 2016, 2017, and 2018 in Figures \ref{fig:ele_efficiency_vs_pT_emu} and \ref{fig:muon_efficiency_vs_eta_emu} \cite{CMS-DP-2019-025}. These efficiencies were measured centrally using a Tag and Probe in events with $Z$ to dileptons with the same flavour and opposite charge, where the tags are an isolated muon or electron, and the probe (offline) candidate is required to satisfy the same lepton selection as that of the tag candidate, be matched within $\Delta R < 0.1$ with a corresponding online trigger object, and also to pass the cross-trigger. The trigger efficiency is then:
-\begin{equation}
-    \text{Efficiency} = \frac{\text{Events passing lepton pair selections and probe passing trigger}}{\text{Events passing lepton pair selections}}
-\end{equation}
-
-\begin{figure}[h]
-    \centering
-    \begin{subfigure}{0.45\textwidth}
-        \includegraphics[width=1.0\textwidth]{figures/ch-8-scale-factors-and-corrections/ele_efficiency_vs_pT_emu_HLT_Mu23_TrkIsoVVL_Ele12_CaloIdL_TrackIdL_IsoVL_DZ.png}
-        \caption{Electron efficiency vs. $p_{T}$.}
-        \label{fig:ele_efficiency_vs_pT_emu}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.45\textwidth}
-        \includegraphics[width=1.0\textwidth]{figures/ch-8-scale-factors-and-corrections/muon_efficiency_vs_eta_emu_HLT_Mu23_TrkIsoVVL_Ele12_CaloIdL_TrackIdL_IsoVL_DZ.png}
-        \caption{Muon efficiency vs. $\eta$.}
-        \label{fig:muon_efficiency_vs_eta_emu}
-    \end{subfigure}
-    \caption[Efficiencies of the electron leg vs. $p_{T}$ (\textit{left}) and the muon log vs. $\eta$ (\textit{right}), for the HLT path with online thresholds of 12 GeV for the electron and 23 GeV for the muon, with the data-taking years 2016 through 2018 overlaid.]{Efficiencies of the electron leg vs. $p_{T}$ (\textit{left}) and the muon log vs. $\eta$ (\textit{right}), for the HLT path with online thresholds of 12 GeV for the electron and 23 GeV for the muon, for the data-taking years 2016 (\textit{black}), 2017 (\textit{red}), and 2018 (\textit{green}) \cite{CMS-DP-2019-025}.} 
-\end{figure}
+\subsection{Muon ID, isolation, and tracking efficiency}
 
 
 
