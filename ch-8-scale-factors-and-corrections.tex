@@ -255,12 +255,13 @@ For misidentified $e \rightarrow \tau_{h}$, the scale factors are split into bar
     \label{table:tauIDeff_deepTau_vs_electron}
 \end{table}
 
-\section{Electron and muon ID and tracking efficiencies}
-% TODO: muon ID efficiency https://cds.cern.ch/record/2161025/files/DP2016_027.pdf?version=1, TODO: isolation (same source as ID), and TODO: tracking https://cds.cern.ch/record/2724492/files/DP2020_035.pdf
-Scale factors are applied to correct for differences between data and MC in the identification (ID) and tracking of the electrons and muons.  
 
-\subsection{Electron ID and tracking efficiency}
-Electron and photon identification, as discussed earlier, use variables with good signal vs. background discrimination power such as lateral shower shape and ratio of energy deposited in the HCAL to energy deposited in the ECAL at the position of the electron. The cut-based electron identification efficiencies in data and ratio of efficiencies in data to MC are shown in Fig. \ref{fig:electron_MVA_ID_efficiency} for the multivariate analysis (MVA) identification working point and in Fig. \ref{fig:electron_GSF_tracking_efficiency} for the Gaussian-sum filter (GSF) tracking \cite{CMS-DP-2020-037}. The exact values used and recipe are taken from the Standard Model $H \rightarrow \tau\tau$ analysis \cite{CMS-HIG-19-010}, due to the similarities in event and object selection.
+\section{Electron ID and tracking efficiency}
+Scale factors are applied to MC to correct for differences between MC and data in the performance of electron identification (ID) and tracking.
+
+Electron and photon identification, as discussed earlier, use variables with good signal vs. background discrimination power such as lateral shower shape and ratio of energy deposited in the HCAL to energy deposited in the ECAL at the position of the electron. The cut-based electron identification efficiencies in data and ratio of efficiencies in data to MC are shown in Fig. \ref{fig:electron_MVA_ID_efficiency} for the multivariate analysis (MVA) identification working point. 
+
+The tracking efficiencies in data and the data/MC ratio are shown in Fig. \ref{fig:electron_GSF_tracking_efficiency} for the Gaussian-sum filter (GSF) tracking \cite{CMS-DP-2020-037}. 
 
 \begin{figure}[h]
     \centering
@@ -278,7 +279,54 @@ Electron and photon identification, as discussed earlier, use variables with goo
     \caption[Efficiencies in data (\textit{top panels}) and the ratio of efficiencies in data/MC (\textit{bottom panels}), for the electron multivariate analysis (MVA) identification (\textit{left}) and for the Gaussian-sum filter (GSF) tracking (\textit{right}).]{Efficiencies in data (\textit{top panels}) and the ratio of efficiencies in data/MC (\textit{bottom panels}), for the electron multivariate analysis (MVA) identification (\textit{left}) and for the Gaussian-sum filter (GSF) tracking (\textit{right}) \cite{CMS-DP-2020-037}. Error bars represent statistical and systematic uncertainties.} 
 \end{figure}
 
-\subsection{Muon ID, isolation, and tracking efficiency}
+
+\section{Muon ID, isolation, and tracking efficiencies}
+Scale factors are applied to MC to correct for differences between MC and data in the performance of muon identification, isolation, and tracking, as detailed below.
+
+The efficiencies for muon identification measured in 2015 data and MC simulation are shown in Figures \ref{fig:muon_looseID_efficiency} and \ref{fig:muon_tightID_efficiency} for the loose ID and tight ID respectively \cite{CMS-MUO-16-001}. The loose ID is chosen such that efficiency exceeds 99\% over the full $\eta$ range, and the data and simulation agree to within 1\%. The tight ID is chosen such that efficiency varies between 95\% and 99\% as a function of $\eta$, and the data and simulation agree to within 1-3\%. The muon identification working point used in this analysis is the medium ID, which has an efficiency of 98\% for all $\eta$ and an agreement within 1-2\% \cite{CMS-MUO-16-001}. 
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=1.0\textwidth]{figures/ch-8-scale-factors-and-corrections/muon_efficiency_looseID}
+        \caption{Muon efficiency isolation vs $p_{T}$.}
+        \label{fig:muon_looseID_efficiency}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=1.0\textwidth]{figures/ch-8-scale-factors-and-corrections/muon_efficiency_tightID}
+        \caption{Muon isolation efficiency vs. $|\eta|$.}
+        \label{fig:muon_tightID_efficiency}
+    \end{subfigure}
+    \caption[Muon identification efficiencies in 2015 data and MC as a function of the muon $p_{T}$ for the loose ID (\textit{left}) and tight ID (\textit{right}) working points.]{Muon identification efficiencies in 2015 data and MC as a function of the muon $p_{T}$ for the loose ID (\textit{left}) and tight ID (\textit{right}) working points \cite{CMS-MUO-16-001}.} 
+\end{figure}
+
+The efficiencies in data for the muon isolation, as measured in Level-3 muons (muons in one of the final stages of reconstruction in the HLT), as a function of the muon $p_{T}$ and $|\eta|$ are shown in Figures \ref{fig:muon_isolation_efficiency_vsPt} and \ref{fig:muon_isolation_efficiency_vsEta} \cite{CMS-MUO-16-001}. The HLT muon reconstruction consists of two steps: Level-2 (L2), where the muon is reconstructed in the muon subdetectors only, and Level-3 (L3) which is a global fit of tracker and muon hits (i.e. the global muon reconstruction as described in Section \ref{section:ch-5-muon-reconstruction}) \cite{Verwilligen-proceedings-2016}.
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=1.0\textwidth]{figures/ch-8-scale-factors-and-corrections/muon_efficiency_isolation_vsPt}
+        \caption{Muon efficiency isolation vs $p_{T}$.}
+        \label{fig:muon_isolation_efficiency_vsPt}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=1.0\textwidth]{figures/ch-8-scale-factors-and-corrections/muon_efficiency_isolation_vsEta}
+        \caption{Muon isolation efficiency vs. $|\eta|$.}
+        \label{fig:muon_isolation_efficiency_vsEta}
+    \end{subfigure}
+    \caption[Muon isolation efficiencies in Run-2 data as a function of the muon $p_{T}$ (\textit{left}) and $|\eta|$ (\textit{right}).]{Muon isolation efficiencies in Run-2 data with respect to Level-3 muons (one of the final stages of HLT muon reconstruction) as a function of the muon $p_{T}$ (\textit{left}) and $|\eta|$ (\textit{right}) \cite{CMS-MUO-16-001}.} 
+\end{figure}
+
+The muon tracking efficiencies as a function of $|\eta|$ for standalone muons (i.e. tracks from only the muon system, i.e. DT, CSC, and RPC, as discussed in Section \ref{section:ch-5-muon-reconstruction}), is shown for data and simulated Drell-Yan samples in Fig. \ref{fig:muon_tracking_efficiency} \cite{CMS-DP-2020-035}. 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=8cm]{figures/ch-8-scale-factors-and-corrections/muon_tracking_efficiency}
+    \caption[Muon tracking efficiencies as a function of $|\eta|$ for standalone muons in Run-2 data (\textit{black}) and Drell-Yan (\textit{blue}) MC simulation.]{Muon tracking efficiencies as a function of $|\eta|$ for standalone muons in Run-2 data (\textit{black}) and Drell-Yan MC simulation (\textit{blue}) \cite{CMS-DP-2020-035}. All Tracks refers to tracks which exploit the presence of muon candidates in the muon system to seed the track reconstruction in the inner tracker, in contrast to tracks that use tracker-only hits for seeding. Uncertainties shown are statistical.}
+    \label{fig:muon_tracking_efficiency}
+\end{figure}
 
 
 
@@ -293,7 +341,7 @@ The Z boson transverse momentum distribution disagrees between leading-order (LO
 Reweighing is performed to rescale MC events to account for differences between MC and data, in the distribution of the pileup (number of additional proton-proton interactions per bunch crossing). A tool for calculating the pileup reweighing for the MC samples used is provided centrally by the Luminosity POG \cite{twiki_LUMI_POG_recommendation}.
 
 \section{Pre-firing corrections}
-TODO: Check 2017 and 2016
+In 2016 and 2017 data-taking, a gradual timing shift of ECAL was not properly propagated to L1 trigger primitives (TPs), resulting in a large fraction of high $\eta$ TPs being incorrectly associated with the previous bunch crossing. L1 trigger rules prevent two consecutive bunch crossings from firing, causing events to be rejected if significant ECAL energy was deposited in $2.0 < |\eta| 3.0$. To account for this issue, MC simulations for 2016 and 2017 are corrected using an event-dependent weight. Embedded samples are not corrected \cite{CMS-HIG-19-010}.
 
 \section{Top $p_{T}$ spectrum reweighing}
 In Run-1 and Run-2 it was observed that the $p_{T}$ spectra of top quarks in $t\bar{t}$ data was significantly softer than those predicted by MC simulations \cite{twiki_Top_pt_reweighing}. Possible sources of this discrepancy are higher order QCD and/or electroweak corrections, and non-resonant production of $t\bar{t}$-like final states. To account for this, corrections derived from Run-2 data by the Top Physics Analysis Group (PAG) are applied to the $p_{T}$ of the top and anti-top quarks in MC simulations, computed as a function of their generator-level $p_{T}$ \cite{twiki_Top_pt_reweighing}.
