@@ -1,1 +1,52 @@
-\section{Statistical fitting}
+In this chapter we describe the statistical methodology used to perform signal extraction. We define concepts needed to construct a model and describe the methodology used to test models under different hypotheses.
+
+\section{Probability densities and the likelihood function}
+
+In the frequentist interpretation, an experiment can be replicated multiple times, resulting in different values of an observable $x$, e.g. the invariant mass of a candidate Higgs boson in a search for the Higgs \cite{2011-Statistics-Cranmer}. The ensemble of values of $x$ gives rise to the probability density function (PDF) of $x$, denoted $f(x)$, which has the important property that it is normalized to unity:
+\begin{equation*}
+    \int f(x) \, dx = 1 \,.
+\end{equation*}
+A parametric family of PDFs
+\begin{equation*}
+    f(x|\alpha) \, ,
+\end{equation*}
+read "$f$ of $x$ given $\alpha$, is referred to as a probability model or model. The parameters $\alpha$ typically represent parameters of the theory or an unknown property of the detector's response. The parameters are not frequentist in nature, unlike $x$. Out of all the parameters, typically only a few are of interest, called the parameters of interest. The remaining are referred to as nuisance parameters \cite{2011-Statistics-Cranmer}.
+
+The likelihood function $L(\alpha)$ is numerically equivalent to $f(x|\alpha)$ with the observables $x$ fixed. It is not a probability density for $\alpha$ and is not normalized to unity:
+\begin{equation*}
+    \int L(\alpha) \, d(\alpha) \neq 1 \, .
+\end{equation*}
+
+\section{Estimating parameters}
+
+A common task in physics is the estimation of a model parameter \cite{2011-Statistics-Cranmer}. For instance, if we measure data $x_i$ distributed according to a Gaussian probability density $f(x | \mu, \sigma) = \text{Gauss}(x|\mu, \sigma)$, we can estimate the mean $\mu$ by calculating the mean of the measured data points $\bar{x} = \Sigma_{i = 1}^{n} x_i / n$. More generally, an estimator $\hat{\alpha}(\mathcal{D}$) is a function of the data, used to estimate the true value of some parameter $\alpha$.
+
+A commonly used estimator in physics is the maximum likelihood estimator (MLE), defined as the value of $\alpha$ which maximizes the likelihood function $L(\alpha)$. This value, labeled $\hat{\alpha}$, also maximizes $\log L(\alpha)$ and minimizes $ - \log L(\alpha)$. By convention, the $-\log L(\alpha)$ is minimized in a process called ``fitting", and the maximum likelihood estimate is called the ``best fit value". 
+
+
+% Test statistics 
+
+% Likelihood functions
+
+% Nuisance parameters 
+
+% Profile likelihood ratios
+
+% How to get a Confidence Level 
+
+% Asimov dataset
+
+\section{Testing hypotheses}
+
+
+\section{Combining of multiple channels}
+Analyses frequently have multiple search channels which need to be combined \cite{2011-Cowan-et-al}. We assume that there is one strength parameter $\mu$ that is the same for all channels. Each channel $i$ has a likelihood function $L_{i} (\mu, \boldsymbol{\theta}_i)$, where $\boldsymbol{\theta_i}$ represents the set of nuisance parameters for the $i$th channel, some of which may be common between the channels. If the channels are statistically independent, the full likelihood function is the product
+\begin{equation}
+    L(\mu, \boldsymbol{\theta}) = \prod_{i} L_i (\mu, \boldsymbol{\theta_i})
+\end{equation}
+where $\boldsymbol{\theta}$ is the complete set of all nuisance parameters. The profile likelihood ratio is 
+\begin{equation}
+    \lambda(\mu) = \frac{ \prod_i L_i(\mu, \hat{\hat{\boldsymbol{\theta}}}_i) }{ \prod_i L_i(\mu, \hat{\boldsymbol{\theta}}_i)}
+\end{equation}
+
+% TODO: finish this section once I also define what a profile likelihood ratio is
