@@ -1,4 +1,4 @@
-In this chapter we describe the statistical methodology used to perform signal extraction. 
+In this chapter we outline the statistics terminology and concepts underlying the modified frequentist method $CL_{S}$ used to perform signal extraction.
 
 \section{Model building and parameter estimation}
 In the frequentist interpretation of probability, an experiment measuring an observable can be repeated, resulting in different values of the observable, e.g. the invariant mass of a candidate Higgs boson in a search for the Higgs \cite{2011-Statistics-Cranmer}. The ensemble of values of the observable $x$ gives rise to the probability density function (PDF) $f(x)$, which has the important property that it is normalized to unity:
@@ -73,12 +73,12 @@ where $T(\mathcal{D})$ is the test statistic, and the last $\alpha$ (not bolded)
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=15cm]{figures/ch-13-signal-extraction/schematic_neyman_construction.png}
+    \includegraphics[width=12cm]{figures/ch-13-signal-extraction/schematic_neyman_construction.png}
     \caption[Schematic of the Neyman construction for confidence intervals.]{Schematic of the Neyman construction for confidence intervals \cite{2011-Statistics-Cranmer}. For each value of $\theta$, we find a region in $x$ where $\int f(x|\theta) dx$ satisfies the size of the test (\textit{blue}). These regions form a confidence belt (\textit{green}). The intersection of the observation $x_0$ (\textit{red}) with the confidence belt defines the confidence interval $[\theta_1, \theta_2]$ \cite{2011-Statistics-Cranmer}.} 
     \label{fig:neyman-construction}
 \end{figure}
 
-\section{Profiling}
+\section{Profile likelihood ratio}
 
 In this section we describe a frequentist statistical procedure based on the profile likelihood ratio test statistic, which is implemented using asymptotic distributions.
 
@@ -95,22 +95,17 @@ The main conceptual reason for constructing the test statistic from the profile 
 
 The following $p$-value is used to quantify the consistency with the hypothesis of a signal strength of $\mu$:
 \begin{equation}
-    p_\mu = \int_{\tilde{q_{\mu, \text{obs}}}}^{\infty} f(\tilde{q}_\mu | \mu, \doublehat{\boldsymbol{\theta}}(\mu, \text{obs})) \, d\tilde{q}_\mu
+    p_\mu = \int_{\tilde{q}_{\mu, \text{obs}}}^{\infty} f(\tilde{q}_\mu | \mu, \doublehat{\boldsymbol{\theta}}(\mu, \text{obs})) \, d\tilde{q}_\mu
 \end{equation}
 
-% TODO: elaborate (section 3.3 of Cranmer https://cds.cern.ch/record/2004587/files/267-308%20Cranmer.pdf)
 
 \section{Modified frequentist method: $CL_{S}$}
-In the
-
-\section{Combining of multiple channels}
-Analyses frequently have multiple search channels which need to be combined \cite{2011-Cowan-et-al}. We assume that there is one strength parameter $\mu$ that is the same for all channels. Each channel $i$ has a likelihood function $L_{i} (\mu, \boldsymbol{\theta}_i)$, where $\boldsymbol{\theta_i}$ represents the set of nuisance parameters for the $i$th channel, some of which may be common between the channels. If the channels are statistically independent, the full likelihood function is the product
+In the modified frequentist method called $CL_{S}$, to test a hypothesis with signal, we define $p'_{\mu}$ as a ratio of $p$-values \cite{2011-Statistics-Cranmer}:
 \begin{equation}
-    L(\mu, \boldsymbol{\theta}) = \prod_{i} L_i (\mu, \boldsymbol{\theta_i})
+    p'_{\mu} = \frac{p_\mu}{1 - p_b}
 \end{equation}
-where $\boldsymbol{\theta}$ is the complete set of all nuisance parameters. The profile likelihood ratio is 
+where $p_b$ is the $p$-value derived under the background-only hypothesis:
 \begin{equation}
-    \lambda(\mu) = \frac{ \prod_i L_i(\mu, \hat{\hat{\boldsymbol{\theta}}}_i) }{ \prod_i L_i(\mu, \hat{\boldsymbol{\theta}}_i)}
+    p_b = 1 - p_0 \equiv 1 - \int_{\tilde{q}_{\mu, \text{obs}}}^{\infty} f(\tilde{q}_\mu | 0, \doublehat{\boldsymbol{\theta}}(\mu = 0, \text{obs})) \, d\tilde{q}_{\mu} \, .
 \end{equation}
-
-% TODO: finish this section once I also define what a profile likelihood ratio is
+The $CL_{S}$ upper limit on $\mu$, denoted $\mu_{up}$, is obtained by solving for $p'_{\mu_{\text{up}}} = 5\%$. If testing the compatability of the data with the background-only hypothesis, we consider the $p_b$ value defined above and conventionally convert it into the quantile or ``sigma" of a unit Gaussian. $z$ standard deviations (e.g. $z = 5$ in ``5$\sigma$") means that the probability of falling above these standard deviations, equals $p_b$ (e.g. $3\sigma$ corresponds to $p_b = 2.7 \times 10^{-3}$ or 95.43\%, and $5\sigma$ corresponds to $p_b = 5.7 \times 10^{-7}$ or 99.999943\%).
