@@ -43,7 +43,7 @@ As a simple example, take the $p$-value test, for an experiment where we count e
     \item The null hypothesis ($H_0$), i.e. the background-only hypothesis in this experiment, with the probability modeled by Poisson($n_{SR}|\nu_B$).
     \item The alternate hypothesis ($H_1$), i.e. signal-plus-background hypothesis, with the probability modeled by Poisson($n_{SR}|(\nu_B + \nu_S)$).
 \end{enumerate}
-The compatability of the observed data $\nu^0_{SR}$ and the null hypothesis, is quantified as the probability that the background-only hypothesis would produce at least as many events as was observed. This probability is the $p$-value: 
+The compatibility of the observed data $\nu^0_{SR}$ and the null hypothesis, is quantified as the probability that the background-only hypothesis would produce at least as many events as was observed. This probability is the $p$-value: 
 \begin{equation}
     p = \sum_{n = n^0_{SR}}^{\infty} \text{Poisson}(n | \nu_B) \, .
 \end{equation}
@@ -54,7 +54,7 @@ The $p$-value is an example of a test statistic $T$, which maps the data to a si
 \begin{equation}
     T_{NP}(\mathcal{D}) = \frac{L(\mathcal{D} | {H_1})}{L(\mathcal{D}|{H_0})}
 \end{equation}
-To reiterate, the test statistic $T$ is a real-valued function of the data, implying that a particular probability model $\boldsymbol{f}(\mathcal{D}|\boldsymbol{\alpha})$ implies a distribution of the test statistic, $f(T|\boldsymbol{\alpha})$, which depends on the value of $\alpha$. With this distribution in hand, the $p$-value can be evaluated in the followng equivalent formulations:
+To reiterate, the test statistic $T$ is a real-valued function of the data, implying that a particular probability model $\boldsymbol{f}(\mathcal{D}|\boldsymbol{\alpha})$ implies a distribution of the test statistic, $f(T|\boldsymbol{\alpha})$, which depends on the value of $\alpha$. With this distribution in hand, the $p$-value can be evaluated in the following equivalent formulations:
 \begin{align}
     p(\boldsymbol{\alpha}) &= \int_{T_0}^{\infty} f(T|\boldsymbol{\alpha}) \, dT  \\
               &= \int \boldsymbol{f}(\mathcal{D} | \boldsymbol{\alpha}) \, \theta(T(\mathcal{D}) - T_0) \, d\mathcal{D} \\
@@ -108,4 +108,4 @@ where $p_b$ is the $p$-value derived under the background-only hypothesis:
 \begin{equation}
     p_b = 1 - p_0 \equiv 1 - \int_{\tilde{q}_{\mu, \text{obs}}}^{\infty} f(\tilde{q}_\mu | 0, \doublehat{\boldsymbol{\theta}}(\mu = 0, \text{obs})) \, d\tilde{q}_{\mu} \, .
 \end{equation}
-The $CL_{S}$ upper limit on $\mu$, denoted $\mu_{up}$, is obtained by solving for $p'_{\mu_{\text{up}}} = 5\%$. If testing the compatability of the data with the background-only hypothesis, we consider the $p_b$ value defined above and conventionally convert it into the quantile or ``sigma" of a unit Gaussian. $z$ standard deviations (e.g. $z = 5$ in ``5$\sigma$") means that the probability of falling above these standard deviations, equals $p_b$ (e.g. $3\sigma$ corresponds to $p_b = 2.7 \times 10^{-3}$ or 95.43\%, and $5\sigma$ corresponds to $p_b = 5.7 \times 10^{-7}$ or 99.999943\%).
+The $CL_{S}$ upper limit on $\mu$, denoted $\mu_{up}$, is obtained by solving for $p'_{\mu_{\text{up}}} = 5\%$. If testing the compatibility of the data with the background-only hypothesis, we consider the $p_b$ value defined above and conventionally convert it into the quantile or ``sigma" of a unit Gaussian. $z$ standard deviations (e.g. $z = 5$ in ``5$\sigma$") means that the probability of falling above these standard deviations, equals $p_b$ (e.g. $3\sigma$ corresponds to $p_b = 2.7 \times 10^{-3}$ or 95.43\%, and $5\sigma$ corresponds to $p_b = 5.7 \times 10^{-7}$ or 99.999943\%).
