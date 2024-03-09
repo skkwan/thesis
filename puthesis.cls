@@ -140,8 +140,8 @@
 %% Not necessary to specify the point size - we inherit it from above
 %% \LoadClass[12pt]{report}
 \LoadClass{report}
-\setlength{\oddsidemargin}{.5in}   %{.4375in}
-\setlength{\evensidemargin}{.5in} %{.4375in}
+\setlength{\oddsidemargin}{.25in}   %{.4375in}
+\setlength{\evensidemargin}{.25in} %{.4375in}
 \setlength{\topmargin}{-.5in}  %{-.5625in}
 \setlength{\textheight}{9in}
 \setlength{\textwidth}{6in}
