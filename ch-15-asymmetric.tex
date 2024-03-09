@@ -17,9 +17,35 @@ Studies of the signal phenomenology in the cascade scenario were performed to de
 
 Cross sections and branching fractions of the $4b2\tau$ and $2b4\tau$ final states were compared using cross-section predictions provided by the authors of \cite{Robens:2019kga}. For an example mass point $m_{a_2} = 80$ GeV, $m_{a_1} = 30$ GeV, the branching fractions to $4b2\tau$ is ten times larger than $2b4\tau$: $B(h \rightarrow a_1 a_2 \rightarrow 3 a_1 \rightarrow 4b2\tau) = 0.00857$, vs. $B(h \rightarrow a_1 a_2 \rightarrow 3 a_1 \rightarrow 2b4\tau) = 0.00068$. The $4b2\tau$ final state was chosen for this analysis.
 
-An event category with three or more b-tag jets was determined to be infeasible due to low statistics in this category, due to the difficulties in reconstructing the third and fourth b jets which have very low transverse momenta $p_{T}$. Event categories with exactly 1 b-tag jet and $\geq 2$ b-tag jets will be used.
+In general the four b-jets have low $p_{T}$ at generator level, as illustrated for example mass points (100, 15) GeV and (40, 20) GeV. %TODO: add figures
+ An event category with three or more b-tag jets was determined to be infeasible due to low statistics in this category, due to the difficulties in reconstructing the third and fourth b jets which have very low transverse momenta $p_{T}$. Event categories with exactly 1 b-tag jet and $\geq 2$ b-tag jets will be used.
 
-The possibility of the leading and sub-leading b-tag jets being sufficiently close in $\Delta R$ to require boosted jet reconstruction techniques was explored. In the $4b2\tau$ case, jets in the generated event were spatially matched in $\Delta R$ to the jets reconstructed with the standard AK4 algorithm which uses a cone size of $\Delta R = 0.4$ to find jet constituents. Reasonable $p_{T}$ resolution (computed as $(p_{T, \text{reconstructed}} - p_{T, \text{gen}})/ p_{T, \text{gen}}$) was seen for representative mass points.
+In the $4b2\tau$ final state, the possibility of the leading and sub-leading b-tag jets being sufficiently close in $\Delta R$ to require boosted jet reconstruction techniques was explored. In the $4b2\tau$ case, the two b-jets in the generated event that were spatially closest in $\Delta R$ were considered as one object. This two b-jet object was spatially matched in $\Delta R$ to the jets reconstructed with the standard AK4 algorithm which uses a cone size of $\Delta R = 0.4$. The quality of the $p_{T}$ resolution (computed as $(p_{T, \text{reconstructed}} - p_{T, \text{gen}})/ p_{T, \text{gen}}$) and closeness in distance $\Delta R$ of the reconstructed jet to the nearest generator-level jets, was seen to depend on the absolute and relative masses of the light scalars. The best (worst) performance occurred in samples with large (small) mass differences between the heavier scalar $a_2$ and the lighter scalar $a_1$, as illustrated for the mass points (100, 15) GeV and (40, 20) GeV in Fig. \ref{fig:cascade_matching_to_AK4_jets}.
+
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=1.0\textwidth]{figures/ch-15-asymmetric/Cascade_ggH_MA2-100_MA1-15_pt_resolution_ak4_leadingPair}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=1.0\textwidth]{figures/ch-15-asymmetric/Cascade_ggH_MA2-100_MA1-15_deltaR_ak4_leadingPair}
+    \end{subfigure} \\
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=1.0\textwidth]{figures/ch-15-asymmetric/Cascade_ggH_MA2-40_MA1-20_pt_resolution_ak4_leadingPair}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=1.0\textwidth]{figures/ch-15-asymmetric/Cascade_ggH_MA2-40_MA1-20_deltaR_ak4_leadingPair}
+        % \caption{$\tau_{h}$ efficiency from $e\tau_{h}$ trigger.}
+        % \label{fig:}
+    \end{subfigure}     
+    \caption{Distributions (arbitrary units) of transverse momentum $p_{T}$ resolution and $\Delta R$ between the two closest generator-level $b$ jets, treated as one object, and the nearest reconstructed AK4 jet, for two different $h\rightarrow a_1 a_2$ mass points $(m_{a_1}, m_{a_2}) = (100, 15)$ GeV (\textit{top left, top right}) and $(40, 20)$ GeV (\textit{bottom left, bottom right}) in the ggH production of the 125 GeV $h$. In the $(40, 20)$ GeV mass point, the longer $p_{T}$ resolution tail (\textit{bottom left}) indicates that the reconstructed jet underestimates the generator b-jets' energy, and the significant fraction of events with larger $\Delta R$ values (\textit{bottom right}) indicate worse matching.}
+    \label{fig:cascade_matching_to_AK4_jets}
+\end{figure}
+
+
 
 \section{Control plots for $\mu\tau_{h}$ channel}
 % TODO: include mutau control plots
