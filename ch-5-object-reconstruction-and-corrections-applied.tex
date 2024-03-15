@@ -3,8 +3,9 @@
 We review the properties of the particles most pertinent to the analyses presented in this work (taus, muons, electrons, jets, and b-jets), their signatures in the CMS detector, and dedicated reconstruction techniques used at CMS.
 
 \subsection{Taus}
-\subsubsection{Decay modes}
-The lifetime of $\tau$ leptons is short enough that they decay before reaching the detector elements. In two thirds of the cases, $\tau$ leptons decay hadronically, typically into one or three charged mesons (predominantly $\pi^+$, $\pi^-$), often accompanied by neutral pions (that decay $\pi^0 \rightarrow \gamma\gamma$), and a $\nu_{\tau}$. These hadronic decays are denoted $\tau_{h}$. In the remainder of the decays, the tau decays to the lighter leptons (electron or muon), termed leptonic decays. In all cases, at least one neutrino is produced, resulting in missing transverse energy in the CMS detector. The tau's largest decay branching ratios (proportional to probability of decay) are listed below \citep{workman_review_2022}: 
+The tau ($\tau$) is the heaviest known lepton. With a rest mass of 1776.86 MeV, it can decay to not only electrons and muons, but also hadrons. The mean lifetime of the $\tau$ is $\tau = 290 \times 10^{-15}$ seconds, corresponding to $c\tau = 87.03$ $\mu$m, which is short enough that taus decay in the CMS detector before reaching the detector elements. 
+
+In two thirds of the cases, $\tau$ leptons decay hadronically, typically into one or three charged mesons (predominantly $\pi^+$, $\pi^-$), often accompanied by neutral pions (that decay $\pi^0 \rightarrow \gamma\gamma$), and a $\nu_{\tau}$. These hadronic decays are denoted $\tau_{h}$. In the remainder of the decays, the tau decays to the lighter leptons (electron or muon), termed leptonic decays. In all cases, at least one neutrino is produced, resulting in missing transverse energy in the CMS detector. The tau's largest decay branching ratios (proportional to probability of decay) are listed below \citep{workman_review_2022}: 
 \begin{itemize}
     \item 17.8\% decay to $e^- \bar{\nu}_e \nu_{\tau}$
     \item 17.4\% decay to $\mu^- \bar{\nu}_\mu \nu_{\tau}$
@@ -16,7 +17,7 @@ The lifetime of $\tau$ leptons is short enough that they decay before reaching t
 
 The neutrinos escape undetected from the CMS detector and are not considered in the reconstruction. Charged hadrons leave tracks in the tracking detector before being absorbed in the hadronic calorimeter; in CMS tau reconstruction terminology, they are often called ``prongs'', i.e. the dominant $\tau_{h}$ decay modes are termed ``1 prong" ($\pi^\pm$), ``1 prong + $\pi^0$(s)", and ``3-prong''. Neutral pions decay to two photons which lose their energy in the electromagnetic calorimeter. Taus that decay to electrons and muons, are typically triggered on and reconstructed as electrons and muons respectively. 
 
-\subsubsection{Hadron plus strips (HPS) reconstruction}
+\subsubsection{Hadron plus strips (HPS) reconstruction of $\tau_{h}$}
 At CMS, hadronically decaying tau leptons are reconstructed with the hadron plus strips (HPS) algorithm \citep{CMS-TAU-14-001} \cite{2012-JINST-7-P01001}. The HPS algorithm capitalizes on photon conversions in the CMS tracker material, which originate from the neutral pion ($\pi^0$) decaying to two photons. The bending of electron/positron tracks due to the CMS solenoid magnetic field leads to a spread of the neutral pions' calorimeter signatures in the $\phi$ direction. This motivates the reconstruction of photons in ``strips": objects that are built out of PF photons and electrons. The strip reconstruction starts with centering a strip on the most energetic electromagnetic particle in a PF jet. Among other electromagnetic particles located in a window of size $\Delta \eta = 0.05$ and $\Delta \phi = 0.20$ around the strip center, the most energetic one is associated with the strip and its momentum is added to the strip momentum. This is repeated iteratively until no further particles can be associated. Lastly, strips satisfying a requirement of $p_{T}^{\text{strip}} > 1$ GeV are combined with charged hadrons to reconstruct individual $\tau_{h}$ decay modes, where $h$ stands for both $\pi$ and $K$:
 \begin{itemize}
     \item \textit{Single hadron}: $h^- \nu_{\tau}$ and $h^- \pi^0 \nu_{\tau}$ decay modes, in which the neutral pions have too little energy to be reconstructed as strips.
@@ -30,7 +31,7 @@ In the HPS algorithm, the direction of the reconstructed tau momentum $\vec{p}^{
 
 All charged hadrons are assumed to be pions, and they are required to be consistent with the masses of the intermediate meson resonances (if applicable), with the following allowed windows for candidates: 50-200 MeV for $\pi^0$, 0.3-1.3 GeV for $\rho$, and 0.8-1.5 GeV for $a_1$. If the $\tau_{h}$ decay is compatible with more than one hypothesis, the one giving the highest $p_{T}^{\tau_{h}}$ is chosen. Lastly, an isolation requirement is applied: aside from the $\tau_{h}$ decay products, no charged hadrons or photons can be present within an isolation cone of size $\Delta R = 0.5$ around the direction of the $\tau_{h}$. The outputs of the HPS algorithm are the reconstructed decay mode and the visible four-momentum (i.e. the four-momenta of all decay products excluding the neutrinos).
 
-\subsubsection{DeepTau}
+\subsubsection{DeepTau for identifying $\tau_{h}$}
 The identification of $\tau_{h}$ candidates in CMS has historically been divided into separate discriminators against jets, electrons, and muons. Discriminators versus jets and electrons use information from derived quantities, such as the $p_{T}$ sum of particles near the $\tau_{h}$ axis. Building on the previous multivariate analysis (MVA) classifier \cite{CMS-TAU-16-003} based on a boosted decision tree (BDT), DeepTau is a more recent classifier based on a deep neural network (DNN) that simultaneously discriminates against jets, electrons, and muons. The DNN uses a combination of high-level inputs, similar to previous algorithms, and also uses convolutional layers in $\eta$-$\phi$ space to process information from all reconstructed particles near the $\tau_{h}$ axis. Convolutional layers are based on the principle that an image can be processed independently of its position. 
 
 The final DeepTau discriminators against jets, muons, and electrons are given by 
@@ -41,7 +42,7 @@ where $y_\tau$ ($y_\alpha$) are estimates of the probabilities for the $\tau_{h}
 
 \subsection{Muons}
 \label{section:ch-5-muon-reconstruction}
-Muons are identified with requirements on the quality of the track reconstruction and on the number of measurements in the tracker and the muon systems \citep{CMS-MUO-10-004}. In the standard CMS reconstruction, tracks are first reconstructed independently in the inner tracker (tracker track) and in the muon system (standalone-muon track). Next, these tracks are processed in two different methods.
+Muons are the next lightest lepton after taus, with a mass of $105.66$ MeV and a mean lifetime of $\tau = 2.20 \times 10^{-6}$ seconds, or $c\tau = 658.64$ m. At CMS, muons are identified with requirements on the quality of the track reconstruction and on the number of measurements in the tracker and the muon systems \citep{CMS-MUO-10-004}. In the standard CMS reconstruction, tracks are first reconstructed independently in the inner tracker (tracker track) and in the muon system (standalone-muon track). Next, these tracks are processed in two different methods.
 
 The first is Global Muon reconstruction (outside-in) \citep{CMS-MUO-10-004}, which fits combined hits from the tracker track and standalone-muon track, using the Kalman-filter technique. At large transverse momenta, $p_{T} \gtrsim 200$ GeV, the global-muon fit can improve the momentum resolution compared to the tracker-only fit. 
 
@@ -57,7 +58,7 @@ where $\sum_{\text{charged}} p_{T}$ is the scalar sum of the $p_{T}$ of the char
 
 
 \subsection{Electrons}
-Electrons are reconstructed by associating a track reconstructed in the silicon tracking detector with a cluster of energy in the ECAL. Performance is maximized via a combination of a stand-alone approach and the complementary global particle-flow approach \citep{JINST-2015-10-P06005}. 
+Electrons are the lighest lepton with a mass of $0.511$ MeV. At CMS, electrons are reconstructed by associating a track reconstructed in the silicon tracking detector with a cluster of energy in the ECAL. Performance is maximized via a combination of a stand-alone approach and the complementary global particle-flow approach \citep{JINST-2015-10-P06005}. 
 
 In the stand-alone approach, the electron energy, which is typically spread over several crystals of the ECAL, is clustered with the ``hybrid'' algorithm in the barrel and the ``multi-$5\times 5$'' in the endcaps \citep{JINST-2015-10-P06005}. The hybrid algorithm collects energy in a small window in $\eta$ and an extended window in $\phi$. It identifies a seed crystal, and adds arrays of $5 \times 1$ crystals in $\eta \times \phi$ in a range of $N = 17$ crystals in both directions of $\phi$, if their energies exceed a minimum threshold, thus forming a supercluster (SC).  In the endcap, crystals are not arranged in an $\eta \times \phi$ geometry; instead clusters are build around seed crystals in clusters of $5\times 5$ crystals that can partly overlap. Nearby clusters are grouped into a supercluster, and energy is recovered from associated deposits in the preshower. 
 
