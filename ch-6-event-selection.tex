@@ -6,9 +6,35 @@ In all three final states, events are required to have at least one b-tag jet pa
 
 Events in MC samples are sorted into one of the three $\tau\tau$ channels if they pass the following trigger requirements and requirements on the offline reconstructed objects in the event, first checking the HLT paths for the $\mu\tau_{h}$ channel, then $e\tau_{h}$, and finally $e\mu$. The two leading leptons (e.g. muon and hadronic tau for the $\mu\tau_{h}$ channel) that were determined to have originated from the $\tau\tau$ decay, are called the $\tau\tau$ ``legs'' and are respectively subscripted $1$ and $2$ in this work. For events in data and embedded samples, the HLT paths requirements for the corresponding channel are checked.
 
-After sorting events by HLT paths and identifying the leading tau legs in the offline reconstructed objects, the $p_{T}$ of the offline objects is checked against the online trigger thresholds. Trigger matching is also performed, which checks the correspondence between each offline reconstructed object used in the analysis (e.g. a muon), and a trigger object in the HLT (e.g. a HLT muon). An offline object is considered to be matched, if it corresponds to a trigger object of the same object type, with $\Delta R < 0.5$. This matched trigger object is also required to pass the filter(s) of the HLT trigger.
+After sorting events by HLT paths and identifying the leading tau legs in the offline reconstructed objects, the $p_{T}$ of the offline objects is checked against the online trigger thresholds. Trigger matching is also performed, which checks the correspondence between each offline reconstructed object used in the analysis (e.g. a muon), and a trigger object in the HLT (e.g. a HLT muon). An offline object is considered to be matched, if it corresponds to a trigger object of the same object type, with $\Delta R < 0.5$. This matched trigger object is also required to pass the filter(s) of the HLT trigger. The trigger thresholds used for the $bb\tau\tau$ final state (the focus of this work) and the $bb\mu\mu$ final state are summarized in Table \ref{tab:trigger_thresholds} and detailed in the following sections.
 
-Further cuts are made on the offline objects in each channel to obtain the signal region, or other data regions used to perform data-driven background estimations. These are detailed below. 
+\begin{table}[ht!]
+    \centering
+    \begin{tabular}{|lc|c|cccccc|}
+    \hline
+    \multirow{3}{*}{ Year } & \multirow{3}{*}{ Single/dilepton trigger $p_{T}$ } & $bb\mu\mu$ & \multicolumn{6}{c|}{$bb\tau\tau$} \\
+    & & & \multicolumn{2}{c}{$e\mu$} & \multicolumn{2}{c}{$e\tau_{h}$} & \multicolumn{2}{c|}{$\mu\tau_{h}$}  \\
+    & & $\mu$ & $e$ & $\mu$ & $e$ & $\tau_{h}$ & $\mu$ & $\tau_{h}$ \\
+    \hline
+    \multirow{3}{*}{ 2016 } & Single lepton      &  24     &        \textendash       &       \textendash      &         25          &          \textendash         &          22         &         \textendash    \\
+                            & $p_{T}$-leading lepton        &  17     &        23       &       23      & \multirow{2}{*}{\textendash} & \multirow{2}{*}{\textendash} &          \textendash         &         20    \\
+                            & $p_{T}$-subleading lepton     &  8      &        12       &       8       &                     &                     &          19         &         \textendash    \\
+    \hline
+    \multirow{3}{*}{ 2017 } & Single lepton       & 24      &        \textendash       &       \textendash      &       27, 32        &          \textendash         &       24, 27        &         \textendash    \\
+                            & $p_{T}$-leading lepton        &  17     &        23       &       23      &         \textendash          &          30         &          \textendash         &         27    \\
+                            & $p_{T}$-subleading lepton     &  8      &        12       &       8       &         24          &          \textendash         &          20         &         \textendash    \\
+    \hline
+    \multirow{3}{*}{ 2018 } & Single lepton      & 24      &        \textendash       &       \textendash      &       32, 35        &          \textendash         &       24, 27        &         \textendash    \\
+                            & $p_{T}$-leading lepton        &  17     &        23       &       23      &         \textendash          &          30         &          \textendash         &         27    \\
+                            & $p_{T}$ subleading lepton     &  8      &        12       &       8       &         24          &          \textendash         &          20         &         \textendash    \\
+    \hline
+    \end{tabular}
+    \caption{Trigger thresholds used for the leptons in the $bb\mu\mu$ analysis and the $bb\tau\tau$ analysis (the focus of this work). The thresholds for the three $bb\tau\tau$ channels ($e\mu$, $e\tau_{h}$, and $\mu\tau_{h}$) are listed separately, with some channels and years taking the logical OR of two triggers with different thresholds.}
+    \label{tab:trigger_thresholds}
+\end{table}
+    
+
+Further cuts are made on the offline objects in each channel to obtain the signal region, or other data regions used to perform data-driven background estimations. 
 
 \section{Event selection in the \texorpdfstring{$\mu\tau_{h}$}{mutauh} channel}
 \label{section:ch-6-event-selection-mutau}
@@ -133,6 +159,7 @@ For the QCD multijet background estimation described in Section \ref{section:ch-
     \caption{High-Level Trigger (HLT) paths used to select data and simulation events in 2018 for the three $\tau\tau$ channels. In 2018 a HLT trigger path using the hadron plus strips (HPS) tau reconstruction algorithm became available.}
     \label{table:trigger2018}
 \end{table}
+
 
 
 \section{Extra lepton vetoes in all channels}
