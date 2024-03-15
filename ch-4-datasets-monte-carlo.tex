@@ -13,4 +13,13 @@ The samples for modeling the signal ($h \rightarrow aa \rightarrow 2b2\tau$ and 
 
 \section{Embedded samples}
 \label{sec:embedded-samples}
-An embedding technique is used to estimate background from the Standard Model $Z$ boson decaying to $\tau\tau$, from data with minimal simulation input \cite{CMS-TAU-18-001}. In data events selected to have $Z \rightarrow \mu\mu$ decays, all energy deposits of the recorded muons are removed from the event, and replaced with simulated tau leptons with the same kinematic properties as the removed muons. This results in a hybrid data format containing information from both observed and simulated events. The advantage of the Embedded samples is that the portions of the event that are difficult to model and describe (e.g. the underlying event or production of additional jets) are directly taken from data. 
+An embedding technique is used to estimate background from the Standard Model $Z$ boson decaying to $\tau\tau$, from data with minimal simulation input \cite{CMS-TAU-18-001}. In data events containing $Z \rightarrow \mu\mu$ decays, all energy deposits of the recorded muons are removed from the event, and replaced with simulated tau leptons with the same kinematic properties as the removed muons. This results in a hybrid data format containing information from both observed and simulated events, as illustrated in Fig. \ref{fig:embedded-schematic} \cite{CMS-TAU-18-001}. The advantage of the Embedded samples is that the portions of the event that are difficult to model and describe (e.g. the underlying event or production of additional jets) are directly taken from data. 
+
+% TODO: add text
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=15cm]{figures/ch-4-datasets-monte-carlo/embedded_schematic}
+    \caption[Schematic view of the four main steps of the embedding technique for $\tau$ leptons.]{Schematic view of the four main steps of the embedding technique for $\tau$ leptons, as described in Section \ref{sec:embedded-samples} \cite{CMS-TAU-18-001}. A $Z \rightarrow \mu\mu$ event is selected in data (\textit{$Z\rightarrow \mu\mu$ selection}), all of the energy deposits associated with the muons are removed (\textit{$Z \rightarrow \mu\mu$ cleaning}), and two $\tau$ leptons and their decays are simulated in an empty detector (\textit{$Z \rightarrow \tau\tau$ simulation}). Lastly, all energy deposits of the simulated $\tau$ decays are combined with the data event (\textit{$Z \rightarrow \tau\tau$ hybrid}).} 
+    \label{fig:embedded-schematic}
+\end{figure}
