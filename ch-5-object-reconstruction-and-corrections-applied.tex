@@ -17,7 +17,7 @@ In two thirds of the cases, $\tau$ leptons decay hadronically, typically into on
 
 The neutrinos escape undetected from the CMS detector and are not considered in the reconstruction. Charged hadrons leave tracks in the tracking detector before being absorbed in the hadronic calorimeter; in CMS tau reconstruction terminology, they are often called ``prongs'', i.e. the dominant $\tau_{h}$ decay modes are termed ``1 prong" ($\pi^\pm$), ``1 prong + $\pi^0$(s)", and ``3-prong''. Neutral pions decay to two photons which lose their energy in the electromagnetic calorimeter. Taus that decay to electrons and muons, are typically triggered on and reconstructed as electrons and muons respectively. 
 
-\subsubsection{Hadron plus strips (HPS) reconstruction of \texorpdfstring{$\tau_{h}$}{tauh}}
+\subsubsection{Hadron plus strips (HPS) reconstruction of $\tau_{h}$}
 At CMS, hadronically decaying tau leptons are reconstructed with the hadron plus strips (HPS) algorithm \citep{CMS-TAU-14-001} \cite{2012-JINST-7-P01001}. The HPS algorithm capitalizes on photon conversions in the CMS tracker material, which originate from the neutral pion ($\pi^0$) decaying to two photons. The bending of electron/positron tracks due to the CMS solenoid magnetic field leads to a spread of the neutral pions' calorimeter signatures in the $\phi$ direction. This motivates the reconstruction of photons in ``strips": objects that are built out of PF photons and electrons. The strip reconstruction starts with centering a strip on the most energetic electromagnetic particle in a PF jet. Among other electromagnetic particles located in a window of size $\Delta \eta = 0.05$ and $\Delta \phi = 0.20$ around the strip center, the most energetic one is associated with the strip and its momentum is added to the strip momentum. This is repeated iteratively until no further particles can be associated. Lastly, strips satisfying a requirement of $p_{T}^{\text{strip}} > 1$ GeV are combined with charged hadrons to reconstruct individual $\tau_{h}$ decay modes, where $h$ stands for both $\pi$ and $K$:
 \begin{itemize}
     \item \textit{Single hadron}: $h^- \nu_{\tau}$ and $h^- \pi^0 \nu_{\tau}$ decay modes, in which the neutral pions have too little energy to be reconstructed as strips.
@@ -31,7 +31,7 @@ In the HPS algorithm, the direction of the reconstructed tau momentum $\vec{p}^{
 
 All charged hadrons are assumed to be pions, and they are required to be consistent with the masses of the intermediate meson resonances (if applicable), with the following allowed windows for candidates: 50-200 MeV for $\pi^0$, 0.3-1.3 GeV for $\rho$, and 0.8-1.5 GeV for $a_1$. If the $\tau_{h}$ decay is compatible with more than one hypothesis, the one giving the highest $p_{T}^{\tau_{h}}$ is chosen. Lastly, an isolation requirement is applied: aside from the $\tau_{h}$ decay products, no charged hadrons or photons can be present within an isolation cone of size $\Delta R = 0.5$ around the direction of the $\tau_{h}$. The outputs of the HPS algorithm are the reconstructed decay mode and the visible four-momentum (i.e. the four-momenta of all decay products excluding the neutrinos).
 
-\subsubsection{DeepTau for identifying \texorpdfstring{$\tau_{h}$}{tauh}}
+\subsubsection{DeepTau for identifying $\tau_{h}$}
 The identification of $\tau_{h}$ candidates in CMS has historically been divided into separate discriminators against jets, electrons, and muons. Discriminators versus jets and electrons use information from derived quantities, such as the $p_{T}$ sum of particles near the $\tau_{h}$ axis. Building on the previous multivariate analysis (MVA) classifier \cite{CMS-TAU-16-003} based on a boosted decision tree (BDT), DeepTau is a more recent classifier based on a deep neural network (DNN) that simultaneously discriminates against jets, electrons, and muons. The DNN uses a combination of high-level inputs, similar to previous algorithms, and also uses convolutional layers in $\eta$-$\phi$ space to process information from all reconstructed particles near the $\tau_{h}$ axis. Convolutional layers are based on the principle that an image can be processed independently of its position. 
 
 The final DeepTau discriminators against jets, muons, and electrons are given by 
@@ -96,7 +96,7 @@ The DeepJet (formerly known as DeepFlavour) algorithm \cite{CMS-DP-2017-013} is 
 
 
 
-\section{Reconstruction of the \texorpdfstring{$\tau\tau$}{tautau} mass}
+\section{Reconstruction of the $\tau\tau$ mass}
 
 The final signal extraction is done to the total $\tau\tau$ mass, which is estimated from the visible $\tau\tau$ mass using the FastMTT algorithm \cite{2014_SVFit_Bianchini}. FastMTT is based on the SVFit algorithm, originally developed for the Standard Model $H \rightarrow \tau\tau$ analysis \cite{CMS-HIG-13-004}. Both the SVFit algorithms, and the FastMTT algorithm, are described below, to give a complete picture of how tau decays are parameterized.
 
@@ -138,7 +138,7 @@ Uncertainties in scale factors and corrections are also sources of systematic er
 
 
 \section{Corrections applied to simulation and embedded}
-\label{sec:corrections_applied}
+
 \subsection{Tau energy scale}
 \label{sec:tau_energy_scale}
 
@@ -213,7 +213,7 @@ Corrections to the electron energy scale are applied to genuine $e$ from $\tau$ 
     \label{table:ele-ES-embedded}
 \end{table}
 
-\subsection{\texorpdfstring{$\tau_{h}$}{tauh} identification efficiency}
+\subsection{$\tau_{h}$ identification efficiency}
 \label{sec:tauh_id_efficiency}
 
 The $\tau_{h}$ identification efficiency can differ in data and MC \cite{twiki_TAU_POG_tauidrecommendationforrun2}. Recommended corrections are provided by the Tau POG, and we use the medium DeepTau vs. jet working point values. The identification efficiency is measured in $Z \rightarrow \tau\tau$ events in the $\mu\tau_{h}$ final state, and is binned in $p_{T}$ due to clear $p_{T}$ dependence of the DeepTau ID. 
@@ -308,7 +308,7 @@ The disagreement between data and MC, particularly at low transverse momentum, i
 \end{figure}
 
 
-\subsection{\texorpdfstring{$e\mu$}{emu} cross-trigger efficiencies}
+\subsection{$e\mu$ cross-trigger efficiencies}
 
 The efficiencies of the electron and muons for the cross-trigger with leading muon used in the $e\mu$ channel are shown for data in 2016, 2017, and 2018 in Figures \ref{fig:ele_efficiency_vs_pT_emu} and \ref{fig:muon_efficiency_vs_eta_emu} \cite{CMS-DP-2019-025}. These efficiencies were measured centrally using a Tag and Probe in events with $Z$ to dileptons with the same flavour and opposite charge, where the tags are an isolated muon or electron, and the probe (offline) candidate is required to satisfy the same lepton selection as that of the tag candidate, be matched within $\Delta R < 0.1$ with a corresponding online trigger object, and also to pass the cross-trigger. The trigger efficiency is then:
 \begin{equation}
@@ -332,7 +332,7 @@ The efficiencies of the electron and muons for the cross-trigger with leading mu
 \end{figure}
 
 
-\subsection{Electrons and muons faking \texorpdfstring{$\tau_{h}$}{tauh}: energy scales}
+\subsection{Electrons and muons faking $\tau_{h}$: energy scales}
 
 Energy scales for electrons misidentified as hadronic tau decays ($e$ faking $\tau_{h}$) are provided by the Tau POG, and were measured in the $e\tau_{h}$ channel with the visible invariant mass of the electron and hadronic tau system \cite{twiki_HiggsToTauTauWorkingLegacyRun2}. This energy scale is applied for $\tau_{h}$ with $p_{T} > 20$ GeV regardless of which DeepTau vs. electron working point was used. Values for 2018 are shown in Table \ref{table:electron-faking-tauh-FES-2018}.
 
@@ -355,7 +355,7 @@ Energy scales for electrons misidentified as hadronic tau decays ($e$ faking $\t
 
 No nominal energy scale is applied for muons mis-reconstructed as $\tau_{h}$, and the uncertainty is treated as $\pm$ 1\% and uncorrelated in the reconstructed decay mode \cite{twiki_HiggsToTauTauWorkingLegacyRun2}. 
 
-\subsection{Electrons and muons faking \texorpdfstring{$\tau_{h}$}{tauh}: misidentification efficiencies}
+\subsection{Electrons and muons faking $\tau_{h}$: misidentification efficiencies}
 Corrections on identification efficiencies are applied to genuine electrons and muons misidentified as $\tau$ to account for differences in data and MC.
 
 The specific values depend on the vs. electron and vs. muon discriminator working points used. 
@@ -487,7 +487,7 @@ Reweighing is performed to rescale MC events to account for differences between 
 \subsection{Pre-firing corrections}
 In 2016 and 2017 data-taking, a gradual timing shift of ECAL was not properly propagated to L1 trigger primitives (TPs), resulting in a large fraction of high $\eta$ TPs being incorrectly associated with the previous bunch crossing. L1 trigger rules prevent two consecutive bunch crossings from firing, causing events to be rejected if significant ECAL energy was deposited in $2.0 < |\eta| 3.0$. To account for this issue, MC simulations for 2016 and 2017 are corrected using an event-dependent weight. Embedded samples are not corrected \cite{CMS-HIG-19-010}.
 
-\subsection{Top \texorpdfstring{$p_{T}$}{pT} spectrum reweighing}
+\subsection{Top $p_{T}$ spectrum reweighing}
 In Run-1 and Run-2 it was observed that the $p_{T}$ spectra of top quarks in $t\bar{t}$ data was significantly softer than those predicted by MC simulations \cite{twiki_Top_pt_reweighing}. Possible sources of this discrepancy are higher order QCD and/or electroweak corrections, and non-resonant production of $t\bar{t}$-like final states. To account for this, corrections derived from Run-2 data by the Top Physics Analysis Group (PAG) are applied to the $p_{T}$ of the top and anti-top quarks in MC simulations, computed as a function of their generator-level $p_{T}$ \cite{twiki_Top_pt_reweighing}.
 
 \subsection{B-tagging efficiency}
