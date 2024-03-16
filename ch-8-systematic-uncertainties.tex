@@ -36,7 +36,7 @@ The uncertainties in the jet energy correction and resolution \cite{CMS-JME-13-0
         \item \textit{BBEC1, BBEC1Year}: for sub-detector regions, with barrel ``BB" in $|\eta| < 1.3$ and endcap region 1 ``EC1'': $1.3 < |\eta| < 2.5$.
         \item \textit{EC2, EC2 year}: for sub-detector regions, with endcap region 2 ``EC2'' in $2.5 < |\eta| < 3.0$.
         \item \textit{HF, HF year}: for sub-detector regions, with hadron forward ``HF'' in $|\eta| > 3$.
-        \item \textit{FlavorQCD}: for uncertainty in jet flavour (uds/c/b-quark and gluon) estimates based on comparing Pythia and Herwig (different MC generator) predictions. 
+        \item \textit{FlavorQCD}: for uncertainty in jet flavor (uds/c/b-quark and gluon) estimates based on comparing Pythia and Herwig (different MC generator) predictions. 
         \item \textit{RelativeBal}: account for difference between log-linear fits of the two methods used to study the jet energy response: MPF (missing transverse momentum projection fraction) and $p_{T}$ balance.
         \item \textit{RelativeSample}: account for $\eta$-dependent uncertainty due to a difference between relative residuals, observed with dijet and Z+jets in Run D of 2018 data.
         \item \textit{JetResolution}: uncertainty in the jet energy resolution.
@@ -45,13 +45,13 @@ The uncertainties in the jet energy correction and resolution \cite{CMS-JME-13-0
 \subsection{Uncertainties from b-tagging scale factors}
 The b-tagging scale factor has its own set of associated uncertainties (not to be confused with shifts in the b-tagging scale factor due to the propagation of the jet energy scale uncertainties described in the previous section \ref{subsec:JEC_sys}). They are:
 \begin{itemize}
-    \item \textit{hf}: contamination from heavy flavour (b+c) jets in the light flavour region.
-    \item \textit{hfstats1, hfstats2}: linear and quadratic statistical fluctuations from b jets. 
-    \item \textit{lf}: contamination from light flavour (udsg+c jets) in the heavy flavour region.
+    \item \textit{hf}: contamination from heavy flavor (b+c) jets in the light flavor region.
+    \item \textit{hfstats1, hfstats2}: linear and quadratic statistical fluctuations from b-flavor jets. 
+    \item \textit{lf}: contamination from light flavor (udsg+c jets) in the heavy flavor region.
     \item \textit{lfstats1, lfstats2}: linear and quadratic statistical fluctuations from udsg jets.
     \item \textit{cferr, cferr2}: uncertainty for charm jets.
 \end{itemize}
-The variations for ``lf, hf, hfstats1/2, lfstats1/2'' are applied to both b and udsg jets. For c-flavour jets, only ``cferr1/2'' is applied.
+The variations for ``lf, hf, hfstats1/2, lfstats1/2'' are applied to both b and udsg jets. For c-flavor jets, only ``cferr1/2'' is applied.
 
 \subsection{Uncertainties from MET}
 Samples where recoil corrections were applied (Z+jets, W+jets, and Standard Model Higgs, as described in Section \ref{sec:corrections_applied}) have uncertainties from the response and resolution of the hadronic recoil against the leptonic system. These are each binned in jet multiplicity.
