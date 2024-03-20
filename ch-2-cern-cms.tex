@@ -11,7 +11,7 @@ The beams of particles in the LHC are made to collide at a center-of-mass energy
 \begin{figure}[ht]
     \centering
     \includegraphics[width=11cm]{figures/ch-2-cern-cms/aerial-view-LHC-ring.jpeg}
-    \caption[Aerial view of the Large Hadron Collider (LHC).]{Aerial view of the Large Hadron Collider (LHC) spanning the border of France and Switzerland, and the four major experiments located around the ring: CMS (Compact Muon Solenoid), LHCb (LHC beauty), ATLAS (A Toroidal LHC Apparatus), and ALICE (A Large Ion Collider Experiment). \cite{OPEN-PHO-ACCEL-2017-005}}
+    \caption[Aerial view of the Large Hadron Collider (LHC).]{Aerial view of the Large Hadron Collider (LHC) spanning the border of France and Switzerland, and the four major experiments located around the ring: CMS (Compact Muon Solenoid), LHCb (LHC beauty), ATLAS (A Toroidal LHC Apparatus), and ALICE (A Large Ion Collider Experiment) \cite{OPEN-PHO-ACCEL-2017-005}.}
     \label{fig:aerial-view-LHC-ring}
 \end{figure}
 
@@ -19,12 +19,12 @@ The beams of particles in the LHC are made to collide at a center-of-mass energy
 
 \section{Luminosity and pileup}
 \label{section:luminosity_and_pileup}
-The number of events generated per second by the LHC collisions is given by
+In order to search for rare decays, such as those that result from the creation and decay of a Higgs, W, or Z boson, a large number of parton interactions per second are required at the LHC. The number of events generated per second by the LHC collisions is given by
 \begin{equation}
      N_{event} = \mathcal{L} \cdot \sigma_{event}
     \label{eqn:nEvents}
 \end{equation} 
-where $\sigma_{event}$ is the cross-section for the event under study, and $\mathcal{L}$ the machine luminosity. The machine luminosity is measured in units of cm$^{-2}$ s$^{-1}$, and depends only on the beam parameters, and can be written for a Gaussian beam distribution as:
+where $\sigma_{event}$ is the cross-section for the event under study, and $\mathcal{L}$ the instantaneous luminosity. The instantaneous luminosity is measured in units of cm$^{-2}$ s$^{-1}$, and depends only on the beam parameters, and can be written for a Gaussian beam distribution as:
 \begin{equation}
     \mathcal{L} = \frac{N_b^2 n_b f_{rev} \gamma_r}{4\pi \epsilon_n \beta^*} F
 \end{equation}
@@ -68,7 +68,7 @@ The High-Luminosity LHC (HL-LHC) is a major upgrade of the LHC scheduled to take
 \section{The CMS Detector}
 \label{section:cms-detector}
 
-The Compact Muon Solenoid (CMS) experiment was conceived to study proton-proton and lead-lead collisions at a center-of-mass energy of 14 TeV (5.5 TeV nucleon-nucleon) and at luminosities up to $10^{34}$ cm$^{-2}$ s$^{-1}$ ($10^{27}$ cm$^{-2}$ s$^{-1}$) \cite{CMS-2008-JINST-3-S08004} \cite{CERN-EP-2017-110}. Starting from the beam interaction region at the center of the CMS detector, particles first pass through a silicon pixel and strip tracker, in which charged-particle trajectories (tracks) and origins (vertices) are reconstructed from signals (hits) in the sensitive layers. The tracker is immersed in a high-magnetic-field superconducting solenoid that bends the trajectories of charged particles, allowing the measurement of their electric charge and momenta. Electrons and photons are then absorbed in an electromagnetic calorimeter (ECAL) comprised of lead-tungstate scintillating-crystals. The corresponding electromagnetic showers are detected as clusters of energy recording in neighboring cells, from which the direction and energy of the particles can be determined. Charged and neutral hadrons may initiate a hadronic shower in the ECAL as well, which is then fully absorbed in the hadron calorimeter (HCAL). The resulting clusters are used to estimate their direction and energies. Muons and neutrinos pass through the calorimeters with little to no interactions. Neutrinos escaped undetected; muons produce hits in additional gas-ionization chamber muon detectors housed in the iron yoke of the flux-return. A sketch of example particle interactions in a transverse slice of the CMS detector is shown in Fig. \ref{fig:sketch-cms-particle-interactions}. The collision data is recorded with the use of the Level-1 (L1) trigger (discussed separately in \ref{section:phase-1-l1-trigger}), high-level trigger (HLT), and data acquisition systems ensuring high efficiency in selecting physics events of interest. 
+The Compact Muon Solenoid (CMS) experiment was conceived to study proton-proton and lead-lead collisions at a center-of-mass energy of 14 TeV (5.5 TeV nucleon-nucleon) and at luminosities up to $10^{34}$ cm$^{-2}$ s$^{-1}$ ($10^{27}$ cm$^{-2}$ s$^{-1}$) \cite{CMS-2008-JINST-3-S08004} \cite{CERN-EP-2017-110}. Starting from the beam interaction region at the center of the CMS detector, particles first pass through a silicon pixel and strip tracker, in which charged-particle trajectories (tracks) and origins (vertices) are reconstructed from signals (hits) in the sensitive layers. The tracker is immersed in a high-magnetic-field superconducting solenoid that bends the trajectories of charged particles, allowing the measurement of their electric charge and momenta. Electrons and photons are then absorbed in an electromagnetic calorimeter (ECAL) comprised of lead-tungstate scintillating-crystals. The corresponding electromagnetic showers are detected as clusters of energy recording in neighboring cells, from which the direction and energy of the particles can be determined. Charged and neutral hadrons may initiate a hadronic shower in the ECAL as well, which is then fully absorbed in the hadron calorimeter (HCAL). The resulting clusters are used to estimate their direction and energies. Muons and neutrinos pass through the calorimeters with little to no interactions. Neutrinos escaped undetected; muons produce hits in additional gas-ionization chamber muon detectors housed in the iron yoke of the flux-return. A sketch of example particle interactions in a transverse slice of the CMS detector is shown in Fig. \ref{fig:sketch-cms-particle-interactions}. The collision data is recorded with the use of the Level-1 (L1) trigger (discussed in greater detail in \ref{section:phase-1-l1-trigger}), the High-Level Trigger (HLT), and data acquisition systems ensuring high efficiency in selecting physics events of interest. 
 
 \begin{figure}[ht]
     \centering
