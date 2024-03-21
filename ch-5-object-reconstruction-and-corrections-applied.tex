@@ -1,4 +1,4 @@
-In this chapter on object reconstruction and corrections, Section \ref{sec:object-reconstruction} reviews the physical properties of the objects most pertinent to the analyses presented in this work: taus ($\tau$), muons ($\mu$), electrons ($e$), and jets, with a focus on jets originating from b quarks (b-flavor jets), as well as the methodology used to reconstruct the particles from their characteristic signatures in the CMS detector. Section \ref{section:svfit} describes the method used to reconstruct the invariant full $\tau\tau$ mass which is used for the final signal extraction. Lastly, Section \ref{sec:corrections_applied} describes the corrections applied to the simulated samples which improve their modeling of data.
+In the data processing workflow, data events and simulated events are analyzed to reconstruct physics objects of interest, and algorithms for distinguishing genuine particle candidates from background, are employed. Section \ref{sec:object-reconstruction} describes the physical properties of the most important objects in the $h \rightarrow aa \rightarrow bb\tau\tau$ analysis: taus, muons, electrons, jets, and jets originating from b-quarks (b-flavor jets), as well as their reconstruction and identification in CMS. In this analysis, the full energy and momentum of the two tau leptons ($m_{\tau\tau}$) is estimated from the measured (i.e. visible) components of the tau leptons using the SVFit/FastMTT algorithm, which is described in Section \ref{section:svfit}. Corrections are applied to the simulated samples at the object level and the event level to account for known discrepancies between simulations and the data that the simulations are intended to model. These corrections are listed and detailed in Section \ref{sec:corrections_applied}.
 
 \section{Object reconstruction}
 \label{sec:object-reconstruction}
@@ -190,7 +190,7 @@ An energy scale is applied to the $p_{T}$ and mass of genuine muons from $\tau$ 
 Corrections to the electron energy scale are applied to genuine $e$ from $\tau$ decays, and are binned in two dimensions by electron $p_{T}$ and $\eta$ for barrel vs. endcap \cite{twiki_Electron_POG_recommendation}. The scale factors are binned in $p_{T}$ and $\eta$ for MC samples: e.g. values for 2018 are shown in Fig. \ref{fig:egamma-POG-UL-egamma-scale-factors} from \cite{twiki_Electron_UL_2016_2017_2018}. For embedded samples the electron energy scale is taken as only binned in $\eta$ (Table \ref{table:ele-ES-embedded}).
 
 % https://twiki.cern.ch/twiki/pub/CMS/EgammaUL2016To2018/egammaEffi.txt_Ele_wp90noiso_egammaPlots.pdf
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[width=15cm]{figures/ch-5-object-reconstruction-and-corrections-applied/egamma-POG-UL-egamma-scale-factors.png}
     \caption[Electron/photon energy scale factors and uncertainties for 2018.]{Electron/photon energy scale factors (\textit{left}) and corresponding uncertainties (\textit{right}) binned in the electron $\eta$ and $p_{T}$, for the data-taking year 2018 \cite{twiki_Electron_UL_2016_2017_2018}.} 
@@ -198,7 +198,7 @@ Corrections to the electron energy scale are applied to genuine $e$ from $\tau$ 
 \end{figure}
 
 
-\begin{table}[h]
+\begin{table}[ht]
     \centering
     \begin{tabular}{|c|c|c|c|}
     \hline
@@ -218,7 +218,7 @@ Corrections to the electron energy scale are applied to genuine $e$ from $\tau$ 
 The $\tau_{h}$ identification efficiency can differ in data and MC \cite{twiki_TAU_POG_tauidrecommendationforrun2}. Recommended corrections are provided by the Tau POG, and we use the medium DeepTau vs. jet working point values. The identification efficiency is measured in $Z \rightarrow \tau\tau$ events in the $\mu\tau_{h}$ final state, and is binned in $p_{T}$ due to clear $p_{T}$ dependence of the DeepTau ID. 
 
 
-\begin{table}[h]
+\begin{table}[ht]
     \centering
     \begin{tabular}{|c|c|c|c|c|c|c|}
     \hline
@@ -248,7 +248,7 @@ The efficiencies in data of the single-$\tau_{h}$ leg in $\mu\tau_{h}$, $e\tau_{
 The efficiencies for the hadronic tau legs in the relevant channels of this analyses ($\mu\tau_{h}$ and $e\tau_{h}$) as a function of the offline tau $p_{T}$ and $\eta$, are shown for data taken in 2016, 2017, and 2018 in Figures \ref{fig:mutauEfficiencyPt_eachYear_mediumTauMVA_Data} and \ref{fig:etauEfficiencyPt_eachYear_mediumTauMVA_Data} \cite{CMS-DP-2019-012} \cite{twiki_Tau_Lepton_Run_2_trigger_performance}. In both figures, the different HLT thresholds and differences in the L1 seed result in higher efficiencies in 2016 and differences in shapes of the 2016 efficiencies compared to 2017 and 2018. The low pileup in 2016 also leads to higher efficiencies in that year.
 
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \begin{subfigure}{0.45\textwidth}
         \includegraphics[width=1.0\textwidth]{figures/ch-5-object-reconstruction-and-corrections-applied/mutauEfficiencyPt_eachYear_mediumTauMVA_Data.png}
@@ -268,7 +268,7 @@ The efficiencies for the hadronic tau legs in the relevant channels of this anal
 \subsection{Single muon trigger efficiencies}
 The efficiencies for the single isolated muon trigger with $p_{T} > 24$ GeV used in this analysis, is shown for the data-taking year 2018 in Fig. \ref{fig:single_muon_24GeV_efficiency_vs_pt} as a function of the muon $p_{T}$ and as a function of the muon $|\eta|$ in Fig. \ref{fig:single_muon_24GeV_efficiency_vs_eta} from \cite{CMS-DP-2018-034}. The data is split with respect to a HLT muon reconstruction update that was deployed on 15/05/2018. A small asymmetry in efficiencies between negative and positive $\eta$ in Fig. \ref{fig:single_muon_24GeV_efficiency_vs_eta} is due to disabled muon chambers (CSCs). The efficiencies shown are estimated using a Tag and Probe method using $Z\rightarrow \mu\mu$ events, with the tag being an offline muon with $p_{T} > 29$ GeV and $|\eta| < 2.4$ passing a tight ID criteria, and the probe is an online (L1) trigger object with $\Delta R < 0.3$ and passing tight ID and Particle Flow based isolation requirements with $p_{T} > 26$ GeV.
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \begin{subfigure}{0.45\textwidth}
         \includegraphics[width=1.0\textwidth]{figures/ch-5-object-reconstruction-and-corrections-applied/singleMuon_isolated_efficiency_vs_pt}
@@ -290,7 +290,7 @@ The efficiencies in data, and the ratio between data and MC, of the single elect
 
 The disagreement between data and MC, particularly at low transverse momentum, is in part due to detector effects that are difficult to simulate, such as crystal transparency losses in the ECAL and the evolution of dead regions in the pixel tracker \cite{CMS-DP-2020-016}.
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \begin{subfigure}{0.45\textwidth}
         \includegraphics[width=1.0\textwidth]{figures/ch-5-object-reconstruction-and-corrections-applied/electron_Ele32_WPTight_Gsf_efficiency_vsPt}
@@ -314,7 +314,7 @@ The efficiencies of the electron and muons for the cross-trigger with leading mu
     \text{Efficiency} = \frac{\text{Events passing lepton pair selections and probe passing trigger}}{\text{Events passing lepton pair selections}}
 \end{equation}
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \begin{subfigure}{0.45\textwidth}
         \includegraphics[width=1.0\textwidth]{figures/ch-5-object-reconstruction-and-corrections-applied/ele_efficiency_vs_pT_emu_HLT_Mu23_TrkIsoVVL_Ele12_CaloIdL_TrackIdL_IsoVL_DZ.png}
@@ -336,7 +336,7 @@ The efficiencies of the electron and muons for the cross-trigger with leading mu
 Energy scales for electrons misidentified as hadronic tau decays ($e$ faking $\tau_{h}$) are provided by the Tau POG, and were measured in the $e\tau_{h}$ channel with the visible invariant mass of the electron and hadronic tau system \cite{twiki_HiggsToTauTauWorkingLegacyRun2}. This energy scale is applied for $\tau_{h}$ with $p_{T} > 20$ GeV regardless of which DeepTau vs. electron working point was used. Values for 2018 are shown in Table \ref{table:electron-faking-tauh-FES-2018}.
 
 % root -l TauFES_eta-dm_DeepTau2017v2p1VSe_2018ReReco.root 
-\begin{table}[h]
+\begin{table}[ht]
     \centering
     \begin{tabular}{|c|c|}
     \hline
@@ -361,7 +361,7 @@ The specific values depend on the vs. electron and vs. muon discriminator workin
 For misidentified $\mu \rightarrow \tau_{h}$, the scale factors are split into different $|\eta|$ regions, determined by the CMS muon and tracker detector geometries, as shown in Table \ref{table:tauIDeff_deepTau_vs_muon} for 2018 \cite{twiki_TAU_POG_tauidrecommendationforrun2}.
 
 
-\begin{table}[h]
+\begin{table}[ht]
     \centering
     \begin{tabular}{|c|c|c|}
     \hline
@@ -382,7 +382,7 @@ For misidentified $\mu \rightarrow \tau_{h}$, the scale factors are split into d
 For misidentified $e \rightarrow \tau_{h}$, the scale factors are split into barrel and endcap regions, dictated by the ECAL detector geometry, as shown in Table \ref{table:tauIDeff_deepTau_vs_electron} for 2018.
 
 % root -l /Users/stephaniekwan/Dropbox/Princeton_G6/TauIDSFs/data/TauID_SF_eta_DeepTau2017v2p1VSe_2018ReReco.root 
-\begin{table}[h]
+\begin{table}[ht]
     \centering
     \begin{tabular}{|c|c|c|}
     \hline
@@ -406,7 +406,7 @@ Electron and photon identification, as discussed earlier, use variables with goo
 
 The tracking efficiencies in data and the data/MC ratio are shown in Fig. \ref{fig:electron_GSF_tracking_efficiency} for the Gaussian-sum filter (GSF) tracking \cite{CMS-DP-2020-037}. 
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \begin{subfigure}{0.45\textwidth}
         \includegraphics[width=1.0\textwidth]{figures/ch-5-object-reconstruction-and-corrections-applied/electron_MVA_90wp_identification_efficiency}
@@ -428,7 +428,7 @@ Scale factors are applied to MC to correct for differences between MC and data i
 
 The efficiencies for muon identification measured in 2015 data and MC simulation are shown in Figures \ref{fig:muon_looseID_efficiency} and \ref{fig:muon_tightID_efficiency} for the loose ID and tight ID respectively \cite{CMS-MUO-16-001}. The loose ID is chosen such that efficiency exceeds 99\% over the full $\eta$ range, and the data and simulation agree to within 1\%. The tight ID is chosen such that efficiency varies between 95\% and 99\% as a function of $\eta$, and the data and simulation agree to within 1-3\%. The muon identification working point used in this analysis is the medium ID, which has an efficiency of 98\% for all $\eta$ and an agreement within 1-2\% \cite{CMS-MUO-16-001}. 
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \begin{subfigure}{0.45\textwidth}
         \includegraphics[width=1.0\textwidth]{figures/ch-5-object-reconstruction-and-corrections-applied/muon_efficiency_looseID}
@@ -446,7 +446,7 @@ The efficiencies for muon identification measured in 2015 data and MC simulation
 
 The efficiencies in data for the muon isolation, as measured in Level-3 muons (muons in one of the final stages of reconstruction in the HLT), as a function of the muon $p_{T}$ and $|\eta|$ are shown in Figures \ref{fig:muon_isolation_efficiency_vsPt} and \ref{fig:muon_isolation_efficiency_vsEta} \cite{CMS-MUO-16-001}. The HLT muon reconstruction consists of two steps: Level-2 (L2), where the muon is reconstructed in the muon subdetectors only, and Level-3 (L3) which is a global fit of tracker and muon hits (i.e. the global muon reconstruction as described in Section \ref{section:ch-5-muon-reconstruction}) \cite{Verwilligen-proceedings-2016}.
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \begin{subfigure}{0.45\textwidth}
         \includegraphics[width=1.0\textwidth]{figures/ch-5-object-reconstruction-and-corrections-applied/muon_efficiency_isolation_vsPt}
@@ -464,7 +464,7 @@ The efficiencies in data for the muon isolation, as measured in Level-3 muons (m
 
 The muon tracking efficiencies as a function of $|\eta|$ for standalone muons (i.e. tracks from only the muon system, i.e. DT, CSC, and RPC, as discussed in Section \ref{section:ch-5-muon-reconstruction}), is shown for data and simulated Drell-Yan samples in Fig. \ref{fig:muon_tracking_efficiency} \cite{CMS-DP-2020-035}. 
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[width=8cm]{figures/ch-5-object-reconstruction-and-corrections-applied/muon_tracking_efficiency}
     \caption[Muon tracking efficiencies as a function of $|\eta|$ for standalone muons in Run-2 data (\textit{black}) and Drell-Yan (\textit{blue}) MC simulation.]{Muon tracking efficiencies as a function of $|\eta|$ for standalone muons in Run-2 data (\textit{black}) and Drell-Yan MC simulation (\textit{blue}) \cite{CMS-DP-2020-035}. All Tracks refers to tracks which exploit the presence of muon candidates in the muon system to seed the track reconstruction in the inner tracker, in contrast to tracks that use tracker-only hits for seeding. Uncertainties shown are statistical.}
