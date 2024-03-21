@@ -1,14 +1,13 @@
+Measured events are divided into categories, based on cuts on values of observables in the event, or some derived quantity based on the observables in the event. The objective of event categorization is to divide events into signal regions, where the signal is enhanced and the background is suppressed, and control regions, which are signal-poor and used to check that the background estimation methods employed in the analysis in fact accurately models the data. In this analysis, events in each tautau channel are selected to contain one or more b-tag jets reconstructed in the event as described in Section \ref{section:event-categorization-b-tag-jet}. Events are further divided into signal and control regions using a deep learning-based approach described in Section \ref{section:DNN-event-categorization}. The signal is extracted from the di-tau mass distribution in the signal region using the statistical procedure described in Section \ref{section:methodology_signal_extraction}.
+
 \section{B-tag jet multiplicity}
+\label{section:event-categorization-b-tag-jet}
 The increased statistics of the full Run-2 dataset enables the separation of events into events with exactly 1 b-tag jet and events with greater than 1 b-tag jet. Further event categorization is performed with deep neural networks (DNNs) described below. The DNNs  are used only for separating events into signal and control regions in the 1 b-tag and 2 b-tag jets scenarios. The final results are extracted from the statistical fitting to the mass of the $\tau\tau$, $m_{\tau\tau}$.
 
 \section{DNN-based event categorization}
 \label{section:DNN-event-categorization}
-A brief overview of the DNN-based event categorization is given below with a focus on the physics aspects, with full details of the machine learning training in \cite{CMS-HIG-22-007} and associated documentation.
-
-\subsubsection{Training samples}
 Neural networks for event categorization are trained for each of the $\mu\tau_{h}$, $e\tau_{h}$, and $e\mu$ channels, for 1 and 2 b-tag jets, giving $3 \times 2 = 6$ networks in total. In the training, the signal is taken to be all of the possible pseudoscalar mass $m_{a}$ hypotheses together. The backgrounds for each DNN are taken to be a representative combination of the three major backgrounds: $Z \rightarrow \tau\tau$, $t\bar{t}$+jets, and fake backgrounds. The proportions of each background for each channel and b-tag jet multiplicity are taken from the yields in the $m_{\tau\tau}$ distribution. For instance, in the $\mu\tau_{h}$ 1 b-tag jet category, the composition of the background for training is 17.4\% from $Z \rightarrow \tau\tau$, 42.4\% from $t\bar{t}$+jets, and 40.2\% fakes.
 
-\subsubsection{Input variables}
 The input variables capture the key differences between the signal and the background:
 \begin{itemize}
     \item Transverse momentum $p_{T}$ of the electron and muon in the $e\tau_{h}$ and $\mu\tau_{h}$ channels, where the signal tends to have a softer $p_{T}$ spectrum (lower energy) than the background.
@@ -34,8 +33,6 @@ The input variables capture the key differences between the signal and the backg
         \end{equation}
     This variable peaks at zero for the $h\rightarrow aa \rightarrow 2b2\tau$ signal.
 \end{itemize}
-
-\subsubsection{Categorization using the DNN score}
 
 After training, events in data, MC, and embedded are evaluated with the six DNNs and assigned a raw score between 0 and 1 (background-like or signal-like). In order to flatten the distribution of the score and define score thresholds for categorizing events, the raw output scores are transformed with the function $\tilde{p}(n) = \arctanh(p \times \tanh(n))/n$ where $n$ is a positive integer. The thresholds of the DNN score used for signal/control region definition are determined using scans that optimize the signal sensitivity and are shown in Tables \ref{table:1bNN-final-categories} and \ref{table:2bNN-final-categories}.
 
@@ -114,7 +111,8 @@ After training, events in data, MC, and embedded are evaluated with the six DNNs
 
 
 \section{Methodology for signal extraction}
-In this section we outline the statistics terminology and concepts underlying the modified frequentist method $CL_{S}$ used to perform signal extraction.
+\label{section:methodology_signal_extraction}
+After events are divided into categories, the data is compared to the expected backgrounds in the signal region categories. Here, we describe the fundamental concepts behind hypothesis testing in high-energy physics, as well as how exclusion limits can be set on parameters whose true values we cannot measure, culminating in the modified frequentist method $CL_{S}$ which is used to perform signal extraction in this analysis.
 
 \subsection{Model building and parameter estimation}
 In the frequentist interpretation of probability, an experiment measuring an observable can be repeated, resulting in different values of the observable, e.g. the invariant mass of a candidate Higgs boson in a search for the Higgs \cite{2011-Statistics-Cranmer}. The ensemble of values of the observable $x$ gives rise to the probability density function (PDF) $f(x)$, which has the important property that it is normalized to unity:
@@ -188,7 +186,7 @@ To construct a confidence interval for a parameter $\alpha$, the Neyman Construc
 where $T(\mathcal{D})$ is the test statistic, and the last $\alpha$ (not bolded) and the subscript $k_\alpha$ refer to the size of the test. A schematic of the Neyman construction is shown in Fig. \ref{fig:neyman-construction}. In a more generalized case, the $x$-axis is the test statistic $T$.
 
 \begin{figure}[ht]
-    \centering
+    \centering  
     \includegraphics[width=12cm]{figures/ch-9-event-categorization-and-signal-extraction/schematic_neyman_construction.png}
     \caption[Schematic of the Neyman construction for confidence intervals.]{Schematic of the Neyman construction for confidence intervals \cite{2011-Statistics-Cranmer}. For each value of $\theta$, we find a region in $x$ where $\int f(x|\theta) dx$ satisfies the size of the test (\textit{blue}). These regions form a confidence belt (\textit{green}). The intersection of the observation $x_0$ (\textit{red}) with the confidence belt defines the confidence interval $[\theta_1, \theta_2]$ \cite{2011-Statistics-Cranmer}.} 
     \label{fig:neyman-construction}
