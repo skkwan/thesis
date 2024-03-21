@@ -1,7 +1,10 @@
-\section{Datasets used}
-The $h \rightarrow aa \rightarrow 2b2\tau$ analysis (CMS CADI line HIG-22-007) is based on proton-proton collision data at a center-of-mass energy of 13 TeV collected in full Run-2 (2016-18) with the CMS detector. The data analyzed corresponds to a total integrated luminosity of 138 fb$^{-1}$ (36.33 fb$^{-1}$ for 2016, 41.53 fb$^{-1}$ for 2017, and 59.74 fb$^{-1}$ for 2018) \cite{CMS-LUM-17-001} \cite{CMS-LUM-17-004} \cite{CMS-LUM-18-002}. The cumulative delivered and recorded luminosity versus time for 2015-2018 is shown in Fig. \ref{fig:integrated-luminosity-Run-2}.
+The search for the exotic decay of the 125\GeV Higgs boson to two light neutral scalars decaying to a pair of bottom quarks and a pair of tau leptons ($h \rightarrow aa \rightarrow bb\tau\tau$) is based on proton-proton collision data at a center-of-mass energy 13 TeV collected in Run-2 of data-taking, spanning the data-taking years 2016, 2017, and 2018. The datasets used and the triggers used to collect the data are described in Section \ref{section:data-datasets}. Section \ref{section:mc-samples} describes the Monte Carlo simulated samples that are used to model the $h \rightarrow aa \rightarrow bb\tau\tau$ signal and background Standard Model processes. Lastly, in order to obtain a better description of Standard Model backgrounds that contain two tau leptons, a data-Monte Carlo hybrid technique is used to generate embedded samples which model processes with genuine $\tau\tau$ in the final state, as detailed in Section \ref{section:embedded-samples}.
 
-\begin{figure}[h]
+\section{Datasets used}
+\label{section:data-datasets}
+The $h \rightarrow aa \rightarrow bb\tau\tau$ analysis \cite{CMS-HIG-22-007} is based on proton-proton collision data at a center-of-mass energy of 13 TeV collected in full Run-2 (2016-18) with the CMS detector. The data analyzed corresponds to a total integrated luminosity of 138 fb$^{-1}$ (36.33 fb$^{-1}$ for 2016, 41.53 fb$^{-1}$ for 2017, and 59.74 fb$^{-1}$ for 2018) \cite{CMS-LUM-17-001} \cite{CMS-LUM-17-004} \cite{CMS-LUM-18-002}. The cumulative delivered and recorded luminosity versus time for 2015-2018 is shown in Fig. \ref{fig:integrated-luminosity-Run-2}.
+
+\begin{figure}[ht]
     \centering
     \includegraphics[width=13cm]{figures/ch-4-datasets-monte-carlo/int_lumi_allcumulative_pp_run2}
     \caption[Cumulative delivered and recorded luminosity versus time for 2015-2018 at CMS, in proton-proton collision data only, at nominal center-of-mass energy.]{Cumulative delivered and recorded luminosity versus time for 2015-2018 at CMS, in proton-proton collision data only, at nominal center-of-mass energy \cite{twiki_Lumi_Public_Results}.} 
@@ -13,21 +16,22 @@ Data collected with the single muon trigger is used for the $\mu\tau_{h}$ channe
 A full list of samples used can be found in the full documentation \cite{CMS-AN-20-213} \cite{CMS-HIG-22-007}.
 
 \section{Monte Carlo samples}
+\label{section:mc-samples}
 Modeling and computing observables originating from arbitrary physics processes at the tree level and at next-to-leading order (NLO) is performed by Monte Carlo (MC) event generators, such as Powheg and MadGraph5\_amC\@NLO \cite{Alwall_2014} \cite{Frederix_2018}. The information generated, e.g. the computation of the differential cross sections and kinematics of the final state particles, is saved in a compressed file and used to generate MC samples that are used in physics analyses. The samples are digitized using GEANT4 \cite{agostinelli_geant4simulation_2003}, a platform used at the LHC and other facilities to comprehensively simulate the passage of particles through matter. The digitized samples are passed through the same detector reconstruction as real data events collected in the detector.
 
 The samples for modeling the signal ($h \rightarrow aa \rightarrow 2b2\tau$ and $h\rightarrow a_1 a_2$) in the 2HDM+S and TRSM are generated at tree-level, for a range of masses of the light neutral scalar $a$. For $h \rightarrow aa$, the mass hypotheses for the $a$ range from $m_a = (12 \,\text{GeV}, 62.5 \,\text{GeV})$. For $h \rightarrow a_1 a_2$, the mass hypotheses for the two light scalars span combinations of $m_{a1}$, $m_{a2}$ ranging from $(12 \,\text{GeV}, 62.5 \,\text{GeV})$ for the two scalars.
 
 
 \section{Embedded samples}
-\label{sec:embedded-samples}
+\label{section:embedded-samples}
 An important background for Higgs boson studies and searches for additional Higgs bosons is the decay of $Z$ bosons into pairs of $\tau$ leptons ($Z \rightarrow \tau\tau$). An embedded technique was developed in the context of Standard Model Higgs to $\tau\tau$ measurements, to model $Z \rightarrow \tau\tau$ decays, and was expanded to also model all Standard Model processes that contain $\tau\tau$ \cite{CMS-TAU-18-001}. The embedded technique has since been used successfully at CMS for the Standard Model $H \rightarrow \tau\tau$ measurement, as well as searches for minimal supersymmetric extensions to the Standard Model (MSSM) \cite{CMS-HIG-13-021} \cite{CMS-HIG-19-010}.
 
 Fig. \ref{fig:embedded-schematic} shows a schematic of how embedded samples are produced. Data events containing $Z \rightarrow \mu\mu$ decays are selected. In these events, all energy deposits of the recorded muons are removed, and are replaced with simulated tau leptons with the same kinematic properties as the removed muons. This results in a hybrid data format containing information from both observed and simulated events, as illustrated in Fig. \ref{fig:embedded-schematic} \cite{CMS-TAU-18-001}.
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[width=13cm]{figures/ch-4-datasets-monte-carlo/embedded_schematic}
-    \caption[Schematic view of the four main steps of the embedding technique for $\tau$ leptons.]{Schematic view of the four main steps of the embedding technique for $\tau$ leptons, as described in Section \ref{sec:embedded-samples} \cite{CMS-TAU-18-001}. A $Z \rightarrow \mu\mu$ event is selected in data (\textit{$Z\rightarrow \mu\mu$ selection}), all of the energy deposits associated with the muons are removed (\textit{$Z \rightarrow \mu\mu$ cleaning}), and two $\tau$ leptons and their decays are simulated in an empty detector (\textit{$Z \rightarrow \tau\tau$ simulation}). Lastly, all energy deposits of the simulated $\tau$ decays are combined with the data event (\textit{$Z \rightarrow \tau\tau$ hybrid}).} 
+    \caption[Schematic view of the four main steps of the embedding technique for $\tau$ leptons.]{Schematic view of the four main steps of the embedding technique for $\tau$ leptons, as described in Section \ref{section:embedded-samples} \cite{CMS-TAU-18-001}. A $Z \rightarrow \mu\mu$ event is selected in data (\textit{$Z\rightarrow \mu\mu$ selection}), all of the energy deposits associated with the muons are removed (\textit{$Z \rightarrow \mu\mu$ cleaning}), and two $\tau$ leptons and their decays are simulated in an empty detector (\textit{$Z \rightarrow \tau\tau$ simulation}). Lastly, all energy deposits of the simulated $\tau$ decays are combined with the data event (\textit{$Z \rightarrow \tau\tau$ hybrid}).} 
     \label{fig:embedded-schematic}
 \end{figure}
 
