@@ -44,15 +44,13 @@ Peak luminosity at interaction points 1 and 5 reach values of $\sim 1.0 \times 1
 
 Per Eqn. \ref{eqn:nEvents}, the integrated luminosity over time is proportional to the number of events produced, and the size of LHC datasets is commonly presented in terms of integrated luminosity. Collider operation aims to optimize the integrated luminosity. Thus the exploration of rare events in the LHC collisions requires both high beam energies and high beam intensities.
 
-The LHC's nominal beam luminosities are sufficiently large for multiple proton-proton collisions to occur in the same time window of 25 nanoseconds in which proton bunches collide \cite{CMS-JME-18-001}. These multiple collisions will lead to particle interactions overlapping in the detector. To measure a proton-proton collision, the single collision must be separated from overlapping collisions, which are called ``pileup'' collisions. A distribution of pileup in the data-taking years 2016-2018 is shown in Fig. \ref{fig:pileup-run-2}. The pileup is defined as the average number of $pp$ collisions per bunch crossing.
+The interaction vertex corresponding to the hard scattering of the protons is called the primary interaction vertex, or primary vertex (PV). The LHC's nominal beam luminosities are sufficiently large for multiple proton-proton collisions to occur in the same time window of 25 nanoseconds in which proton bunches collide \cite{CMS-JME-18-001}. To measure a proton-proton collision, the primary vertices must be separated from overlapping collisions, called ``pileup'' collisions. 
 
-CMS reports an inelastic $pp$ cross section of $\sigma_{\text{inel}} = 68.6$ millibarns at a center-of-mass energy of $\sqrt{s} = 13$\TeV \cite{CERN-EP-2018-004-pileup}, which can be used to estimate pileup as follows:
+The pileup is defined as the average number of $pp$ collisions per bunch crossing, and can be estimated from the inelastic $pp$ cross section of $\sigma_{\text{inel}} = 68.6$ millibarns at a center-of-mass energy of $\sqrt{s} = 13$\TeV \cite{CERN-EP-2018-004-pileup}:
 \begin{equation}
-    \text{Pileup} = \frac{\mathcal{L} \times \sigma_{\text{inel}}}{ n_b \cdot f}
+    \text{Pileup} = \frac{\mathcal{L} \times \sigma_{\text{inel}}}{ n_b \cdot f} \sim 22
 \end{equation}
-With the example values above, pileup can be estimated to be $\sim 22$.
-
-While useful in the search for rare physics processes, higher luminosities create more intense pileup conditions, posing a greater challenge to detector performance and particle reconstruction and identification.
+A distribution of pileup in the data-taking years 2016-2018 is shown in Fig. \ref{fig:pileup-run-2}.
 
 \begin{figure}[ht]
     \centering
@@ -60,6 +58,9 @@ While useful in the search for rare physics processes, higher luminosities creat
     \caption[Distribution of the mean number of inelastic collisions per bunch crossing (pileup) in data, for proton-proton collisions in 2016-2018]{Distribution of the mean number of inelastic collisions per bunch crossing (pileup) in data \cite{CMS-JME-18-001}, for proton-proton collisions in 2016 (\textit{dotted orange}), 2017 (\textit{dotted light blue}), 2018 (\textit{dotted dark blue}), and integrated over 2016-2018 (\textit{solid grey}). A cross-section of inelastic proton-proton collisions of 69.2 mbarns is assumed. In the running conditions of the High-Luminosity LHC, pileup will reach unprecedented levels of up to 200 per bunch crossing \cite{CERN-2020-010-HL-LHC-TDR}.}
     \label{fig:pileup-run-2}
 \end{figure}
+
+These multiple collisions will lead to higher occupancies in the detector, and particles originating from the pileup interactions can be confused with those originating from the primary vertex. Thus, higher luminosities create more intense pileup conditions, posing a greater challenge to detector performance and particle reconstruction and identification.
+
 
 \section{The High-Luminosity LHC}
 \label{section:HL-LHC}
