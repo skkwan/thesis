@@ -15,13 +15,13 @@ The input variables capture the key differences between the signal and the backg
     \item Invariant masses of the various objects ($\tau\tau$ legs and the b-tag jet(s)), which tend to be smaller for the signal samples.
     \item The angular separation $\Delta R$ between pairs of the objects, where signal samples peak at smaller $\Delta R$ values.
     
-    \item The transverse mass between the missing transverse energy $p_{T}^{\text{miss}}$ and each of the four objects \cite{CMS-HIG-17-024}, defined as
+    \item The transverse mass between the missing transverse energy $p_{T}^{\text{miss}}$ and each of the four objects~\cite{CMS-HIG-17-024}, defined as
         \begin{equation}
             m_{T}(\ell, p_{T}^{\text{miss}}) \equiv \sqrt{2 p_{T}^{\ell} \cdot p_{T}^{\text{miss}} [1 - \cos(\Delta \phi)]}
         \end{equation}
     where $p_{T}^\ell$ is the transverse momentum of the object $\ell$, and $\Delta \phi$ is the difference in azimuthal angle between the object and the $p_{T}^{\text{miss}}$. Events from $t\bar{t}$+jets and jets faking $\tau_{h}$ backgrounds have larger $p_{T}^{\text{miss}}$ resulting in larger transverse mass values compared to the signal, which tends to have smaller $p_{T}^{\text{miss}}$ that is also more aligned with the lepton legs.
 
-    \item The variable $D_{\zeta}$ \cite{CMS-HIG-17-024}, defined as
+    \item The variable $D_{\zeta}$~\cite{CMS-HIG-17-024}, defined as
         \begin{equation}
             D_{\zeta} \equiv p_{\zeta} - 0.85 p_{\zeta}^{\text{vis}}
         \end{equation}
@@ -115,7 +115,7 @@ After training, events in data, MC, and embedded are evaluated with the six DNNs
 After events are divided into categories, the data is compared to the expected backgrounds in the signal region categories. Here, we describe the fundamental concepts behind hypothesis testing in high-energy physics, as well as how exclusion limits can be set on parameters whose true values we cannot measure, culminating in the modified frequentist method $CL_{S}$ which is used to perform signal extraction in this analysis.
 
 \subsection{Model building and parameter estimation}
-In the frequentist interpretation of probability, an experiment measuring an observable can be repeated, resulting in different values of the observable, e.g. the invariant mass of a candidate Higgs boson in a search for the Higgs \cite{2011-Statistics-Cranmer}. The ensemble of values of the observable $x$ gives rise to the probability density function (PDF) $f(x)$, which has the important property that it is normalized to unity:
+In the frequentist interpretation of probability, an experiment measuring an observable can be repeated, resulting in different values of the observable, e.g. the invariant mass of a candidate Higgs boson in a search for the Higgs~\cite{2011-Statistics-Cranmer}. The ensemble of values of the observable $x$ gives rise to the probability density function (PDF) $f(x)$, which has the important property that it is normalized to unity:
 \begin{equation*}
     \int f(x) \, dx = 1 \,.
 \end{equation*}
@@ -123,20 +123,20 @@ A parametric family of PDFs
 \begin{equation*}
     f(x|\alpha) \, ,
 \end{equation*}
-read ``$f$ of $x$ given $\alpha$", is referred to as a probability model or model. The parameters $\alpha$ typically represent parameters of the theory or an unknown property of the detector's response. The parameters are not frequentist in nature, unlike $x$. Out of all the parameters, typically only a few are of interest, and are called the parameters of interest (POI), labeled $\mu$ here. The remaining are referred to as nuisance parameters (NP) \cite{2011-Statistics-Cranmer} and are labeled $\boldsymbol{\theta}$.
+read ``$f$ of $x$ given $\alpha$", is referred to as a probability model or model. The parameters $\alpha$ typically represent parameters of the theory or an unknown property of the detector's response. The parameters are not frequentist in nature, unlike $x$. Out of all the parameters, typically only a few are of interest, and are called the parameters of interest (POI), labeled $\mu$ here. The remaining are referred to as nuisance parameters (NP)~\cite{2011-Statistics-Cranmer} and are labeled $\boldsymbol{\theta}$.
 
 $f(x)$ is the probability density for the observable in one event and we wish to describe the probability density for a dataset with many events, $\mathcal{D} = \{x_1, ..., x_n\}$, called the total probability model $\boldsymbol{f}$. For instance, if we also have a prediction for the total number of events expected, called $\nu$, we also account for the overall Poisson probability for observing $n$ events given $\nu$ expected:
 \begin{equation}
     \boldsymbol{f}(\mathcal{D}|\nu, \alpha) = \text{Poisson}(n|\nu) \prod_{e=1}^{n} f(x_e | \alpha)
 \end{equation}
 
-The likelihood function $L(\alpha)$ is numerically equivalent to $f(x|\alpha)$ for fixed $x$, or $\boldsymbol{f}(\mathcal{D}|\alpha)$ with $\mathcal{D}$ fixed \cite{2011-Statistics-Cranmer}. The likelihood function is not a probability density for $\alpha$ and is not normalized to unity:
+The likelihood function $L(\alpha)$ is numerically equivalent to $f(x|\alpha)$ for fixed $x$, or $\boldsymbol{f}(\mathcal{D}|\alpha)$ with $\mathcal{D}$ fixed~\cite{2011-Statistics-Cranmer}. The likelihood function is not a probability density for $\alpha$ and is not normalized to unity:
 \begin{equation*}
     \int L(\alpha) \, d(\alpha) \neq 1 \, .
 \end{equation*}
 i.e. the likelihood function is the value of $f$ as a function of $\alpha$ given a fixed value of $x$.
 
-To estimate the parameter $\alpha$ we use an estimator, which is a function of the data. Take for example the measurement of data distributed according to a Gaussian probability density $f(x| \mu,\sigma) = \text{Gauss}(x|\mu,\sigma)$. One possible estimator of the mean $\mu$, is the mean of the measured data points $\bar{x} = \sum_{i = 1}^{n} x_i / n$ \cite{2011-Statistics-Cranmer}. 
+To estimate the parameter $\alpha$ we use an estimator, which is a function of the data. Take for example the measurement of data distributed according to a Gaussian probability density $f(x| \mu,\sigma) = \text{Gauss}(x|\mu,\sigma)$. One possible estimator of the mean $\mu$, is the mean of the measured data points $\bar{x} = \sum_{i = 1}^{n} x_i / n$~\cite{2011-Statistics-Cranmer}. 
 
 A commonly used estimator in physics is the maximum likelihood estimator (MLE), defined as the value $\alpha$ which maximizes the likelihood function $L(\alpha)$. This value, labeled $\hat{\alpha}$, also maximizes $\ln L(\alpha)$ and minimizes $-\ln L(\alpha)$. By convention the $-\ln L(\alpha)$ is minimized, in a process called ``fitting", and the maximum likelihood estimate is called the ``best fit value". 
 
@@ -152,7 +152,7 @@ In this section we next introduce concepts related to hypothesis testing such as
 
 The objective of a likelihood analysis is to distinguish different models representing the various hypotheses, and determine the one that best explains the experimental outcome. In a search for new physics, a signal is additive on top of the background. The background-only hypothesis is the null hypothesis, and the signal-plus-background hypothesis is the alternative. 
 
-As a simple example, take the $p$-value test, for an experiment where we count events in the signal region, $n_{SR}$, and expect $\nu_B$ background events and $\nu_S$ events from the signal \cite{2011-Statistics-Cranmer}. Then 
+As a simple example, take the $p$-value test, for an experiment where we count events in the signal region, $n_{SR}$, and expect $\nu_B$ background events and $\nu_S$ events from the signal~\cite{2011-Statistics-Cranmer}. Then 
 \begin{enumerate}
     \item The null hypothesis ($H_0$), i.e. the background-only hypothesis in this experiment, with the probability modeled by Poisson($n_{SR}|\nu_B$).
     \item The alternate hypothesis ($H_1$), i.e. signal-plus-background hypothesis, with the probability modeled by Poisson($n_{SR}|(\nu_B + \nu_S)$).
@@ -161,9 +161,9 @@ The compatibility of the observed data $\nu^0_{SR}$ and the null hypothesis, is 
 \begin{equation}
     p = \sum_{n = n^0_{SR}}^{\infty} \text{Poisson}(n | \nu_B) \, .
 \end{equation}
-If the $p$-value is very small, we might reject the null hypothesis. The $p$-value is not the probability of the null hypothesis given the data; rather, it expresses the probability that data with a certain property was obtained, assuming the null hypothesis \cite{2011-Statistics-Cranmer}.
+If the $p$-value is very small, we might reject the null hypothesis. The $p$-value is not the probability of the null hypothesis given the data; rather, it expresses the probability that data with a certain property was obtained, assuming the null hypothesis~\cite{2011-Statistics-Cranmer}.
 
-The $p$-value is an example of a test statistic $T$, which maps the data to a single real number. The Neyman-Pearson lemma states that out of the infinite possibilities of choices of test statistic, the uniformly most powerful test statistic is the likelihood ratio $T_{NP}$ \cite{2011-Statistics-Cranmer}:
+The $p$-value is an example of a test statistic $T$, which maps the data to a single real number. The Neyman-Pearson lemma states that out of the infinite possibilities of choices of test statistic, the uniformly most powerful test statistic is the likelihood ratio $T_{NP}$~\cite{2011-Statistics-Cranmer}:
 
 \begin{equation}
     T_{NP}(\mathcal{D}) = \frac{L(\mathcal{D} | {H_1})}{L(\mathcal{D}|{H_0})}
@@ -177,7 +177,7 @@ To reiterate, the test statistic $T$ is a real-valued function of the data, impl
 where $T_0$ is the value of $T$ based on the observed data, and $\theta()$ is the Heaviside function. The size of the test is conventionally chosen to be 10\%, 5\%, or 1\%. As the $p$-value depends on $\boldsymbol{\alpha}$ (both the POI and NP), the null hypothesis should not be rejected if the $p$-value is larger than the size of the test for any value of the nuisance parameters.
 
 \subsection{Confidence intervals}
-In an example of the measurement of the Standard Model Higgs boson, $\boldsymbol{\alpha}_{\text{POI}} = (\sigma/ \sigma_{SM}, M_H)$, with $\sigma/\sigma_{SM}$ is the ratio of the production cross-section for Higgs with respect to its value in the SM, and $M_H$ is the unknown mass of the Higgs, values of these parameters outside specific bounds are said to be ``excluded at the 95\% confidence level''. These allowed regions are called confidence levels or confidence regions, and the parameter values outside of them are considered excluded \cite{2011-Statistics-Cranmer}. A 95\% confidence interval does not mean that there is a 95\% chance that the true value of the parameter is inside the interval. Rather, a 95\% confidence interval covers the true value 95\% of the time (even though we do not know the true value). 
+In an example of the measurement of the Standard Model Higgs boson, $\boldsymbol{\alpha}_{\text{POI}} = (\sigma/ \sigma_{SM}, M_H)$, with $\sigma/\sigma_{SM}$ is the ratio of the production cross-section for Higgs with respect to its value in the SM, and $M_H$ is the unknown mass of the Higgs, values of these parameters outside specific bounds are said to be ``excluded at the 95\% confidence level''. These allowed regions are called confidence levels or confidence regions, and the parameter values outside of them are considered excluded~\cite{2011-Statistics-Cranmer}. A 95\% confidence interval does not mean that there is a 95\% chance that the true value of the parameter is inside the interval. Rather, a 95\% confidence interval covers the true value 95\% of the time (even though we do not know the true value). 
 
 To construct a confidence interval for a parameter $\alpha$, the Neyman Construction is used to invert a series of hypothesis tests; i.e. for each possible value of $\alpha$, the null hypothesis is treated as $\alpha$, and we perform a hypothesis test based on a test statistic. To construct a 95\% confidence interval, we construct a series of hypothesis tests with size of 5\%. The confidence interval $I(\mathcal{D})$ is constructed by taking the set of parameter values $\boldsymbol{\alpha}$ where the null hypothesis is accepted:
 \begin{equation}
@@ -188,7 +188,7 @@ where $T(\mathcal{D})$ is the test statistic, and the last $\alpha$ (not bolded)
 \begin{figure}[ht]
     \centering  
     \includegraphics[width=12cm]{figures/ch-9-event-categorization-and-signal-extraction/schematic_neyman_construction.png}
-    \caption[Schematic of the Neyman construction for confidence intervals.]{Schematic of the Neyman construction for confidence intervals \cite{2011-Statistics-Cranmer}. For each value of $\theta$, we find a region in $x$ where $\int f(x|\theta) dx$ satisfies the size of the test (\textit{blue}). These regions form a confidence belt (\textit{green}). The intersection of the observation $x_0$ (\textit{red}) with the confidence belt defines the confidence interval $[\theta_1, \theta_2]$ \cite{2011-Statistics-Cranmer}.} 
+    \caption[Schematic of the Neyman construction for confidence intervals.]{Schematic of the Neyman construction for confidence intervals~\cite{2011-Statistics-Cranmer}. For each value of $\theta$, we find a region in $x$ where $\int f(x|\theta) dx$ satisfies the size of the test (\textit{blue}). These regions form a confidence belt (\textit{green}). The intersection of the observation $x_0$ (\textit{red}) with the confidence belt defines the confidence interval $[\theta_1, \theta_2]$~\cite{2011-Statistics-Cranmer}.} 
     \label{fig:neyman-construction}
 \end{figure}
 
@@ -203,9 +203,9 @@ We construct the profile likelihood ratio,
 \begin{equation}
     \lambda(\mu) = \frac{L(\mu, \doublehat{\boldsymbol{\theta}}(\mu))}{L({\mu, \hat{\boldsymbol{\theta}}})}
 \end{equation}
-which depends explicitly on the parameter of interest $\mu$, implicitly on the data $\mathcal{D}_{\text{sim}}$ and global observables $\mathcal{G}$, and is independent of the nuisance parameters $\boldsymbol{\theta}$, which have been eliminated in profiling \cite{2011-Statistics-Cranmer}.
+which depends explicitly on the parameter of interest $\mu$, implicitly on the data $\mathcal{D}_{\text{sim}}$ and global observables $\mathcal{G}$, and is independent of the nuisance parameters $\boldsymbol{\theta}$, which have been eliminated in profiling~\cite{2011-Statistics-Cranmer}.
 
-The main conceptual reason for constructing the test statistic from the profile likelihood ratio is that asymptotically (i.e. for measurements with many events) the distribution of the profile likelihood ratio $\lambda(\mu = \mu_{\text{true}})$ is independent of the values of the nuisance parameters \cite{2011-Statistics-Cranmer}. 
+The main conceptual reason for constructing the test statistic from the profile likelihood ratio is that asymptotically (i.e. for measurements with many events) the distribution of the profile likelihood ratio $\lambda(\mu = \mu_{\text{true}})$ is independent of the values of the nuisance parameters~\cite{2011-Statistics-Cranmer}. 
 
 The following $p$-value is used to quantify the consistency with the hypothesis of a signal strength of $\mu$:
 \begin{equation}
@@ -214,7 +214,7 @@ The following $p$-value is used to quantify the consistency with the hypothesis 
 
 
 \subsection{Modified frequentist method: \texorpdfstring{$CL_{S}$}{CLs}}
-In the modified frequentist method called $CL_{S}$, to test a hypothesis with signal, we define $p'_{\mu}$ as a ratio of $p$-values \cite{2011-Statistics-Cranmer}:
+In the modified frequentist method called $CL_{S}$, to test a hypothesis with signal, we define $p'_{\mu}$ as a ratio of $p$-values~\cite{2011-Statistics-Cranmer}:
 \begin{equation}
     p'_{\mu} = \frac{p_\mu}{1 - p_b}
 \end{equation}
