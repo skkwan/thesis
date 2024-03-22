@@ -1,4 +1,4 @@
-This chapter introduces the key aspects of the CERN Large Hadron Collider (LHC) and the Compact Muon Solenoid (CMS) experiment where the work for this thesis was conducted. Section \ref{section:LHC} describes the history of accelerator developments at CERN that led to the construction of the LHC, the current LHC configuration, and the largest experiments located at the LHC. The concepts of beam luminosity and pileup, which are critical for understanding and measuring high-energy particle collisions, are described in Section \ref{section:luminosity_and_pileup} and discussed in the context of the High-Luminosity LHC (HL-LHC) upgrade in Section \ref{section:HL-LHC}. Lastly, Section \ref{section:cms-detector} describes the design and function of CMS and its subdetectors, and terminates in a description of data processing at CMS, beginning from online event filtering in the Level-1 Trigger, to processing in the High-Level Trigger, to offline particle reconstruction, and finally long-term storage and processing of measured events.
+This chapter introduces the key aspects of the CERN Large Hadron Collider (LHC) and the Compact Muon Solenoid (CMS) experiment where the work for this thesis was conducted. Section \ref{section:LHC} describes the history of accelerator developments at CERN that led to the construction of the LHC, the current LHC configuration, and the largest experiments located at the LHC. The concepts of beam luminosity and pile-up, which are critical for understanding and measuring high-energy particle collisions, are described in Section \ref{section:luminosity_and_pileup} and discussed in the context of the High-Luminosity LHC (HL-LHC) upgrade in Section \ref{section:HL-LHC}. Lastly, Section \ref{section:cms-detector} describes the design and function of CMS and its subdetectors, and terminates in a description of data processing at CMS, beginning from online event filtering in the Level-1 Trigger, to processing in the High-Level Trigger, to offline particle reconstruction, and finally long-term storage and processing of measured events.
 
 \section{The Large Hadron Collider}
 \label{section:LHC}
@@ -17,7 +17,7 @@ The beams of particles in the LHC are made to collide at a center-of-mass energy
 
 
 
-\section{Luminosity and pileup}
+\section{Luminosity and pile-up}
 \label{section:luminosity_and_pileup}
 In order to search for rare processes, such as those resulting from a Higgs, W, or Z boson, a large number of parton interactions per second are required at the LHC. The number of events generated per second by the LHC collisions is given by
 \begin{equation}
@@ -44,22 +44,22 @@ Peak luminosity at interaction points 1 and 5 reach values of $\sim 1.0 \times 1
 
 Per Eqn. \ref{eqn:nEvents}, the integrated luminosity over time is proportional to the number of events produced, and the size of LHC datasets is commonly presented in terms of integrated luminosity. Collider operation aims to optimize the integrated luminosity. Thus the exploration of rare events in the LHC collisions requires both high beam energies and high beam intensities.
 
-The interaction vertex corresponding to the hard scattering of the protons is called the primary interaction vertex, or primary vertex (PV). The LHC's nominal beam luminosities are sufficiently large for multiple proton-proton collisions to occur in the same time window of 25 nanoseconds in which proton bunches collide~\cite{CMS-JME-18-001}. To measure a proton-proton collision, the primary vertices must be separated from overlapping collisions, called ``pileup'' collisions. 
+The interaction vertex corresponding to the hard scattering of the protons is called the primary interaction vertex, or primary vertex (PV). The LHC's nominal beam luminosities are sufficiently large for multiple proton-proton collisions to occur in the same time window of 25 nanoseconds in which proton bunches collide~\cite{CMS-JME-18-001}. To measure a proton-proton collision, the primary vertices must be separated from overlapping collisions, called ``pile-up'' collisions. 
 
-The pileup is defined as the average number of $pp$ collisions per bunch crossing, and can be estimated from the inelastic $pp$ cross section of $\sigma_{\text{inel}} = 68.6$ millibarns at a center-of-mass energy of $\sqrt{s} = 13$\TeV~\cite{CERN-EP-2018-004-pileup}:
+The pile-up is defined as the average number of $pp$ collisions per bunch crossing, and can be estimated from the inelastic $pp$ cross section of $\sigma_{\text{inel}} = 68.6$ millibarns at a center-of-mass energy of $\sqrt{s} = 13$\TeV~\cite{CERN-EP-2018-004-pileup}:
 \begin{equation}
-    \text{Pileup} = \frac{\mathcal{L} \times \sigma_{\text{inel}}}{ n_b \cdot f} \sim 22
+    \text{Pile-up} = \frac{\mathcal{L} \times \sigma_{\text{inel}}}{ n_b \cdot f} \sim 22
 \end{equation}
-A distribution of pileup in the data-taking years 2016-2018 is shown in Fig. \ref{fig:pileup-run-2}.
+A distribution of pile-up in the data-taking years 2016-2018 is shown in Fig. \ref{fig:pileup-run-2}.
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=8cm]{figures/ch-2-cern-cms/pileup-run-2-CMS-JME-18-001_Figure_001.png}
-    \caption[Distribution of the mean number of inelastic collisions per bunch crossing (pileup) in data, for proton-proton collisions in 2016-2018]{Distribution of the mean number of inelastic collisions per bunch crossing (pileup) in data~\cite{CMS-JME-18-001}, for proton-proton collisions in 2016 (\textit{dotted orange}), 2017 (\textit{dotted light blue}), 2018 (\textit{dotted dark blue}), and integrated over 2016-2018 (\textit{solid grey}). A cross-section of inelastic proton-proton collisions of 69.2 mbarns is assumed. In the running conditions of the High-Luminosity LHC, pileup will reach unprecedented levels of up to 200 per bunch crossing~\cite{CERN-2020-010-HL-LHC-TDR}.}
+    \caption[Distribution of the mean number of inelastic collisions per bunch crossing (pile-up) in data, for proton-proton collisions in 2016-2018]{Distribution of the mean number of inelastic collisions per bunch crossing (pile-up) in data~\cite{CMS-JME-18-001}, for proton-proton collisions in 2016 (\textit{dotted orange}), 2017 (\textit{dotted light blue}), 2018 (\textit{dotted dark blue}), and integrated over 2016-2018 (\textit{solid grey}). A cross-section of inelastic proton-proton collisions of 69.2 mbarns is assumed. In the running conditions of the High-Luminosity LHC, pile-up will reach unprecedented levels of up to 200 per bunch crossing~\cite{CERN-2020-010-HL-LHC-TDR}.}
     \label{fig:pileup-run-2}
 \end{figure}
 
-These multiple collisions will lead to higher occupancies in the detector, and particles originating from the pileup interactions can be confused with those originating from the primary vertex. Thus, higher luminosities create more intense pileup conditions, posing a greater challenge to detector performance and particle reconstruction and identification.
+These multiple collisions will lead to higher occupancies in the detector, and particles originating from the pile-up interactions can be confused with those originating from the primary vertex. Thus, higher luminosities create more intense pile-up conditions, posing a greater challenge to detector performance and particle reconstruction and identification.
 
 
 \section{The High-Luminosity LHC}
