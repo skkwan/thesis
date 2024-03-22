@@ -38,50 +38,43 @@ The reconstruction and identification of electrons and photons ($e/\gamma$) begi
     \label{fig:phase-2-summary-trigger-TP-algo-physics}
 \end{figure}
 
-\subsection{Phase-2 geometry of the ECAL Barrel trigger}
-\label{section:phase-2-ECAL-barrel-geometry}
 % https://cds.cern.ch/record/2714892/files/CMS-TDR-021.pdf  
 % Section 2.2.1, on page 36-37
-In Phase-2, the upgrade of both on-detector and off-detector electronics for the barrel calorimeters trigger primitive generator (TPG) will stream single crystal data from the on-detector to the backend electronics, in contrast to the lower-granularity output of the Phase-1 ECAL TPG that is restricted to providing trigger tower sums of $5 \times 5$ crystals~\cite{CMS-TDR-021}. 
-A schematic representation of the geometry of the ECAL barrel in the Regional Calorimeter Trigger (RCT) is shown in Fig. \ref{fig:phase-2-rct-cards-schematic}. The barrel is spanned by 36 RCT cards, each spanning $17 \times 4$ towers in $\eta \times \phi$. Each RCT card is subdivided into five ``regions'' as shown in Fig. \ref{fig:phase-2-one-rct-card-schematic}. After initial clustering and processing, the outputs of the RCT card are sent to the Global Calorimeter (GCT) trigger, which is processed in three cards as shown in Fig. \ref{fig:phase-2-gct-cards-schematic}.
-
-\begin{figure}[ht]
+In Phase-2, the upgrade of both on-detector and off-detector electronics of the barrel calorimeters' trigger primitive generator (TPG) will enable the streaming of single crystal data from the on-detector to the backend electronics. Currently in Phase-1, the ECAL and HCAL TPGs is restricted to providing lower-granularity information of trigger tower sums of $5 \times 5$ crystals to the Level-1 Trigger~\cite{CMS-TDR-021}. A schematic of the geometry of the ECAL barrel in the Phase-2 Regional Calorimeter Trigger (RCT) is shown in Fig. \ref{fig:phase-2-rct-cards-schematic}. The barrel is spanned by 36 RCT cards, each spanning $17 \times 4$ towers in $\eta \times \phi$. Each RCT card is subdivided into five ``regions'' as shown in Fig. \ref{fig:phase-2-one-rct-card-schematic-landscape}.  After initial clustering and processing, the outputs of the RCT card are sent to the Global Calorimeter (GCT) trigger, which is processed in three cards as shown in Fig. \ref{fig:phase-2-gct-cards-schematic}. The reconstruction algorithm is detailed below.
+\begin{figure}[!ht]
     \centering
-    \includegraphics[width=9cm]{figures/ch-3-phase2/phase-2-rct-cards-schematic.png}
+    \includegraphics[width=5cm]{figures/ch-3-phase2/phase-2-rct-cards-schematic.png}
     \caption{Schematic of the geometry of the Phase-2 ECAL barrel in the Regional Calorimeter Trigger (RCT), showing the division of the barrel region into 36 Regional Calorimeter Trigger (RCT) cards (\textit{red}). Each card spans $17 \times 4$ towers in $\eta \times \phi$ (\textit{green}), and each tower is $5\times 5$ in single crystals in $\eta \times \phi$. Towers in the overlap region (\textit{shaded yellow}) are read out to both the barrel and endcap.}
     \label{fig:phase-2-rct-cards-schematic}
 \end{figure}
 
+
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=9cm]{figures/ch-3-phase2/phase-2-one-rct-card-schematic.png}
-    \caption{Schematic of two example RCT cards in the negative eta (\textit{top}) and positive eta (\textit{center}) regions of the ECAL barrel. Each RCT card is divided into five regions: four regions are of size $3 \times 4$ towers in $\eta \times \phi$ (\textit{bottom left}), and a fifth smaller overlap region of size $2 \times 4$ towers (\textit{bottom right}). Each tower is $5 \times 5$ ($\eta\times\phi$) in crystals.}
-    \label{fig:phase-2-one-rct-card-schematic}
+    \includegraphics[width=11cm]{figures/ch-3-phase2/phase-2-one-rct-card-schematic-landscape.png}
+    \caption{Schematic of two example RCT cards in the negative eta (\textit{top left}) and positive eta (\textit{bottom left}) regions of the ECAL barrel. Each RCT card is divided into six regions: five regions are of size $3 \times 4$ towers in $\eta \times \phi$ (\textit{top right}), and a sixth smaller overlap region of size $2 \times 4$ towers (\textit{bottom right}). Each tower is $5 \times 5$ ($\eta\times\phi$) in crystals.}
+    \label{fig:phase-2-one-rct-card-schematic-landscape}
 \end{figure}
 
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=15cm]{figures/ch-3-phase2/phase-2-gct-cards-schematic.png}
-    \caption{Schematic of the Phase-2 ECAL barrel in the Global Calorimeter Trigger (GCT), which will process the outputs of the Regional Calorimeter Trigger (RCT) in three cards (\textit{magenta highlights}). Each card in the GCT processes the equivalent of sixteen RCT cards, with the center twelve being unique to that GCT card (\textit{shaded pink}), and the remaining four processed in overlap with the other GCT cards.}
+    \caption{Schematic of the Phase-2 ECAL barrel in the Global Calorimeter Trigger (GCT), which will process the outputs of the Regional Calorimeter Trigger (RCT) in three GCT cards (\textit{purple borders}). Each card in the GCT processes the equivalent of sixteen RCT cards, with the center twelve RCT cards being unique to that GCT card (\textit{shaded pink}), and the remaining four RCT cards overlapping with one other GCT card.}
     \label{fig:phase-2-gct-cards-schematic}
 \end{figure}
-
-
-\subsection{Phase-2 electron/photon reconstruction algorithm}
-\label{section:phase-2-egamma-reconstruction-algorithm}
 
 The standalone barrel algorithm for reconstructing and identifying electrons and photons in the Phase-2 Level-1 Trigger takes as input the digitized response of each crystal of the barrel ECAL, with a granularity $0.0175 \times 0.0175$ in $\eta \times \phi$, which is 25 times higher than the input to the Phase-1 trigger, which consisted of trigger towers with a granularity of $0.0875 \times 0.0875$. In HCAL the tower size of $0.0875 \times 0.0875$ is unchanged. The trigger algorithm is designed to closely reproduce the algorithm used in the offline reconstruction, with limitations and simplifications due to trigger latency. 
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=12cm]{figures/ch-3-phase2/phase-2-cluster-footprint.png}
-    \caption{Illustration of an example electron/photon ($e/\gamma$) cluster in the Phase-2 Level-1 Trigger standalone barrel $e/\gamma$ reconstruction, in a region of $15\times 20$ crystals ($3\times 4$ towers). Each small pink square is one crystal, the highest-granularity ECAL trigger primitives available to the L1 Trigger in Phase-2. The core cluster consists of the energy sum in a $3\times 5$ window of crystals, (\textit{shaded light blue}) centered around the seed crystal (\textit{red}). Bremsstrahlung corrections are checked in the adjacent $3\times 5$ windows in the $\phi$ direction (\textit{shaded light yellow}). The relative energies in windows of size $2\times 5$ and $5\times 5$ in crystals (\textit{dashed dark blue and dark red}) are used to compute shower shape variables to identify true $e/\gamma$ objects. Lastly, an isolation sum is computed in a window of size $7\times 7$ in towers (not shown in figure).}
+    \caption{Illustration of an example electron/photon ($e/\gamma$) cluster in the Phase-2 Level-1 Trigger standalone barrel $e/\gamma$ reconstruction, in a region of $15\times 20$ crystals ($3\times 4$ towers) in $\eta \times \phi$. Each small pink square is one crystal, the highest-granularity ECAL trigger primitives available to the L1 Trigger in Phase-2. The core cluster consists of the energy sum in a $3\times 5$ window of crystals (\textit{shaded light blue}), centered around the seed crystal (\textit{red}). The presence of energy lost to bremsstrahlung radiation is checked in the adjacent $3\times 5$ windows in the $\phi$ direction (\textit{shaded light yellow}). The ratio of the total energies in windows of size $2\times 5$ and $5\times 5$ in crystals (\textit{dashed dark blue and dark red}) around the seed crystal, is computed and compared to the core cluster energy to obtain shower shape flags. Lastly, the isolation, defined as the sum of the energy in a large window of size $7\times 7$ in towers (not shown in figure) is computed, and compared to the core cluster energy to obtain isolation flags.}
     \label{fig:phase-2-cluster-footprint}
 \end{figure}
 
 
-In the RCT, an initial requirement of $p_{T} > 0.5$ GeV is imposed on the input trigger primitives (i.e. energies from the ECAL crystals and HCAL towers) to reject contribution from pile-up. In one of the regions inside a RCT card (Fig. \ref{fig:phase-2-one-rct-card-schematic}), the crystal containing the highest energy deposit is identified as the seed crystal, as shown in Fig. \ref{fig:phase-2-cluster-footprint}. The energy in the crystals in a window of size $3\times 5$ in $\eta\times\phi$ around the seed cluster is added into a cluster. The energy is considered ``clustered''. The process is repeated with the remaining ``unclustered" energy, until up to four clusters are produced in the region. 
+In the RCT, an initial requirement of $p_{T} > 0.5$ GeV is imposed on the input trigger primitives (i.e. energies from the ECAL crystals and HCAL towers) to reject contribution from pile-up. In one of the regions inside a RCT card (Fig. \ref{fig:phase-2-one-rct-card-schematic-landscape}), the crystal containing the highest energy deposit is identified as the seed crystal, as shown in Fig. \ref{fig:phase-2-cluster-footprint}. The energy in the crystals in a window of size $3\times 5$ in $\eta\times\phi$ around the seed cluster is added into a cluster. The energy is considered ``clustered''. The process is repeated with the remaining ``unclustered" energy, until up to four clusters are produced in the region. 
 
 
 To improve $e/\gamma$ identification and to reduce background contributions, identification and reconstruction algorithms are implemented at this stage:
@@ -97,20 +90,20 @@ From each RCT card, the twelve highest-energy clusters, as well as any remaining
     \item Isolation: One handle to reject backgrounds from e.g. pile-up, comes from the tendency for background to be spread more uniformly across a large area in the detector, whereas genuine $e/\gamma$ are expected to produce showers concentrated in the $3 \times 5$ crystal window. The energy sum in a large window of $7 \times 7$ in towers is computed and used to reject background.
 \end{itemize}
 
+
+
+The performance of the standalone barrel $e/\gamma$ algorithm in Phase-2 conditions is summarized in the efficiency and rates. The efficiencies are measured with a simulated Monte Carlo sample containing electrons and are shown in Fig. \ref{results-egamma-efficiency-gt25}. The rates are measured with a simulated minimum bias sample intended to closely mimic generic proton-proton collisions in the CMS detector and are shown in Fig. \ref{fig:results-egamma-rates}. The performance of the Phase-2 emulator discussed in this work, which closely mimics the firmware logic and uses fixed-precision integers, is shown to be comparable to the previous emulator which used floats and idealized logic.
+
 \begin{figure}[ht]
     \centering
     \includegraphics[width=12cm]{figures/ch-3-phase2/results-egamma-efficiency-gt25.png}
-    \caption[Efficiency of the standalone barrel $e/\gamma$ reconstruction, as a function of the true electron's transverse momentum $p_{T}$.]{Efficiency of the standalone barrel $e/\gamma$ reconstruction, measured in a simulated sample of electrons, as a function of the true electron's transverse momentum $p_{T}$. The performance of the previous, idealized algorithm as shown in the 2021 Phase-2 TDR~\cite{CMS-TDR-021} with and without the isolation and shower shape discrimination variables (``standalone working point/ WP'') (\textit{dark blue, grey}). The Phase-2 emulator discussed in this work with and without the same working point (\textit{black, red}) is shown to have comparable performance.}
+    \caption{Efficiencies of the current and previous emulators of the standalone barrel $e/\gamma$ algorithm for the Phase-2 Level-1 Trigger, evaluated in a simulated sample containing electrons, as a function of the electron's generator-level transverse momentum $p_{T}$. The standalone working point (WP) is defined as the logical OR of the isolation flag and shower shape flag. The efficiencies with and without requiring the standalone WP, are shown for the current emulator (labeled ``Phase 2", \textit{black, red}) and the previous emulator (labeled ``TDR", \textit{dark blue, grey}).}
     \label{fig:results-egamma-efficiency-gt25}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[h]
     \centering
     \includegraphics[width=12cm]{figures/ch-3-phase2/results-egamma-rates.png}
-    \caption[Rates of the standalone barrel $e/\gamma$ reconstruction measured as a function of the minimum energy ($E_T$) required of the reconstructed $e/\gamma$ object in each event.]{Rates of the standalone barrel $e/\gamma$ reconstruction, evaluated on a minimum bias sample, measured as a function of the minimum energy ($E_T$) required of the reconstructed $e/\gamma$ object in each event. The performance of the previous, idealized algorithm as shown in the 2021 Phase-2 TDR~\cite{CMS-TDR-021} with and without the isolation and shower shape discrimination variables (``standalone working point/ WP'') (\textit{dark blue, grey}). The Phase-2 emulator discussed in this work with and without the same working point (\textit{black, red}) is shown to have comparable performance.}
+    \caption{Rates in kHz of the current Phase-2 and previous (``TDR") emulators of the standalone barrel $e/\gamma$ algorithm for the Phase-2 Level-1 Trigger, evaluated on a minimum bias (MinBias) sample with 200 pile-up (PU), measured as a function of the minimum energy ($E_T$) required of the reconstructed $e/\gamma$ object in each event. The standalone working point (standalone WP) is defined to be the logical OR of the isolation flag and the shower shape flag. The rates with and without requiring the standalone WP, are shown for the current emulator (labeled ``Phase 2", \textit{black, red}) and the previous emulator (labeled ``TDR", \textit{dark blue, grey}).}
     \label{fig:results-egamma-rates}
 \end{figure}
-
-
-The performance of the standalone barrel $e/\gamma$ algorithm in Phase-2 conditions is summarized in the efficiency and rates. The efficiencies are measured with a simulated Monte Carlo sample containing electrons. The rates are measured with a simulated minimum bias sample intended to closely mimic generic proton-proton collisions in the CMS detector. The performance of the Phase-2 emulator discussed in this work, which closely mimics the firmware logic and uses fixed-precision integers, is shown to be comparable to the previous emulator which used floats and idealized logic.
-
