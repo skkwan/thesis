@@ -31,6 +31,7 @@ The outputs from the above trigger paths are combined in the Global Trigger (GT)
 \label{section:standalone_barrel_calo_egamma}
 The reconstruction and identification of electrons and photons ($e/\gamma$) begin with the trigger primitives of the barrel ECAL and HCAL detectors and endcap HGCAL calorimeters, covering the pseudorapidity region $|\eta| < 3$. The barrel and endcap regions of the detector are intrinsically different enough to warrant different approaches to $e/\gamma$ reconstruction. This work presents a firmware-based emulator for the standalone $e/\gamma$ reconstruction in the barrel calorimeter (Fig. \ref{fig:phase-2-summary-trigger-TP-algo-physics}). ``Standalone" refers to the fact that the tracker information is not used in this particular reconstruction chain. This firmware-based emulator is based on the parallelized, computational logic that will be deployed in the firmware of the Phase-2 Level-1 trigger. The emulator uses fixed-precision integers to represent all values, such as in the computation of cluster energies, and closely mimics the firmware logic which uses arrays and performs computations in flattened loops. It represents an improved, more realistic understanding of the trigger, compared to the previous emulator which used idealized logic such as vector operations, and floats to represent all values~\cite{CMS-TDR-021}.
 
+
 \begin{figure}[ht]
     \centering
     \includegraphics[width=15cm]{figures/ch-3-phase2/phase-2-summary-trigger-TP-algo-physics.png}
@@ -91,7 +92,9 @@ From each RCT card, the twelve highest-energy clusters, as well as any remaining
 \end{itemize}
 Flags that provide discrimination power between genuine $e/\gamma$ and background, are computed using the relative isolation and shower shape quantities. The standalone working point (WP) is defined as the logical OR of the relative isolation and shower shape flags. 
 
-\subsection{Electron/photon standalone barrel output and results}
+The information of the clusters in the event, including their energies, crystal-level position, the relative isolation flag, the shower shape flag, the standalone WP, and the ratio of the HCAL over ECAL energies, are sent in 64 bits to the Correlator Trigger and the Global Trigger. The towers in the event are computed as the sum of all unclustered energy in the ECAL with the corresponding HCAL energy at each tower location, and their energies are sent to the Correlator Trigger.
+
+\subsection{Electron/photon standalone barrel results}
 The performance of the current emulator of the standalone barrel $e/\gamma$ algorithm in Phase-2 conditions is quantified in efficiencies and rates. Efficiency is the fraction of true electrons that the algorithm can reconstruct and identify, and is evaluated in a Monte Carlo simulated sample containing electrons with transverse momentum $p_{T}$ ranging from 1 to 100\GeV.  The efficiencies of the current and previous emulaors as a function of the electron generator-level $p_{T}$ are shown in Fig. \ref{fig:results-egamma-efficiency-gt25}. 
 
 The rates are the event rates that this reconstruction and identification algorithm would obtain if it were deployed in a trigger, assuming that proton-proton collisions are occurring at the 40 MHz event rate of the HL-LHC. The rate is reported as a function of the minimum energy threshold required by the trigger, and is estimated using a simulated sample of minimum bias events, i.e. generic proton-proton collisions without any specific physics selections. The rates for the current and previous emulator are shown in Fig. \ref{fig:results-egamma-rates}. 
@@ -110,8 +113,4 @@ The rates are the event rates that this reconstruction and identification algori
     \label{fig:results-egamma-rates}
 \end{figure}
 
-% TODO: discuss performance in menu
-
-The information of the clusters in the event, including their energies, crystal-level position, the relative isolation flag, the shower shape flag, the standalone WP, and the ratio of the HCAL over ECAL energies, are sent in digitized ``words" of 64 bits to the Correlator Trigger and the Global Trigger. The towers in the event are computed as the sum of all unclustered energy in the ECAL with the corresponding HCAL energy at each tower location, and their energies are sent to the Correlator Trigger.
-
-% TODO: talk about how the outputs are used
+The current emulator is incorporated into the full Phase-2 L1 menu, allowing an estimate of the rates produced by the standalone $e/\gamma$ barrel trigger path and all other algorithms in the L1 Trigger. All rates are estimated with the assumption of an average pile-up of 200 and event rate of 40 MHz. The standalone working point single $e/\gamma$ path with requirements on the $e/\gamma$ candidate to have $|\eta| < 2.4$, offline $p_{T}$ to be greater than 51\GeV, and online $p_{T}$ to be greater than 41\GeV, is projected to have a rate of around 23 kHz. The standalone working point double $e/\gamma$ path with requirements on the two $e/\gamma$ candidates to have $|\eta| < 2.4$, offline $p_{T}$ greater than 37 and 24\GeV, and online $p_{T}$ greater than 29 and 18\GeV, is projected to give a rate of around 6 kHz. For both paths, the objects efficiency plateau is 99\%. 
