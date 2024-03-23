@@ -1,0 +1,511 @@
+The datasets used in the MiniAOD-based framework for the $h \rightarrow aa \rightarrow bb\tau\tau$ analysis are listed in this appendix. The NanoAOD-based framework uses the NanoAOD versions of these datasets. The data used for the years 2016-2018 are listed in Tables~\ref{tab:2016datasets}, \ref{tab:2017datasets}, and \ref{tab:2018datasets} respectively. The embedded samples used for the years 2016-2018 are listed in Tables~\ref{tab:2016emb}, \ref{tab:2017emb}, and \ref{tab:2018emb} respectively. The Monte Carlo simulated samples used to estimate backgrounds for the years 2016-2018 are listed in Tables~\ref{tab:2016mcbkg}, \ref{tab:2017mcbkg}, and \ref{tab:2018mcbkg} respectively. 
+
+The $h \rightarrow aa \rightarrow bb\tau\tau$ signal samples are generated for 11 psuedoscalar masses between 12\GeV and 60\GeV for gluon fusion (ggF) and vector boson fusion (VBF) Higgs production. The 2016-2018 signal samples are listed in Tables~\ref{tab:2016signal}, \ref{tab:2017signal} and \ref{tab:2018signal} respectively. A filter is applied at the generator level for each $\tau\tau$ final state:
+\begin{itemize}
+    \item $ee$ final state: $p_{T}(e_1) > 22$\GeV, $p_{T}e_{2} > 10$\GeV, $|\eta(e_{1})| < 2.6$, and $|\eta(e_{2})| < 2.6$.
+    \item $e\tau_{h}$ final state: $p_{T}(e) > 22$\GeV, $p_{T}(\tau_{h}) > 16$\GeV, $|\eta(e)| < 2.6$, and $|\eta(\tau_{h})| < 2.7$.
+    \item $e\mu$ final state: $p_{T}(e) > 11$\GeV, $p_{T}(\mu) > 7$\GeV, $|\eta(e)| < 2.6$, and $|\eta(\mu)| < 2.5$.
+    \item $\tau_{h}\tau_{h}$ final state: $p_{T}(\tau_{h1}) > 28$\GeV, $p_{T}(\tau_{h2}) > 28$\GeV, $|\eta(\tau_{h1})| < 2.5$, and $|\eta(\tau_{h2})| < 2.5$.
+    \item $\mu\tau_{h}$ final state: $p_{T}(\mu) > 19$\GeV, $p_{T}(\tau_{h}) > 16$\GeV, $|\eta(\mu)| < 2.5$, and $|\eta(\tau_{h})| < 2.7$.
+    \item $\mu\mu$ final state: $p_{T}(\mu_{1}) > 17$\GeV, $p_{T}(\mu_{2}) > 8$\GeV, $|\eta(\mu_{1})| < 2.5$, and $|\eta(\mu_{2})| < 2.5$.
+\end{itemize}
+The tables also show for each sample the filter efficiencies, which is the percentage of events that pass the above filters, and the number of events that were generated after applying the filters.
+
+
+\begin{table}[ht]
+    \begin{center}
+    {\scriptsize
+    \begin{tabular}{|c|l|c|}
+    \hline
+    Channel & Data sets (2016) & Run range\\
+    \hline
+    $e\mu$ & \texttt{/MuonEG/Run2016B-17Jul2018\_ver1-v1/MINIAOD} & 272760-273017\\
+    & \texttt{/MuonEG/Run2016B-17Jul2018\_ver2-v1/MINIAOD} & 273150-275376\\
+    & \texttt{/MuonEG/Run2016C-17Jul2018-v1/MINIAOD} & 275656-276283\\
+    & \texttt{/MuonEG/Run2016D-17Jul2018-v1/MINIAOD} & 276315-276811\\
+    & \texttt{/MuonEG/Run2016E-17Jul2018-v2/MINIAOD} & 276831-277420\\
+    & \texttt{/MuonEG/Run2016F-17Jul2018-v1/MINIAOD} & 277932-278808\\
+    & \texttt{/MuonEG/Run2016G-17Jul2018-v1/MINIAOD} & 278820-280385\\
+    & \texttt{/MuonEG/Run2016H-17Jul2018-v1/MINIAOD} & 281613-284044\\
+    \hline
+    $e\tau_{h}$ & \texttt{/SingleElectron/Run2016B-17Jul2018\_ver1-v1/MINIAOD} & 272760-273017\\
+    & \texttt{/SingleElectron/Run2016B-17Jul2018\_ver2-v1/MINIAOD} & 273150-275376\\
+    & \texttt{/SingleElectron/Run2016C-17Jul2018-v1/MINIAOD} & 275656-276283\\
+    & \texttt{/SingleElectron/Run2016D-17Jul2018-v1/MINIAOD} & 276315-276811\\
+    & \texttt{/SingleElectron/Run2016E-17Jul2018-v1/MINIAOD} & 276831-277420\\
+    & \texttt{/SingleElectron/Run2016F-17Jul2018-v1/MINIAOD} & 277932-278808\\
+    & \texttt{/SingleElectron/Run2016G-17Jul2018-v1/MINIAOD} & 278820-280385\\
+    & \texttt{/SingleElectron/Run2016H-17Jul2018-v1/MINIAOD} & 281613-284044\\
+    \hline
+    $\mu\tau_{h}$ & \texttt{/SingleMuon/Run2016B-17Jul2018\_ver1-v1/MINIAOD} & 272760-273017\\
+    & \texttt{/SingleMuon/Run2016B-17Jul2018\_ver2-v1/MINIAOD} & 273150-275376\\
+    & \texttt{/SingleMuon/Run2016C-17Jul2018-v1/MINIAOD} & 275656-276283\\
+    & \texttt{/SingleMuon/Run2016D-17Jul2018-v1/MINIAOD} & 276315-276811\\
+    & \texttt{/SingleMuon/Run2016E-17Jul2018-v1/MINIAOD} & 276831-277420\\
+    & \texttt{/SingleMuon/Run2016F-17Jul2018-v1/MINIAOD} & 277932-278808\\
+    & \texttt{/SingleMuon/Run2016G-17Jul2018-v1/MINIAOD} & 278820-280385\\
+    & \texttt{/SingleMuon/Run2016H-17Jul2018-v1/MINIAOD} & 281613-284044\\
+    \hline
+    \end{tabular}
+    }
+    \end{center}
+    \caption{Data sets used in the $h\rightarrow aa \rightarrow bb\tau\tau$ analysis for the 2016 era.}
+    \label{tab:2016datasets}
+    \end{table}
+    
+    \begin{table}[ht]
+    \begin{center}
+    {\scriptsize
+    \begin{tabular}{|c|l|c|}
+    \hline
+    Channel & Data sets (2017) & Run range\\
+    \hline
+    $e\mu$ & \texttt{/MuonEG/Run2017B-31Mar2018-v1/MINIAOD} & 297047-299329\\
+    & \texttt{/MuonEG/Run2017C-31Mar2018-v1/MINIAOD} & 299368-302029\\
+    & \texttt{/MuonEG/Run2017D-31Mar2018-v1/MINIAOD} & 302031-302663\\
+    & \texttt{/MuonEG/Run2017E-31Mar2018-v1/MINIAOD} & 303824-304797\\
+    & \texttt{/MuonEG/Run2017F-31Mar2018-v1/MINIAOD} & 305040-306460\\
+    \hline
+    $e\tau_{h}$ & \texttt{/SingleElectron/Run2017B-31Mar2018-v1/MINIAOD} & 297047-299329\\
+    & \texttt{/SingleElectron/Run2017C-31Mar2018-v1/MINIAOD} & 299368-302029\\
+    & \texttt{/SingleElectron/Run2017D-31Mar2018-v1/MINIAOD} & 302031-302663\\
+    & \texttt{/SingleElectron/Run2017E-31Mar2018-v1/MINIAOD} & 303824-304797\\
+    & \texttt{/SingleElectron/Run2017F-31Mar2018-v1/MINIAOD} & 305040-306460\\
+    \hline
+    $\mu\tau_{h}$ & \texttt{/SingleMuon/Run2017B-31Mar2018-v1/MINIAOD} & 297047-299329\\
+    & \texttt{/SingleMuon/Run2017C-31Mar2018-v1/MINIAOD} & 299368-302029\\
+    & \texttt{/SingleMuon/Run2017D-31Mar2018-v1/MINIAOD} & 302031-302663\\
+    & \texttt{/SingleMuon/Run2017E-31Mar2018-v1/MINIAOD} & 303824-304797\\
+    & \texttt{/SingleMuon/Run2017F-31Mar2018-v1/MINIAOD} & 305040-306460\\
+    \hline
+    \end{tabular}
+    }
+    \end{center}
+    \caption{Data sets used in the $h\rightarrow aa \rightarrow bb\tau\tau$ analysis for the 2017 era.}
+    \label{tab:2017datasets}
+    \end{table}
+    
+    \begin{table}[ht]
+    \begin{center}
+    {\scriptsize
+    \begin{tabular}{|c|l|c|}
+    \hline
+    Channel & Data sets (2018) & Run range\\
+    \hline
+    $e\mu$ & \texttt{/MuonEG/Run2018A-17Sep2018-v1/MINIAOD} & 315257-316995\\
+    & \texttt{/MuonEG/Run2018B-17Sep2018-v1/MINIAOD} & 317080-319310\\
+    & \texttt{/MuonEG/Run2018C-17Sep2018-v1/MINIAOD} & 319337-320065\\
+    & \texttt{/MuonEG/Run2018D-PromptReco-v2/MINIAOD} & 320500-325175\\
+    \hline
+    $e\tau_{h}$ & \texttt{/EGamma/Run2018A-17Sep2018-v2/MINIAOD} & 315257-316995\\
+    & \texttt{/EGamma/Run2018B-17Sep2018-v1/MINIAOD} & 317080-319310\\
+    & \texttt{/EGamma/Run2018C-17Sep2018-v1/MINIAOD} & 319337-320065\\
+    & \texttt{/EGamma/Run2018D-PromptReco-v2/MINIAOD} & 320497-325175\\
+    \hline
+    $\mu\tau_{h}$ & \texttt{/SingleMuon/Run2018A-17Sep2018-v2/MINIAOD} & 315257-316995\\
+    & \texttt{/SingleMuon/Run2018B-17Sep2018-v1/MINIAOD} & 317080-319310\\
+    & \texttt{/SingleMuon/Run2018C-17Sep2018-v1/MINIAOD} & 319337-320065\\
+    & \texttt{/SingleMuon/Run2018D-PromptReco-v2/MINIAOD} & 320500-325175\\
+    \hline
+    \end{tabular}
+    }
+    \end{center}
+    \caption{Data sets used in the $h\rightarrow aa \rightarrow bb\tau\tau$ analysis for the 2018 eras.}
+    \label{tab:2018datasets}
+\end{table}
+    
+\begin{table}[ht]
+    \begin{center}
+    {\scriptsize
+    \begin{tabular}{|c|l|}
+    \hline
+    Channel & Embedded samples (2016)\\
+    \hline
+    $e\mu$ & \texttt{/EmbeddingRun2016B/ElMuFinalState-inputDoubleMu\_94X\_Legacy\_miniAOD-v5}\\
+    & \texttt{/EmbeddingRun2016C/ElMuFinalState-inputDoubleMu\_94X\_Legacy\_miniAOD-v5}\\
+    & \texttt{/EmbeddingRun2016D/ElMuFinalState-inputDoubleMu\_94X\_Legacy\_miniAOD-v5}\\
+    & \texttt{/EmbeddingRun2016E/ElMuFinalState-inputDoubleMu\_94X\_Legacy\_miniAOD-v5}\\
+    & \texttt{/EmbeddingRun2016F/ElMuFinalState-inputDoubleMu\_94X\_Legacy\_miniAOD-v5}\\
+    & \texttt{/EmbeddingRun2016G/ElMuFinalState-inputDoubleMu\_94X\_Legacy\_miniAOD-v5}\\
+    & \texttt{/EmbeddingRun2016H/ElMuFinalState-inputDoubleMu\_94X\_Legacy\_miniAOD-v5}\\
+    \hline
+    $e\tau_{h}$ & \texttt{/EmbeddingRun2016B/ElTauFinalState-inputDoubleMu\_94X\_Legacy\_miniAOD-v5}\\
+    & \texttt{/EmbeddingRun2016C/ElTauFinalState-inputDoubleMu\_94X\_Legacy\_miniAOD-v5}\\
+    & \texttt{/EmbeddingRun2016D/ElTauFinalState-inputDoubleMu\_94X\_Legacy\_miniAOD-v5}\\
+    & \texttt{/EmbeddingRun2016E/ElTauFinalState-inputDoubleMu\_94X\_Legacy\_miniAOD-v5}\\
+    & \texttt{/EmbeddingRun2016F/ElTauFinalState-inputDoubleMu\_94X\_Legacy\_miniAOD-v5}\\
+    & \texttt{/EmbeddingRun2016G/ElTauFinalState-inputDoubleMu\_94X\_Legacy\_miniAOD-v5}\\
+    & \texttt{/EmbeddingRun2016H/ElTauFinalState-inputDoubleMu\_94X\_Legacy\_miniAOD-v5}\\
+    \hline
+    $\mu\tau_{h}$ & \texttt{/EmbeddingRun2016B/MuTauFinalState-inputDoubleMu\_94X\_Legacy\_miniAOD-v5}\\
+    & \texttt{/EmbeddingRun2016C/MuTauFinalState-inputDoubleMu\_94X\_Legacy\_miniAOD-v5}\\
+    & \texttt{/EmbeddingRun2016D/MuTauFinalState-inputDoubleMu\_94X\_Legacy\_miniAOD-v5}\\
+    & \texttt{/EmbeddingRun2016E/MuTauFinalState-inputDoubleMu\_94X\_Legacy\_miniAOD-v5}\\
+    & \texttt{/EmbeddingRun2016F/MuTauFinalState-inputDoubleMu\_94X\_Legacy\_miniAOD-v5}\\
+    & \texttt{/EmbeddingRun2016G/MuTauFinalState-inputDoubleMu\_94X\_Legacy\_miniAOD-v5}\\
+    & \texttt{/EmbeddingRun2016H/MuTauFinalState-inputDoubleMu\_94X\_Legacy\_miniAOD-v5}\\
+    \hline
+    \end{tabular}
+    }
+    \end{center}
+    \caption{Embedded samples used in the analysis for the 2016 era.}
+    \label{tab:2016emb}
+    \end{table}
+    
+    \begin{table}[ht]
+    \begin{center}
+    {\scriptsize
+    \begin{tabular}{|c|l|}
+    \hline
+    Channel & Embedded samples (2017)\\
+    \hline
+    $e\mu$ & \texttt{/EmbeddingRun2017B/ElMuFinalState-inputDoubleMu\_94X\_miniAOD-v2}\\
+    & \texttt{/EmbeddingRun2017C/ElMuFinalState-inputDoubleMu\_94X\_miniAOD-v2}\\
+    & \texttt{/EmbeddingRun2017D/ElMuFinalState-inputDoubleMu\_94X\_miniAOD-v2}\\
+    & \texttt{/EmbeddingRun2017E/ElMuFinalState-inputDoubleMu\_94X\_miniAOD-v2}\\
+    & \texttt{/EmbeddingRun2017F/ElMuFinalState-inputDoubleMu\_94X\_miniAOD-v2}\\
+    \hline
+    $e\tau_{h}$ & \texttt{/EmbeddingRun2017B/ElTauFinalState-inputDoubleMu\_94X\_miniAOD-v2}\\
+    & \texttt{/EmbeddingRun2017C/ElTauFinalState-inputDoubleMu\_94X\_miniAOD-v2}\\
+    & \texttt{/EmbeddingRun2017D/ElTauFinalState-inputDoubleMu\_94X\_miniAOD-v2}\\
+    & \texttt{/EmbeddingRun2017E/ElTauFinalState-inputDoubleMu\_94X\_miniAOD-v2}\\
+    & \texttt{/EmbeddingRun2017F/ElTauFinalState-inputDoubleMu\_94X\_miniAOD-v2}\\
+    \hline
+    $\mu\tau_{h}$ & \texttt{/EmbeddingRun2017B/MuTauFinalState-inputDoubleMu\_94X\_miniAOD-v2}\\
+    & \texttt{/EmbeddingRun2017C/MuTauFinalState-inputDoubleMu\_94X\_miniAOD-v2}\\
+    & \texttt{/EmbeddingRun2017D/MuTauFinalState-inputDoubleMu\_94X\_miniAOD-v2}\\
+    & \texttt{/EmbeddingRun2017E/MuTauFinalState-inputDoubleMu\_94X\_miniAOD-v2}\\
+    & \texttt{/EmbeddingRun2017F/MuTauFinalState-inputDoubleMu\_94X\_miniAOD-v2}\\
+    \hline
+    \end{tabular}
+    }
+    \end{center}
+    \caption{Embedded samples used in the analysis for the 2017 era.}
+    \label{tab:2017emb}
+    \end{table}
+    
+    \begin{table}[ht]
+    \begin{center}
+    {\scriptsize
+    \begin{tabular}{|c|l|}
+    \hline
+    Channel & Embedded samples (2018)\\
+    \hline
+    $e\mu$ & \texttt{/EmbeddingRun2018A/ElMuFinalState-inputDoubleMu\_102X\_miniAOD-v1}\\
+    & \texttt{/EmbeddingRun2018B/ElMuFinalState-inputDoubleMu\_102X\_miniAOD-v1}\\
+    & \texttt{/EmbeddingRun2018C/ElMuFinalState-inputDoubleMu\_102X\_miniAOD-v1}\\
+    & \texttt{/EmbeddingRun2018D/ElMuFinalState-inputDoubleMu\_102X\_miniAOD-v1}\\
+    \hline
+    $e\tau_{h}$ & \texttt{/EmbeddingRun2018A/ElTauFinalState-inputDoubleMu\_102X\_miniAOD-v1}\\
+    & \texttt{/EmbeddingRun2018B/ElTauFinalState-inputDoubleMu\_102X\_miniAOD-v1}\\
+    & \texttt{/EmbeddingRun2018C/ElTauFinalState-inputDoubleMu\_102X\_miniAOD-v1}\\
+    & \texttt{/EmbeddingRun2018D/ElTauFinalState-inputDoubleMu\_102X\_miniAOD-v1}\\
+    \hline
+    $\mu\tau_{h}$ & \texttt{/EmbeddingRun2018A/MuTauFinalState-inputDoubleMu\_102X\_miniAOD-v1}\\
+    & \texttt{/EmbeddingRun2018B/MuTauFinalState-inputDoubleMu\_102X\_miniAOD-v1}\\
+    & \texttt{/EmbeddingRun2018C/MuTauFinalState-inputDoubleMu\_102X\_miniAOD-v1}\\
+    & \texttt{/EmbeddingRun2018D/MuTauFinalState-inputDoubleMu\_102X\_miniAOD-v1}\\
+    \hline
+    \end{tabular}
+    }
+    \end{center}
+    \caption{Embedded samples used in the analysis for the 2018 era.}
+    \label{tab:2018emb}
+\end{table}
+    
+    
+\begin{table}[ht]
+    \begin{center}
+    {\scriptsize
+    \begin{tabular}{|c|l|c|}
+    \hline
+    Process & Simulated background samples (2016) & Cross section (pb) \\
+    \hline
+    DY & \texttt{/DY1JetsToLL\_M-50\_TuneCUETP8M1} & 1012.5 (LO)\\
+    & \texttt{/DY2JetsToLL\_M-50\_TuneCUETP8M1} & 332.8 (LO)\\
+    & \texttt{/DY3JetsToLL\_M-50\_TuneCUETP8M1} & 101.8 (LO)\\
+    & \texttt{/DY4JetsToLL\_M-50\_TuneCUETP8M1} & 54.8 (LO)\\
+    & \texttt{/DYJetsToLL\_M-50\_TuneCUETP8M1} & 4963.0 (LO)\\
+    & \texttt{/DY1JetsToLL\_M-10to50\_TuneCUETP8M1} & 730.3 (LO)\\
+    & \texttt{/DY2JetsToLL\_M-10to50\_TuneCUETP8M1} & 387.4 (LO)\\
+    & \texttt{/DY3JetsToLL\_M-10to50\_TuneCUETP8M1} & 95.0 (LO)\\
+    & \texttt{/DY4JetsToLL\_M-10to50\_TuneCUETP8M1} & 36.7 (LO)\\
+    & \texttt{/DYJetsToLL\_M-10to50\_TuneCUETP8M1} & 16290.0 (LO)\\
+    \hline
+    Top & \texttt{/TTTo2L2Nu\_TuneCP5\_PSweights} & 88.29\\
+    & \texttt{/TTToHadronic\_TuneCP5\_PSweights} & 377.96\\
+    & \texttt{/TTToSemiLeptonic\_TuneCP5\_PSweights} & 365.35\\
+    & \texttt{/ST\_t-channel\_antitop\_4f\_inclusiveDecays}$^\dagger$ & 26.23\\
+    & \texttt{/ST\_t-channel\_top\_4f\_inclusiveDecays}$^\dagger$ & 44.07\\
+    & \texttt{/ST\_tW\_antitop\_5f\_inclusiveDecays\_TuneCUETP8M1} & 35.6\\
+    & \texttt{/ST\_tW\_top\_5f\_inclusiveDecays\_TuneCUETP8M1} & 35.6\\
+    \hline
+    VV & \texttt{/VVTo2L2Nu\_13TeV\_amcatnloFXFX\_madspin\_pythia8} & 13.84\\
+    & \texttt{/WZTo2L2Q\_13TeV\_amcatnloFXFX\_madspin\_pythia8} & 5.52\\
+    & \texttt{/WZTo3LNu\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8} & 4.43\\
+    & \texttt{/ZZTo2L2Q\_13TeV\_amcatnloFXFX\_madspin\_pythia8} & 3.38\\
+    & \texttt{/ZZTo4L\_13TeV-amcatnloFXFX-pythia8} & 1.212\\
+    \hline
+    W & \texttt{/W1JetsToLNu\_TuneCUETP8M1} & 8104.0 (LO)\\
+    & \texttt{/W2JetsToLNu\_TuneCUETP8M1} & 2793.0 (LO)\\
+    & \texttt{/W3JetsToLNu\_TuneCUETP8M1} & 992.5 (LO)\\
+    & \texttt{/W4JetsToLNu\_TuneCUETP8M1} & 544.3 (LO)\\
+    & \texttt{/WJetsToLNu\_TuneCUETP8M1} & 52940.0 (LO)\\
+    \hline
+    H & \texttt{/GluGluHToTauTau\_M125} & 48.58*0.0627\\
+    & \texttt{/GluGluHToWWTo2L2Nu\_M125} & 48.58*0.2137*0.3258*0.3258\\
+    & \texttt{/GluGluZH\_HToWW\_M125} & 0.1227*0.2137\\
+    & \texttt{/HWminusJ\_HToWW\_M125} & 0.5328*0.2137\\
+    & \texttt{/HWplusJ\_HToWW\_M125} & 0.840*0.2137\\
+    & \texttt{/HZJ\_HToWW\_M125} & 0.7612*0.2137\\
+    & \texttt{/VBFHToTauTau\_M125} & 3.782*0.0627\\
+    & \texttt{/VBFHToWWTo2L2Nu\_M125} & 3.782*0.2137*0.3258*0.3258\\
+    & \texttt{/WminusHToTauTau\_M125} & 0.5328*0.0627\\
+    & \texttt{/WplusHToTauTau\_M125} & 0.840*0.0627\\
+    & \texttt{/ZHToTauTau\_M125} & 0.7612*0.0627\\
+    & \texttt{/ggZH\_HToTauTau\_ZToLL\_M125} & 0.1227*0.0627*3*0.033658\\
+    & \texttt{/ggZH\_HToTauTau\_ZToNuNu\_M125} & 0.1227*0.0627*0.2000\\
+    & \texttt{/ggZH\_HToTauTau\_ZToQQ\_M125} & 0.1227*0.0627*0.6991\\
+    & \texttt{/ttHToNonbb\_M125\_TuneCUETP8M2\_ttHtranche3} & 0.5071*(1-0.5824)\\
+    & \texttt{/ttHTobb\_M125\_TuneCP5} & 0.5071*0.5824\\
+    \hline
+    \end{tabular}
+    }
+    \end{center}
+    \caption{Background MC samples used in the analysis for the 2016 era. Samples marked with a $^{\dagger}$ are generated with the powhegV2-madspin-pythia8 tag.}
+    \label{tab:2016mcbkg}
+    \end{table}
+    
+    \begin{table}[ht]
+    \begin{center}
+    {\scriptsize
+    \begin{tabular}{|c|l|c|}
+    \hline
+    Process & Simulated background samples (2017) & Cross section (pb)\\
+    \hline
+    DY & \texttt{DY1JetsToLL\_M-50\_TuneCP5} & 877.8 (LO)\\
+    & \texttt{DY2JetsToLL\_M-50\_TuneCP5} & 304.4 (LO)\\
+    & \texttt{DY3JetsToLL\_M-50\_TuneCP5} & 111.5 (LO)\\
+    & \texttt{DY4JetsToLL\_M-50\_TuneCP5} & 44.0 (LO)\\
+    & \texttt{DYJetsToLL\_M-50\_TuneCP5} & 5343.0 (LO)\\
+    & \texttt{DYJetsToLL\_M-10to50\_TuneCP5} & 15810.0 (LO)\\
+    \hline
+    Top & \texttt{TTTo2L2Nu\_TuneCP5} & 88.29\\
+    & \texttt{TTToHadronic\_TuneCP5} & 377.96\\
+    & \texttt{TTToSemiLeptonic\_TuneCP5} & 365.35\\
+    & \texttt{ST\_t-channel\_antitop\_4f\_inclusiveDecays\_TuneCP5}$^{\dagger}$ & 80.94\\
+    & \texttt{ST\_t-channel\_top\_4f\_inclusiveDecays\_TuneCP5}$^{\dagger}$ & 136.02\\
+    & \texttt{ST\_tW\_antitop\_5f\_inclusiveDecays\_TuneCP5} & 35.85\\
+    & \texttt{ST\_tW\_top\_5f\_inclusiveDecays\_TuneCP5} & 35.85\\
+    \hline
+    VV & \texttt{VVTo2L2Nu\_13TeV\_amcatnloFXFX\_madspin\_pythia8} & 13.84\\
+    & \texttt{WZTo2L2Q\_13TeV\_amcatnloFXFX\_madspin\_pythia8} & 5.52\\
+    & \texttt{WZTo3LNu\_TuneCP5\_13TeV-amcatnloFXFX-pythia8} & 4.43\\
+    & \texttt{ZZTo2L2Q\_13TeV\_amcatnloFXFX\_madspin\_pythia8} & 3.38\\
+    & \texttt{ZZTo4L\_TuneCP5\_13TeV-amcatnloFXFX-pythia8} & 1.212\\
+    \hline
+    W & \texttt{W1JetsToLNu\_TuneCP5} & 8104.0 (LO)\\
+    & \texttt{W2JetsToLNu\_TuneCP5} & 2793.0 (LO)\\
+    & \texttt{W3JetsToLNu\_TuneCP5} & 992.5 (LO)\\
+    & \texttt{W4JetsToLNu\_TuneCP5} & 544.3 (LO)\\
+    & \texttt{WJetsToLNu\_TuneCP5} & 52940.0 (LO)\\
+    \hline
+    H & \texttt{GluGluHToTauTau\_M125} & 48.58*0.0627\\
+    & \texttt{GluGluHToWWTo2L2Nu\_M125}$^{\dagger\dagger\dagger}$ & 48.58*0.2137*0.3258*0.3258\\
+    & \texttt{GluGluZH\_HToWW\_M125} & 0.1227*0.2137\\
+    & \texttt{HWminusJ\_HToWW\_M125} & 0.5328*0.2137\\
+    & \texttt{HWplusJ\_HToWW\_M125} & 0.840*0.2137\\
+    & \texttt{HZJ\_HToWW\_M125}$^{\dagger\dagger}$ & 0.7612*0.2137\\
+    & \texttt{VBFHToTauTau\_M125} & 3.782*0.0627\\
+    & \texttt{VBFHToWWTo2L2Nu\_M125}$^{\dagger\dagger}$ & 3.782*0.2137*0.3258*0.3258\\
+    & \texttt{WminusHToTauTau\_M125} & 0.5328*0.0627\\
+    & \texttt{WplusHToTauTau\_M125} & 0.840*0.0627\\
+    & \texttt{ZHToTauTau\_M125} & 0.7612*0.0627\\
+    & \texttt{ggZH\_HToTauTau\_ZToLL\_M125} & 0.1227*0.0627*3*0.033658\\
+    & \texttt{ggZH\_HToTauTau\_ZToNuNu\_M125} & 0.1227*0.0627*0.2000\\
+    & \texttt{ggZH\_HToTauTau\_ZToQQ\_M125} & 0.1227*0.0627*0.6991\\
+    & \texttt{ttHToNonbb\_M125\_TuneCP5} & 0.5071*(1-0.5824)\\
+    & \texttt{ttHTobb\_M125\_TuneCP5} & 0.5071*0.5824\\
+    \hline
+    \end{tabular}
+    }
+    \end{center}
+    \caption{Background MC samples used in the analysis for the 2017 era. All samples use powheg, except the DYJets and WJets samples, which use madgraphMLM. Samples marked with a $^\dagger$, $^{\dagger\dagger}$, or $^{\dagger\dagger\dagger}$ had the tags powhegV2-madspin-pythia8, powheg2\_JHUGenV714\_pythia8, or powheg\_jhugen724\_pythia8 respectively.}
+    \label{tab:2017mcbkg}
+    \end{table}
+    
+    \begin{table}[ht]
+    \begin{center}
+    {\scriptsize
+    \begin{tabular}{|c|l|c|}
+    \hline
+    Process & Simulated background samples (2018) & Cross section (pb)\\
+    \hline
+    DY & \texttt{DY1JetsToLL\_M-50\_TuneCP5} & 877.8 (LO)\\
+    & \texttt{DY2JetsToLL\_M-50\_TuneCP5} & 304.4 (LO)\\
+    & \texttt{DY3JetsToLL\_M-50\_TuneCP5} & 111.5 (LO)\\
+    & \texttt{DY4JetsToLL\_M-50\_TuneCP5} & 44.0 (LO)\\
+    & \texttt{DYJetsToLL\_M-50\_TuneCP5} & 5343.0 (LO)\\
+    & \texttt{DYJetsToLL\_M-10to50\_TuneCP5} & 15810.0 (LO)\\
+    \hline
+    Top & \texttt{TTTo2L2Nu\_TuneCP5} & 88.29\\
+    & \texttt{TTToHadronic\_TuneCP5} & 377.96\\
+    & \texttt{TTToSemiLeptonic\_TuneCP5} & 365.35\\
+    & \texttt{ST\_t-channel\_antitop\_4f\_InclusiveDecays\_TuneCP5}$^\dagger$ & 80.94\\
+    & \texttt{ST\_t-channel\_top\_5f\_TuneCP5}$^\dagger$ & 136.02\\
+    & \texttt{ST\_tW\_antitop\_5f\_inclusiveDecays\_TuneCP5} & 35.85\\
+    & \texttt{ST\_tW\_top\_5f\_inclusiveDecays} & 35.85\\
+    \hline
+    VV & \texttt{VVTo2L2Nu\_13TeV\_amcatnloFXFX\_madspin} & 13.84\\
+    & \texttt{WZTo2L2Q\_13TeV\_amcatnloFXFX\_madspin} & 5.52\\
+    & \texttt{WZTo3LNu\_TuneCP5\_13TeV-amcatnloFXFX-pythia8} & 4.43\\
+    & \texttt{ZZTo2L2Q\_13TeV\_amcatnloFXFX\_madspin} & 3.38\\
+    & \texttt{ZZTo4L\_TuneCP5\_13TeV-amcatnloFXFX-pythia8} & 1.212\\
+    \hline
+    W & \texttt{W1JetsToLNu\_TuneCP5} & 8104.0 (LO)\\
+    & \texttt{W2JetsToLNu\_TuneCP5} & 2793.0 (LO)\\
+    & \texttt{W3JetsToLNu\_TuneCP5} & 992.5 (LO)\\
+    & \texttt{W4JetsToLNu\_TuneCP5} & 544.3 (LO)\\
+    & \texttt{WJetsToLNu\_TuneCP5} & 52940.0 (LO)\\
+    \hline
+    H & \texttt{GluGluHToTauTau\_M125} & 48.58*0.0627\\
+    & \texttt{GluGluHToWWTo2L2Nu\_M125}$^\dagger\dagger$ & 48.58*0.2137*0.3258*0.3258\\
+    & \texttt{GluGluZH\_HToWW\_M125} & 0.1227*0.2137\\
+    & \texttt{HWminusJ\_HToWW\_M125}$^{\dagger\dagger\dagger}$ & 0.5328*0.2137\\
+    & \texttt{HWplusJ\_HToWW\_M125}$^{\dagger\dagger\dagger}$ & 0.840*0.2137\\
+    & \texttt{HZJ\_HToWW\_M125}${\dagger\dagger}$ & 0.7612*0.2137\\
+    & \texttt{VBFHToTauTau\_M125} & 3.782*0.0627\\
+    & \texttt{VBFHToWWTo2L2Nu\_M125}$^{\dagger\dagger\dagger}$ & 3.782*0.2137*0.3258*0.3258\\
+    & \texttt{WminusHToTauTau\_M125} & 0.5328*0.0627\\
+    & \texttt{WplusHToTauTau\_M125} & 0.840*0.0627\\
+    & \texttt{ZHToTauTau\_M125} & 0.7612*0.0627\\
+    & \texttt{ggZH\_HToTauTau\_ZToLL\_M125} & 0.1227*0.0627*3*0.033658\\
+    & \texttt{ggZH\_HToTauTau\_ZToNuNu\_M125} & 0.1227*0.0627*0.2000\\
+    & \texttt{ggZH\_HToTauTau\_ZToQQ\_M125} & 0.1227*0.0627*0.6991\\
+    & \texttt{ttHToNonbb\_M125\_TuneCP5} & 0.5071*(1-0.5824)\\
+    & \texttt{ttHTobb\_M125\_TuneCP5} & 0.5071*0.5824\\
+    \hline
+    \end{tabular}
+    }
+    \end{center}
+    \caption{Background Monte Carlo samples used in the analysis for the 2018 era. All samples listed are generated for 13\TeV collisions and use pythia8. All samples use powheg, except the DYJets and WJets samples, which use madgraphMLM. Samples marked with a $^\dagger$, $^{\dagger\dagger}$, or $^{\dagger\dagger\dagger}$, had the tags powhegV2-madspin-pythia8, powheg2\_JHUGenV714\_pythia8, and powheg\_jhugen724\_pythia8 respectively.}
+    \label{tab:2018mcbkg}
+    \end{table}
+    
+    
+
+
+\begin{table}[ht]
+    \begin{center}
+    {\scriptsize
+    \begin{tabular}{|l|c|c|}
+    \hline
+    Signal samples (2016) & \# events & Filter eff.\\
+    \hline
+    \texttt{/SUSYGluGluToHToAA\_AToBB\_AToTauTau\_M-12\_FilterTauTauTrigger} & 0.4M & 3.81\%\\
+    \texttt{/SUSYGluGluToHToAA\_AToBB\_AToTauTau\_M-15\_FilterTauTauTrigger} & 0.4M & 3.54\%\\
+    \texttt{/SUSYGluGluToHToAA\_AToBB\_AToTauTau\_M-20\_FilterTauTauTrigger} & 1M & 3.37\\
+    \texttt{/SUSYGluGluToHToAA\_AToBB\_AToTauTau\_M-25\_FilterTauTauTrigger} & 0.2M & 3.56\%\\
+    \texttt{/SUSYGluGluToHToAA\_AToBB\_AToTauTau\_M-30\_FilterTauTauTrigger} & 0.2M & 3.16\%\\
+    \texttt{/SUSYGluGluToHToAA\_AToBB\_AToTauTau\_M-35\_FilterTauTauTrigger} & 0.2M & 3.30\%\\
+    \texttt{/SUSYGluGluToHToAA\_AToBB\_AToTauTau\_M-40\_FilterTauTauTrigger} & 1M & 3.30\%\\
+    \texttt{/SUSYGluGluToHToAA\_AToBB\_AToTauTau\_M-45\_FilterTauTauTrigger} & 0.2M & 3.23\%\\
+    \texttt{/SUSYGluGluToHToAA\_AToBB\_AToTauTau\_M-50\_FilterTauTauTrigger} & 0.2M & 3.42\%\\
+    \texttt{/SUSYGluGluToHToAA\_AToBB\_AToTauTau\_M-55\_FilterTauTauTrigger} & 0.2M & 3.65\%\\
+    \texttt{/SUSYGluGluToHToAA\_AToBB\_AToTauTau\_M-60\_FilterTauTauTrigger} & 1M & 3.73\\
+    \hline
+    \texttt{/SUSYVBFHToAA\_AToBB\_AToTauTau\_M-12\_FilterTauTauTrigger} & 0.2M & 7.94\%\\
+    \texttt{/SUSYVBFHToAA\_AToBB\_AToTauTau\_M-15\_FilterTauTauTrigger} & 0.2M & 7.38\%\\
+    \texttt{/SUSYVBFHToAA\_AToBB\_AToTauTau\_M-20\_FilterTauTauTrigger} & 0.2M & 7.27\%\\
+    \texttt{/SUSYVBFHToAA\_AToBB\_AToTauTau\_M-25\_FilterTauTauTrigger} & 0.2M & 7.21\%\\
+    \texttt{/SUSYVBFHToAA\_AToBB\_AToTauTau\_M-30\_FilterTauTauTrigger} & 0.2M & 6.87\%\\
+    \texttt{/SUSYVBFHToAA\_AToBB\_AToTauTau\_M-35\_FilterTauTauTrigger} & 0.2M & 6.80\%\\
+    \texttt{/SUSYVBFHToAA\_AToBB\_AToTauTau\_M-40\_FilterTauTauTrigger} & 0.2M & 6.78\%\\
+    \texttt{/SUSYVBFHToAA\_AToBB\_AToTauTau\_M-45\_FilterTauTauTrigger} & 0.2M & 6.56\%\\
+    \texttt{/SUSYVBFHToAA\_AToBB\_AToTauTau\_M-50\_FilterTauTauTrigger} & 0.2M & 6.40\%\\
+    \texttt{/SUSYVBFHToAA\_AToBB\_AToTauTau\_M-55\_FilterTauTauTrigger} & 0.2M & 6.54\%\\
+    \texttt{/SUSYVBFHToAA\_AToBB\_AToTauTau\_M-60\_FilterTauTauTrigger} & 0.2M & 6.55\%\\
+    \hline
+    \end{tabular}
+    }
+    \end{center}
+    \caption{Signal samples used in the analysis for the 2016 era. All belong to the RunIISummer16MiniAODv3 campaign and are produced with the tags TuneCUETP8M1\_13TeV\_madgraph\_pythia8 PUMoriond17\_94X\_mcRun2\_asymptotic\_v3. The second column is the number of events after the generator-level filter is applied, and the third column is the filter efficiency (percentage of all events that pass the generator-level filter).}
+    \label{tab:2016signal}
+    \end{table}
+    
+    \begin{table}[ht]
+    \begin{center}
+    {\scriptsize
+    \begin{tabular}{|l|c|c|}
+    \hline
+    Signal samples (2017) & \# events & Filter eff.\\
+    \hline
+    \texttt{/SUSYGluGluToHToAA\_AToBB\_AToTauTau\_M-12\_FilterTauTauTrigger} & 0.4M & 3.78\%\\
+    \texttt{/SUSYGluGluToHToAA\_AToBB\_AToTauTau\_M-15\_FilterTauTauTrigger} & 0.4M & 3.55\%\\
+    \texttt{/SUSYGluGluToHToAA\_AToBB\_AToTauTau\_M-20\_FilterTauTauTrigger} & 1M & 3.40\%\\
+    \texttt{/SUSYGluGluToHToAA\_AToBB\_AToTauTau\_M-25\_FilterTauTauTrigger} & 0.2M & 3.32\%\\
+    \texttt{/SUSYGluGluToHToAA\_AToBB\_AToTauTau\_M-30\_FilterTauTauTrigger} & 0.2M & 3.36\%\\
+    \texttt{/SUSYGluGluToHToAA\_AToBB\_AToTauTau\_M-35\_FilterTauTauTrigger} & 0.2M & 3.27\%\\
+    \texttt{/SUSYGluGluToHToAA\_AToBB\_AToTauTau\_M-40\_FilterTauTauTrigger} & 1M & 3.03\%\\
+    \texttt{/SUSYGluGluToHToAA\_AToBB\_AToTauTau\_M-45\_FilterTauTauTrigger} & 0.2M & 3.03\%\\
+    \texttt{/SUSYGluGluToHToAA\_AToBB\_AToTauTau\_M-50\_FilterTauTauTrigger} & 0.2M & 3.31\%\\
+    \texttt{/SUSYGluGluToHToAA\_AToBB\_AToTauTau\_M-55\_FilterTauTauTrigger} & 0.2M & 3.56\%\\
+    \texttt{/SUSYGluGluToHToAA\_AToBB\_AToTauTau\_M-60\_FilterTauTauTrigger} & 1M & 3.95\%\\
+    \hline
+    \texttt{/SUSYVBFHToAA\_AToBB\_AToTauTau\_M-12\_FilterTauTauTrigger} & 0.2M & 7.73\%\\
+    \texttt{/SUSYVBFHToAA\_AToBB\_AToTauTau\_M-15\_FilterTauTauTrigger} & 0.2M & 7.35\%\\
+    \texttt{/SUSYVBFHToAA\_AToBB\_AToTauTau\_M-20\_FilterTauTauTrigger} & 0.2M & 7.33\%\\
+    \texttt{/SUSYVBFHToAA\_AToBB\_AToTauTau\_M-25\_FilterTauTauTrigger} & 0.2M & 7.23\%\\
+    \texttt{/SUSYVBFHToAA\_AToBB\_AToTauTau\_M-30\_FilterTauTauTrigger} & 0.2M & 6.84\%\\
+    \texttt{/SUSYVBFHToAA\_AToBB\_AToTauTau\_M-35\_FilterTauTauTrigger} & 0.2M & 6.97\%\\
+    \texttt{/SUSYVBFHToAA\_AToBB\_AToTauTau\_M-40\_FilterTauTauTrigger} & 0.2M & 6.17\%\\
+    \texttt{/SUSYVBFHToAA\_AToBB\_AToTauTau\_M-45\_FilterTauTauTrigger} & 0.2M & 6.67\%\\
+    \texttt{/SUSYVBFHToAA\_AToBB\_AToTauTau\_M-50\_FilterTauTauTrigger} & 0.2M & 6.61\%\\
+    \texttt{/SUSYVBFHToAA\_AToBB\_AToTauTau\_M-55\_FilterTauTauTrigger} & 0.2M & 6.51\%\\
+    \texttt{/SUSYVBFHToAA\_AToBB\_AToTauTau\_M-60\_FilterTauTauTrigger} & 0.2M & 6.71\%\\
+    \hline
+    \end{tabular}
+    }
+    \end{center}
+    \caption{Signal samples used in the analysis for the 2017 era. All belong to the RunIIFall17MiniAODv2 campaign and are produced with the tags TuneCP5\_13TeV\_madgraph\_pythia8 and PU2017\_12Apr2018\_94X\_mc2017\_realistic\_v14. The second column is the number of events after the generator-level filter is applied, and the third column is the filter efficiency (percentage of all events that pass the generator-level filter).}
+    \label{tab:2017signal}
+    \end{table}
+    
+    \begin{table}[ht]
+    \begin{center}
+    {\scriptsize
+    \begin{tabular}{|l|c|c|}
+    \hline
+    Signal samples (2018) & \# events & Filter eff.\\
+    \hline
+    \texttt{/SUSYGluGluToHToAA\_AToBB\_AToTauTau\_M-12\_FilterTauTauTrigger} & 0.4M & 3.78\%\\
+    \texttt{/SUSYGluGluToHToAA\_AToBB\_AToTauTau\_M-15\_FilterTauTauTrigger} & 0.4M & 3.49\%\\
+    \texttt{/SUSYGluGluToHToAA\_AToBB\_AToTauTau\_M-20\_FilterTauTauTrigger} & 1M & 3.36\%\\
+    \texttt{/SUSYGluGluToHToAA\_AToBB\_AToTauTau\_M-25\_FilterTauTauTrigger} & 0.2M & 3.46\%\\
+    \texttt{/SUSYGluGluToHToAA\_AToBB\_AToTauTau\_M-30\_FilterTauTauTrigger} & 0.2M & 3.18\%\\
+    \texttt{/SUSYGluGluToHToAA\_AToBB\_AToTauTau\_M-35\_FilterTauTauTrigger} & 0.2M & 3.28\%\\
+    \texttt{/SUSYGluGluToHToAA\_AToBB\_AToTauTau\_M-40\_FilterTauTauTrigger} & 1M & 3.10\%\\
+    \texttt{/SUSYGluGluToHToAA\_AToBB\_AToTauTau\_M-45\_FilterTauTauTrigger} & 0.2M & 3.21\%\\
+    \texttt{/SUSYGluGluToHToAA\_AToBB\_AToTauTau\_M-50\_FilterTauTauTrigger} & 0.2M & 3.14\%\\
+    \texttt{/SUSYGluGluToHToAA\_AToBB\_AToTauTau\_M-55\_FilterTauTauTrigger} & 0.2M & 3.56\%\\
+    \texttt{/SUSYGluGluToHToAA\_AToBB\_AToTauTau\_M-60\_FilterTauTauTrigger} & 1M & 3.38\%\\
+    \hline
+    \texttt{/SUSYVBFHToAA\_AToBB\_AToTauTau\_M-12\_FilterTauTauTrigger} & 0.2M & 7.78\%\\
+    \texttt{/SUSYVBFHToAA\_AToBB\_AToTauTau\_M-15\_FilterTauTauTrigger} & 0.2M & 7.52\%\\
+    \texttt{/SUSYVBFHToAA\_AToBB\_AToTauTau\_M-20\_FilterTauTauTrigger} & 0.2M & 6.87\%\\
+    \texttt{/SUSYVBFHToAA\_AToBB\_AToTauTau\_M-25\_FilterTauTauTrigger} & 0.2M & 7.21\%\\
+    \texttt{/SUSYVBFHToAA\_AToBB\_AToTauTau\_M-30\_FilterTauTauTrigger} & 0.2M & 6.51\%\\
+    \texttt{/SUSYVBFHToAA\_AToBB\_AToTauTau\_M-35\_FilterTauTauTrigger} & 0.2M & 6.95\%\\
+    \texttt{/SUSYVBFHToAA\_AToBB\_AToTauTau\_M-40\_FilterTauTauTrigger} & 0.2M & 6.81\%\\
+    \texttt{/SUSYVBFHToAA\_AToBB\_AToTauTau\_M-45\_FilterTauTauTrigger} & 0.2M & 6.62\%\\
+    \texttt{/SUSYVBFHToAA\_AToBB\_AToTauTau\_M-50\_FilterTauTauTrigger} & 0.2M & 6.56\%\\
+    \texttt{/SUSYVBFHToAA\_AToBB\_AToTauTau\_M-55\_FilterTauTauTrigger} & 0.2M & 6.64\%\\
+    \texttt{/SUSYVBFHToAA\_AToBB\_AToTauTau\_M-60\_FilterTauTauTrigger} & 0.2M & 6.75\%\\
+    \hline
+    \end{tabular}
+    }
+    \end{center} 
+    \caption{Signal samples used in the analysis for the 2018 era. All belong to the RunIIAutumn18MiniAOD campaign and are produced with \_TuneCP5\_13TeV\_madgraph\_pythia8, with the tag 102X\_upgrade2018\_realistic\_v15. The second column is the number of events after the generator-level filter is applied, and the third column is the filter efficiency (percentage of all events that pass the generator-level filter).}
+    \label{tab:2018signal}
+    \end{table}
+    
