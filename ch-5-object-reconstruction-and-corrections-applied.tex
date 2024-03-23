@@ -134,7 +134,7 @@ FastMTT~\cite{CMS-AN-19-032-FastMTT} is a further simplification to the matrix e
 \section{Corrections applied to simulation}
 \label{sec:corrections_applied}
 
-Corrections are applied to simulated samples to account for known effects in the event modeling and reconstruction and data-taking, and are intended to bring simulations in closer agreement with data. Corrections fall into two broad categories: \textit{energy scale corrections} applied to physics objects, and \textit{event-level corrections}. Energy scale corrections are multiplicative factors applied to the energy and transverse momentum $p_{T}$ of simulated objects (e.g. leptons or jets), and bring the average reconstructed energies of simulated particles into better agreement with those of objects reconstructed from data. Event-level corrections are applied as a per-event multiplicative weight, and account for effects such as mis-modeling in simulations of the underlying physics process, or changing detector operating conditions during data-taking. Event-level corrections change the shapes of the distributions of all the physical observables.  
+Corrections are applied to simulated samples to account for known effects in the event modeling and reconstruction and data-taking, and are intended to bring simulations in closer agreement with data. Corrections fall into two broad categories: \textit{energy scale corrections} applied to physics objects, and \textit{event-level corrections}. Energy scale corrections are multiplicative factors applied to the energy and transverse momentum $p_{T}$ of simulated objects (e.g. leptons or jets), and bring the average reconstructed energies of simulated particles into better agreement with those of objects reconstructed from data. Event-level corrections are applied as a per-event multiplicative weight, and account for effects such as differences in object identification efficiencies and trigger efficiencies between data and simulated samples, mis-modeling in simulations of the underlying physics process, or changing detector operating conditions during data-taking. Event-level corrections change the shapes of the distributions of all the physical observables.  
 
 Uncertainties in scale factors and corrections are also sources of systematic errors in the analysis, detailed in Chapter \ref{chapter:ch-8:systematic-uncertainties}. Systematic uncertainties in the tau, muon, and electron energy scales can shift the $p_{T}$ of the leptons up or down, which can change whether events pass or fail the offline $p_{T}$ thresholds for the trigger paths described in the previous section, i.e. change the number of events in the signal region.  
 
@@ -234,7 +234,7 @@ The $\tau_{h}$ identification efficiency can differ in data and MC~\cite{twiki_T
 \end{table}
 
 
-\subsection{Trigger efficiencies}
+\subsection{Trigger efficiencies definition}
 
 Scale factors are applied to correct for differences in trigger efficiencies between MC and embedded vs. data, with values taken from tools provided by the Standard Model $H \rightarrow \tau\tau$ working group which uses the same trigger paths~\cite{twiki_HiggsToTauTauWorkingLegacyRun2}. In the following sections we review relevant trigger efficiencies in data, which form the basis of the trigger efficiency corrections applied to MC and embedded.
 
