@@ -2,7 +2,7 @@ The datasets used in the MiniAOD-based framework for the $h \rightarrow aa \righ
 
 The $h \rightarrow aa \rightarrow bb\tau\tau$ signal samples are generated for 11 psuedoscalar masses between 12\GeV and 60\GeV for gluon fusion (ggF) and vector boson fusion (VBF) Higgs production. The 2016-2018 signal samples are listed in Tables~\ref{tab:2016signal}, \ref{tab:2017signal} and \ref{tab:2018signal} respectively. A filter is applied at the generator level for each $\tau\tau$ final state:
 \begin{itemize}
-    \item $ee$ final state: $p_{T}(e_1) > 22$\GeV, $p_{T}e_{2} > 10$\GeV, $|\eta(e_{1})| < 2.6$, and $|\eta(e_{2})| < 2.6$.
+    \item $ee$ final state: $p_{T}(e_1) > 22$\GeV, $p_{T}(e_{2}) > 10$\GeV, $|\eta(e_{1})| < 2.6$, and $|\eta(e_{2})| < 2.6$.
     \item $e\tau_{h}$ final state: $p_{T}(e) > 22$\GeV, $p_{T}(\tau_{h}) > 16$\GeV, $|\eta(e)| < 2.6$, and $|\eta(\tau_{h})| < 2.7$.
     \item $e\mu$ final state: $p_{T}(e) > 11$\GeV, $p_{T}(\mu) > 7$\GeV, $|\eta(e)| < 2.6$, and $|\eta(\mu)| < 2.5$.
     \item $\tau_{h}\tau_{h}$ final state: $p_{T}(\tau_{h1}) > 28$\GeV, $p_{T}(\tau_{h2}) > 28$\GeV, $|\eta(\tau_{h1})| < 2.5$, and $|\eta(\tau_{h2})| < 2.5$.
@@ -17,7 +17,7 @@ The tables also show for each sample the filter efficiencies, which is the perce
     {\scriptsize
     \begin{tabular}{|c|l|c|}
     \hline
-    Channel & Data sets (2016) & Run range\\
+    Channel & Datasets (2016) & Run range\\
     \hline
     $e\mu$ & \texttt{/MuonEG/Run2016B-17Jul2018\_ver1-v1/MINIAOD} & 272760-273017\\
     & \texttt{/MuonEG/Run2016B-17Jul2018\_ver2-v1/MINIAOD} & 273150-275376\\
@@ -49,7 +49,7 @@ The tables also show for each sample the filter efficiencies, which is the perce
     \end{tabular}
     }
     \end{center}
-    \caption{Data sets used in the $h\rightarrow aa \rightarrow bb\tau\tau$ analysis for the 2016 era.}
+    \caption{Datasets used in the $h\rightarrow aa \rightarrow bb\tau\tau$ analysis for the 2016 era.}
     \label{tab:2016datasets}
     \end{table}
     
@@ -58,7 +58,7 @@ The tables also show for each sample the filter efficiencies, which is the perce
     {\scriptsize
     \begin{tabular}{|c|l|c|}
     \hline
-    Channel & Data sets (2017) & Run range\\
+    Channel & Datasets (2017) & Run range\\
     \hline
     $e\mu$ & \texttt{/MuonEG/Run2017B-31Mar2018-v1/MINIAOD} & 297047-299329\\
     & \texttt{/MuonEG/Run2017C-31Mar2018-v1/MINIAOD} & 299368-302029\\
@@ -81,7 +81,7 @@ The tables also show for each sample the filter efficiencies, which is the perce
     \end{tabular}
     }
     \end{center}
-    \caption{Data sets used in the $h\rightarrow aa \rightarrow bb\tau\tau$ analysis for the 2017 era.}
+    \caption{Datasets used in the $h\rightarrow aa \rightarrow bb\tau\tau$ analysis for the 2017 era.}
     \label{tab:2017datasets}
     \end{table}
     
@@ -90,7 +90,7 @@ The tables also show for each sample the filter efficiencies, which is the perce
     {\scriptsize
     \begin{tabular}{|c|l|c|}
     \hline
-    Channel & Data sets (2018) & Run range\\
+    Channel & Datasets (2018) & Run range\\
     \hline
     $e\mu$ & \texttt{/MuonEG/Run2018A-17Sep2018-v1/MINIAOD} & 315257-316995\\
     & \texttt{/MuonEG/Run2018B-17Sep2018-v1/MINIAOD} & 317080-319310\\
@@ -110,7 +110,7 @@ The tables also show for each sample the filter efficiencies, which is the perce
     \end{tabular}
     }
     \end{center}
-    \caption{Data sets used in the $h\rightarrow aa \rightarrow bb\tau\tau$ analysis for the 2018 eras.}
+    \caption{Datasets used in the $h\rightarrow aa \rightarrow bb\tau\tau$ analysis for the 2018 eras.}
     \label{tab:2018datasets}
 \end{table}
     
@@ -330,7 +330,7 @@ The tables also show for each sample the filter efficiencies, which is the perce
     \end{tabular}
     }
     \end{center}
-    \caption{Background MC samples used in the analysis for the 2017 era. All samples use powheg, except the DYJets and WJets samples, which use madgraphMLM. Samples marked with a $^\dagger$, $^{\dagger\dagger}$, or $^{\dagger\dagger\dagger}$ had the tags powhegV2-madspin-pythia8, powheg2\_JHUGenV714\_pythia8, or powheg\_jhugen724\_pythia8 respectively.}
+    \caption{Background MC samples used in the analysis for the 2017 era. All samples use powheg, except the DYJets and WJets samples, which use madgraphMLM. Samples marked with a $^\dagger$, $^{\dagger\dagger}$, or $^{\dagger\dagger\dagger}$ were produced with Powheg2 and Pythia8, and Madspin, JHUGenV714, or jhugen724 respectively.}
     \label{tab:2017mcbkg}
     \end{table}
     
@@ -388,7 +388,7 @@ The tables also show for each sample the filter efficiencies, which is the perce
     \end{tabular}
     }
     \end{center}
-    \caption{Background Monte Carlo samples used in the analysis for the 2018 era. All samples listed are generated for 13\TeV collisions and use pythia8. All samples use powheg, except the DYJets and WJets samples, which use madgraphMLM. Samples marked with a $^\dagger$, $^{\dagger\dagger}$, or $^{\dagger\dagger\dagger}$, had the tags powhegV2-madspin-pythia8, powheg2\_JHUGenV714\_pythia8, and powheg\_jhugen724\_pythia8 respectively.}
+    \caption{Background Monte Carlo samples used in the analysis for the 2018 era. All samples listed are generated for 13\TeV collisions and use pythia8. All samples use powheg, except the DYJets and WJets samples, which use madgraphMLM. Samples marked with a $^\dagger$, $^{\dagger\dagger}$, or $^{\dagger\dagger\dagger}$, were produced with Powheg and Pythia8, and Madspin, JHUGenV714, and Jhugen724 respectively.}
     \label{tab:2018mcbkg}
     \end{table}
     
@@ -429,7 +429,7 @@ The tables also show for each sample the filter efficiencies, which is the perce
     \end{tabular}
     }
     \end{center}
-    \caption{Signal samples used in the analysis for the 2016 era. All belong to the RunIISummer16MiniAODv3 campaign and are produced with the tags TuneCUETP8M1\_13TeV\_madgraph\_pythia8 PUMoriond17\_94X\_mcRun2\_asymptotic\_v3. The second column is the number of events after the generator-level filter is applied, and the third column is the filter efficiency (percentage of all events that pass the generator-level filter).}
+    \caption{Signal samples used in the analysis for the 2016 era. All belong to the RunIISummer16MiniAODv3 campaign and are produced with Madgraph and Pythia8. The second column is the number of events after the generator-level filter is applied, and the third column is the filter efficiency (percentage of all events that pass the generator-level filter).}
     \label{tab:2016signal}
     \end{table}
     
@@ -467,7 +467,7 @@ The tables also show for each sample the filter efficiencies, which is the perce
     \end{tabular}
     }
     \end{center}
-    \caption{Signal samples used in the analysis for the 2017 era. All belong to the RunIIFall17MiniAODv2 campaign and are produced with the tags TuneCP5\_13TeV\_madgraph\_pythia8 and PU2017\_12Apr2018\_94X\_mc2017\_realistic\_v14. The second column is the number of events after the generator-level filter is applied, and the third column is the filter efficiency (percentage of all events that pass the generator-level filter).}
+    \caption{Signal samples used in the analysis for the 2017 era. All belong to the RunIIFall17MiniAODv2 campaign and are produced with Madgraph and Pythia8. The second column is the number of events after the generator-level filter is applied, and the third column is the filter efficiency (percentage of all events that pass the generator-level filter).}
     \label{tab:2017signal}
     \end{table}
     
@@ -505,7 +505,7 @@ The tables also show for each sample the filter efficiencies, which is the perce
     \end{tabular}
     }
     \end{center} 
-    \caption{Signal samples used in the analysis for the 2018 era. All belong to the RunIIAutumn18MiniAOD campaign and are produced with \_TuneCP5\_13TeV\_madgraph\_pythia8, with the tag 102X\_upgrade2018\_realistic\_v15. The second column is the number of events after the generator-level filter is applied, and the third column is the filter efficiency (percentage of all events that pass the generator-level filter).}
+    \caption{Signal samples used in the analysis for the 2018 era. All belong to the RunIIAutumn18MiniAOD campaign and are produced with Madgraph and Pythia8. The second column is the number of events after the generator-level filter is applied, and the third column is the filter efficiency (percentage of all events that pass the generator-level filter).}
     \label{tab:2018signal}
     \end{table}
     
