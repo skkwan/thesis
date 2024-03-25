@@ -67,72 +67,92 @@ In the $4b2\tau$ final state, the possibility of the leading and sub-leading b-t
 \label{section:a1a2_control_plots}
 The $\tau\tau$ states for the $h \rightarrow a_1 a_2$ to $4b2\tau$ analysis are similar to those in the $h\rightarrow aa \rightarrow bb\tau\tau$ analysis. For the $\mu\tau_{h}$ channel, histograms of the key kinematic variables are made for data and the sum of the expected backgrounds, which are estimated from Monte Carlo samples, embedded samples, and the data-driven method for estimating jets faking $\tau_{h}$ as described in Chapter \ref{chapter:ch-7:background-estimation}. Nominal values of the scale factors and event reweighing are applied, as described in Chapter \ref{sec:corrections_applied}. The errors shown in the figures include statistical errors and several of the full set of systematic errors (only those associated with the lepton energy scales and $\tau_{h}$ identification efficiency, described in Sections \ref{sec:tau_energy_scale}, \ref{sec:muon_energy_scale}, and \ref{sec:tauh_id_efficiency}). 
 
-The $p_{T}$, $\eta$, and $\phi$ of the leading muon and hadronic tau $\tau_{h}$, and the di-tau visible mass $m_{\text{vis}}$ and momentum $p_{T, \text{vis}}$, are shown in Fig. \ref{fig:nanoAOD_mutau_control_plots_leading_mutauh}. The $p_{T}$, $\eta$, and $\phi$ of the the leading and sub-leading b-tag jets, and the missing transverse energy magnitude and azimuthal direction, are shown in Fig. \ref{fig:nanoAOD_mutau_control_plots_btagjets_met_metphi}.
+The $p_{T}$, $\eta$, and $\phi$ of the leading muon and hadronic tau $\tau_{h}$, and the di-tau visible mass $m_{\text{vis}}$ and momentum $p_{T, \text{vis}}$, are shown in Figures \ref{fig:nanoAOD_mutau_control_plots_leading_muon}, \ref{fig:nanoAOD_mutau_control_plots_leading_tauh}, and \ref{fig:nanoAOD_mutau_control_plots_mvis_ptvis}. The $p_{T}$, $\eta$, and $\phi$ of the the leading and sub-leading b-tag jets, and the missing transverse energy magnitude and azimuthal direction, are shown in Figures \ref{fig:nanoAOD_mutau_control_plots_btagjets_leading}, \ref{fig:nanoAOD_mutau_control_plots_btagjets_subleading}, and \ref{fig:nanoAOD_mutau_control_plots_met_metphi}.
 
 \begin{figure}[ht]
     \centering
-    \begin{subfigure}{0.45\textwidth}
+    \begin{subfigure}{0.75\textwidth}
         \includegraphics[width=1.0\textwidth]{figures/ch-11-asymmetric/mutau_pt_1.png}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.45\textwidth}
-        \includegraphics[width=1.0\textwidth]{figures/ch-11-asymmetric/mutau_pt_2.png}
     \end{subfigure} \\
-    \begin{subfigure}{0.45\textwidth}
+    \begin{subfigure}{0.75\textwidth}
         \includegraphics[width=1.0\textwidth]{figures/ch-11-asymmetric/mutau_eta_1.png}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.45\textwidth}
-        \includegraphics[width=1.0\textwidth]{figures/ch-11-asymmetric/mutau_eta_2.png}
-    \end{subfigure} \\   
-    \begin{subfigure}{0.45\textwidth}
+    \end{subfigure} \\
+    \begin{subfigure}{0.75\textwidth}
         \includegraphics[width=1.0\textwidth]{figures/ch-11-asymmetric/mutau_phi_1.png}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.45\textwidth}
-        \includegraphics[width=1.0\textwidth]{figures/ch-11-asymmetric/mutau_phi_2.png}
-    \end{subfigure} \\     
-    \begin{subfigure}{0.45\textwidth}
-        \includegraphics[width=1.0\textwidth]{figures/ch-11-asymmetric/mutau_m_vis.png}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.45\textwidth}
-        \includegraphics[width=1.0\textwidth]{figures/ch-11-asymmetric/mutau_pt_vis.png}
-    \end{subfigure} \\   
-    \caption{Kinematic properties of the leading muon and $\tau_{h}$ in the $\mu\tau_{h}$ channel: $p_T$ (\textit{top row}), $\eta$ (\textit{second row}), and $\phi$ (\textit{third row}). The visible 4-momenta of the muon and $\tau_{h}$ are summed, giving the visible di-tau mass $m_{\text{vis}}$ and transverse momentum $p_{T, \text{vis}}$.  The errors shown in the figures include statistical errors and only several of the full set of systematic errors (only those associated with the lepton energy scales and $\tau_{h}$ identification efficiency).}
-    \label{fig:nanoAOD_mutau_control_plots_leading_mutauh}
+    \end{subfigure} \\ 
+    \caption{Kinematic properties of the leading muon in the $\mu\tau_{h}$ channel using 2018 samples: transverse momentum $p_T$ (\textit{top}), $\eta$ (\textit{middle}), and $\phi$ (\textit{bottom}). The errors shown in the figures include statistical errors and only several of the full set of systematic errors (only those associated with the lepton energy scales and $\tau_{h}$ identification efficiency).}
+    \label{fig:nanoAOD_mutau_control_plots_leading_muon}
 \end{figure}
 
 \begin{figure}[ht]
     \centering
-    \begin{subfigure}{0.45\textwidth}
+    \begin{subfigure}{0.75\textwidth}
+        \includegraphics[width=1.0\textwidth]{figures/ch-11-asymmetric/mutau_pt_2.png}
+    \end{subfigure} \\
+    \begin{subfigure}{0.75\textwidth}
+        \includegraphics[width=1.0\textwidth]{figures/ch-11-asymmetric/mutau_eta_2.png}
+    \end{subfigure} \\
+    \begin{subfigure}{0.75\textwidth}
+        \includegraphics[width=1.0\textwidth]{figures/ch-11-asymmetric/mutau_phi_2.png}
+    \end{subfigure} \\ 
+    \caption{Kinematic properties of the leading hadronic tau ($\tau_{h}$) in the $\mu\tau_{h}$ channel using 2018 samples: transverse momentum $p_T$ (\textit{top}), $\eta$ (\textit{middle}), and $\phi$ (\textit{bottom}). The errors shown in the figures include statistical errors and only several of the full set of systematic errors (only those associated with the lepton energy scales and $\tau_{h}$ identification efficiency).}
+    \label{fig:nanoAOD_mutau_control_plots_leading_tauh}
+\end{figure}
+
+
+\begin{figure}[ht]
+    \centering
+    \begin{subfigure}{0.75\textwidth}
+        \includegraphics[width=1.0\textwidth]{figures/ch-11-asymmetric/mutau_m_vis.png}
+    \end{subfigure} \\
+    \begin{subfigure}{0.75\textwidth}
+        \includegraphics[width=1.0\textwidth]{figures/ch-11-asymmetric/mutau_pt_vis.png}
+    \end{subfigure} \\   
+    \caption{The visible di-tau mass $m_{\text{vis}}$ (\textit{top}) and visible di-tau transverse momentum $p_{T, \text{vis}}$ (\textit{bottom}), computed from the sum of the visible 4-momenta of the muon and $\tau_{h}$ in the $\mu\tau_{h}$ channel using 2018 samples. The errors shown in the figures include statistical errors and only several of the full set of systematic errors (only those associated with the lepton energy scales and $\tau_{h}$ identification efficiency).}
+    \label{fig:nanoAOD_mutau_control_plots_mvis_ptvis}
+\end{figure}
+
+
+\begin{figure}[ht]
+    \centering
+    \begin{subfigure}{0.75\textwidth}
         \includegraphics[width=1.0\textwidth]{figures/ch-11-asymmetric/mutau_bpt_deepflavour_1.png}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.45\textwidth}
+    \end{subfigure} \\
+    \begin{subfigure}{0.75\textwidth}
+        \includegraphics[width=1.0\textwidth]{figures/ch-11-asymmetric/mutau_beta_deepflavour_1.png}
+    \end{subfigure} \\
+    \begin{subfigure}{0.75\textwidth}
+        \includegraphics[width=1.0\textwidth]{figures/ch-11-asymmetric/mutau_bphi_deepflavour_1.png}
+    \end{subfigure} \\       
+    \caption{Kinematic properties of the leading b-tag jet in the $\mu\tau_{h}$ final state using 2018 samples: transverse momentum $p_{T}$ (\textit{top}), $\eta$ (\textit{middle}), $\phi$ (\textit{bottom}). The errors shown in the figures include statistical errors and only several of the full set of systematic errors (only those associated with the lepton energy scales and $\tau_{h}$ identification efficiency).}
+    \label{fig:nanoAOD_mutau_control_plots_btagjets_leading}
+\end{figure}
+
+
+\begin{figure}[ht]
+    \centering
+    \begin{subfigure}{0.75\textwidth}
         \includegraphics[width=1.0\textwidth]{figures/ch-11-asymmetric/mutau_bpt_deepflavour_2.png}
     \end{subfigure} \\
-    \begin{subfigure}{0.45\textwidth}
-        \includegraphics[width=1.0\textwidth]{figures/ch-11-asymmetric/mutau_beta_deepflavour_1.png}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.45\textwidth}
+    \begin{subfigure}{0.75\textwidth}
         \includegraphics[width=1.0\textwidth]{figures/ch-11-asymmetric/mutau_beta_deepflavour_2.png}
-    \end{subfigure} \\   
-    \begin{subfigure}{0.45\textwidth}
-        \includegraphics[width=1.0\textwidth]{figures/ch-11-asymmetric/mutau_bphi_deepflavour_1.png}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.45\textwidth}
+    \end{subfigure} \\
+    \begin{subfigure}{0.75\textwidth}
         \includegraphics[width=1.0\textwidth]{figures/ch-11-asymmetric/mutau_bphi_deepflavour_2.png}
-    \end{subfigure} \\     
-    \begin{subfigure}{0.45\textwidth}
+    \end{subfigure} \\       
+    \caption{Kinematic properties of the sub-leading b-tag jet in the $\mu\tau_{h}$ final state using 2018 samples: transverse momentum $p_{T}$ (\textit{top}), $\eta$ (\textit{middle}), $\phi$ (\textit{bottom}). The errors shown in the figures include statistical errors and only several of the full set of systematic errors (only those associated with the lepton energy scales and $\tau_{h}$ identification efficiency).}
+    \label{fig:nanoAOD_mutau_control_plots_btagjets_subleading}
+\end{figure}
+
+
+\begin{figure}[ht]
+    \centering   
+    \begin{subfigure}{0.75\textwidth}
         \includegraphics[width=1.0\textwidth]{figures/ch-11-asymmetric/mutau_met.png}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.45\textwidth}
+    \end{subfigure} \\ 
+    \begin{subfigure}{0.75\textwidth}
         \includegraphics[width=1.0\textwidth]{figures/ch-11-asymmetric/mutau_metphi.png}
     \end{subfigure} \\   
-    \caption{Kinematic properties of the leading and sub-leading b-tag jets in the $\mu\tau_{h}$ final state: jet $p_{T}$ (\textit{top row}), $\eta$ (\textit{second row}), $\phi$ (\textit{third row}), as well as the missing transverse energy magnitude and azimuthal direction (\textit{bottom row}). The errors shown in the figures include statistical errors and only several of the full set of systematic errors (only those associated with the lepton energy scales and $\tau_{h}$ identification efficiency).}
-    \label{fig:nanoAOD_mutau_control_plots_btagjets_met_metphi}
+    \caption{Missing transverse energy magnitude (\textit{top}) and azimuthal direction (\textit{bottom}) in the $\mu\tau_{h}$ final state using 2018 samples. The errors shown in the figures include statistical errors and only several of the full set of systematic errors (only those associated with the lepton energy scales and $\tau_{h}$ identification efficiency).}
+    \label{fig:nanoAOD_mutau_control_plots_met_metphi}
 \end{figure}
