@@ -73,7 +73,7 @@
   \end{center}
   \vspace{.3in}
   \begin{center}
-    Not yet recommended for Acceptance \\
+    Recommended for Acceptance \\
     by the \@dept \\ 
     Adviser: \@adviser
   \end{center}
